@@ -41,7 +41,11 @@ ui <- dashboardPage(
                 menuSubItem("G10 ELA Writing Analysis", tabName = "g10ELAWritingAnalysis"),
                 menuSubItem("G10 ELA Reading Analysis", tabName = "g10ELAReadingAnalysis"),
                 menuSubItem("G10 ELA Content", tabName = "g10ELAContent"),
-                menuSubItem("G10 ELA RT-State Diff", tabName = "g10ELADiff")
+                menuSubItem("G10 ELA RT-State Diff", tabName = "g10ELADiff"),
+                menuSubItem("G8 ELA Content", tabName = "g8ELAContent"),
+                menuSubItem("G8 ELA RT-State Diff", tabName = "g8ELADiff"),
+                menuSubItem("G7 ELA Content", tabName = "g7ELAContent"),
+                menuSubItem("G7 ELA RT-State Diff", tabName = "g7ELADiff")
        )
 
     )
@@ -1116,7 +1120,7 @@ ui <- dashboardPage(
                 valueBox(EG10_CV_PTS[1,2], HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue"),
                 box( title = "Notes", width = 4, solidHeader = FALSE,
                      HTML("<p> Read more about the <a href =
-                      'https://www.doe.mass.edu/frameworks/ela/2017-06.pdf'>
+                      'https://www.doe.mass.edu/frameworks/ela/2018-06.pdf'>
                        anchor standards </a> in the frameworks</p>"))
               )
 
@@ -1172,12 +1176,12 @@ ui <- dashboardPage(
               ),
               h3("Writing"),
               fluidRow(
-                valueBox( EG10_ESidea_Diff[1,5],HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
-                valueBox( EG10_ESconv_Diff[1,5],HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "red"),
+                valueBox( EG10_ESidea_Diff[1,5],HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "light-blue"),
+                valueBox( EG10_ESconv_Diff[1,5],HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
                 box(width = 4, solidHeader = FALSE,
                     HTML("<p> <ul>
                               <li> Student sample writing and
-                                <a href ='https://www.doe.mass.edu/mcas/student/2022/grade10/ela.html'>
+                                <a href ='https://www.doe.mass.edu/mcas/student/2023/grade10/ela.html'>
                                 Scoring guidelines </a>
                               </li>
 
@@ -1211,8 +1215,8 @@ ui <- dashboardPage(
               h3("Writing"),
               fluidRow(
                 # A static valueBox
-                valueBox(EG10_NFWrite_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "red" ),
-                valueBox(EG10_FWrite_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "red"),
+                valueBox(EG10_NFWrite_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
+                valueBox(EG10_FWrite_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
                 box( title = "Notes", width = 4, solidHeader = FALSE,
 
                      HTML("<p> Text title and types in the <a href =
@@ -1241,7 +1245,7 @@ ui <- dashboardPage(
               h3("Writing"),
               fluidRow(
 
-                valueBox(EG10_2TextWrite_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "red" ),
+                valueBox(EG10_2TextWrite_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "light-blue" ),
                 valueBox(EG10_1TextWrite_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "light-blue"),
                 box( title = "Notes", width = 4, solidHeader = FALSE,
                      HTML("<p> Links to questions in the <a href =
@@ -1258,7 +1262,7 @@ ui <- dashboardPage(
                 # A static valueBox
 
                 valueBox(EG10_KD_Diff[1,6], HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
-                valueBox(EG10_CS_Diff[1,6], HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "red"),
+                valueBox(EG10_CS_Diff[1,6], HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "blue"),
 
 
 
@@ -1272,7 +1276,7 @@ ui <- dashboardPage(
                 valueBox(EG10_CV_Diff[1,6], HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue"),
                 box( title = "Notes", width = 4, solidHeader = FALSE,
                      HTML("<p> Read more about the <a href =
-                      'https://www.doe.mass.edu/frameworks/ela/2017-06.pdf'>
+                      'https://www.doe.mass.edu/frameworks/ela/2018-06.pdf'>
                        anchor standards </a> in the frameworks</p>"))
 
 
@@ -1288,8 +1292,8 @@ ui <- dashboardPage(
               span( h2("Writing with Text Synthesis")),
               h3("RT-State Diff"),
               fluidRow(
-                valueBox( EG10_ESidea_Diff[1,5],HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
-                valueBox( EG10_ESconv_Diff[1,5],HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "red"),
+                valueBox( EG10_ESidea_Diff[1,5],HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "light-blue"),
+                valueBox( EG10_ESconv_Diff[1,5],HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p> Rising Tide students earned <b> fewer points </b> than their peers in the state
              across <b> all writing categories </b>. </p>"))
@@ -1321,7 +1325,7 @@ ui <- dashboardPage(
                 valueBox( paste(EG10_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p> <b>Idea Development </b> accounts for <b>63% </b> of available <b> writing </b> points
-                  on the MCAS and <b> 79% of points lost by Rising Tide </b> students. </p>"))
+                  on the MCAS and <b> 89% of points lost by Rising Tide </b> students. </p>"))
               ),
 
               # h3("Top-Performing Students"),
@@ -1411,10 +1415,10 @@ ui <- dashboardPage(
 
               fluidRow(
                 # A static valueBox
-                valueBox(paste(EG10_2TextRead_Loss[1,5], "%"), HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "red" ),
+                valueBox(paste(EG10_2TextRead_Loss[1,5], "%"), HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "blue" ),
                 valueBox(paste(EG10_1TextRead_Loss[1,5], "%"), HTML("<p> Single Text </p>"), icon=icon("1"), color = "blue"),
                 box(  width = 4, solidHeader = FALSE,
-                      HTML("<p><b> 57% </b> of reading points are from items asking
+                      HTML("<p><b> 58% </b> of reading points are from items asking
                   students to <b> snythesize two texts </b>, yet these items account for
                   <b> 65%</b> of reading points lost by <b>Rising Tide students </b>. </p>"))
               ),
@@ -1439,7 +1443,7 @@ ui <- dashboardPage(
               h3("All Students"),
 
               fluidRow(
-                valueBox( paste(EG10_RE_Loss[1,5], "%"),HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "red"),
+                valueBox( paste(EG10_RE_Loss[1,5], "%"),HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "blue"),
                 valueBox(paste(EG10_LA_Loss[1,5], "%"), HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
                 box(  width = 4, solidHeader = FALSE,
                       HTML("<p><b> 86% </b> of slected response points are from items assessing
@@ -1477,7 +1481,7 @@ ui <- dashboardPage(
                 </li>
                 </ul>
                 Read about all of the literacy standards
-                <a href='https://www.doe.mass.edu/frameworks/ela/2017-06.pdf'>here. </a>
+                <a href='https://www.doe.mass.edu/frameworks/ela/2018-06.pdf'>here. </a>
                 </p>"),
               h3("% Points Lost by Domain Cluster: All Students"),
 
@@ -1486,7 +1490,7 @@ ui <- dashboardPage(
                 # A static valueBox
 
                 valueBox(paste(EG10_KD_Loss[1,5], "%"), HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
-                valueBox(paste(EG10_CS_Loss[1,5], "%"), HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "red"),
+                valueBox(paste(EG10_CS_Loss[1,5], "%"), HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "blue"),
 
 
 
@@ -1534,7 +1538,613 @@ ui <- dashboardPage(
               # )
 
 
-      )
+      ),
+   
+ 
+   
+   #G8 ELA Content
+   
+   tabItem("g8ELAContent",
+           span(h1("How were students assessed?")), #style = "color:black")),
+           HTML("<p>The 2023 <b> G8 ELA </b> exam consisted of 29 selected response
+              questions and two essays worth in <b>total 50 points </b>.
+                  </p>"),
+           h2("Available Points by Content Category"),
+           
+           h3("Reading"),
+           fluidRow(
+             valueBox( EG8_RE_PTS[1,2],HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "blue"),
+             valueBox(EG8_RELA_PTS[1,2], HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
+             box( title = "Released Materials", width = 4, solidHeader = FALSE,
+                  HTML("<p>
+                              <ul>
+                                <li>
+                                  <a href='https://mcas.digitalitemlibrary.com/home?subject=ELA&grades=Grade%208&view=ALL'>Digital item library </a>
+                               </li>
+                                <li>
+                                  <a href = 'https://www.doe.mass.edu/mcas/2022/release/gr8-ela.pdf'>
+                                    2022 released paper based items </a>
+                               </li>
+                                <li>
+                                  Sample
+                                    <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-ela/MCAS_2022_Gr8_ELA_PT_ADA.pdf'>
+                                    Paper Based Practice Test PDF </a>
+                               </li>
+                                <li>
+                                  Sample
+                                    <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-ela/'> computer based practice test</a>
+                               </li>
+                              </ul>
+                          </p>"))
+             
+           ),
+           
+           h3("Writing"),
+           fluidRow(
+             valueBox( EG8_WR_PTS[1,2],HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "light-blue"),
+             valueBox( EG8_ESLA_pts[1,2],HTML("<p>Essay: <br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+             box(title = "Notes", width = 4, solidHeader = FALSE,
+                 HTML("<p>
+                               Student sample writing and
+                                <a href ='https://www.doe.mass.edu/mcas/student/2023/grade8/ela.html'>
+                                Scoring guidelines </a>
+
+
+
+
+
+                            </p>"
+                 )
+             )
+             
+           ),
+           
+           h2("Available Points by Text Type"),
+           h3("Reading"),
+           fluidRow(
+             valueBox(EG8_NFRead_PTS[1,2], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
+             valueBox(EG8_FRead_PTS[1,2], HTML("<p> Literature </p>"), icon=icon("book"), color = "blue"),
+             
+             
+             
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Text Titles and types  in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC81ZlxN9Tc/edit?usp=sharing'>
+                       G8 ELA xWalk</a> </p>"))
+             
+             
+           ),
+           h3("Writing"),
+           fluidRow(
+             valueBox(EG8_NFWrite_PTS[1,2], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
+             valueBox(EG8_FWrite_PTS[1,2], HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
+             
+             
+             
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Item Descriptions in <a href =
+                      'https://docs.google.com/spreadsheets/d/1Qp1vP8KVftxzWrhM-EjxJVnEOGLmS01vsRvf0VdIbH4/edit?usp=sharing'>
+                       Item Results</a> </p>"))
+             
+             
+           ),
+           h2("Available Points by Text Quantity"),
+           h3("Reading"),
+           fluidRow(
+             # A static valueBox
+             valueBox(EG8_2TextRead_PTS[1,2], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "blue" ),
+             
+             valueBox(EG8_1TextRead_PTS[1,2], HTML("<p> Single Text </p>"), icon=icon("1"), color = "blue"),
+             
+             
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Links to questions in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1Qp1vP8KVftxzWrhM-EjxJVnEOGLmS01vsRvf0VdIbH4/edit?usp=sharing'>
+                        Item Results</a> </p>"))
+           ),
+           h3("Writing"),
+           fluidRow(
+             # A static valueBox
+             valueBox(EG8_2TextWrite_PTS[1,2], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "light-blue" ),
+             
+             valueBox(EG8_1TextWrite_PTS[1,2], HTML("<p> Single Text </p>"), icon=icon("1"), color = "light-blue"),
+             
+             
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Links to questions in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1Qp1vP8KVftxzWrhM-EjxJVnEOGLmS01vsRvf0VdIbH4/edit?usp=sharing'>
+                       G8 Item Results</a> </p>"))
+           ),
+           
+           h2("Available Selected Response Points by Domain Cluster"),
+           HTML("<p>The 2023 <b> G8 ELA </b> exam consisted of 29 selected response
+              questions worth in <b>total 34 points </b>.</p>"),
+           
+           
+           fluidRow(
+             # A static valueBox
+             valueBox(EG8_KD_PTS[1,2], HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
+             valueBox(EG8_CS_PTS[1,2], HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "blue"),
+             valueBox(EG8_IK_PTS[1,2], HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
+             
+             
+             
+             # valueBox(EG8_KL_PTS[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
+             
+             valueBox(EG8_VA_PTS[1,2], HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
+             valueBox(EG8_CV_PTS[1,2], HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue"),
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  HTML("<p> Read more about the <a href =
+                      'https://www.doe.mass.edu/frameworks/ela/2018-06.pdf'>
+                       anchor standards </a> in the frameworks</p>"))
+           )
+           
+           
+           
+           # h3("Available Points by Question Type"),
+           # fluidRow(
+           #   # A static valueBox
+           #   valueBox(EG8_SR_PTS[1,2], HTML("<p> Selected <br> Response </p>"), icon=icon("square-check"), color = "teal"),
+           # 
+           #   valueBox(EG8_ES_PTS[1,2], HTML("<p> Essay: Lang. <br>& Idea Dev.</p>"),icon=icon("file-pen"), color = "teal" ),
+           # 
+           #   box(  width = 4, solidHeader = FALSE,
+           #        HTML("<p> 2022 student released
+           #             <a href = 'https://www.doe.mass.edu/mcas/student/2022/grade8/ela.html'>
+           #               essays </a> and Scoring Guidelines </p>")
+           # )
+           
+           #)
+   ),
+   
+   #G8 ELA Performance
+   
+   tabItem("g8ELADiff",
+           span(h1("How do our students compare to their peers in the state?")), #style = "color:black")),
+           
+           h2("RT-State Diff by Content Category"),
+           h3("Reading"),
+           fluidRow(
+             valueBox( EG8_RE_Diff[1,6],HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "blue"),
+             valueBox(EG8_RELA_PTS[1,2], HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
+             box( title = "Released Materials", width = 4, solidHeader = FALSE,
+                  HTML("<p>
+                            <ul>
+                              <li>
+                                <a href='https://mcas.digitalitemlibrary.com/home?subject=ELA&grades=Grade%208&view=ALL'>Digital item library </a>
+                              </li>
+                               <li>
+                                  <a href = 'https://www.doe.mass.edu/mcas/2022/release/gr8-ela.pdf'>
+                                  2022 released paper based items </a>
+                              </li>
+                              <li> Sample
+                                <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-ela/MCAS_2022_Gr8_ELA_PT_ADA.pdf'>
+                                  Paper Based Practice Test PDF </a>
+                              </li>
+                              <li> Sample
+                                  <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-ela/'> computer based practice test</a>
+                              </li>
+                            </ul>
+                        </p>"))
+             
+             
+           ),
+           h3("Writing"),
+           fluidRow(
+             valueBox( EG8_ESidea_Diff[1,5],HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "light-blue"),
+             valueBox( EG8_ESconv_Diff[1,5],HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+             box(width = 4, solidHeader = FALSE,
+                 HTML("<p> <ul>
+                              <li> Student sample writing and
+                                <a href ='https://www.doe.mass.edu/mcas/student/2022/grade8/ela.html'>
+                                Scoring guidelines </a>
+                              </li>
+
+
+
+                            </ul>
+                            </p>"
+                 )
+             )
+             
+           ),
+           
+           
+           
+           
+           h2("RT-State Diff by Text Type"),
+           h3("Reading"),
+           fluidRow(
+             
+             valueBox(EG8_NFRead_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
+             valueBox(EG8_FRead_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "blue"),
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Text title and types in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1TLJTY_twbuuSqCZx_9h_g4ZO4_pLuCWGgpCwklRebdE/edit?usp=sharing'>
+                       G8 ELA xWalk.</a> </p>"))
+             
+             
+             
+           ),
+           h3("Writing"),
+           fluidRow(
+             # A static valueBox
+             valueBox(EG8_NFWrite_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
+             valueBox(EG8_FWrite_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Text title and types in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1TLJTY_twbuuSqCZx_9h_g4ZO4_pLuCWGgpCwklRebdE/edit?usp=sharing'>
+                       G8 ELA xWalk.</a> </p>"))
+             
+             
+             
+           ),
+           h2("RT-State Diff by Text Quantity"),
+           h3("Reading"),
+           fluidRow(
+             # A static valueBox
+             valueBox(EG8_2TextRead_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "blue" ),
+             valueBox(EG8_1TextRead_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "blue"),
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Links to questions in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1TLJTY_twbuuSqCZx_9h_g4ZO4_pLuCWGgpCwklRebdE/edit?usp=sharing'>
+                       G8 ELA xWalk.</a> </p>"))
+             
+             
+             
+           ),
+           
+           h3("Writing"),
+           fluidRow(
+             
+             valueBox(EG8_2TextWrite_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "light-blue" ),
+             valueBox(EG8_1TextWrite_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "light-blue"),
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  HTML("<p> Links to questions in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1TLJTY_twbuuSqCZx_9h_g4ZO4_pLuCWGgpCwklRebdE/edit?usp=sharing'>
+                       G8 ELA xWalk.</a> </p>"))
+             
+             
+             
+           ),
+           h2("Selected Response RT-State Diff by Domain Cluster"),
+           
+           
+           fluidRow(
+             # A static valueBox
+             
+             valueBox(EG8_KD_Diff[1,6], HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
+             valueBox(EG8_CS_Diff[1,6], HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "blue"),
+             
+             
+             
+             valueBox(EG8_IK_Diff[1,6], HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
+             
+             
+             
+             # valueBox(EG8_KL_Diff[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
+             
+             valueBox(EG8_VA_Diff[1,6], HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
+             valueBox(EG8_CV_Diff[1,6], HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue"),
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  HTML("<p> Read more about the <a href =
+                      'https://www.doe.mass.edu/frameworks/ela/2018-06.pdf'>
+                       anchor standards </a> in the frameworks</p>"))
+             
+             
+             
+           )
+           
+     ),
+   
+   #G7 ELA Content
+   
+   tabItem("g7ELAContent",
+           span(h1("How were students assessed?")), #style = "color:black")),
+           HTML("<p>The 2023 <b> G7 ELA </b> exam consisted of 29 selected response
+              questions and two essays worth in <b>total 50 points </b>.
+                  </p>"),
+           h2("Available Points by Content Category"),
+           
+           h3("Reading"),
+           fluidRow(
+             valueBox( EG7_RE_PTS[1,2],HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "blue"),
+             valueBox(EG7_RELA_PTS[1,2], HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
+             box( title = "Released Materials", width = 4, solidHeader = FALSE,
+                  HTML("<p>
+                              <ul>
+                                <li>
+                                  <a href='https://mcas.digitalitemlibrary.com/home?subject=ELA&grades=Grade%207&view=ALL'>Digital item library </a>
+                               </li>
+                                <li>
+                                  <a href = 'https://www.doe.mass.edu/mcas/2022/release/gr7-ela.pdf'>
+                                    2022 released paper based items </a>
+                               </li>
+                                <li>
+                                  Sample
+                                    <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-ela/MCAS_2022_Gr7_ELA_PT_ADA.pdf'>
+                                    Paper Based Practice Test PDF </a>
+                               </li>
+                                <li>
+                                  Sample
+                                    <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-ela/'> computer based practice test</a>
+                               </li>
+                              </ul>
+                          </p>"))
+             
+           ),
+           
+           h3("Writing"),
+           fluidRow(
+             valueBox( EG7_WR_PTS[1,2],HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "light-blue"),
+             valueBox( EG7_ESLA_pts[1,2],HTML("<p>Essay: <br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+             box(title = "Notes", width = 4, solidHeader = FALSE,
+                 HTML("<p>
+                               Student sample writing and
+                                <a href ='https://www.doe.mass.edu/mcas/student/2023/grade7/ela.html'>
+                                Scoring guidelines </a>
+
+
+
+
+
+                            </p>"
+                 )
+             )
+             
+           ),
+           
+           h2("Available Points by Text Type"),
+           h3("Reading"),
+           fluidRow(
+             valueBox(EG7_NFRead_PTS[1,2], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
+             valueBox(EG7_FRead_PTS[1,2], HTML("<p> Literature </p>"), icon=icon("book"), color = "blue"),
+             
+             
+             
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Text Titles and types  in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+                       G7 ELA xWalk</a> </p>"))
+             
+             
+           ),
+           h3("Writing"),
+           fluidRow(
+             valueBox(EG7_NFWrite_PTS[1,2], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
+             valueBox(EG7_FWrite_PTS[1,2], HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
+             
+             
+             
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Item Descriptions in <a href =
+                      'https://docs.google.com/spreadsheets/d/1Qp1vP7KVftxzWrhM-EjxJVnEOGLmS01vsRvf0VdIbH4/edit?usp=sharing'>
+                       G7 ELA Item Results</a> </p>"))
+             
+             
+           ),
+           h2("Available Points by Text Quantity"),
+           h3("Reading"),
+           fluidRow(
+             # A static valueBox
+             valueBox(EG7_2TextRead_PTS[1,2], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "blue" ),
+             
+             valueBox(EG7_1TextRead_PTS[1,2], HTML("<p> Single Text </p>"), icon=icon("1"), color = "blue"),
+             
+             
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Links to questions in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1Qp1vP7KVftxzWrhM-EjxJVnEOGLmS01vsRvf0VdIbH4/edit?usp=sharing'>
+                       G7 ELA Item Results</a> </p>"))
+           ),
+           h3("Writing"),
+           fluidRow(
+             # A static valueBox
+             valueBox(EG7_2TextWrite_PTS[1,2], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "light-blue" ),
+             
+             valueBox(EG7_1TextWrite_PTS[1,2], HTML("<p> Single Text </p>"), icon=icon("1"), color = "light-blue"),
+             
+             
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Links to questions in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1Qp1vP7KVftxzWrhM-EjxJVnEOGLmS01vsRvf0VdIbH4/edit?usp=sharing'>
+                       G7 ELA Item Results</a> </p>"))
+           ),
+           
+           h2("Available Selected Response Points by Domain Cluster"),
+           HTML("<p>The 2023 <b> G7 ELA </b> exam consisted of 29 selected response
+              questions worth in <b>total 34 points </b>.</p>"),
+           
+           
+           fluidRow(
+             # A static valueBox
+             valueBox(EG7_KD_PTS[1,2], HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
+             valueBox(EG7_CS_PTS[1,2], HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "blue"),
+             valueBox(EG7_IK_PTS[1,2], HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
+             
+             
+             
+             # valueBox(EG7_KL_PTS[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
+             
+             valueBox(EG7_VA_PTS[1,2], HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
+             valueBox(EG7_CV_PTS[1,2], HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue"),
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  HTML("<p> Read more about the <a href =
+                      'https://www.doe.mass.edu/frameworks/ela/2017-06.pdf'>
+                       anchor standards </a> in the frameworks</p>"))
+           )
+           
+           
+           
+           # h3("Available Points by Question Type"),
+           # fluidRow(
+           #   # A static valueBox
+           #   valueBox(EG7_SR_PTS[1,2], HTML("<p> Selected <br> Response </p>"), icon=icon("square-check"), color = "teal"),
+           # 
+           #   valueBox(EG7_ES_PTS[1,2], HTML("<p> Essay: Lang. <br>& Idea Dev.</p>"),icon=icon("file-pen"), color = "teal" ),
+           # 
+           #   box(  width = 4, solidHeader = FALSE,
+           #        HTML("<p> 2022 student released
+           #             <a href = 'https://www.doe.mass.edu/mcas/student/2022/grade7/ela.html'>
+           #               essays </a> and Scoring Guidelines </p>")
+           # )
+           
+           #)
+   ),
+   
+   #G7 ELA Performance
+   
+   tabItem("g7ELADiff",
+           span(h1("How do our students compare to their peers in the state?")), #style = "color:black")),
+           
+           h2("RT-State Diff by Content Category"),
+           h3("Reading"),
+           fluidRow(
+             valueBox( EG7_RE_Diff[1,6],HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "blue"),
+             valueBox(EG7_RELA_PTS[1,2], HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
+             box( title = "Released Materials", width = 4, solidHeader = FALSE,
+                  HTML("<p>
+                            <ul>
+                              <li>
+                                <a href='https://mcas.digitalitemlibrary.com/home?subject=ELA&grades=Grade%207&view=ALL'>Digital item library </a>
+                              </li>
+                               <li>
+                                  <a href = 'https://www.doe.mass.edu/mcas/2022/release/gr7-ela.pdf'>
+                                  2022 released paper based items </a>
+                              </li>
+                              <li> Sample
+                                <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-ela/MCAS_2022_Gr7_ELA_PT_ADA.pdf'>
+                                  Paper Based Practice Test PDF </a>
+                              </li>
+                              <li> Sample
+                                  <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-ela/'> computer based practice test</a>
+                              </li>
+                            </ul>
+                        </p>"))
+             
+             
+           ),
+           h3("Writing"),
+           fluidRow(
+             valueBox( EG7_ESidea_Diff[1,5],HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "light-blue"),
+             valueBox( EG7_ESconv_Diff[1,5],HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+             box(width = 4, solidHeader = FALSE,
+                 HTML("<p> <ul>
+                              <li> Student sample writing and
+                                <a href ='https://www.doe.mass.edu/mcas/student/2022/grade7/ela.html'>
+                                Scoring guidelines </a>
+                              </li>
+
+
+
+                            </ul>
+                            </p>"
+                 )
+             )
+             
+           ),
+           
+           
+           
+           
+           h2("RT-State Diff by Text Type"),
+           h3("Reading"),
+           fluidRow(
+             
+             valueBox(EG7_NFRead_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
+             valueBox(EG7_FRead_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "blue"),
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Text title and types in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1TLJTY_twbuuSqCZx_9h_g4ZO4_pLuCWGgpCwklRebdE/edit?usp=sharing'>
+                       G7 ELA xWalk.</a> </p>"))
+             
+             
+             
+           ),
+           h3("Writing"),
+           fluidRow(
+             # A static valueBox
+             valueBox(EG7_NFWrite_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
+             valueBox(EG7_FWrite_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Text title and types in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1TLJTY_twbuuSqCZx_9h_g4ZO4_pLuCWGgpCwklRebdE/edit?usp=sharing'>
+                       G7 ELA xWalk.</a> </p>"))
+             
+             
+             
+           ),
+           h2("RT-State Diff by Text Quantity"),
+           h3("Reading"),
+           fluidRow(
+             # A static valueBox
+             valueBox(EG7_2TextRead_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "blue" ),
+             valueBox(EG7_1TextRead_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "blue"),
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Links to questions in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1TLJTY_twbuuSqCZx_9h_g4ZO4_pLuCWGgpCwklRebdE/edit?usp=sharing'>
+                       G7 ELA xWalk.</a> </p>"))
+             
+             
+             
+           ),
+           
+           h3("Writing"),
+           fluidRow(
+             
+             valueBox(EG7_2TextWrite_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "light-blue" ),
+             valueBox(EG7_1TextWrite_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "light-blue"),
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  HTML("<p> Links to questions in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1TLJTY_twbuuSqCZx_9h_g4ZO4_pLuCWGgpCwklRebdE/edit?usp=sharing'>
+                       G7 ELA xWalk.</a> </p>"))
+             
+             
+             
+           ),
+           h2("Selected Response RT-State Diff by Domain Cluster"),
+           
+           
+           fluidRow(
+             # A static valueBox
+             
+             valueBox(round(EG7_KD_Diff[1,6]), HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
+             valueBox(EG7_CS_Diff[1,6], HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "blue"),
+             
+             
+             
+             valueBox(EG7_IK_Diff[1,6], HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
+             
+             
+             
+             # valueBox(EG7_KL_Diff[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
+             
+             valueBox(round(EG7_VA_Diff[1,6]), HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
+             valueBox(EG7_CV_Diff[1,6], HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue"),
+             box( title = "Notes", width = 4, solidHeader = FALSE,
+                  HTML("<p> Read more about the <a href =
+                      'https://www.doe.mass.edu/frameworks/ela/2018-06.pdf'>
+                       anchor standards </a> in the frameworks</p>"))
+             
+             
+             
+           )
+           
+   )  
       
       
       

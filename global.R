@@ -464,6 +464,13 @@ EG8_xWalk<-read_item_xwalk("data/2023MCASItemXWalk.xlsx", "EG8_xwalk",
 EG8_item<-Join_Item_Xwalk("ela", EG8_item, EG8_xWalk)
 EG8_item<-Join_ELAItem_Cluster(EG8_item, ELA_cluster_xwalk)
 
+EG8_reading_item <- EG8_item%>%
+  filter(!str_detect(`Type`,"ES"))
+#view(EG8_reading_item)
+EG8_writing_item <- EG8_item%>%
+  filter(str_detect(`Type`,"ES") & str_detect(`Reporting Category`, "-"))
+#view(EG8_writing_item)
+
 ## EG8 Student Performance DF's
 
 EG8_student_perf<-Student_Perf("ela", 8, student_itemDF)
@@ -477,7 +484,7 @@ EG8_student_reading_item_perf<-EG8_student_item_perf%>%
 EG8_student_writing_item_perf<-EG8_student_item_perf%>%
   filter(str_detect(`Type`, "ES"))
 EG8_student_essay_perf<-Student_Essay_Perf(8, student_itemDF, EG8_item)
-view(EG8_item)
+#view(EG8_item)
 # EG8_item_summary<-EG8_item%>%
 #   mutate(`RT Points Earned` = `item Possible Points`*`RT Percent Points`)%>%
 #   mutate(`State Points Earned` = `item Possible Points`*`State Percent Points`)%>%
@@ -489,19 +496,21 @@ view(EG8_item)
 #   mutate(`RT-State_Diff` = `RT Percent Earned`-`State Percent Earned`)
 # view(EG8_item_summary)
 
-EG8_reading_item <- EG8_item%>%
-  filter(!str_detect(`Type`,"ES"))
-#view(EG8_reading_item)
-EG8_writing_item <- EG8_item%>%
-  filter(str_detect(`Type`,"ES") & str_detect(`Reporting Category`, "-"))
-#view(EG8_writing_item)
 
-#G7 ELA
+
+#G7 ELA Item DF
 EG7_item<-read_item("data/2023ELAItemResults.xlsx", "EG7", "ela")
-#EG7_xWalk<-read_item_xwalk("data/2022MCASItemXWalk.xlsx", "EG7_xwalk", 
-#                           "ela")
-#EG7_item<-Join_Item_Xwalk("ela", EG7_item, EG7_xWalk)
-#EG7_item<-Join_ELAItem_Cluster(EG7_item, ELA_cluster_xwalk)
+EG7_xWalk<-read_item_xwalk("data/2023MCASItemXWalk.xlsx", "EG7_xwalk", 
+                           "ela")
+EG7_item<-Join_Item_Xwalk("ela", EG7_item, EG7_xWalk)
+EG7_item<-Join_ELAItem_Cluster(EG7_item, ELA_cluster_xwalk)
+EG7_reading_item <- EG7_item%>%
+  filter(!str_detect(`Type`,"ES"))
+#view(EG7_reading_item)
+EG7_writing_item <- EG7_item%>%
+  filter(str_detect(`Type`,"ES") & str_detect(`Reporting Category`, "-"))
+
+#view(EG7_writing_item)
 #view(EG7_item)
 # EG7_item_summary<-EG7_item%>%
 #   mutate(`RT Points Earned` = `item Possible Points`*`RT Percent Points`)%>%
@@ -514,12 +523,19 @@ EG7_item<-read_item("data/2023ELAItemResults.xlsx", "EG7", "ela")
 #   mutate(`RT-State_Diff` = `RT Percent Earned`-`State Percent Earned`)
 # view(EG7_item_summary)
 
-EG7_reading_item <- EG7_item%>%
+## EG7 Student Performance DF's
+
+EG7_student_perf<-Student_Perf("ela", 7, student_itemDF)
+EG7_student_item_perf<-Student_Item_Perf("ela", EG7_item, EG7_student_perf)
+view(EG7_student_item_perf)
+
+EG7_student_essay_perf<-Student_Essay_Perf(7, student_itemDF, EG7_item)
+view(EG7_student_item_perf)
+EG7_student_reading_item_perf<-EG7_student_item_perf%>%
   filter(!str_detect(`Type`,"ES"))
-#view(EG7_reading_item)
-EG7_writing_item <- EG7_item%>%
-  filter(str_detect(`Type`,"ES") & str_detect(`Reporting Category`, "-"))
-#view(EG7_writing_item)
+EG7_student_writing_item_perf<-EG7_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))
+EG7_student_essay_perf<-Student_Essay_Perf(7, student_itemDF, EG7_item)
 
 #G6 ELA
 EG6_item<-read_item("data/2023ELAItemResults.xlsx", "EG6", "ela")
@@ -570,6 +586,148 @@ EG5_reading_item <- EG5_item%>%
 EG5_writing_item <- EG5_item%>%
   filter(str_detect(`Type`,"ES") & str_detect(`Reporting Category`, "-"))
 #view(EG5_writing_item)
+
+# Exam Content: G7 ELA
+#Reporting Categories: G7 ELA: 
+#"LA":E, 
+#"RE":Reading
+# "WR": Writing,
+#
+# Question Type: G7 ELA:
+#"ES": Essay,  "SR": Selected Response
+
+## G7 ELA Exam Content
+EG7_ES_PTS<-Item_Type_Points("ES", EG7_item)
+EG7_SR_PTS<-Item_Type_Points("SR", EG7_item)
+
+
+
+
+EG7_RE_PTS<-Reporting_Cat_Points("ela", "RE", EG7_item)
+EG7_WR_PTS<-Reporting_Cat_Points("ela", "WR", EG7_item)
+
+## Writing language Points
+EG7_ESLA_item<-EG7_item %>%
+  filter(str_detect(eitem,"LA"))
+EG7_ESLA_pts<-Reporting_Cat_Points("ela", "LA", EG7_ESLA_item)
+
+## Reading Language Points
+EG7_RELA_item<-EG7_item %>%
+  filter(!str_detect(eitem,"LA"))
+EG7_RELA_PTS<-Reporting_Cat_Points("ela", "LA", EG7_RELA_item)
+
+# EG7 Domain Cluster Points
+EG7_CS_PTS<-Practice_Cat_Points("ela", "Craft and Structure", EG7_item)
+
+EG7_CV_PTS<-Practice_Cat_Points("ela", "Conventions", EG7_item)
+
+EG7_KD_PTS<-Practice_Cat_Points("ela", "Key Ideas and Details", EG7_item)
+EG7_KL_PTS<-Practice_Cat_Points("ela", "Knowledge of Language", EG7_item)
+EG7_ID_PTS<-Practice_Cat_Points("ela", "Idea Development", EG7_item)
+EG7_IK_PTS<-Practice_Cat_Points("ela", "Integration of Knowledge and Ideas", EG7_item)
+EG7_VA_PTS<-Practice_Cat_Points("ela", "Vocabulary Acquisition and Use", EG7_item)
+EG7_WC_PTS<-Practice_Cat_Points("ela", "Writing Combined (Conv/Idea Dev)", EG7_item)
+
+## EG7 Text Type and Quantity Points
+
+EG7_FRead_PTS<-ELA_TextType_Points("Literature", EG7_reading_item)
+EG7_NFRead_PTS<-ELA_TextType_Points("Informational", EG7_reading_item)
+EG7_2TextRead_PTS<-ELA_NumText_Points("More than 1", EG7_reading_item)
+EG7_1TextRead_PTS<-ELA_NumText_Points("1.0", EG7_reading_item)
+EG7_FWrite_PTS<-ELA_TextType_Points("Literature", EG7_writing_item)
+EG7_NFWrite_PTS<-ELA_TextType_Points("Informational", EG7_writing_item)
+EG7_2TextWrite_PTS<-ELA_NumText_Points("More than 1", EG7_writing_item)
+EG7_1TextWrite_PTS<-ELA_NumText_Points("1.0", EG7_writing_item)
+
+## EG7 RT-State Diff
+###RT-State Diff by Question Type
+EG7_SR_Diff<-Item_Type_Diff("ela", "SR", EG7_student_item_perf)
+EG7_ES_Diff<-Item_Type_Diff("ela", "ES", EG7_student_item_perf)
+
+EG7_FRead_Diff<-ELA_TextType_Diff("Literature", EG7_student_reading_item_perf)
+EG7_NFRead_Diff<-ELA_TextType_Diff("Informational", EG7_student_reading_item_perf)
+EG7_FWrite_Diff<-ELA_TextType_Diff("Literature", EG7_student_writing_item_perf)
+EG7_NFWrite_Diff<-ELA_TextType_Diff("Informational", EG7_student_writing_item_perf)
+EG7_2TextRead_Diff<-ELA_NumText_Diff("More than 1", EG7_student_reading_item_perf)
+EG7_1TextRead_Diff<-ELA_NumText_Diff("1.0", EG7_student_reading_item_perf)
+EG7_2TextWrite_Diff<-ELA_NumText_Diff("More than 1", EG7_student_writing_item_perf)
+EG7_1TextWrite_Diff<-ELA_NumText_Diff("1.0", EG7_student_writing_item_perf)
+
+##RT-State Diff and %points Lost by LA and RE (need to separate WR LA and RE LA)
+EG7_LA_Diff<-Reporting_Cat_Diff("ela", "LA", EG7_student_item_perf)
+#view(EG7_LA_Diff)
+EG7_RE_Diff<-Reporting_Cat_Diff("ela", "RE", EG7_student_item_perf)
+#view(EG7_RE_Diff)
+EG7_ESconv_Diff<-ELA_Subitem_Diff("conv", EG7_student_essay_perf)
+#view(EG7_ESconv_Diff)
+EG7_ESidea_Diff<-ELA_Subitem_Diff("idea", EG7_student_essay_perf)
+#view(EG7_ESidea_Diff)
+#EG7Top_ESconv_Diff<-ELA_Subitem_Diff("conv", EG7_TopStudent_essay_perf)
+#view(EG7Top_ESconv_Diff)
+#EG7Top_ESidea_Diff<-ELA_Subitem_Diff("idea", EG7_TopStudent_essay_perf)
+#view(EG7Top_ESidea_Diff)
+
+##EG7 Domain Cluster Diff
+EG7_CS_Diff<-Practice_Cat_Diff("ela", "Craft and Structure", EG7_student_item_perf)
+EG7_CV_Diff<-Practice_Cat_Diff("ela", "Conventions", EG7_student_item_perf)
+#view(EG7_CV_Diff)
+EG7_KD_Diff<-Practice_Cat_Diff("ela", "Key Ideas and Details", EG7_student_item_perf)
+#view(EG7_KD_Diff)
+EG7_KL_Diff<-Practice_Cat_Diff("ela", "Knowledge of Language", EG7_student_item_perf)
+#view(EG7_KL_Diff)
+EG7_ID_Diff<-Practice_Cat_Diff("ela", "Idea Development", EG7_student_item_perf)
+#view(EG7_ID_Diff)
+EG7_IK_Diff<-Practice_Cat_Diff("ela", "Integration of Knowledge and Ideas", EG7_student_item_perf)
+#view(EG7_IK_Diff)
+EG7_VA_Diff<-Practice_Cat_Diff("ela", "Vocabulary Acquisition and Use", EG7_student_item_perf)
+#view(EG7_VA_Diff)
+EG7_WC_Diff<-Practice_Cat_Diff("ela", "Writing Combined (Conv/Idea Dev)", EG7_student_item_perf)
+
+##EG7 Point Loss by Reporting Category, Text Type, and Domain Cluster
+EG7_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG7_student_item_perf)
+#view(EG7_LA_Loss)
+EG7_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG7_student_item_perf)
+#view(EG7_RE_Loss)
+#EG7Top_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG7_TopStudent_item_perf)
+# view(EG7Top_LA_Loss)
+#EG7Top_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG7_TopStudent_item_perf)
+# view(EG7Top_RE_Loss)
+
+EG7_CS_Loss<-Practice_Cat_Loss("ela", "Craft and Structure", EG7_student_item_perf)
+#view(EG7_CV_Loss)
+EG7_CV_Loss<-Practice_Cat_Loss("ela", "Conventions", EG7_student_item_perf)
+#view(EG7_CV_Loss)
+EG7_KD_Loss<-Practice_Cat_Loss("ela", "Key Ideas and Details", EG7_student_item_perf)
+#view(EG7_KD_Loss)
+EG7_KL_Loss<-Practice_Cat_Loss("ela", "Knowledge of Language", EG7_student_item_perf)
+#view(EG7_KL_Loss)
+EG7_ID_Loss<-Practice_Cat_Loss("ela", "Idea Development", EG7_student_item_perf)
+#view(EG7_ID_Loss)
+EG7_IK_Loss<-Practice_Cat_Loss("ela", "Integration of Knowledge and Ideas", EG7_student_item_perf)
+#view(EG7_IK_Loss)
+EG7_VA_Loss<-Practice_Cat_Loss("ela", "Vocabulary Acquisition and Use", EG7_student_item_perf)
+#view(EG7_VA_Loss)
+EG7_WC_Loss<-Practice_Cat_Loss("ela", "Writing Combined (Conv/Idea Dev)", EG7_student_item_perf)
+
+EG7_ESconv_Loss<-ELA_Subitem_Loss("conv", EG7_student_essay_perf)
+#view(EG7_ESconv_Loss)
+EG7_ESidea_Loss<-ELA_Subitem_Loss("idea", EG7_student_essay_perf)
+#view(EG7_ESidea_Loss)
+#EG7Top_ESconv_Loss<-ELA_Subitem_Loss("conv", EG7_TopStudent_essay_perf)
+#view(EG7Top_ESconv_Loss)
+#EG7Top_ESidea_Loss<-ELA_Subitem_Loss("idea", EG7_TopStudent_essay_perf)
+#view(EG7Top_ESidea_Loss)
+
+
+EG8_FRead_Loss<-ELA_TextType_Loss("Literature", EG8_student_reading_item_perf)
+EG8_NFRead_Loss<-ELA_TextType_Loss("Informational", EG8_student_reading_item_perf)
+EG8_FWrite_Loss<-ELA_TextType_Loss("Literature", EG8_student_writing_item_perf)
+EG8_NFWrite_Loss<-ELA_TextType_Loss("Informational", EG8_student_writing_item_perf)
+EG8_2TextRead_Loss<-ELA_NumText_Loss("More than 1", EG8_student_reading_item_perf)
+EG8_1TextRead_Loss<-ELA_NumText_Loss("1.0", EG8_student_reading_item_perf)
+EG8_2TextWrite_Loss<-ELA_NumText_Loss("More than 1", EG8_student_writing_item_perf)
+EG8_1TextWrite_Loss<-ELA_NumText_Loss("1.0", EG8_student_writing_item_perf)
+
 
 # Exam Content: G8 ELA
 #Reporting Categories: G8 ELA: 
