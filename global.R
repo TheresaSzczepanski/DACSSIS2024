@@ -601,6 +601,137 @@ EG5_writing_item <- EG5_item%>%
   filter(str_detect(`Type`,"ES") & str_detect(`Reporting Category`, "-"))
 #view(EG5_writing_item)
 
+# Exam Content: G6 ELA
+#Reporting Categories: G6 ELA: 
+#"LA":E, 
+#"RE":Reading
+# "WR": Writing,
+#
+# Question Type: G6 ELA:
+#"ES": Essay,  "SR": Selected Response
+
+## G6 ELA Exam Content
+EG6_ES_PTS<-Item_Type_Points("ES", EG6_item)
+EG6_SR_PTS<-Item_Type_Points("SR", EG6_item)
+
+
+
+
+EG6_RE_PTS<-Reporting_Cat_Points("ela", "RE", EG6_item)
+EG6_WR_PTS<-Reporting_Cat_Points("ela", "WR", EG6_item)
+
+## Writing language Points
+EG6_ESLA_item<-EG6_item %>%
+  filter(str_detect(eitem,"LA"))
+EG6_ESLA_pts<-Reporting_Cat_Points("ela", "LA", EG6_ESLA_item)
+
+## Reading Language Points
+EG6_RELA_item<-EG6_item %>%
+  filter(!str_detect(eitem,"LA"))
+EG6_RELA_PTS<-Reporting_Cat_Points("ela", "LA", EG6_RELA_item)
+
+# EG6 Domain Cluster Points
+EG6_CS_PTS<-Practice_Cat_Points("ela", "Craft and Structure", EG6_item)
+
+EG6_CV_PTS<-Practice_Cat_Points("ela", "Conventions", EG6_item)
+
+EG6_KD_PTS<-Practice_Cat_Points("ela", "Key Ideas and Details", EG6_item)
+EG6_KL_PTS<-Practice_Cat_Points("ela", "Knowledge of Language", EG6_item)
+EG6_ID_PTS<-Practice_Cat_Points("ela", "Idea Development", EG6_item)
+EG6_IK_PTS<-Practice_Cat_Points("ela", "Integration of Knowledge and Ideas", EG6_item)
+EG6_VA_PTS<-Practice_Cat_Points("ela", "Vocabulary Acquisition and Use", EG6_item)
+EG6_WC_PTS<-Practice_Cat_Points("ela", "Writing Combined (Conv/Idea Dev)", EG6_item)
+
+## EG6 Text Type and Quantity Points
+
+EG6_FRead_PTS<-ELA_TextType_Points("Literature", EG6_reading_item)
+EG6_NFRead_PTS<-ELA_TextType_Points("Informational", EG6_reading_item)
+EG6_2TextRead_PTS<-ELA_NumText_Points("More than 1", EG6_reading_item)
+EG6_1TextRead_PTS<-ELA_NumText_Points("1.0", EG6_reading_item)
+EG6_FWrite_PTS<-ELA_TextType_Points("Literature", EG6_writing_item)
+EG6_NFWrite_PTS<-ELA_TextType_Points("Informational", EG6_writing_item)
+EG6_2TextWrite_PTS<-ELA_NumText_Points("More than 1", EG6_writing_item)
+EG6_1TextWrite_PTS<-ELA_NumText_Points("1.0", EG6_writing_item)
+
+## EG6 RT-State Diff
+###RT-State Diff by Question Type
+EG6_SR_Diff<-Item_Type_Diff("ela", "SR", EG6_student_item_perf)
+EG6_ES_Diff<-Item_Type_Diff("ela", "ES", EG6_student_item_perf)
+
+EG6_FRead_Diff<-ELA_TextType_Diff("Literature", EG6_student_reading_item_perf)
+EG6_NFRead_Diff<-ELA_TextType_Diff("Informational", EG6_student_reading_item_perf)
+EG6_FWrite_Diff<-ELA_TextType_Diff("Literature", EG6_student_writing_item_perf)
+EG6_NFWrite_Diff<-ELA_TextType_Diff("Informational", EG6_student_writing_item_perf)
+EG6_2TextRead_Diff<-ELA_NumText_Diff("More than 1", EG6_student_reading_item_perf)
+EG6_1TextRead_Diff<-ELA_NumText_Diff("1.0", EG6_student_reading_item_perf)
+EG6_2TextWrite_Diff<-ELA_NumText_Diff("More than 1", EG6_student_writing_item_perf)
+EG6_1TextWrite_Diff<-ELA_NumText_Diff("1.0", EG6_student_writing_item_perf)
+
+##RT-State Diff and %points Lost by LA and RE (need to separate WR LA and RE LA)
+EG6_LA_Diff<-Reporting_Cat_Diff("ela", "LA", EG6_student_item_perf)
+#view(EG6_LA_Diff)
+EG6_RE_Diff<-Reporting_Cat_Diff("ela", "RE", EG6_student_item_perf)
+#view(EG6_RE_Diff)
+EG6_ESconv_Diff<-ELA_Subitem_Diff("conv", EG6_student_essay_perf)
+#view(EG6_ESconv_Diff)
+EG6_ESidea_Diff<-ELA_Subitem_Diff("idea", EG6_student_essay_perf)
+#view(EG6_ESidea_Diff)
+#EG6Top_ESconv_Diff<-ELA_Subitem_Diff("conv", EG6_TopStudent_essay_perf)
+#view(EG6Top_ESconv_Diff)
+#EG6Top_ESidea_Diff<-ELA_Subitem_Diff("idea", EG6_TopStudent_essay_perf)
+#view(EG6Top_ESidea_Diff)
+
+##EG6 Domain Cluster Diff
+EG6_CS_Diff<-Practice_Cat_Diff("ela", "Craft and Structure", EG6_student_item_perf)
+EG6_CV_Diff<-Practice_Cat_Diff("ela", "Conventions", EG6_student_item_perf)
+#view(EG6_CV_Diff)
+EG6_KD_Diff<-Practice_Cat_Diff("ela", "Key Ideas and Details", EG6_student_item_perf)
+#view(EG6_KD_Diff)
+EG6_KL_Diff<-Practice_Cat_Diff("ela", "Knowledge of Language", EG6_student_item_perf)
+#view(EG6_KL_Diff)
+EG6_ID_Diff<-Practice_Cat_Diff("ela", "Idea Development", EG6_student_item_perf)
+#view(EG6_ID_Diff)
+EG6_IK_Diff<-Practice_Cat_Diff("ela", "Integration of Knowledge and Ideas", EG6_student_item_perf)
+#view(EG6_IK_Diff)
+EG6_VA_Diff<-Practice_Cat_Diff("ela", "Vocabulary Acquisition and Use", EG6_student_item_perf)
+#view(EG6_VA_Diff)
+EG6_WC_Diff<-Practice_Cat_Diff("ela", "Writing Combined (Conv/Idea Dev)", EG6_student_item_perf)
+
+##EG6 Point Loss by Reporting Category, Text Type, and Domain Cluster
+EG6_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG6_student_item_perf)
+#view(EG6_LA_Loss)
+EG6_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG6_student_item_perf)
+#view(EG6_RE_Loss)
+#EG6Top_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG6_TopStudent_item_perf)
+# view(EG6Top_LA_Loss)
+#EG6Top_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG6_TopStudent_item_perf)
+# view(EG6Top_RE_Loss)
+
+EG6_CS_Loss<-Practice_Cat_Loss("ela", "Craft and Structure", EG6_student_item_perf)
+#view(EG6_CV_Loss)
+EG6_CV_Loss<-Practice_Cat_Loss("ela", "Conventions", EG6_student_item_perf)
+#view(EG6_CV_Loss)
+EG6_KD_Loss<-Practice_Cat_Loss("ela", "Key Ideas and Details", EG6_student_item_perf)
+#view(EG6_KD_Loss)
+EG6_KL_Loss<-Practice_Cat_Loss("ela", "Knowledge of Language", EG6_student_item_perf)
+#view(EG6_KL_Loss)
+EG6_ID_Loss<-Practice_Cat_Loss("ela", "Idea Development", EG6_student_item_perf)
+#view(EG6_ID_Loss)
+EG6_IK_Loss<-Practice_Cat_Loss("ela", "Integration of Knowledge and Ideas", EG6_student_item_perf)
+#view(EG6_IK_Loss)
+EG6_VA_Loss<-Practice_Cat_Loss("ela", "Vocabulary Acquisition and Use", EG6_student_item_perf)
+#view(EG6_VA_Loss)
+EG6_WC_Loss<-Practice_Cat_Loss("ela", "Writing Combined (Conv/Idea Dev)", EG6_student_item_perf)
+
+EG6_ESconv_Loss<-ELA_Subitem_Loss("conv", EG6_student_essay_perf)
+#view(EG6_ESconv_Loss)
+EG6_ESidea_Loss<-ELA_Subitem_Loss("idea", EG6_student_essay_perf)
+#view(EG6_ESidea_Loss)
+#EG6Top_ESconv_Loss<-ELA_Subitem_Loss("conv", EG6_TopStudent_essay_perf)
+#view(EG6Top_ESconv_Loss)
+#EG6Top_ESidea_Loss<-ELA_Subitem_Loss("idea", EG6_TopStudent_essay_perf)
+#view(EG6Top_ESidea_Loss)
+
 # Exam Content: G7 ELA
 #Reporting Categories: G7 ELA: 
 #"LA":E, 
