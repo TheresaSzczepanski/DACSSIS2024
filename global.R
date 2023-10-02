@@ -577,11 +577,18 @@ EG6_student_essay_perf<-Student_Essay_Perf(6, student_itemDF, EG6_item)
 
 
 #G5 ELA
+
+#G5 ELA Item DF
 EG5_item<-read_item("data/2023ELAItemResults.xlsx", "EG5", "ela")
-#EG5_xWalk<-read_item_xwalk("data/2022MCASItemXWalk.xlsx", "EG5_xwalk", 
-#                           "ela")
-#EG5_item<-Join_Item_Xwalk("ela", EG5_item, EG5_xWalk)
-#EG5_item<-Join_ELAItem_Cluster(EG5_item, ELA_cluster_xwalk)
+EG5_xWalk<-read_item_xwalk("data/2023MCASItemXWalk.xlsx", "EG5_xwalk", 
+                           "ela")
+EG5_item<-Join_Item_Xwalk("ela", EG5_item, EG5_xWalk)
+EG5_item<-Join_ELAItem_Cluster(EG5_item, ELA_cluster_xwalk)
+EG5_reading_item <- EG5_item%>%
+  filter(!str_detect(`Type`,"ES"))
+#view(EG5_reading_item)
+EG5_writing_item <- EG5_item%>%
+  filter(str_detect(`Type`,"ES") & str_detect(`Reporting Category`, "-"))
 view(EG5_item)
 # EG5_item_summary<-EG5_item%>%
 #   mutate(`RT Points Earned` = `item Possible Points`*`RT Percent Points`)%>%
@@ -594,12 +601,151 @@ view(EG5_item)
 #   mutate(`RT-State_Diff` = `RT Percent Earned`-`State Percent Earned`)
 # view(EG5_item_summary)
 
-EG5_reading_item <- EG5_item%>%
+## EG5 Student Performance DF's
+
+EG5_student_perf<-Student_Perf("ela", 5, student_itemDF)
+EG5_student_item_perf<-Student_Item_Perf("ela", EG5_item, EG5_student_perf)
+view(EG5_student_item_perf)
+
+EG5_student_essay_perf<-Student_Essay_Perf(5, student_itemDF, EG5_item)
+view(EG5_student_item_perf)
+EG5_student_reading_item_perf<-EG5_student_item_perf%>%
   filter(!str_detect(`Type`,"ES"))
-#view(EG5_reading_item)
-EG5_writing_item <- EG5_item%>%
-  filter(str_detect(`Type`,"ES") & str_detect(`Reporting Category`, "-"))
-#view(EG5_writing_item)
+EG5_student_writing_item_perf<-EG5_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))
+EG5_student_essay_perf<-Student_Essay_Perf(5, student_itemDF, EG5_item)
+
+## Exam Content/Performance: G5
+# Exam Content: G5 ELA
+#Reporting Categories: G5 ELA: 
+#"LA":E, 
+#"RE":Reading
+# "WR": Writing,
+#
+# Question Type: G5 ELA:
+#"ES": Essay,  "SR": Selected Response
+
+## G5 ELA Exam Content
+EG5_ES_PTS<-Item_Type_Points("ES", EG5_item)
+EG5_SR_PTS<-Item_Type_Points("SR", EG5_item)
+
+
+
+
+EG5_RE_PTS<-Reporting_Cat_Points("ela", "RE", EG5_item)
+EG5_WR_PTS<-Reporting_Cat_Points("ela", "WR", EG5_item)
+
+## Writing language Points
+EG5_ESLA_item<-EG5_item %>%
+  filter(str_detect(eitem,"LA"))
+EG5_ESLA_pts<-Reporting_Cat_Points("ela", "LA", EG5_ESLA_item)
+
+## Reading Language Points
+EG5_RELA_item<-EG5_item %>%
+  filter(!str_detect(eitem,"LA"))
+EG5_RELA_PTS<-Reporting_Cat_Points("ela", "LA", EG5_RELA_item)
+
+# EG5 Domain Cluster Points
+EG5_CS_PTS<-Practice_Cat_Points("ela", "Craft and Structure", EG5_item)
+
+EG5_CV_PTS<-Practice_Cat_Points("ela", "Conventions", EG5_item)
+
+EG5_KD_PTS<-Practice_Cat_Points("ela", "Key Ideas and Details", EG5_item)
+EG5_KL_PTS<-Practice_Cat_Points("ela", "Knowledge of Language", EG5_item)
+EG5_ID_PTS<-Practice_Cat_Points("ela", "Idea Development", EG5_item)
+EG5_IK_PTS<-Practice_Cat_Points("ela", "Integration of Knowledge and Ideas", EG5_item)
+EG5_VA_PTS<-Practice_Cat_Points("ela", "Vocabulary Acquisition and Use", EG5_item)
+EG5_WC_PTS<-Practice_Cat_Points("ela", "Writing Combined (Conv/Idea Dev)", EG5_item)
+
+## EG5 Text Type and Quantity Points
+
+EG5_FRead_PTS<-ELA_TextType_Points("Literature", EG5_reading_item)
+EG5_NFRead_PTS<-ELA_TextType_Points("Informational", EG5_reading_item)
+EG5_2TextRead_PTS<-ELA_NumText_Points("More than 1", EG5_reading_item)
+EG5_1TextRead_PTS<-ELA_NumText_Points("1.0", EG5_reading_item)
+EG5_FWrite_PTS<-ELA_TextType_Points("Literature", EG5_writing_item)
+EG5_NFWrite_PTS<-ELA_TextType_Points("Informational", EG5_writing_item)
+EG5_2TextWrite_PTS<-ELA_NumText_Points("More than 1", EG5_writing_item)
+EG5_1TextWrite_PTS<-ELA_NumText_Points("1.0", EG5_writing_item)
+
+## EG5 RT-State Diff
+###RT-State Diff by Question Type
+EG5_SR_Diff<-Item_Type_Diff("ela", "SR", EG5_student_item_perf)
+EG5_ES_Diff<-Item_Type_Diff("ela", "ES", EG5_student_item_perf)
+
+EG5_FRead_Diff<-ELA_TextType_Diff("Literature", EG5_student_reading_item_perf)
+EG5_NFRead_Diff<-ELA_TextType_Diff("Informational", EG5_student_reading_item_perf)
+EG5_FWrite_Diff<-ELA_TextType_Diff("Literature", EG5_student_writing_item_perf)
+EG5_NFWrite_Diff<-ELA_TextType_Diff("Informational", EG5_student_writing_item_perf)
+EG5_2TextRead_Diff<-ELA_NumText_Diff("More than 1", EG5_student_reading_item_perf)
+EG5_1TextRead_Diff<-ELA_NumText_Diff("1.0", EG5_student_reading_item_perf)
+EG5_2TextWrite_Diff<-ELA_NumText_Diff("More than 1", EG5_student_writing_item_perf)
+EG5_1TextWrite_Diff<-ELA_NumText_Diff("1.0", EG5_student_writing_item_perf)
+
+##RT-State Diff and %points Lost by LA and RE (need to separate WR LA and RE LA)
+EG5_LA_Diff<-Reporting_Cat_Diff("ela", "LA", EG5_student_item_perf)
+#view(EG5_LA_Diff)
+EG5_RE_Diff<-Reporting_Cat_Diff("ela", "RE", EG5_student_item_perf)
+#view(EG5_RE_Diff)
+EG5_ESconv_Diff<-ELA_Subitem_Diff("conv", EG5_student_essay_perf)
+#view(EG5_ESconv_Diff)
+EG5_ESidea_Diff<-ELA_Subitem_Diff("idea", EG5_student_essay_perf)
+#view(EG5_ESidea_Diff)
+#EG5Top_ESconv_Diff<-ELA_Subitem_Diff("conv", EG5_TopStudent_essay_perf)
+#view(EG5Top_ESconv_Diff)
+#EG5Top_ESidea_Diff<-ELA_Subitem_Diff("idea", EG5_TopStudent_essay_perf)
+#view(EG5Top_ESidea_Diff)
+
+##EG5 Domain Cluster Diff
+EG5_CS_Diff<-Practice_Cat_Diff("ela", "Craft and Structure", EG5_student_item_perf)
+EG5_CV_Diff<-Practice_Cat_Diff("ela", "Conventions", EG5_student_item_perf)
+#view(EG5_CV_Diff)
+EG5_KD_Diff<-Practice_Cat_Diff("ela", "Key Ideas and Details", EG5_student_item_perf)
+#view(EG5_KD_Diff)
+EG5_KL_Diff<-Practice_Cat_Diff("ela", "Knowledge of Language", EG5_student_item_perf)
+#view(EG5_KL_Diff)
+EG5_ID_Diff<-Practice_Cat_Diff("ela", "Idea Development", EG5_student_item_perf)
+#view(EG5_ID_Diff)
+EG5_IK_Diff<-Practice_Cat_Diff("ela", "Integration of Knowledge and Ideas", EG5_student_item_perf)
+#view(EG5_IK_Diff)
+EG5_VA_Diff<-Practice_Cat_Diff("ela", "Vocabulary Acquisition and Use", EG5_student_item_perf)
+#view(EG5_VA_Diff)
+EG5_WC_Diff<-Practice_Cat_Diff("ela", "Writing Combined (Conv/Idea Dev)", EG5_student_item_perf)
+
+##EG5 Point Loss by Reporting Category, Text Type, and Domain Cluster
+EG5_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG5_student_item_perf)
+#view(EG5_LA_Loss)
+EG5_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG5_student_item_perf)
+#view(EG5_RE_Loss)
+#EG5Top_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG5_TopStudent_item_perf)
+# view(EG5Top_LA_Loss)
+#EG5Top_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG5_TopStudent_item_perf)
+# view(EG5Top_RE_Loss)
+
+EG5_CS_Loss<-Practice_Cat_Loss("ela", "Craft and Structure", EG5_student_item_perf)
+#view(EG5_CV_Loss)
+EG5_CV_Loss<-Practice_Cat_Loss("ela", "Conventions", EG5_student_item_perf)
+#view(EG5_CV_Loss)
+EG5_KD_Loss<-Practice_Cat_Loss("ela", "Key Ideas and Details", EG5_student_item_perf)
+#view(EG5_KD_Loss)
+EG5_KL_Loss<-Practice_Cat_Loss("ela", "Knowledge of Language", EG5_student_item_perf)
+#view(EG5_KL_Loss)
+EG5_ID_Loss<-Practice_Cat_Loss("ela", "Idea Development", EG5_student_item_perf)
+#view(EG5_ID_Loss)
+EG5_IK_Loss<-Practice_Cat_Loss("ela", "Integration of Knowledge and Ideas", EG5_student_item_perf)
+#view(EG5_IK_Loss)
+EG5_VA_Loss<-Practice_Cat_Loss("ela", "Vocabulary Acquisition and Use", EG5_student_item_perf)
+#view(EG5_VA_Loss)
+EG5_WC_Loss<-Practice_Cat_Loss("ela", "Writing Combined (Conv/Idea Dev)", EG5_student_item_perf)
+
+EG5_ESconv_Loss<-ELA_Subitem_Loss("conv", EG5_student_essay_perf)
+#view(EG5_ESconv_Loss)
+EG5_ESidea_Loss<-ELA_Subitem_Loss("idea", EG5_student_essay_perf)
+#view(EG5_ESidea_Loss)
+#EG5Top_ESconv_Loss<-ELA_Subitem_Loss("conv", EG5_TopStudent_essay_perf)
+#view(EG5Top_ESconv_Loss)
+#EG5Top_ESidea_Loss<-ELA_Subitem_Loss("idea", EG5_TopStudent_essay_perf)
+#view(EG5Top_ESidea_Loss)
 
 # Exam Content: G6 ELA
 #Reporting Categories: G6 ELA: 
