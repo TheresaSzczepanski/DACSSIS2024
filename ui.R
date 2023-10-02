@@ -151,7 +151,7 @@ ui <- dashboardPage(
               <a href='https://mcas.digitalitemlibrary.com/home?subject=Science&grades=Physics&view=ALL'>digital item library. </a> 
                 Download the <a href = 'https://www.doe.mass.edu/mcas/2023/release/hs-physics.pdf'>
                 2023 released paper based items </a>, complete a 
-              <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-science/MCAS_2023_HS_Introductory%20Physics_PT_ADA.pdf'>
+              <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-science/'>
                 paper practice test </a>, or complete a
               <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-science/'>
                 computer based practice test </a>
@@ -387,7 +387,7 @@ ui <- dashboardPage(
                         2022 released paper based items PDF (2023 not available yet) </a> 
                 </li>
                 <li> Download
-              <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-science/MCAS_2023_Gr8_SCI_PT_ADA.pdf'>
+              <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-science/'>
                 Sample Paper Based Test PDF </a>or complete the 
                 <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-science/'> computer based practice test</a> with the
                 scoring key/rubric
@@ -416,7 +416,7 @@ ui <- dashboardPage(
               h3("Available Points by Practice Category"),
               HTML("<p>Explore all released questions by   
                    <a href='https://mcas.digitalitemlibrary.com/home?subject=Science&grades=Grade%208&view=PracticeCategory'>
-                   science practice category</a>. \n Note that there are 15 released items and 26 unreleased
+                   science practice category</a>. \n Note that there are some
                    items which do not have a listed science practice category. </p>"),
               fluidRow(
                 # A static valueBox
@@ -495,7 +495,7 @@ ui <- dashboardPage(
                 <li> Download the
                   <a href = 'https://www.doe.mass.edu/mcas/2022/release/gr5-ste.pdf'> 2022 paper based released questions (2023 not available yet)</a>
                 <li> Download
-              <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-science/MCAS_2023_Gr5_SCI_PT_ADA.pdf'>
+              <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-science/'>
                 Sample Paper Based Test PDF </a> or complete the 
                 <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-science/' computer based practice test</a> with the
                 scoring key/rubric 
@@ -837,7 +837,7 @@ ui <- dashboardPage(
                 <li> Complete and Score released questions in the  
                    <a href='https://mcas.digitalitemlibrary.com/home?subject=Math&grades=Grade%206&view=ALL'>digital item library. </a> 
                 </li>
-                <li> Download <a href = 'https://www.doe.mass.edu/mcas/2023/release/gr6-math.pdf'>
+                <li> Download <a href = 'https://www.doe.mass.edu/mcas/2022/release/gr6-math.pdf'>
                     2022 released items PDF (2023 Unavailable) </a> 
                 </li>
                 <li>Student<a href = 'https://www.doe.mass.edu/mcas/student/2023/grade6/math.html'>
@@ -2747,7 +2747,7 @@ ui <- dashboardPage(
              valueBox(EG5_CV_Diff[1,6], HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue"),
              box( title = "Notes", width = 4, solidHeader = FALSE,
                   HTML("<p> Read more about the <a href =
-                      'https://www.doe.mass.edu/frameworks/ela/2018-05.pdf'>
+                      'https://www.doe.mass.edu/frameworks/ela/2017-06.pdf'>
                        anchor standards </a> in the frameworks</p>"))
              
              
