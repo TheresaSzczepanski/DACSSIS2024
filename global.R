@@ -457,12 +457,26 @@ EG10_student_writing_item_perf<-EG10_student_item_perf%>%
   filter(str_detect(`Type`, "ES"))
 EG10_student_essay_perf<-Student_Essay_Perf(10, student_itemDF, EG10_item)
 
-#G8 ELA
+#EG8 Item DF's
 EG8_item<-read_item("data/2023ELAItemResults.xlsx", "EG8", "ela")
-#EG8_xWalk<-read_item_xwalk("data/2022MCASItemXWalk.xlsx", "EG8_xwalk", 
-#                           "ela")
-#EG8_item<-Join_Item_Xwalk("ela", EG8_item, EG8_xWalk)
-#EG8_item<-Join_ELAItem_Cluster(EG8_item, ELA_cluster_xwalk)
+EG8_xWalk<-read_item_xwalk("data/2023MCASItemXWalk.xlsx", "EG8_xwalk",
+                          "ela")
+EG8_item<-Join_Item_Xwalk("ela", EG8_item, EG8_xWalk)
+EG8_item<-Join_ELAItem_Cluster(EG8_item, ELA_cluster_xwalk)
+
+## EG8 Student Performance DF's
+
+EG8_student_perf<-Student_Perf("ela", 8, student_itemDF)
+EG8_student_item_perf<-Student_Item_Perf("ela", EG8_item, EG8_student_perf)
+view(EG8_student_item_perf)
+
+EG8_student_essay_perf<-Student_Essay_Perf(8, student_itemDF, EG8_item)
+view(EG8_student_item_perf)
+EG8_student_reading_item_perf<-EG8_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))
+EG8_student_writing_item_perf<-EG8_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))
+EG8_student_essay_perf<-Student_Essay_Perf(8, student_itemDF, EG8_item)
 view(EG8_item)
 # EG8_item_summary<-EG8_item%>%
 #   mutate(`RT Points Earned` = `item Possible Points`*`RT Percent Points`)%>%
@@ -557,14 +571,147 @@ EG5_writing_item <- EG5_item%>%
   filter(str_detect(`Type`,"ES") & str_detect(`Reporting Category`, "-"))
 #view(EG5_writing_item)
 
-# Exam Content: G10 ELA
-#Reporting Categories: G10 ELA: 
+# Exam Content: G8 ELA
+#Reporting Categories: G8 ELA: 
 #"LA":E, 
 #"RE":Reading
 # "WR": Writing,
 #
-# Question Type: G10 ELA:
+# Question Type: G8 ELA:
 #"ES": Essay,  "SR": Selected Response
+
+## G8 ELA Exam Content
+EG8_ES_PTS<-Item_Type_Points("ES", EG8_item)
+EG8_SR_PTS<-Item_Type_Points("SR", EG8_item)
+
+
+
+
+EG8_RE_PTS<-Reporting_Cat_Points("ela", "RE", EG8_item)
+EG8_WR_PTS<-Reporting_Cat_Points("ela", "WR", EG8_item)
+
+## Writing language Points
+EG8_ESLA_item<-EG8_item %>%
+  filter(str_detect(eitem,"LA"))
+EG8_ESLA_pts<-Reporting_Cat_Points("ela", "LA", EG8_ESLA_item)
+
+## Reading Language Points
+EG8_RELA_item<-EG8_item %>%
+  filter(!str_detect(eitem,"LA"))
+EG8_RELA_PTS<-Reporting_Cat_Points("ela", "LA", EG8_RELA_item)
+
+# EG8 Domain Cluster Points
+EG8_CS_PTS<-Practice_Cat_Points("ela", "Craft and Structure", EG8_item)
+
+EG8_CV_PTS<-Practice_Cat_Points("ela", "Conventions", EG8_item)
+
+EG8_KD_PTS<-Practice_Cat_Points("ela", "Key Ideas and Details", EG8_item)
+EG8_KL_PTS<-Practice_Cat_Points("ela", "Knowledge of Language", EG8_item)
+EG8_ID_PTS<-Practice_Cat_Points("ela", "Idea Development", EG8_item)
+EG8_IK_PTS<-Practice_Cat_Points("ela", "Integration of Knowledge and Ideas", EG8_item)
+EG8_VA_PTS<-Practice_Cat_Points("ela", "Vocabulary Acquisition and Use", EG8_item)
+EG8_WC_PTS<-Practice_Cat_Points("ela", "Writing Combined (Conv/Idea Dev)", EG8_item)
+
+## EG8 Text Type and Quantity Points
+
+EG8_FRead_PTS<-ELA_TextType_Points("Literature", EG8_reading_item)
+EG8_NFRead_PTS<-ELA_TextType_Points("Informational", EG8_reading_item)
+EG8_2TextRead_PTS<-ELA_NumText_Points("More than 1", EG8_reading_item)
+EG8_1TextRead_PTS<-ELA_NumText_Points("1.0", EG8_reading_item)
+EG8_FWrite_PTS<-ELA_TextType_Points("Literature", EG8_writing_item)
+EG8_NFWrite_PTS<-ELA_TextType_Points("Informational", EG8_writing_item)
+EG8_2TextWrite_PTS<-ELA_NumText_Points("More than 1", EG8_writing_item)
+EG8_1TextWrite_PTS<-ELA_NumText_Points("1.0", EG8_writing_item)
+
+## EG8 RT-State Diff
+###RT-State Diff by Question Type
+EG8_SR_Diff<-Item_Type_Diff("ela", "SR", EG8_student_item_perf)
+EG8_ES_Diff<-Item_Type_Diff("ela", "ES", EG8_student_item_perf)
+
+EG8_FRead_Diff<-ELA_TextType_Diff("Literature", EG8_student_reading_item_perf)
+EG8_NFRead_Diff<-ELA_TextType_Diff("Informational", EG8_student_reading_item_perf)
+EG8_FWrite_Diff<-ELA_TextType_Diff("Literature", EG8_student_writing_item_perf)
+EG8_NFWrite_Diff<-ELA_TextType_Diff("Informational", EG8_student_writing_item_perf)
+EG8_2TextRead_Diff<-ELA_NumText_Diff("More than 1", EG8_student_reading_item_perf)
+EG8_1TextRead_Diff<-ELA_NumText_Diff("1.0", EG8_student_reading_item_perf)
+EG8_2TextWrite_Diff<-ELA_NumText_Diff("More than 1", EG8_student_writing_item_perf)
+EG8_1TextWrite_Diff<-ELA_NumText_Diff("1.0", EG8_student_writing_item_perf)
+
+##RT-State Diff and %points Lost by LA and RE (need to separate WR LA and RE LA)
+EG8_LA_Diff<-Reporting_Cat_Diff("ela", "LA", EG8_student_item_perf)
+#view(EG8_LA_Diff)
+EG8_RE_Diff<-Reporting_Cat_Diff("ela", "RE", EG8_student_item_perf)
+#view(EG8_RE_Diff)
+EG8_ESconv_Diff<-ELA_Subitem_Diff("conv", EG8_student_essay_perf)
+#view(EG8_ESconv_Diff)
+EG8_ESidea_Diff<-ELA_Subitem_Diff("idea", EG8_student_essay_perf)
+#view(EG8_ESidea_Diff)
+#EG8Top_ESconv_Diff<-ELA_Subitem_Diff("conv", EG8_TopStudent_essay_perf)
+#view(EG8Top_ESconv_Diff)
+#EG8Top_ESidea_Diff<-ELA_Subitem_Diff("idea", EG8_TopStudent_essay_perf)
+#view(EG8Top_ESidea_Diff)
+
+##EG8 Domain Cluster Diff
+EG8_CS_Diff<-Practice_Cat_Diff("ela", "Craft and Structure", EG8_student_item_perf)
+EG8_CV_Diff<-Practice_Cat_Diff("ela", "Conventions", EG8_student_item_perf)
+#view(EG8_CV_Diff)
+EG8_KD_Diff<-Practice_Cat_Diff("ela", "Key Ideas and Details", EG8_student_item_perf)
+#view(EG8_KD_Diff)
+EG8_KL_Diff<-Practice_Cat_Diff("ela", "Knowledge of Language", EG8_student_item_perf)
+#view(EG8_KL_Diff)
+EG8_ID_Diff<-Practice_Cat_Diff("ela", "Idea Development", EG8_student_item_perf)
+#view(EG8_ID_Diff)
+EG8_IK_Diff<-Practice_Cat_Diff("ela", "Integration of Knowledge and Ideas", EG8_student_item_perf)
+#view(EG8_IK_Diff)
+EG8_VA_Diff<-Practice_Cat_Diff("ela", "Vocabulary Acquisition and Use", EG8_student_item_perf)
+#view(EG8_VA_Diff)
+EG8_WC_Diff<-Practice_Cat_Diff("ela", "Writing Combined (Conv/Idea Dev)", EG8_student_item_perf)
+
+##EG8 Point Loss by Reporting Category, Text Type, and Domain Cluster
+EG8_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG8_student_item_perf)
+#view(EG8_LA_Loss)
+EG8_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG8_student_item_perf)
+#view(EG8_RE_Loss)
+#EG8Top_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG8_TopStudent_item_perf)
+# view(EG8Top_LA_Loss)
+#EG8Top_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG8_TopStudent_item_perf)
+# view(EG8Top_RE_Loss)
+
+EG8_CS_Loss<-Practice_Cat_Loss("ela", "Craft and Structure", EG8_student_item_perf)
+#view(EG8_CV_Loss)
+EG8_CV_Loss<-Practice_Cat_Loss("ela", "Conventions", EG8_student_item_perf)
+#view(EG8_CV_Loss)
+EG8_KD_Loss<-Practice_Cat_Loss("ela", "Key Ideas and Details", EG8_student_item_perf)
+#view(EG8_KD_Loss)
+EG8_KL_Loss<-Practice_Cat_Loss("ela", "Knowledge of Language", EG8_student_item_perf)
+#view(EG8_KL_Loss)
+EG8_ID_Loss<-Practice_Cat_Loss("ela", "Idea Development", EG8_student_item_perf)
+#view(EG8_ID_Loss)
+EG8_IK_Loss<-Practice_Cat_Loss("ela", "Integration of Knowledge and Ideas", EG8_student_item_perf)
+#view(EG8_IK_Loss)
+EG8_VA_Loss<-Practice_Cat_Loss("ela", "Vocabulary Acquisition and Use", EG8_student_item_perf)
+#view(EG8_VA_Loss)
+EG8_WC_Loss<-Practice_Cat_Loss("ela", "Writing Combined (Conv/Idea Dev)", EG8_student_item_perf)
+
+EG8_ESconv_Loss<-ELA_Subitem_Loss("conv", EG8_student_essay_perf)
+#view(EG8_ESconv_Loss)
+EG8_ESidea_Loss<-ELA_Subitem_Loss("idea", EG8_student_essay_perf)
+#view(EG8_ESidea_Loss)
+#EG8Top_ESconv_Loss<-ELA_Subitem_Loss("conv", EG8_TopStudent_essay_perf)
+#view(EG8Top_ESconv_Loss)
+#EG8Top_ESidea_Loss<-ELA_Subitem_Loss("idea", EG8_TopStudent_essay_perf)
+#view(EG8Top_ESidea_Loss)
+
+
+EG8_FRead_Loss<-ELA_TextType_Loss("Literature", EG8_student_reading_item_perf)
+EG8_NFRead_Loss<-ELA_TextType_Loss("Informational", EG8_student_reading_item_perf)
+EG8_FWrite_Loss<-ELA_TextType_Loss("Literature", EG8_student_writing_item_perf)
+EG8_NFWrite_Loss<-ELA_TextType_Loss("Informational", EG8_student_writing_item_perf)
+EG8_2TextRead_Loss<-ELA_NumText_Loss("More than 1", EG8_student_reading_item_perf)
+EG8_1TextRead_Loss<-ELA_NumText_Loss("1.0", EG8_student_reading_item_perf)
+EG8_2TextWrite_Loss<-ELA_NumText_Loss("More than 1", EG8_student_writing_item_perf)
+EG8_1TextWrite_Loss<-ELA_NumText_Loss("1.0", EG8_student_writing_item_perf)
+
 
 ## G10 ELA Exam Content
 EG10_ES_PTS<-Item_Type_Points("ES", EG10_item)
