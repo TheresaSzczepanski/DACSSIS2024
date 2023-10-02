@@ -450,7 +450,7 @@ EG10_writing_item <- EG10_item%>%
 ## ELA Data Frames
 EG10_student_perf<-Student_Perf("ela", 10, student_itemDF)
 EG10_student_item_perf<-Student_Item_Perf("ela", EG10_item, EG10_student_perf)
-view(EG10_student_item_perf)
+#view(EG10_student_item_perf)
 EG10_student_reading_item_perf<-EG10_student_item_perf%>%
   filter(!str_detect(`Type`,"ES"))
 EG10_student_writing_item_perf<-EG10_student_item_perf%>%
@@ -475,7 +475,7 @@ EG8_writing_item <- EG8_item%>%
 
 EG8_student_perf<-Student_Perf("ela", 8, student_itemDF)
 EG8_student_item_perf<-Student_Item_Perf("ela", EG8_item, EG8_student_perf)
-view(EG8_student_item_perf)
+#view(EG8_student_item_perf)
 
 EG8_student_essay_perf<-Student_Essay_Perf(8, student_itemDF, EG8_item)
 view(EG8_student_item_perf)
@@ -527,7 +527,7 @@ EG7_writing_item <- EG7_item%>%
 
 EG7_student_perf<-Student_Perf("ela", 7, student_itemDF)
 EG7_student_item_perf<-Student_Item_Perf("ela", EG7_item, EG7_student_perf)
-view(EG7_student_item_perf)
+#view(EG7_student_item_perf)
 
 EG7_student_essay_perf<-Student_Essay_Perf(7, student_itemDF, EG7_item)
 view(EG7_student_item_perf)
@@ -537,13 +537,18 @@ EG7_student_writing_item_perf<-EG7_student_item_perf%>%
   filter(str_detect(`Type`, "ES"))
 EG7_student_essay_perf<-Student_Essay_Perf(7, student_itemDF, EG7_item)
 
-#G6 ELA
+#G6 ELA Item DF
 EG6_item<-read_item("data/2023ELAItemResults.xlsx", "EG6", "ela")
-#EG6_xWalk<-read_item_xwalk("data/2022MCASItemXWalk.xlsx", "EG6_xwalk", 
-#                           "ela")
-#EG6_item<-Join_Item_Xwalk("ela", EG6_item, EG6_xWalk)
-#EG6_item<-Join_ELAItem_Cluster(EG6_item, ELA_cluster_xwalk)
-#view(EG6_item)
+EG6_xWalk<-read_item_xwalk("data/2023MCASItemXWalk.xlsx", "EG6_xwalk", 
+                           "ela")
+EG6_item<-Join_Item_Xwalk("ela", EG6_item, EG6_xWalk)
+EG6_item<-Join_ELAItem_Cluster(EG6_item, ELA_cluster_xwalk)
+EG6_reading_item <- EG6_item%>%
+  filter(!str_detect(`Type`,"ES"))
+#view(EG6_reading_item)
+EG6_writing_item <- EG6_item%>%
+  filter(str_detect(`Type`,"ES") & str_detect(`Reporting Category`, "-"))
+
 # EG6_item_summary<-EG6_item%>%
 #   mutate(`RT Points Earned` = `item Possible Points`*`RT Percent Points`)%>%
 #   mutate(`State Points Earned` = `item Possible Points`*`State Percent Points`)%>%
@@ -555,12 +560,21 @@ EG6_item<-read_item("data/2023ELAItemResults.xlsx", "EG6", "ela")
 #   mutate(`RT-State_Diff` = `RT Percent Earned`-`State Percent Earned`)
 # view(EG6_item_summary)
 
-EG6_reading_item <- EG6_item%>%
+## EG6 Student Performance DF's
+
+EG6_student_perf<-Student_Perf("ela", 6, student_itemDF)
+EG6_student_item_perf<-Student_Item_Perf("ela", EG6_item, EG6_student_perf)
+view(EG6_student_item_perf)
+
+EG6_student_essay_perf<-Student_Essay_Perf(6, student_itemDF, EG6_item)
+view(EG6_student_item_perf)
+EG6_student_reading_item_perf<-EG6_student_item_perf%>%
   filter(!str_detect(`Type`,"ES"))
-#view(EG6_reading_item)
-EG6_writing_item <- EG6_item%>%
-  filter(str_detect(`Type`,"ES") & str_detect(`Reporting Category`, "-"))
-#view(EG6_writing_item)
+EG6_student_writing_item_perf<-EG6_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))
+EG6_student_essay_perf<-Student_Essay_Perf(6, student_itemDF, EG6_item)
+
+
 
 #G5 ELA
 EG5_item<-read_item("data/2023ELAItemResults.xlsx", "EG5", "ela")
