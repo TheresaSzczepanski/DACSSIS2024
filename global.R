@@ -436,7 +436,7 @@ EG10_item<-read_item("data/2023ELAItemResults.xlsx", "EG10", "ela")
 EG10_xWalk<-read_item_xwalk("data/2023MCASItemXWalk.xlsx", "EG10_xwalk", "ela")
 EG10_item<-Join_Item_Xwalk("ela", EG10_item, EG10_xWalk)
 EG10_item<-Join_ELAItem_Cluster(EG10_item, ELA_cluster_xwalk)
-view(EG10_item)
+#view(EG10_item)
 
 
 EG10_reading_item <- EG10_item%>%
@@ -478,7 +478,7 @@ EG8_student_item_perf<-Student_Item_Perf("ela", EG8_item, EG8_student_perf)
 #view(EG8_student_item_perf)
 
 EG8_student_essay_perf<-Student_Essay_Perf(8, student_itemDF, EG8_item)
-view(EG8_student_item_perf)
+#view(EG8_student_essay_perf)
 EG8_student_reading_item_perf<-EG8_student_item_perf%>%
   filter(!str_detect(`Type`,"ES"))
 EG8_student_writing_item_perf<-EG8_student_item_perf%>%
@@ -567,7 +567,7 @@ EG6_student_item_perf<-Student_Item_Perf("ela", EG6_item, EG6_student_perf)
 view(EG6_student_item_perf)
 
 EG6_student_essay_perf<-Student_Essay_Perf(6, student_itemDF, EG6_item)
-view(EG6_student_item_perf)
+#view(EG6_student_essay_perf)
 EG6_student_reading_item_perf<-EG6_student_item_perf%>%
   filter(!str_detect(`Type`,"ES"))
 EG6_student_writing_item_perf<-EG6_student_item_perf%>%
@@ -589,7 +589,7 @@ EG5_reading_item <- EG5_item%>%
 #view(EG5_reading_item)
 EG5_writing_item <- EG5_item%>%
   filter(str_detect(`Type`,"ES") & str_detect(`Reporting Category`, "-"))
-view(EG5_item)
+#view(EG5_item)
 # EG5_item_summary<-EG5_item%>%
 #   mutate(`RT Points Earned` = `item Possible Points`*`RT Percent Points`)%>%
 #   mutate(`State Points Earned` = `item Possible Points`*`State Percent Points`)%>%
@@ -605,10 +605,10 @@ view(EG5_item)
 
 EG5_student_perf<-Student_Perf("ela", 5, student_itemDF)
 EG5_student_item_perf<-Student_Item_Perf("ela", EG5_item, EG5_student_perf)
-view(EG5_student_item_perf)
+#view(EG5_student_item_perf)
 
 EG5_student_essay_perf<-Student_Essay_Perf(5, student_itemDF, EG5_item)
-view(EG5_student_item_perf)
+#view(EG5_student_essay_perf)
 EG5_student_reading_item_perf<-EG5_student_item_perf%>%
   filter(!str_detect(`Type`,"ES"))
 EG5_student_writing_item_perf<-EG5_student_item_perf%>%
