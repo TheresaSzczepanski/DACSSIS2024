@@ -182,12 +182,29 @@ ui <- dashboardPage(
                 # valueBox(4,  "no category reported ", color = "aqua")
 
               ),
+              h3("Available Points by Information Type"),
+              fluidRow(
+                # A static valueBox
+                valueBox(SG9_Vis_PTS, HTML("<p> Visual </p>"), icon=icon("chart-line")),
+                
+                valueBox(SG9_Des_PTS, HTML("<p> Desciptive (words/symbols only)"),icon=icon("align-justify") ),
+                
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                             Student
+                              <a href = 'https://www.doe.mass.edu/mcas/student/2023/hs/physics.html'>
+                              released Constructed Response </a> and Scoring Guidelines
+
+                            </p>"))
+                
+              ),
+              
               h3("Available Points by Question Type"),
               fluidRow(
                 # A static valueBox
-                valueBox(SG9_SR_PTS[1,2], HTML("<p> Selected <br> Response </p>"), icon=icon("square-check")),
+                valueBox(SG9_SR_PTS[1,2], HTML("<p> Selected <br> Response </p>"), icon=icon("square-check"), color = "light-blue"),
 
-                valueBox(SG9_CR_PTS[1,2], HTML("<p> Constructed <br> Response </p>"),icon=icon("pencil") ),
+                valueBox(SG9_CR_PTS[1,2], HTML("<p> Constructed <br> Response </p>"),icon=icon("pencil"), color = "light-blue" ),
 
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p>
@@ -198,6 +215,7 @@ ui <- dashboardPage(
                             </p>"))
 
                 )
+              
 
             ),
       #G9 Physics Performance
@@ -230,13 +248,33 @@ ui <- dashboardPage(
                 valueBox(paste(SG9_ERM_Diff[1,6]), HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "light-blue"),
                 valueBox(paste(SG9_IQ_Diff[1,6]), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue")
               ),
+    
+      
+      h3("RT-State Diff by: Information Type"),
+      
+      fluidRow(
+        # A static valueBox
+        valueBox(SG9_Vis_PTS, HTML("<p> Visual </p>"), icon=icon("chart-line")),
+        
+        valueBox(SG9_Des_PTS, HTML("<p> Desciptive (words/symbols only)"),icon=icon("align-justify") )
+        
+        
+      ),
+      
               
               h3("RT-State Diff by: Question Type"),
               fluidRow(
                 # A static valueBox
                 valueBox(SG9_SR_Diff[1,6], HTML("<p> Selected <br> Response </p>"), icon=icon("square-check")),
 
-                valueBox(SG9_CR_Diff[1,6], HTML("<p> Constructed <br> Response </p>"),icon=icon("pencil") )
+                valueBox(SG9_CR_Diff[1,6], HTML("<p> Constructed <br> Response </p>"),icon=icon("pencil") ),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                             Student
+                              <a href = 'https://www.doe.mass.edu/mcas/student/2023/hs/physics.html'>
+                              released Constructed Response </a> and Scoring Guidelines
+
+                            </p>"))
 
               )
       ),
@@ -412,6 +450,17 @@ ui <- dashboardPage(
                 valueBox(SG8_TE_PTS[1,2], HTML("<p> Technology & <br> Engineering</p>"), icon = icon("bridge"), color = "blue")
               ),
               
+              h3("Available Points by Grade Level"),
+              
+              fluidRow(
+                # A static valueBox
+                valueBox(SG8_G8_PTS[1,2], HTML("<p> G8 </p>"), icon = icon("8"), color = "light-blue"),
+                valueBox(SG8_G7_PTS[1,2], HTML("<p> G7 </p>"), icon = icon("7"), color = "light-blue"),
+                valueBox(SG8_G6_PTS[1,2], HTML("<p> G6 </p>"), icon = icon("6"), color = "light-blue")
+                # valueBox(4,  "no category reported ", color = "aqua")
+                
+              ),
+              
               
               h3("Available Points by Practice Category"),
               HTML("<p>Explore all released questions by   
@@ -420,9 +469,9 @@ ui <- dashboardPage(
                    items which do not have a listed science practice category. </p>"),
               fluidRow(
                 # A static valueBox
-                valueBox(SG8_ERM_PTS[1,2], HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "light-blue"),
-                valueBox(SG8_MD_PTS[1,2], HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "light-blue"),
-                valueBox(SG8_IQ_PTS[1,2], HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue")
+                valueBox(SG8_ERM_PTS[1,2], HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "aqua"),
+                valueBox(SG8_MD_PTS[1,2], HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "aqua"),
+                valueBox(SG8_IQ_PTS[1,2], HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "aqua")
                 # valueBox(4,  "no category reported ", color = "aqua")
 
               ),
@@ -431,9 +480,9 @@ ui <- dashboardPage(
               h3("Available Points by Question Type"),
               fluidRow(
                 # A static valueBox
-                valueBox(SG8_SR_PTS[1,2], HTML("<p> Selected <br> Response </p>"), icon=icon("square-check")),
+                valueBox(SG8_SR_PTS[1,2], HTML("<p> Selected <br> Response </p>"), icon=icon("square-check"), color = "light-blue"),
 
-                valueBox(SG8_CR_PTS[1,2], HTML("<p> Constructed <br> Response </p>"),icon=icon("pencil") )
+                valueBox(SG8_CR_PTS[1,2], HTML("<p> Constructed <br> Response </p>"),icon=icon("pencil"), color = "light-blue" )
 
               )
       ),
@@ -521,6 +570,16 @@ ui <- dashboardPage(
                 valueBox(SG5_TE_PTS[1,2], HTML("<p> Technology & <br> Engineering</p>"), icon = icon("bridge"), color = "blue")
               ),
               
+              h3("Available Points by Grade Level"),
+              
+              fluidRow(
+                # A static valueBox
+                valueBox(SG5_G5_PTS[1,2], HTML("<p> G5 </p>"), icon = icon("5"), color = "light-blue"),
+                valueBox(SG5_G4_PTS[1,2], HTML("<p> G4 </p>"), icon = icon("4"), color = "light-blue"),
+                valueBox(SG5_G3_PTS[1,2], HTML("<p> G3 </p>"), icon = icon("3"), color = "light-blue")
+                # valueBox(4,  "no category reported ", color = "aqua")
+                
+              ),
               
               h3("Available Points by Practice Category"),
               HTML("<p>Explore all released questions by   
@@ -529,18 +588,18 @@ ui <- dashboardPage(
                    items which do not have a listed science practice category. </p>"),
                fluidRow(
                  # A static valueBox
-                valueBox(SG5_ERM_PTS[1,2], HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "light-blue"),
-                valueBox(SG5_MD_PTS[1,2], HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "light-blue"),
-                valueBox(SG5_IQ_PTS[1,2], HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue")
+                valueBox(SG5_ERM_PTS[1,2], HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart")),
+                valueBox(SG5_MD_PTS[1,2], HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator")),
+                valueBox(SG5_IQ_PTS[1,2], HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"))
                 # valueBox(4,  "no category reported ", color = "aqua")
 
               ),
               h3("Available Points by Question Type"),
               fluidRow(
                 # A static valueBox
-                valueBox(SG5_SR_PTS[1,2], HTML("<p> Selected <br> Response </p>"), icon=icon("square-check")),
+                valueBox(SG5_SR_PTS[1,2], HTML("<p> Selected <br> Response </p>"), icon=icon("square-check"), color = "light-blue"),
 
-                valueBox(SG5_CR_PTS[1,2], HTML("<p> Constructed <br> Response </p>"),icon=icon("pencil") )
+                valueBox(SG5_CR_PTS[1,2], HTML("<p> Constructed <br> Response </p>"),icon=icon("pencil"), color = "light-blue" )
 
               )
       ),
