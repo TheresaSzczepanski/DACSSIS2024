@@ -9,6 +9,10 @@ view(student_itemDF)
 ### To-Do: NOTE!! HS STE does not have values on the constructed response, manually upadted in files
 SG11_item <-read_item("data/MCAS_2023_STE_HS_Item_Analysis_Template_V1.xlsx", "High School Biology", "science")
 #view(SG11_item)
+SG11_standard_xWalk <- read_standardXwalk("data/2023MCASItemXWalk.xlsx", "SG11_standard_xwalk")
+#view(SG11_standard_xWalk)
+SG11_item <- left_join(SG11_item, SG11_standard_xWalk, by = "Standard")
+#view(SG11_item)
 
 #G11 Biology Exam Content Page
 SG11_CR_PTS<-Item_Type_Points("CR", SG11_item)
@@ -25,18 +29,19 @@ SG11_MO_PTS<-Reporting_Cat_Points("science", "Molecules to Organisms", SG11_item
 SG9_item <-read_item("data/MCAS_2023_STE_HS_Item_Analysis_Template_V1.xlsx", "High School Physics", "science")
 #view(SG9_item)
 SG9_standard_xWalk <- read_standardXwalk("data/2023MCASItemXWalk.xlsx", "SG9_standard_xwalk")
-view(SG9_standard_xWalk)
+#view(SG9_standard_xWalk)
 
 SG9_item<-left_join(SG9_item, SG9_standard_xWalk, by = "Standard")
-view(SG9_item)
+#view(SG9_item)
 
 SG9_item_xWalk <- read_item_xwalk("data/2023MCASItemXWalk.xlsx", "SG9_item_xwalk", "science")
-view(SG9_item_xWalk)
+#view(SG9_item_xWalk)
 
 SG9_item <-left_join(SG9_item, SG9_item_xWalk, by = "sitem")
 view(SG9_item)
 
 #Reporting Categories: Intro Physics: "MF", "EN", "WA" for science grade levels
+
 SG9_CR_PTS<-Item_Type_Points("CR", SG9_item)
 SG9_SR_PTS<-Item_Type_Points("SR", SG9_item)
 SG9_MD_PTS<-Practice_Cat_Points("science", "B. Mathematics and Data", SG9_item)
@@ -45,7 +50,11 @@ SG9_IQ_PTS<-Practice_Cat_Points("science", "A. Investigations and Questioning", 
 SG9_MF_PTS<-Reporting_Cat_Points("science", "Motion, Forces, and Interactions", SG9_item)
 SG9_EN_PTS<-Reporting_Cat_Points("science", "Energy", SG9_item)
 SG9_WA_PTS<-Reporting_Cat_Points("science", "Waves", SG9_item)
-
+SG9_Rep_PTS <-Rep_Info_Points(SG9_item)
+view(SG9_Rep_PTS)
+#SG9_Graph_PTS <-Rep_Info_Points("Graph", SG9_item)
+SG9_Vis_PTS = SG9_Rep_PTS[1,2] + SG9_Rep_PTS[2,2] + SG9_Rep_PTS[3,2] + SG9_Rep_PTS[5,2] + SG9_Rep_PTS[6,2]
+SG9_Des_PTS = SG9_Rep_PTS[4, 2]
 # Create SG9 Student Item Dataframe
 # SG9 Student Diff Performance Page
 SG9_student_perf<-Student_Perf("physics", 9, student_itemDF)
@@ -113,7 +122,13 @@ SG9Mid_WA_Diff<-Reporting_Cat_Diff("science", "Waves", SG9_MidStudent_item_perf)
 
 # SG8 Exam Content Page and # SG8 Student Diff Performance Page
 SG8_item <-read_item("data/MCAS_2023_MS_STE_Gr_5_8_Item_Analysis_Template_V2.xlsx", "Gr. 8 CBT (SCI08)", "science")
-#view(SG8_item)
+view(SG8_item)
+
+SG8_standard_xWalk <- read_standardXwalk("data/2023MCASItemXWalk.xlsx", "SG8_standard_xwalk")
+view(SG8_standard_xWalk)
+
+SG8_item<-left_join(SG8_item, SG8_standard_xWalk, by = "Standard")
+view(SG8_item)
 
 SG8_student_perf<-Student_Perf("science", 8, student_itemDF)
 #view(SG8_student_perf)
@@ -126,6 +141,11 @@ SG8_student_item_perf<-Student_Item_Perf("science", SG8_item, SG8_student_perf)
 #Reporting Categories: G8STE: "MF", "EN", "WA" for science grade levels
 #G8 STE: "ES", ""LS", PS", "TE"
 #view(SG8_student_item_perf)
+
+SG8_G8_PTS <- Grade_Level_Points(SG8_item, 8)
+SG8_G7_PTS <- Grade_Level_Points(SG8_item, 7)
+SG8_G6_PTS <- Grade_Level_Points(SG8_item, 6)
+
 SG8_CR_PTS<-Item_Type_Points("CR", SG8_item)
 SG8_CR_Diff<-Item_Type_Diff("science", "CR", SG8_student_item_perf)
 
@@ -153,7 +173,19 @@ SG8_TE_Diff<-Reporting_Cat_Diff("science", "Technology/Engineering", SG8_student
 # SG5 Exam Content Page
 SG5_item <-read_item("data/MCAS_2023_MS_STE_Gr_5_8_Item_Analysis_Template_V2.xlsx", "Gr. 5 CBT (SCI05)", "science")
 #view(SG5_item)
+
+SG5_standard_xWalk <- read_standardXwalk("data/2023MCASItemXWalk.xlsx", "SG5_standard_xwalk")
+#view(SG5_standard_xWalk)
+
+SG5_item<-left_join(SG5_item, SG5_standard_xWalk, by = "Standard")
+view(SG5_item)
+
 #G5 STE: "ES", ""LS", PS", "TE"
+
+SG5_G5_PTS <- Grade_Level_Points(SG5_item, 5)
+SG5_G4_PTS <- Grade_Level_Points(SG5_item, 4)
+SG5_G3_PTS <- Grade_Level_Points(SG5_item, 3)
+
 SG5_CR_PTS<-Item_Type_Points("CR", SG5_item)
 SG5_SR_PTS<-Item_Type_Points("SR", SG5_item)
 SG5_MD_PTS<-Practice_Cat_Points("science", "B. Mathematics and Data", SG5_item)

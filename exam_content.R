@@ -25,7 +25,15 @@ Item_Type_Points <-function(itemType, subjectItemDF){
   }
 }       
 
-
+## Function for available points by Grade Level
+Grade_Level_Points <-function(subjectItemDF, gradeLevel){
+  subjectItemDF%>%
+    select(`Grade Level`, `item Possible Points`)%>%
+      group_by(`Grade Level`)%>%
+      summarize(available_points = sum(`item Possible Points`, na.rm=TRUE))%>%
+      filter(`Grade Level` == gradeLevel)
+  
+}  
 
 ##Function for available points by practice category/cluster
 
@@ -86,6 +94,15 @@ Reporting_Cat_Points <-function(subject, reportingCategory, subjectItemDF){
     
   }
 }
+
+## SG9 xWalk Points Functions--------------------------------------------------
+Rep_Info_Points<-function(subjectItemDF){
+  subjectItemDF%>%
+    select(`sitem`, `item Possible Points`, `Representation of Information`)%>%
+    group_by(`Representation of Information`)%>%
+    summarise(available_points = sum(`item Possible Points`, na.rm = TRUE))#%>%
+    #filter(`Representation of Information` == representation)
+}
 ## ELA xWalk Points Functions--------------------------------------------------
 # Fiction-Non
 ELA_TextType_Points<-function(value, subjectItemDF){
@@ -106,3 +123,4 @@ ELA_NumText_Points<-function(value, subjectItemDF){
     summarise(available_points = sum(`item Possible Points`, na.rm=TRUE))%>%
     filter(`Num Texts` == value)
 }
+
