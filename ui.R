@@ -212,9 +212,9 @@ ui <- dashboardPage(
                 # A static valueBox
                 #valueBox( scales::percent(22/42), "Motions, Forces, \n and Interactions", icon = icon("rocket"), color = "blue"),
 
-                valueBox(paste(SG9_MF_Diff[1,6], "%"), HTML("<p> Motions, Forces, <br> and Interactions </p>"), icon = icon("rocket"), color = "blue"),
-                valueBox( paste(SG9_EN_Diff[1,6], "%"),"Energy",icon = icon("atom"), color = "blue"),
-                valueBox(paste(SG9_WA_Diff[1,6], "%"), "Waves", icon = icon("wave-square"), color = "blue")
+                valueBox(paste(SG9_MF_Diff[1,6] ), HTML("<p> Motions, Forces, <br> and Interactions </p>"), icon = icon("rocket"), color = "blue"),
+                valueBox( paste(SG9_EN_Diff[1,6] ),"Energy",icon = icon("atom"), color = "blue"),
+                valueBox(paste(SG9_WA_Diff[1,6] ), "Waves", icon = icon("wave-square"), color = "blue")
               ),
               
               
@@ -226,9 +226,9 @@ ui <- dashboardPage(
               fluidRow(
                 # A static valueBox
 
-                valueBox(paste(SG9_MD_Diff[1,6],  "%"), HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "light-blue"),
-                valueBox(paste(SG9_ERM_Diff[1,6],  "%"), HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "light-blue"),
-                valueBox(paste(SG9_IQ_Diff[1,6],  "%"), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue")
+                valueBox(paste(SG9_MD_Diff[1,6]), HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "light-blue"),
+                valueBox(paste(SG9_ERM_Diff[1,6]), HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "light-blue"),
+                valueBox(paste(SG9_IQ_Diff[1,6]), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue")
               ),
               
               h3("RT-State Diff by: Question Type"),

@@ -124,7 +124,7 @@ read_item_xwalk<-function(file_path, sheet_name, subject){
   )
   if(subject == "science"){
     read_excel(file_path, sheet = sheet_name, 
-               skip = 1, col_names= c(subject_item, "Practice Category")) %>%
+               skip = 1, col_names= c(subject_item, "Representation of Information")) %>%
       mutate(sitem= as.character(sitem))%>%
       separate(c(1), c("sitem", "delete"))%>%
       select(!contains("delete"))%>%
@@ -174,6 +174,12 @@ Join_Item_Xwalk<-function(subject, subjectItemDF, subjectItemXwalkDF){
   else if(subject == "math"){
     left_join(subjectItemDF, subjectItemXwalkDF, "mitem")
   }
+}
+
+##Function to Read in Standard xWalk-------------------------------------------
+## ToDo (migrade ELA cluster xWalk function to this!)
+read_standardXwalk <-function(standard_file_path, standard_sheet_name){
+  read_excel(standard_file_path, standard_sheet_name)
 }
 
 ##Function to Read in ELA Cluster xWalk---------------------------------------

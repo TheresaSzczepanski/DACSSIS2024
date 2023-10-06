@@ -24,6 +24,17 @@ SG11_MO_PTS<-Reporting_Cat_Points("science", "Molecules to Organisms", SG11_item
 # SG9 Physics Exam Content Page
 SG9_item <-read_item("data/MCAS_2023_STE_HS_Item_Analysis_Template_V1.xlsx", "High School Physics", "science")
 #view(SG9_item)
+SG9_standard_xWalk <- read_standardXwalk("data/2023MCASItemXWalk.xlsx", "SG9_standard_xwalk")
+view(SG9_standard_xWalk)
+
+SG9_item<-left_join(SG9_item, SG9_standard_xWalk, by = "Standard")
+view(SG9_item)
+
+SG9_item_xWalk <- read_item_xwalk("data/2023MCASItemXWalk.xlsx", "SG9_item_xwalk", "science")
+view(SG9_item_xWalk)
+
+SG9_item <-left_join(SG9_item, SG9_item_xWalk, by = "sitem")
+view(SG9_item)
 
 #Reporting Categories: Intro Physics: "MF", "EN", "WA" for science grade levels
 SG9_CR_PTS<-Item_Type_Points("CR", SG9_item)
