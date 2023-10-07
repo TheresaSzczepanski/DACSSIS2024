@@ -976,7 +976,8 @@ ui <- dashboardPage(
                              Weakest Items </a> 
 
                             </p>"),
-                     HTML("<p> Algebra and Functions Items account for <b> 35% of available </b> points but <b> 48% </b> of points <b>lost by Rising Tide </b> Students 
+                     HTML("<p> Algebra and Functions Items account for <b> 35% of available 
+                            </b> points but <b> 48% </b> of points <b>lost by Rising Tide </b> Students 
                       </p>")
                      
                 )
@@ -986,7 +987,8 @@ ui <- dashboardPage(
                 valueBox(MG10_NQ_Diff[1,6], HTML(" <p> Numbers and <br> Quantity </p>"), icon = icon("plus-minus"), color = "blue"),
                 valueBox(MG10_SP_Diff[1,6], HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "red"),
                 box(  width = 4, solidHeader = FALSE,
-                      HTML("<p> Statistics and Probability Items account for <b> 17% of available </b> points but <b> 24% </b> of points <b>lost by Rising Tide's Top Performing StudentsStudents </b>
+                      HTML("<p> Statistics and Probability Items account for <b> 17% of available </b> points but 
+                            <b> 24% </b> of points <b>lost by Rising Tide's Top Performing Students </b>
                       </p>")
                 )
               ),
@@ -1136,7 +1138,8 @@ ui <- dashboardPage(
                      HTML("<p>
                               <a href = 'https://docs.google.com/document/d/1eI6Jx-KwERQSz03uAVPv_S4w0p80Iow967Mme1kM8JQ/edit?usp=drive_link'>
                               Released MCAS Items by Standard </a> (Next Generation MCAS 2019-2023)
-                            </p>")
+                              
+                          </p>")
                 )
                 
               ),
@@ -1175,14 +1178,54 @@ ui <- dashboardPage(
                              Weakest Items </a> 
 
                             </p>")
+                       )
+              
+            ),
+              fluidRow(
+                  
+                box( width = 4, solidHeader = FALSE,
+                     
+                     HTML("<p> Expressions and Equations items account for <b> 24%  </b> of points available 
+                            but only <b> 7% </b> of points lost by Rising Tide's <b> Top Performing Students </b> 
+                      </p>")
+                     
+                ),
+                     
+               
+                
+                
+                
+               
+                     
+                
+                
+                box( width = 4, solidHeader = FALSE,
+                     
+                     HTML("<p> <b> Top Performing Students </b> lost a higher percentage </b> of points on
+                              <b> Ratio and Proportional Reasoning items </b>, while,
+                              <b> Low Performing Students </b> lost   <b> 21% </b> of their points on 
+                                  <b> Number System Items </b> compared to only  <b> 7%  </b> of points lost 
+                            lost by Rising Tide's <b> Top Performing Students </b> 
+                      </p>")
+                     
+                ),
+                
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p> Statistics and Probability Items account for <b> 20% of available </b> 
+                          points but <b> 30% </b> of points <b>lost by Rising Tide's Top Performing Students </b>
+                          </p>")
+                     
                      
                 )
+               
+                
+                
               ),
               
               fluidRow(
                 valueBox(MG7_NS_Diff[1,6], "Number System", icon = icon("less-than-equal"), color = "blue"),
-                valueBox(MG7_RP_Diff[1,6], HTML("<p> Ratios and <br> Proportions </p>"), icon = icon("chart-pie"), color = "blue"),
-                valueBox(MG7_SP_Diff[1,6], HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "blue")
+                valueBox(MG7_RP_Diff[1,6], HTML("<p> Ratios and <br> Proportions </p>"), icon = icon("chart-pie"), color = "red"),
+                valueBox(MG7_SP_Diff[1,6], HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "red")
               ),
               
               h3("RT-State Diff by: Question Type"),
@@ -1259,7 +1302,7 @@ ui <- dashboardPage(
               
               
               fluidRow(
-                valueBox(MG6_EE_Diff[1,6], HTML("<p>Expressions <br> and Equations</p>"), icon = icon("equals"), color = "blue"),
+                valueBox(MG6_EE_Diff[1,6], HTML("<p>Expressions <br> and Equations</p>"), icon = icon("equals"), color = "red"),
                 valueBox( MG6_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue"),
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p>
@@ -1275,7 +1318,7 @@ ui <- dashboardPage(
               fluidRow(
                 valueBox(MG6_NS_Diff[1,6], "Number System", icon = icon("less-than-equal"), color = "blue"),
                 valueBox(MG6_RP_Diff[1,6], HTML("<p> Ratios and <br> Proportions </p>"), icon = icon("chart-pie"), color = "blue"),
-                valueBox(MG6_SP_Diff[1,6], HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "blue")
+                valueBox(MG6_SP_Diff[1,6], HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "red")
               ),
               
               h3("RT-State Diff by: Question Type"),
@@ -1356,7 +1399,7 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(MG5_GE_Diff[1,6], "Geometry", icon = icon("shapes"), color = "blue"),
-                valueBox( MG5_MD_Diff[1,6],HTML("<p> Measurement <br> and Data </p>"),icon = icon("ruler"), color = "blue"),
+                valueBox( MG5_MD_Diff[1,6],HTML("<p> Measurement <br> and Data </p>"),icon = icon("ruler"), color = "red"),
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p>
                              Rising Tide 2023

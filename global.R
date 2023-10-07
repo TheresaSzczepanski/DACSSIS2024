@@ -2,7 +2,7 @@ source('dependencies.R')
 
 ## Create Student Item Data Frames----------------------------------------------
 student_itemDF<-read_MCAS_Prelim_Private("csv","data/PrivProtectMCAS2023_spring_prelim_04830000.csv")
-view(student_itemDF)
+#view(student_itemDF)
 
 
 ## Science Exam Content Pages
@@ -393,12 +393,16 @@ MG8_MidStudent_item_perf<-MG8_student_item_perf%>%
   filter( `mscaleds` <515)
 MG8_LowStudent_item_perf<-MG8_student_item_perf%>%
   filter(`mscaleds`<500)
+
 MG7_student_perf<-Student_Perf("math", 7, student_itemDF)
+
 MG7_student_item_perf<-Student_Item_Perf("math", MG7_item, MG7_student_perf)
+
 MG7_TopStudent_item_perf<-MG7_student_item_perf%>%
   filter(`mscaleds`>=515)
+
 MG7_LowStudent_item_perf<-MG7_student_item_perf%>%
-  filter(`mscaleds`> 500)
+  filter(`mscaleds`< 500)
 
 MG6_student_perf<-Student_Perf("math", 6, student_itemDF)
 MG6_student_item_perf<-Student_Item_Perf("math", MG6_item, MG6_student_perf)
@@ -442,6 +446,7 @@ MG10_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG10_student_item_perf)
 MG10Top_AF_Loss<-Reporting_Cat_Loss("math", "Algebra and Functions", MG10_TopStudent_item_perf)
 MG10Top_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG10_TopStudent_item_perf)
 MG10Top_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG10_TopStudent_item_perf)
+
 #view(MG10_AF_Loss)
 #view(MG10Top_AF_Loss)
 #view(MG10_GE_Loss)
@@ -474,36 +479,36 @@ MG8_SA_Diff<-Item_Type_Diff("math", "SA", MG8_student_item_perf)
 MG8_SR_Diff<-Item_Type_Diff("math", "SR", MG8_student_item_perf)
 MG8_FN_Diff<-Reporting_Cat_Diff("math", "Functions", MG8_student_item_perf)
 MG8_FN_Loss<-Reporting_Cat_Loss("math", "Functions", MG8_student_item_perf)
-view(MG8_FN_Loss)
+#view(MG8_FN_Loss)
 MG8Top_FN_Loss<-Reporting_Cat_Loss("math", "Functions", MG8_TopStudent_item_perf)
-view(MG8Top_FN_Loss)
+#view(MG8Top_FN_Loss)
 MG8Low_FN_Loss<-Reporting_Cat_Loss("math", "Functions", MG8_LowStudent_item_perf)
-view(MG8Low_FN_Loss)
+#view(MG8Low_FN_Loss)
 MG8_GE_Diff<-Reporting_Cat_Diff("math", "Geometry", MG8_student_item_perf)
 MG8_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG8_student_item_perf)
-view(MG8_GE_Loss)
+#view(MG8_GE_Loss)
 MG8Top_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG8_TopStudent_item_perf)
-view(MG8Top_GE_Loss)
+#view(MG8Top_GE_Loss)
 
 MG8Mid_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG8_MidStudent_item_perf)
-view(MG8Mid_GE_Loss)
+#view(MG8Mid_GE_Loss)
 
 MG8Low_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG8_LowStudent_item_perf)
-view(MG8Low_GE_Loss)
+#view(MG8Low_GE_Loss)
 MG8_NSEE_Diff<-Reporting_Cat_Diff("math", "The Number System and Expressions and Equations", MG8_student_item_perf)
 MG8_NSEE_Loss<-Reporting_Cat_Loss("math", "The Number System and Expressions and Equations", MG8_student_item_perf)
-view(MG8_NSEE_Loss)
+#view(MG8_NSEE_Loss)
 MG8Top_NSEE_Loss<-Reporting_Cat_Loss("math", "The Number System and Expressions and Equations", MG8_TopStudent_item_perf)
-view(MG8Top_NSEE_Loss)
+#view(MG8Top_NSEE_Loss)
 MG8Mid_NSEE_Loss<-Reporting_Cat_Loss("math", "The Number System and Expressions and Equations", MG8_MidStudent_item_perf)
-view(MG8Mid_NSEE_Loss)
+#view(MG8Mid_NSEE_Loss)
 MG8Low_NSEE_Loss<-Reporting_Cat_Loss("math", "The Number System and Expressions and Equations", MG8_LowStudent_item_perf)
-view(MG8Low_NSEE_Loss)
+#view(MG8Low_NSEE_Loss)
 MG8_SP_Diff<-Reporting_Cat_Diff("math", "Statistics and Probability", MG8_student_item_perf)
 MG8_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG8_student_item_perf)
-view(MG8_SP_Loss)
+#view(MG8_SP_Loss)
 MG8Top_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG8_TopStudent_item_perf)
-view(MG8Top_SP_Loss)
+#view(MG8Top_SP_Loss)
 #MG8Low_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG8_LowStudent_item_perf)
 #view(MG8Low_SP_Loss)
 
@@ -538,14 +543,42 @@ MG7_NS_Diff<-Reporting_Cat_Diff("math", "The Number System", MG7_student_item_pe
 MG7_RP_Diff<-Reporting_Cat_Diff("math", "Ratios and Proportional Relationships", MG7_student_item_perf)
 MG7_SP_Diff<-Reporting_Cat_Diff("math", "Statistics and Probability", MG7_student_item_perf)
 
+MG7_EE_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG7_student_item_perf)
+view(MG7_EE_Loss)
+MG7Top_EE_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG7_TopStudent_item_perf)
+view(MG7Top_EE_Loss)
+
+MG7Low_EE_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG7_LowStudent_item_perf)
+view(MG7Low_EE_Loss)
+
+MG7_NS_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG7_student_item_perf)
+view(MG7_NS_Loss)
+MG7Top_NS_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG7_TopStudent_item_perf)
+view(MG7Top_NS_Loss)
+
+MG7Low_NS_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG7_LowStudent_item_perf)
+view(MG7Low_NS_Loss)
+
+
 MG7_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG7_student_item_perf)
-#view(MG7_GE_Loss)
+view(MG7_GE_Loss)
+
+MG7Top_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG7_TopStudent_item_perf)
+view(MG7Top_GE_Loss)
+
+MG7Low_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG7_LowStudent_item_perf)
+view(MG7Low_GE_Loss)
+
+
 MG7_RP_Loss<-Reporting_Cat_Loss("math", "Ratios and Proportional Relationships", MG7_student_item_perf)
 view(MG7_RP_Loss)
+
 MG7Top_RP_Loss<-Reporting_Cat_Loss("math", "Ratios and Proportional Relationships", MG7_TopStudent_item_perf)
 view(MG7Top_RP_Loss)
 MG7Low_RP_Loss<-Reporting_Cat_Loss("math", "Ratios and Proportional Relationships", MG7_LowStudent_item_perf)
 view(MG7Low_RP_Loss)
+MG7_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG7_student_item_perf)
+view(MG7_SP_Loss)
 MG7Top_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG7_TopStudent_item_perf)
 view(MG7Top_SP_Loss)
 MG7Low_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG7_LowStudent_item_perf)
@@ -748,7 +781,7 @@ EG7_student_item_perf<-Student_Item_Perf("ela", EG7_item, EG7_student_perf)
 #view(EG7_student_item_perf)
 
 EG7_student_essay_perf<-Student_Essay_Perf(7, student_itemDF, EG7_item)
-view(EG7_student_item_perf)
+#view(EG7_student_item_perf)
 EG7_student_reading_item_perf<-EG7_student_item_perf%>%
   filter(!str_detect(`Type`,"ES"))
 EG7_student_writing_item_perf<-EG7_student_item_perf%>%
@@ -782,7 +815,7 @@ EG6_writing_item <- EG6_item%>%
 
 EG6_student_perf<-Student_Perf("ela", 6, student_itemDF)
 EG6_student_item_perf<-Student_Item_Perf("ela", EG6_item, EG6_student_perf)
-view(EG6_student_item_perf)
+#view(EG6_student_item_perf)
 
 EG6_student_essay_perf<-Student_Essay_Perf(6, student_itemDF, EG6_item)
 #view(EG6_student_essay_perf)
