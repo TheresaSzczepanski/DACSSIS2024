@@ -42,6 +42,8 @@ view(SG9_item)
 
 #Reporting Categories: Intro Physics: "MF", "EN", "WA" for science grade levels
 
+SG9_DCI_PTS<-DCI_Points(SG9_item)
+#view(SG9_DCI_PTS)
 SG9_CR_PTS<-Item_Type_Points("CR", SG9_item)
 SG9_SR_PTS<-Item_Type_Points("SR", SG9_item)
 SG9_MD_PTS<-Practice_Cat_Points("science", "B. Mathematics and Data", SG9_item)
@@ -51,10 +53,12 @@ SG9_MF_PTS<-Reporting_Cat_Points("science", "Motion, Forces, and Interactions", 
 SG9_EN_PTS<-Reporting_Cat_Points("science", "Energy", SG9_item)
 SG9_WA_PTS<-Reporting_Cat_Points("science", "Waves", SG9_item)
 SG9_Rep_PTS <-Rep_Info_Points(SG9_item)
-view(SG9_Rep_PTS)
+#view(SG9_Rep_PTS)
 #SG9_Graph_PTS <-Rep_Info_Points("Graph", SG9_item)
 SG9_Vis_PTS = SG9_Rep_PTS[1,2] + SG9_Rep_PTS[2,2] + SG9_Rep_PTS[3,2] + SG9_Rep_PTS[5,2] + SG9_Rep_PTS[6,2]
 SG9_Des_PTS = SG9_Rep_PTS[4, 2]
+
+
 # Create SG9 Student Item Dataframe
 # SG9 Student Diff Performance Page
 SG9_student_perf<-Student_Perf("physics", 9, student_itemDF)
@@ -62,8 +66,22 @@ SG9_student_perf<-Student_Perf("physics", 9, student_itemDF)
 SG9_student_item_perf<-Student_Item_Perf("science", SG9_item, SG9_student_perf)
 #view(SG9_student_item_perf)
 
+SG9_Vis_Diff<-Physics_Visual_Info_Diff("Yes", SG9_student_item_perf)
+SG9_Des_Diff <-Physics_Visual_Info_Diff("No", SG9_student_item_perf)
+SG9_Vis_Loss<-Physics_Visual_Info_Loss(SG9_student_item_perf)
+view(SG9_Vis_Loss)
+SG9_Rep_Diff <-Rep_Info_Diff(SG9_student_item_perf)
+view(SG9_Rep_Diff)
+SG9_Rep_Loss <-Rep_Info_Loss(SG9_student_item_perf)
+view(SG9_Rep_Loss)
+#SG9_Course_Share_Diff<- Course_Share_Diff(SG9_student_item_perf)
+#view(SG9_Course_Share_Diff)
+#SG9_Course_Share_Loss<- Course_Share_Loss(SG9_student_item_perf)
+#view(SG9_Course_Share_Loss)
+#view(SG9_Des_Diff)
 SG9_CR_Diff<-Item_Type_Diff("science", "CR", SG9_student_item_perf)
 #view(SG9_CR_Diff)
+
 SG9_SR_Diff<-Item_Type_Diff("science", "SR", SG9_student_item_perf)
 SG9_MD_Diff<-Practice_Cat_Diff("science", "B. Mathematics and Data", SG9_student_item_perf)
 #view(SG9_MD_Diff)
@@ -76,16 +94,39 @@ SG9_WA_Diff<-Reporting_Cat_Diff("science", "Waves", SG9_student_item_perf)
 # SG9 Top Performing Students
 SG9_TopStudent_item_perf<-SG9_student_item_perf%>%
   filter(sscaleds >= 530)
+SG9Top_Vis_Diff<-Physics_Visual_Info_Diff("Yes", SG9_TopStudent_item_perf)
+SG9Top_Des_Diff <-Physics_Visual_Info_Diff("No", SG9_TopStudent_item_perf)
+SG9Top_Rep_Diff <-Rep_Info_Diff(SG9_TopStudent_item_perf)
+view(SG9Top_Rep_Diff)
+
+SG9Top_Rep_Loss <-Rep_Info_Loss(SG9_TopStudent_item_perf)
+view(SG9Top_Rep_Loss)
+
+#SG9Top_Course_Share_Diff<- Course_Share_Diff(SG9_TopStudent_item_perf)
+#view(SG9Top_Course_Share_Diff)
+#SG9Top_Course_Share_Loss<- Course_Share_Loss(SG9_TopStudent_item_perf)
+#view(SG9Top_Course_Share_Loss)
+#view(SG9Top_Vis_Diff)
+#view(SG9Top_Des_Diff)
 SG9Top_CR_Diff<-Item_Type_Diff("science", "CR", SG9_TopStudent_item_perf)
 #view(SG9_CR_Diff)
 SG9Top_SR_Diff<-Item_Type_Diff("science", "SR", SG9_TopStudent_item_perf)
 SG9Top_MD_Diff<-Practice_Cat_Diff("science", "B. Mathematics and Data", SG9_TopStudent_item_perf)
-#view(SG9_MD_Diff)
+view(SG9Top_MD_Diff)
 SG9Top_ERM_Diff<-Practice_Cat_Diff("science", "C. Evidence, Reasoning, and Modeling", SG9_TopStudent_item_perf)
+view(SG9Top_ERM_Diff)
 SG9Top_IQ_Diff<-Practice_Cat_Diff("science", "A. Investigations and Questioning", SG9_TopStudent_item_perf)
 SG9Top_MF_Diff<-Reporting_Cat_Diff("science", "Motion, Forces, and Interactions", SG9_TopStudent_item_perf)
 SG9Top_EN_Diff<-Reporting_Cat_Diff("science", "Energy", SG9_TopStudent_item_perf)
 SG9Top_WA_Diff<-Reporting_Cat_Diff("science", "Waves", SG9_TopStudent_item_perf)
+
+SG9Top_MD_Loss<-Practice_Cat_Loss("science", "B. Mathematics and Data", SG9_TopStudent_item_perf)
+view(SG9Top_MD_Loss)
+
+SG9Top_ERM_Loss<-Practice_Cat_Loss("science", "C. Evidence, Reasoning, and Modeling", SG9_TopStudent_item_perf)
+view(SG9Top_ERM_Loss)
+SG9Top_IQ_Loss<-Practice_Cat_Loss("science", "A. Investigations and Questioning", SG9_TopStudent_item_perf)
+view(SG9Top_IQ_Loss)
 
 #SG9 PM Performing Students
 SG9_LowStudent_item_perf<-SG9_student_item_perf%>%
@@ -103,10 +144,21 @@ SG9Low_EN_Diff<-Reporting_Cat_Diff("science", "Energy", SG9_LowStudent_item_perf
 SG9Low_WA_Diff<-Reporting_Cat_Diff("science", "Waves", SG9_LowStudent_item_perf)
 #view(SG9Low_WA_Diff)
 
+SG9Low_Rep_Diff <-Rep_Info_Diff(SG9_LowStudent_item_perf)
+view(SG9Low_Rep_Diff)
+SG9Low_Rep_Loss <-Rep_Info_Loss(SG9_LowStudent_item_perf)
+view(SG9Low_Rep_Loss)
+
 #SG9 Almost E Performing Students
 SG9_MidStudent_item_perf<-SG9_student_item_perf%>%
   filter(sscaleds < 530)%>%
   filter(sscaleds >= 515)
+
+SG9Mid_Vis_Diff<-Physics_Visual_Info_Diff("Yes", SG9_MidStudent_item_perf)
+SG9Mid_Des_Diff <-Physics_Visual_Info_Diff("No", SG9_MidStudent_item_perf)
+#view(SG9Mid_Vis_Diff)
+#view(SG9Mid_Des_Diff)
+
 SG9Mid_SR_Diff<-Item_Type_Diff("science", "SR", SG9_MidStudent_item_perf)
 #view(SG9Mid_SR_Diff)
 SG9Mid_CR_Diff<-Item_Type_Diff("science", "CR", SG9_MidStudent_item_perf)
@@ -114,21 +166,39 @@ SG9Mid_CR_Diff<-Item_Type_Diff("science", "CR", SG9_MidStudent_item_perf)
 
 
 SG9Mid_MF_Diff<-Reporting_Cat_Diff("science", "Motion, Forces, and Interactions", SG9_MidStudent_item_perf)
-#view(SG9Mid_MF_Diff)
+view(SG9Mid_MF_Diff)
 SG9Mid_EN_Diff<-Reporting_Cat_Diff("science", "Energy", SG9_MidStudent_item_perf)
-#view(SG9Mid_EN_Diff)
+view(SG9Mid_EN_Diff)
 SG9Mid_WA_Diff<-Reporting_Cat_Diff("science", "Waves", SG9_MidStudent_item_perf)
-#view(SG9Mid_WA_Diff)
+view(SG9Mid_WA_Diff)
+SG9Mid_MD_Diff<-Practice_Cat_Diff("science", "B. Mathematics and Data", SG9_MidStudent_item_perf)
+view(SG9Mid_MD_Diff)
+SG9Mid_MD_Loss<-Practice_Cat_Loss("science", "B. Mathematics and Data", SG9_MidStudent_item_perf)
+view(SG9Mid_MD_Loss)
+
+SG9Mid_ERM_Loss<-Practice_Cat_Loss("science", "C. Evidence, Reasoning, and Modeling", SG9_MidStudent_item_perf)
+view(SG9Mid_ERM_Loss)
+SG9Mid_IQ_Loss<-Practice_Cat_Loss("science", "A. Investigations and Questioning", SG9_MidStudent_item_perf)
+view(SG9Mid_IQ_Loss)
+
+SG9Mid_Rep_Diff <-Rep_Info_Diff(SG9_MidStudent_item_perf)
+view(SG9Mid_Rep_Diff)
+#SG9Mid_Rep_Loss <-Rep_Info_Loss(SG9_MidStudent_item_perf)
+#view(SG9Mid_Rep_Loss)
+#SG9Mid_Course_Share_Diff<- Course_Share_Diff(SG9_MidStudent_item_perf)
+#view(SG9Mid_Course_Share_Diff)
+#SG9Mid_Course_Share_Loss<- Course_Share_Loss(SG9_MidStudent_item_perf)
+#view(SG9Mid_Course_Share_Loss)
 
 # SG8 Exam Content Page and # SG8 Student Diff Performance Page
 SG8_item <-read_item("data/MCAS_2023_MS_STE_Gr_5_8_Item_Analysis_Template_V2.xlsx", "Gr. 8 CBT (SCI08)", "science")
-view(SG8_item)
+#view(SG8_item)
 
 SG8_standard_xWalk <- read_standardXwalk("data/2023MCASItemXWalk.xlsx", "SG8_standard_xwalk")
-view(SG8_standard_xWalk)
+#view(SG8_standard_xWalk)
 
 SG8_item<-left_join(SG8_item, SG8_standard_xWalk, by = "Standard")
-view(SG8_item)
+#view(SG8_item)
 
 SG8_student_perf<-Student_Perf("science", 8, student_itemDF)
 #view(SG8_student_perf)
@@ -142,6 +212,8 @@ SG8_student_item_perf<-Student_Item_Perf("science", SG8_item, SG8_student_perf)
 #G8 STE: "ES", ""LS", PS", "TE"
 #view(SG8_student_item_perf)
 
+SG8_DCI_PTS<-DCI_Points(SG8_item)
+#view(SG8_DCI_PTS)
 SG8_G8_PTS <- Grade_Level_Points(SG8_item, 8)
 SG8_G7_PTS <- Grade_Level_Points(SG8_item, 7)
 SG8_G6_PTS <- Grade_Level_Points(SG8_item, 6)
@@ -178,10 +250,12 @@ SG5_standard_xWalk <- read_standardXwalk("data/2023MCASItemXWalk.xlsx", "SG5_sta
 #view(SG5_standard_xWalk)
 
 SG5_item<-left_join(SG5_item, SG5_standard_xWalk, by = "Standard")
-view(SG5_item)
+#view(SG5_item)
 
 #G5 STE: "ES", ""LS", PS", "TE"
 
+SG5_DCI_PTS<-DCI_Points(SG5_item)
+#view(SG5_DCI_PTS)
 SG5_G5_PTS <- Grade_Level_Points(SG5_item, 5)
 SG5_G4_PTS <- Grade_Level_Points(SG5_item, 4)
 SG5_G3_PTS <- Grade_Level_Points(SG5_item, 3)

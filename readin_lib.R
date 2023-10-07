@@ -124,7 +124,7 @@ read_item_xwalk<-function(file_path, sheet_name, subject){
   )
   if(subject == "science"){
     read_excel(file_path, sheet = sheet_name, 
-               skip = 1, col_names= c(subject_item, "Representation of Information")) %>%
+               skip = 1, col_names= c(subject_item, "Representation of Information", "Visual Info")) %>%
       mutate(sitem= as.character(sitem))%>%
       separate(c(1), c("sitem", "delete"))%>%
       select(!contains("delete"))%>%
@@ -442,3 +442,4 @@ Student_Essay_Perf<-function(gradeLevel, rawStudentPerfDF, ELAItemDF){
 #     filter(str_detect(`esubitem`, "conv") | str_detect(`esubitem`, "idea"))%>%
 #     left_join(ELAItemDF, studentEssayPerfDF, "esubitem")
 # }
+

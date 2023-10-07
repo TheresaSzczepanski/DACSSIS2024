@@ -187,7 +187,7 @@ ui <- dashboardPage(
                 # A static valueBox
                 valueBox(SG9_Vis_PTS, HTML("<p> Visual </p>"), icon=icon("chart-line")),
                 
-                valueBox(SG9_Des_PTS, HTML("<p> Desciptive (words/symbols only)"),icon=icon("align-justify") ),
+                valueBox(SG9_Des_PTS, HTML("<p> Desciptive <br> (words/symbols only)</p>"),icon=icon("align-justify") ),
                 
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p>
@@ -254,9 +254,9 @@ ui <- dashboardPage(
       
       fluidRow(
         # A static valueBox
-        valueBox(SG9_Vis_PTS, HTML("<p> Visual </p>"), icon=icon("chart-line")),
+        valueBox(SG9_Vis_Diff[1,6], HTML("<p> Visual </p>"), icon=icon("chart-line")),
         
-        valueBox(SG9_Des_PTS, HTML("<p> Desciptive (words/symbols only)"),icon=icon("align-justify") )
+        valueBox(SG9_Des_Diff[1,6], HTML("<p> Desciptive <br> (words/symbols only) </p>"),icon=icon("align-justify") )
         
         
       ),
@@ -265,9 +265,9 @@ ui <- dashboardPage(
               h3("RT-State Diff by: Question Type"),
               fluidRow(
                 # A static valueBox
-                valueBox(SG9_SR_Diff[1,6], HTML("<p> Selected <br> Response </p>"), icon=icon("square-check")),
+                valueBox(SG9_SR_Diff[1,6], HTML("<p> Selected <br> Response </p>"), icon=icon("square-check"), color = "light-blue"),
 
-                valueBox(SG9_CR_Diff[1,6], HTML("<p> Constructed <br> Response </p>"),icon=icon("pencil") ),
+                valueBox(SG9_CR_Diff[1,6], HTML("<p> Constructed <br> Response </p>"),icon=icon("pencil"),  color = "light-blue" ),
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p>
                              Student
@@ -285,65 +285,81 @@ ui <- dashboardPage(
       tabItem("g9PhysicsAnalysis", 
               
               span(h1("How do we improve?")), #style = "color:black")),
-              span(h2("Mathematics and Data")),
-              HTML("<p> Mathematics and Data accounts for 48% of available points 
-                  on the MCAS and <b> 55% of points lost by Rising Tide </b> students. </p>"),
-              #h3("% of Points Lost by Practice Category"),
+              span(h2("Practice with Graphs, Abstract Models, Interpreting Data")),
+              HTML("<p> Reading or Synthesizing Information from Visuals was asked of students in
+                    <b> 78%  </b> of available points on the MCAS.Rising Tide students lost disproportionatly more points than their peers in the
+                      state when asked to <b> interpret graphs </b>  and when asked to solve problems with 
+                      <b> contextual images </b> </p>"),
               
-              # fluidRow(
-              #   box(
-              #     status = "primary", solidHeader = TRUE,
-              #     collapsible = TRUE, width = 500,
-              #     plotOutput("SG9Top_Loss_Bar")
-              #   )
-              #  ),
-              
-              #fluidRow(
-              # dataTableOutput("SG9_TopStudent_item_perf")
-              #   ),
-              
-              
-              h3("Top-Performing Students"),
+              h3("RT-State Diff by Visual"),
               HTML("<p> The trend is <b> more pronounced </b> in students with scores <b> greater
                   than 515 </b>. </p>"),
               
               
               
-              # fluidRow(
-              #   # A static valueBox
-              #   valueBox(paste(SG9Top_MD_Loss[1,5], "%"), HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "red", width = SG9practice_width),
-              #   
-              #   
-              #   valueBox(paste(SG9Top_ERM_Loss[1,5], "%"), HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "light-blue", width = SG9practice_width),
-              #   
-              #   valueBox(paste(SG9Top_IQ_Loss[1,5], "%"), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue", width = SG9practice_width),
-              #   #100-SG9Top_IQ_Loss[1,6]-SG9Top_MD_Loss[1,6]-SG9Top_ERM_Loss[1,6]
-              #   valueBox(paste(8, "%"),  HTML("<p> unreleased or <br> no category reported </p>"), color = "light-blue", width = SG9practice_width)
-              #   
-              # ),
+              fluidRow(
+                # A static valueBox
+                valueBox(SG9_Rep_Diff[5,6], HTML("<p> Graphs </p>"), icon = icon("chart-line"), color = "red"),
+                
+                valueBox(SG9_Rep_Diff[2,6], HTML("<p> Contextual Images </p>"), icon = icon("hill-rockslide"), color = "red"),
+                
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/15noiswDgNC3FZmVgxhExutBqcNu5YcmjYf7vjSQ_-Dk/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
+                
+                  )
+                
+              ),
               
-              h3("All students"),
-              HTML("<p> Mathematics and Data accounts for 48% of available points 
-                  on the MCAS and 55% of points lost by Rising Tide students. </p>"),
+              fluidRow(
+
+                valueBox(SG9_Rep_Diff[1,6],  HTML("<p> Abstract Model</p>"), icon = icon("atom"), color = "light-blue"),
+
+                valueBox(SG9_Rep_Diff[3,6], HTML("<p> Data Table</p>"), icon = icon("table"), color = "light-blue")
+                
+                #valueBox(paste(8, "%"),  HTML("<p> unreleased or <br> no category reported </p>"), color = "light-blue", width = SG9practice_width)
+              ),
+
+              span(h2("Frequent Formative Assessment of Mathematical Concepts")),
+              h3("% Points Lost from Students Meeting Expectations"),
+              HTML("<p> Students Meeting Expectations lose disproportionatly more points on Mathematics and Data Items. </p>"),
               
               
               
-              # fluidRow(
-              #   # A static valueBox
-              #   valueBox(paste(SG9_MD_Loss[1,5], "%"), HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "red", width = SG9practice_width),
-              #   
-              #   
-              #   valueBox(paste(SG9_ERM_Loss[1,5], "%"), HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "light-blue", width = SG9practice_width),
-              #   
-              #   valueBox(paste(SG9_IQ_Loss[1,5], "%"), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue", width = SG9practice_width),
-              #   #100-SG9Top_IQ_Loss[1,6]-SG9Top_MD_Loss[1,6]-SG9Top_ERM_Loss[1,6]
-              #   valueBox(paste(8, "%"),  HTML("<p> unreleased or <br> no category reported </p>"), color = "light-blue", width = SG9practice_width)
-              #   
-              # ),
+              fluidRow(
+                # A static valueBox
+                valueBox(paste(SG9Mid_MD_Loss[1,5], "%"), HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "red"),
+
+
+                valueBox(paste(SG9Mid_ERM_Loss[1,5], "%"), HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "light-blue"),
+
+                valueBox(paste(SG9Mid_IQ_Loss[1,5], "%"), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue")
+               
+                #valueBox(paste(8, "%"),  HTML("<p> unreleased or <br> no category reported </p>"), color = "light-blue")
+
+              ),
               
-              h3("Lowest Performing students"),
-              HTML("<p> The lowest performing students also exhibit this trend, 
+              
+              h3("% Points Lost from Top Performing students"),
+              HTML("<p> The top performing students also exhibit this trend, 
                   although it is less pronounced. </p>"),
+              
+              fluidRow(
+                # A static valueBox
+                valueBox(paste(SG9Top_MD_Loss[1,5], "%"), HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "red"),
+                
+                
+                valueBox(paste(SG9Top_ERM_Loss[1,5], "%"), HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "light-blue"),
+                
+                valueBox(paste(SG9Top_IQ_Loss[1,5], "%"), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue")
+                
+                #valueBox(paste(8, "%"),  HTML("<p> unreleased or <br> no category reported </p>"), color = "light-blue")
+                
+              )
               
               
               

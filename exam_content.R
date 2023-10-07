@@ -67,6 +67,15 @@ Practice_Cat_Points <-function(subject, practiceCategory, subjectItemDF){
 }    
 
 
+## Discipline Core Idea Points -------------------------------------------------
+DCI_Points <-function(subjectItemDF){
+ 
+    subjectItemDF%>%
+      select(`sitem`, `item Possible Points`, `Discipline Core Idea`)%>%
+      group_by(`Discipline Core Idea`)%>%
+      summarize(available_points = sum(`item Possible Points`, na.rm=TRUE))#%>%
+      #filter(`Discipline Core Idea` == disciplineCoreIdea)
+}    
 ##Function for dataframe with points available by reporting category------------
 
 Reporting_Cat_Points <-function(subject, reportingCategory, subjectItemDF){

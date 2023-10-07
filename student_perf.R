@@ -228,6 +228,108 @@ Practice_Cat_Loss_Bar <-function(subject, studentItemPerfDF){
   }
 }
 
+## 
+
+DCI_Diff <-function(disciplineCoreIdea, studentItemPerfDF){
+  studentItemPerfDF%>%
+    summarize(available_points = sum(`item Possible Points`, na.rm=TRUE),
+              RT_points = sum(`sitem_score`, na.rm = TRUE),
+              RT_Percent_Points = 100*round(RT_points/available_points,2),
+              State_Percent_Points = 
+                100*round(sum(`State Percent Points`/100*`item Possible Points`/available_points, 
+                              na.rm = TRUE),2))%>%
+    mutate(`RT-State Diff` = round(RT_Percent_Points - State_Percent_Points, 2))%>%
+    filter(`Discipline Core Idea` == disciplineCoreIdea)
+}    
+### Physics specific performance functions
+Physics_Visual_Info_Diff<-function(visual_status, studentItemPerfDF){
+  studentItemPerfDF%>%
+    group_by(`Visual Info`)%>%
+    summarize(available_points = sum(`item Possible Points`, na.rm=TRUE),
+              RT_points = sum(`sitem_score`, na.rm = TRUE),
+              RT_Percent_Points = 100*round(RT_points/available_points,2),
+              State_Percent_Points = 
+                100*round(sum(`State Percent Points`/100*`item Possible Points`/available_points, 
+                              na.rm = TRUE),2))%>%
+    mutate(`RT-State Diff` = round(RT_Percent_Points - State_Percent_Points, 2))%>%
+    filter(`Visual Info` == visual_status)
+}
+
+Physics_Visual_Info_Loss<-function( studentItemPerfDF){
+  Total_Lost_Points<-studentItemPerfDF%>%
+    summarize(Total_Lost_Points = sum(`item Possible Points`, na.rm=TRUE)-sum(`sitem_score`, na.rm=TRUE))
+  #view(Total_Lost_Points)
+  studentItemPerfDF%>%
+    group_by(`Visual Info`)%>%
+    summarize(available_points = sum(`item Possible Points`, na.rm=TRUE),
+              RT_points = sum(`sitem_score`, na.rm = TRUE),
+              RT_lost_points = available_points-RT_points,
+              RT_percent_lost_points = 
+                100*round(sum(`RT_lost_points`/Total_Lost_Points[1,1],
+                              na.rm = TRUE),2))%>%
+    mutate(total_points = sum(`available_points`))%>%
+    mutate(`Percent_available_points` = round(100*(available_points/total_points)))
+}
+Rep_Info_Diff<-function(studentItemPerfDF){
+  studentItemPerfDF%>%
+    group_by(`Representation of Information`)%>%
+    summarize(available_points = sum(`item Possible Points`, na.rm=TRUE),
+              RT_points = sum(`sitem_score`, na.rm = TRUE),
+              RT_Percent_Points = 100*round(RT_points/available_points,2),
+              State_Percent_Points = 
+                100*round(sum(`State Percent Points`/100*`item Possible Points`/available_points, 
+                              na.rm = TRUE),2))%>%
+    mutate(`RT-State Diff` = round(RT_Percent_Points - State_Percent_Points, 2))#%>%
+    #filter(`Visual Info` == visual_status)
+}
+
+Rep_Info_Loss<-function(studentItemPerfDF){
+  Total_Lost_Points<-studentItemPerfDF%>%
+    summarize(Total_Lost_Points = sum(`item Possible Points`, na.rm=TRUE)-sum(`sitem_score`, na.rm=TRUE))
+  #view(Total_Lost_Points)
+    studentItemPerfDF%>%
+      group_by(`Representation of Information`)%>%
+      summarize(available_points = sum(`item Possible Points`, na.rm=TRUE),
+              RT_points = sum(`sitem_score`, na.rm = TRUE),
+              RT_lost_points = available_points-RT_points,
+              RT_percent_lost_points = 
+                100*round(sum(`RT_lost_points`/Total_Lost_Points[1,1],
+                              na.rm = TRUE),2))%>%
+        mutate(total_points = sum(`available_points`))%>%
+      mutate(`Percent_available_points` = round(100*(available_points/total_points)))
+      #%>%
+    #filter(`Representation of Information` == rep_info)
+}
+
+Course_Share_Diff<-function(studentItemPerfDF){
+  studentItemPerfDF%>%
+    group_by(`Course Shared Materials and Assessments 2022-2023`)%>%
+    summarize(available_points = sum(`item Possible Points`, na.rm=TRUE),
+              RT_points = sum(`sitem_score`, na.rm = TRUE),
+              RT_Percent_Points = 100*round(RT_points/available_points,2),
+              State_Percent_Points = 
+                100*round(sum(`State Percent Points`/100*`item Possible Points`/available_points, 
+                              na.rm = TRUE),2))%>%
+    mutate(`RT-State Diff` = round(RT_Percent_Points - State_Percent_Points, 2))#%>%
+  #filter(`Visual Info` == visual_status)
+}
+Course_Share_Loss<-function(studentItemPerfDF){
+  Total_Lost_Points<-studentItemPerfDF%>%
+    summarize(Total_Lost_Points = sum(`item Possible Points`, na.rm=TRUE)-sum(`sitem_score`, na.rm=TRUE))
+  #view(Total_Lost_Points)
+  studentItemPerfDF%>%
+    group_by(`Course Shared Materials and Assessments 2022-2023`)%>%
+    summarize(available_points = sum(`item Possible Points`, na.rm=TRUE),
+              RT_points = sum(`sitem_score`, na.rm = TRUE),
+              RT_lost_points = available_points-RT_points,
+              RT_percent_lost_points =
+                100*round(sum(`RT_lost_points`/Total_Lost_Points[1,1],
+                              na.rm = TRUE),2))%>%
+    mutate(total_points = sum(`available_points`))%>%
+    mutate(`Percent_available_points` = round(100*(available_points/total_points)))
+  #%>%
+  #filter(`Representation of Information` == rep_info)
+}
 ### ELA specific performance functions
 ## RT STate-Diff for ELA Essay sub scores
 
