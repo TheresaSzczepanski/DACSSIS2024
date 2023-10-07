@@ -191,9 +191,8 @@ ui <- dashboardPage(
                 
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p>
-                             Student
-                              <a href = 'https://www.doe.mass.edu/mcas/student/2023/hs/physics.html'>
-                              released Constructed Response </a> and Scoring Guidelines
+                              <a href = 'https://docs.google.com/document/d/1wwXyvgF4sewAq3zbP-4I8iHEiBe-azF-jEyYzSu3-0A/edit?usp=drive_link'>
+                              Released MCAS by Standard </a> (2019-2023 Next Generation)
 
                             </p>"))
                 
@@ -363,20 +362,6 @@ ui <- dashboardPage(
               
               
               
-              # fluidRow(
-              #   # A static valueBox
-              #   valueBox(paste(SG9Low_MD_Loss[1,5], "%"), HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "red", width = SG9practice_width),
-              #   
-              #   
-              #   valueBox(paste(SG9Low_ERM_Loss[1,5], "%"), HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "light-blue", width = SG9practice_width),
-              #   
-              #   valueBox(paste(SG9Low_IQ_Loss[1,5], "%"), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue", width = SG9practice_width),
-              #   #100-SG9Top_IQ_Loss[1,6]-SG9LowTop_MD_Loss[1,6]-SG9LowTop_ERM_Loss[1,6]
-              #   valueBox(paste(9, "%"),  HTML("<p> unreleased or <br> no category reported </p>"), color = "light-blue", width = SG9practice_width)
-              #   
-              # ),
-              
-              
       ),
       
       #G9 Physics Top Perf
@@ -458,7 +443,14 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(SG8_ES_PTS[1,2], HTML("<p> Earth & <br> Space Science</p>"), icon = icon("earth"), color = "blue"),
-                valueBox( SG8_LS_PTS[1,2],"Life Science",icon = icon("dna"), color = "blue")
+                valueBox( SG8_LS_PTS[1,2],"Life Science",icon = icon("dna"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                              <a href = 'https://docs.google.com/document/d/16w1tDbd0-xSRzP-00Yvf3A3T0kiE3f8Hk5sqOhlhRNc/edit?usp=drive_link'>
+                              Released MCAS Items by Standard </a> (Next Generation MCAS 2019-2023)
+                            </p>")
+                     
+                )
               ),
 
               fluidRow(
@@ -512,12 +504,32 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(SG8_ES_Diff[1,6], HTML("<p> Earth & <br> Space Science</p>"), icon = icon("earth"), color = "blue"),
-                valueBox( SG8_LS_Diff[1,6],"Life Science",icon = icon("dna"), color = "blue")
+                valueBox( SG8_LS_Diff[1,6],"Life Science",icon = icon("dna"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/15noiswDgNC3FZmVgxhExutBqcNu5YcmjYf7vjSQ_-Dk/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
+                     
+                )
               ),
               
               fluidRow(
                 valueBox(SG8_PS_Diff[1,6], "Physical Science", icon = icon("atom"), color = "blue"),
                 valueBox(SG8_TE_Diff[1,6], HTML("<p> Technology & <br> Engineering</p>"), icon = icon("bridge"), color = "blue")
+              ),
+              
+              h3("RT-State Diff by Grade Level"),
+              
+              fluidRow(
+                # A static valueBox
+                valueBox(SG8_G8_Diff[1,2], HTML("<p> G8 </p>"), icon = icon("8"), color = "light-blue"),
+                valueBox(SG8_G7_Diff[1,2], HTML("<p> G7 </p>"), icon = icon("7"), color = "light-blue"),
+                valueBox(SG8_G6_Diff[1,2], HTML("<p> G6 </p>"), icon = icon("6"), color = "light-blue")
+                # valueBox(4,  "no category reported ", color = "aqua")
+                
               ),
               
               
@@ -578,7 +590,14 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(SG5_ES_PTS[1,2], HTML("<p> Earth & <br> Space Science</p>"), icon = icon("earth"), color = "blue"),
-                valueBox( SG5_LS_PTS[1,2],"Life Science",icon = icon("dna"), color = "blue")
+                valueBox( SG5_LS_PTS[1,2],"Life Science",icon = icon("dna"), color = "blue"),
+                
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                              <a href = 'https://docs.google.com/document/d/1CZvZocUghzZb2QbCUpuwHePGsK3tpfnMwVqvuYs0lxk/edit?usp=drive_link'>
+                              Released MCAS Items by Standard </a> (Next Generation MCAS 2019-2023)
+                            </p>")
+                )
               ),
               
               fluidRow(
@@ -629,12 +648,31 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(SG5_ES_Diff[1,6], HTML("<p> Earth & <br> Space Science</p>"), icon = icon("earth"), color = "blue"),
-                valueBox( SG5_LS_Diff[1,6],"Life Science",icon = icon("dna"), color = "blue")
+                valueBox( SG5_LS_Diff[1,6],"Life Science",icon = icon("dna"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/15noiswDgNC3FZmVgxhExutBqcNu5YcmjYf7vjSQ_-Dk/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
+                     
+                )
               ),
 
               fluidRow(
                 valueBox(SG5_PS_Diff[1,6], "Physical Science", icon = icon("atom"), color = "blue"),
                 valueBox(SG5_TE_Diff[1,6], HTML("<p> Technology & <br> Engineering</p>"), icon = icon("bridge"), color = "blue")
+              ),
+              h3("RT-State Diff by Grade Level"),
+              
+              fluidRow(
+                # A static valueBox
+                valueBox(SG5_G5_Diff[1,2], HTML("<p> G5 </p>"), icon = icon("5"), color = "light-blue"),
+                valueBox(SG5_G4_Diff[1,2], HTML("<p> G4 </p>"), icon = icon("4"), color = "light-blue"),
+                valueBox(SG5_G3_Diff[1,2], HTML("<p> G3 </p>"), icon = icon("3"), color = "light-blue")
+                # valueBox(4,  "no category reported ", color = "aqua")
+                
               ),
               
               
@@ -696,7 +734,13 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(MG10_AF_PTS[1,2], HTML("<p> Algebra and <br> Functions </p>"), icon = icon("square-root-variable"), color = "blue"),
-                valueBox( MG10_GE_PTS[1,2],"Geometry",icon = icon("shapes"), color = "blue")
+                valueBox( MG10_GE_PTS[1,2],"Geometry",icon = icon("shapes"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                              <a href = 'https://docs.google.com/document/d/1fgVckOxME_Kgi8SimVxrumECnr648MzCIbIBEMH0qZ4/edit?usp=drive_link'>
+                              Released MCAS Items by Standard </a> (Next Generation MCAS 2019-2023)
+                            </p>")
+                )
               ),
               
               fluidRow(
@@ -726,7 +770,16 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(MG10_AF_Diff[1,6], HTML("<p> Algebra and <br> Functions </p>"), icon = icon("square-root-variable"), color = "blue"),
-                valueBox( MG10_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue")
+                valueBox( MG10_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
+                     
+                )
               ),
               
               fluidRow(
@@ -775,7 +828,13 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(MG8_FN_PTS[1,2], "Functions", icon = icon("square-root-variable"), color = "blue"),
-                valueBox( MG8_GE_PTS[1,2],"Geometry",icon = icon("shapes"), color = "blue")
+                valueBox( MG8_GE_PTS[1,2],"Geometry",icon = icon("shapes"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                              <a href = 'https://docs.google.com/document/d/1TC52o3YIa-5PkHXSMqRgGYci6pwU-dk-PPvoHj5J_SU/edit?usp=drive_link'>
+                              Released MCAS Items by Standard </a> (Next Generation MCAS 2019-2023)
+                            </p>")
+                )
 
               ),
               
@@ -806,7 +865,16 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(MG8_FN_Diff[1,6], "Functions", icon = icon("square-root-variable"), color = "blue"),
-                valueBox( MG8_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue")
+                valueBox( MG8_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
+                     
+                )
 
               ),
               
@@ -854,7 +922,14 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(MG7_EE_PTS[1,2], HTML("<p> Expressions <br> and Equations </p>"), icon = icon("equals"), color = "blue"),
-                valueBox( MG7_GE_PTS[1,2],"Geometry",icon = icon("shapes"), color = "blue")
+                valueBox( MG7_GE_PTS[1,2],"Geometry",icon = icon("shapes"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                              <a href = 'https://docs.google.com/document/d/1eI6Jx-KwERQSz03uAVPv_S4w0p80Iow967Mme1kM8JQ/edit?usp=drive_link'>
+                              Released MCAS Items by Standard </a> (Next Generation MCAS 2019-2023)
+                            </p>")
+                )
+                
               ),
               
               fluidRow(
@@ -883,7 +958,16 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(MG7_EE_Diff[1,6], HTML("<p> Expressions <br> and Equations </p>"), icon = icon("equals"), color = "blue"),
-                valueBox( MG7_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue")
+                valueBox( MG7_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
+                     
+                )
               ),
               
               fluidRow(
@@ -928,7 +1012,16 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(MG6_EE_PTS[1,2], HTML("<p>Expressions <br> and Equations</p>"), icon = icon("equals"), color = "blue"),
-                valueBox( MG6_GE_PTS[1,2],"Geometry",icon = icon("shapes"), color = "blue")
+                valueBox( MG6_GE_PTS[1,2],"Geometry",icon = icon("shapes"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                            
+                              <a href = 'https://docs.google.com/document/d/1kxR_5IlkFHmxaQoOBccTmD-xxuIUlEkATDHwPNwVLj8/edit?usp=drive_link'>
+                              Released MCAS Items by Standard </a> (Next Generation MCAS 2019-2023)
+
+                            </p>")
+                     
+                )
               ),
               
               fluidRow(
@@ -958,7 +1051,16 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(MG6_EE_Diff[1,6], HTML("<p>Expressions <br> and Equations</p>"), icon = icon("equals"), color = "blue"),
-                valueBox( MG6_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue")
+                valueBox( MG6_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
+                     
+                )
               ),
               
               fluidRow(
@@ -1006,7 +1108,16 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(MG5_GE_PTS[1,2], "Geometry", icon = icon("shapes"), color = "blue"),
-                valueBox( MG5_MD_PTS[1,2],HTML("<p> Measurement <br> and Data </p>"),icon = icon("ruler"), color = "blue")
+                valueBox( MG5_MD_PTS[1,2],HTML("<p> Measurement <br> and Data </p>"),icon = icon("ruler"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                            
+                              <a href = 'https://docs.google.com/document/d/11HBu5rgeCjPSQwmxOqTobsMCxSgfDPICR4myH7ybpJc/edit?usp=drive_link'>
+                              Released MCAS Items by Standard </a> (Next Generation MCAS 2019-2023)
+
+                            </p>")
+                     
+                )
               ),
               
               fluidRow(
@@ -1036,7 +1147,18 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(MG5_GE_Diff[1,6], "Geometry", icon = icon("shapes"), color = "blue"),
-                valueBox( MG5_MD_Diff[1,6],HTML("<p> Measurement <br> and Data </p>"),icon = icon("ruler"), color = "blue")
+                valueBox( MG5_MD_Diff[1,6],HTML("<p> Measurement <br> and Data </p>"),icon = icon("ruler"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
+                     
+                )
+               
+                
               ),
               
               fluidRow(
@@ -1440,7 +1562,7 @@ ui <- dashboardPage(
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p> <b>All</b> essay prompts required students to <b> synthesize two </b> texts. </p>"))
 
-              ),
+              )
 
       ),
       

@@ -228,10 +228,34 @@ Practice_Cat_Loss_Bar <-function(subject, studentItemPerfDF){
   }
 }
 
-## 
+## MS STE Specific Function
+
+# Grade_Level_Points <-function(subjectItemDF, gradeLevel){
+#   subjectItemDF%>%
+#     select(`Grade Level`, `item Possible Points`)%>%
+#     group_by(`Grade Level`)%>%
+#     summarize(available_points = sum(`item Possible Points`, na.rm=TRUE))%>%
+#     filter(`Grade Level` == gradeLevel)
+#   
+# }  
+
+
+Grade_Level_Diff <-function(gradeLevel, studentItemPerfDF){
+  studentItemPerfDF%>%
+    group_by(`Grade Level`)%>%
+    summarize(available_points = sum(`item Possible Points`, na.rm=TRUE),
+              RT_points = sum(`sitem_score`, na.rm = TRUE),
+              RT_Percent_Points = 100*round(RT_points/available_points,2),
+              State_Percent_Points = 
+                100*round(sum(`State Percent Points`/100*`item Possible Points`/available_points, 
+                              na.rm = TRUE),2))%>%
+    mutate(`RT-State Diff` = round(RT_Percent_Points - State_Percent_Points, 2))%>%
+    filter(`Grade Level` == gradeLevel)
+} 
 
 DCI_Diff <-function(disciplineCoreIdea, studentItemPerfDF){
   studentItemPerfDF%>%
+    group_by(`Discipline Core Idea`)%>%
     summarize(available_points = sum(`item Possible Points`, na.rm=TRUE),
               RT_points = sum(`sitem_score`, na.rm = TRUE),
               RT_Percent_Points = 100*round(RT_points/available_points,2),
