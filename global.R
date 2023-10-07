@@ -38,7 +38,7 @@ SG9_item_xWalk <- read_item_xwalk("data/2023MCASItemXWalk.xlsx", "SG9_item_xwalk
 #view(SG9_item_xWalk)
 
 SG9_item <-left_join(SG9_item, SG9_item_xWalk, by = "sitem")
-view(SG9_item)
+#view(SG9_item)
 
 #Reporting Categories: Intro Physics: "MF", "EN", "WA" for science grade levels
 
@@ -69,11 +69,11 @@ SG9_student_item_perf<-Student_Item_Perf("science", SG9_item, SG9_student_perf)
 SG9_Vis_Diff<-Physics_Visual_Info_Diff("Yes", SG9_student_item_perf)
 SG9_Des_Diff <-Physics_Visual_Info_Diff("No", SG9_student_item_perf)
 SG9_Vis_Loss<-Physics_Visual_Info_Loss(SG9_student_item_perf)
-view(SG9_Vis_Loss)
+#view(SG9_Vis_Loss)
 SG9_Rep_Diff <-Rep_Info_Diff(SG9_student_item_perf)
-view(SG9_Rep_Diff)
+#view(SG9_Rep_Diff)
 SG9_Rep_Loss <-Rep_Info_Loss(SG9_student_item_perf)
-view(SG9_Rep_Loss)
+#view(SG9_Rep_Loss)
 #SG9_Course_Share_Diff<- Course_Share_Diff(SG9_student_item_perf)
 #view(SG9_Course_Share_Diff)
 #SG9_Course_Share_Loss<- Course_Share_Loss(SG9_student_item_perf)
@@ -97,10 +97,10 @@ SG9_TopStudent_item_perf<-SG9_student_item_perf%>%
 SG9Top_Vis_Diff<-Physics_Visual_Info_Diff("Yes", SG9_TopStudent_item_perf)
 SG9Top_Des_Diff <-Physics_Visual_Info_Diff("No", SG9_TopStudent_item_perf)
 SG9Top_Rep_Diff <-Rep_Info_Diff(SG9_TopStudent_item_perf)
-view(SG9Top_Rep_Diff)
+#view(SG9Top_Rep_Diff)
 
 SG9Top_Rep_Loss <-Rep_Info_Loss(SG9_TopStudent_item_perf)
-view(SG9Top_Rep_Loss)
+#view(SG9Top_Rep_Loss)
 
 #SG9Top_Course_Share_Diff<- Course_Share_Diff(SG9_TopStudent_item_perf)
 #view(SG9Top_Course_Share_Diff)
@@ -112,16 +112,16 @@ SG9Top_CR_Diff<-Item_Type_Diff("science", "CR", SG9_TopStudent_item_perf)
 #view(SG9_CR_Diff)
 SG9Top_SR_Diff<-Item_Type_Diff("science", "SR", SG9_TopStudent_item_perf)
 SG9Top_MD_Diff<-Practice_Cat_Diff("science", "B. Mathematics and Data", SG9_TopStudent_item_perf)
-view(SG9Top_MD_Diff)
+#view(SG9Top_MD_Diff)
 SG9Top_ERM_Diff<-Practice_Cat_Diff("science", "C. Evidence, Reasoning, and Modeling", SG9_TopStudent_item_perf)
-view(SG9Top_ERM_Diff)
+#view(SG9Top_ERM_Diff)
 SG9Top_IQ_Diff<-Practice_Cat_Diff("science", "A. Investigations and Questioning", SG9_TopStudent_item_perf)
 SG9Top_MF_Diff<-Reporting_Cat_Diff("science", "Motion, Forces, and Interactions", SG9_TopStudent_item_perf)
 SG9Top_EN_Diff<-Reporting_Cat_Diff("science", "Energy", SG9_TopStudent_item_perf)
 SG9Top_WA_Diff<-Reporting_Cat_Diff("science", "Waves", SG9_TopStudent_item_perf)
 
 SG9Top_MD_Loss<-Practice_Cat_Loss("science", "B. Mathematics and Data", SG9_TopStudent_item_perf)
-view(SG9Top_MD_Loss)
+#view(SG9Top_MD_Loss)
 
 SG9Top_ERM_Loss<-Practice_Cat_Loss("science", "C. Evidence, Reasoning, and Modeling", SG9_TopStudent_item_perf)
 #view(SG9Top_ERM_Loss)
@@ -208,6 +208,10 @@ SG8_student_perf<-Student_Perf("science", 8, student_itemDF)
 #view(SG8_student_perf)
 SG8_student_item_perf<-Student_Item_Perf("science", SG8_item, SG8_student_perf)
 #view(SG5_student_perf)
+
+# SG8 Top Performing Students
+SG8_TopStudent_item_perf<-SG8_student_item_perf%>%
+  filter(sscaleds >= 515)
 #Reporting Categories: G8STE: "MF", "EN", "WA" for science grade levels
 #G8 STE: "ES", ""LS", PS", "TE"
 #view(SG8_student_item_perf)
@@ -237,14 +241,49 @@ SG8_ERM_Diff<-Practice_Cat_Diff("science", "C. Evidence, Reasoning, and Modeling
 SG8_IQ_PTS<-Practice_Cat_Points("science", "A. Investigations and Questioning", SG8_item)
 SG8_IQ_Diff<-Practice_Cat_Diff("science", "A. Investigations and Questioning", SG8_student_item_perf)
 
+
+SG8Top_MD_Loss<-Practice_Cat_Loss("science", "B. Mathematics and Data", SG8_TopStudent_item_perf)
+view(SG8Top_MD_Loss)
+SG8Top_ERM_Loss<-Practice_Cat_Loss("science", "C. Evidence, Reasoning, and Modeling", SG8_TopStudent_item_perf)
+view(SG8Top_ERM_Loss)
+SG8Top_IQ_Loss<-Practice_Cat_Loss("science", "A. Investigations and Questioning", SG8_TopStudent_item_perf)
+view(SG8Top_IQ_Loss)
+
+SG8_MD_Loss<-Practice_Cat_Loss("science", "B. Mathematics and Data", SG8_student_item_perf)
+#view(SG8Top_MD_Loss)
+SG8_ERM_Loss<-Practice_Cat_Loss("science", "C. Evidence, Reasoning, and Modeling", SG8_student_item_perf)
+#view(SG8Top_ERM_Loss)
+SG8_IQ_Loss<-Practice_Cat_Loss("science", "A. Investigations and Questioning", SG8_student_item_perf)
+#view(SG8Top_IQ_Loss)
+
+SG8_ES_Loss<-Reporting_Cat_Loss("science", "Earth and Space Science", SG8_student_item_perf)
+#view(SG8_ES_Loss)
+SG8_LS_Loss<-Reporting_Cat_Loss("science", "Life Science", SG8_student_item_perf)
+#view(SG8_LS_Loss)
+SG8_PS_Loss<-Reporting_Cat_Loss("science", "Physical Science", SG8_student_item_perf)
+#view(SG8_PS_Loss)
+SG8_TE_Loss<-Reporting_Cat_Loss("science", "Technology/Engineering", SG8_student_item_perf)
+#view(SG8_TE_Loss)
+
 SG8_ES_PTS<-Reporting_Cat_Points("science", "Earth and Space Science", SG8_item)
 SG8_ES_Diff<-Reporting_Cat_Diff("science", "Earth and Space Science", SG8_student_item_perf)
+SG8Top_ES_Loss<-Reporting_Cat_Loss("science", "Earth and Space Science", SG8_TopStudent_item_perf)
+#view(SG8Top_ES_Loss)
+
 SG8_LS_PTS<-Reporting_Cat_Points("science", "Life Science", SG8_item)
 SG8_LS_Diff<-Reporting_Cat_Diff("science", "Life Science", SG8_student_item_perf)
+SG8Top_LS_Loss<-Reporting_Cat_Loss("science", "Life Science", SG8_TopStudent_item_perf)
+#view(SG8Top_LS_Loss)
 SG8_PS_PTS<-Reporting_Cat_Points("science", "Physical Science", SG8_item)
 SG8_TE_PTS<-Reporting_Cat_Points("science", "Technology/Engineering", SG8_item)
 SG8_PS_Diff<-Reporting_Cat_Diff("science", "Physical Science", SG8_student_item_perf)
+SG8Top_PS_Loss<-Reporting_Cat_Loss("science", "Physical Science", SG8_TopStudent_item_perf)
+#view(SG8Top_PS_Loss)
 SG8_TE_Diff<-Reporting_Cat_Diff("science", "Technology/Engineering", SG8_student_item_perf)
+SG8Top_TE_Loss<-Reporting_Cat_Loss("science", "Technology/Engineering", SG8_TopStudent_item_perf)
+#view(SG8Top_TE_Loss)
+
+
 
 # SG5 Exam Content Page
 SG5_item <-read_item("data/MCAS_2023_MS_STE_Gr_5_8_Item_Analysis_Template_V2.xlsx", "Gr. 5 CBT (SCI05)", "science")
@@ -294,17 +333,35 @@ SG5_LS_Diff<-Reporting_Cat_Diff("science", "Life Science", SG5_student_item_perf
 SG5_PS_Diff<-Reporting_Cat_Diff("science", "Physical Science", SG5_student_item_perf)
 SG5_TE_Diff<-Reporting_Cat_Diff("science", "Technology/Engineering", SG5_student_item_perf)
 
+SG5_MD_Loss<-Practice_Cat_Loss("science", "B. Mathematics and Data", SG5_student_item_perf)
+SG5_ERM_Loss<-Practice_Cat_Loss("science", "C. Evidence, Reasoning, and Modeling", SG5_student_item_perf)
+SG5_IQ_Loss<-Practice_Cat_Loss("science", "A. Investigations and Questioning", SG5_student_item_perf)
+
+SG5Top_MD_Loss<-Practice_Cat_Loss("science", "B. Mathematics and Data", SG5_TopStudent_item_perf)
+view(SG5Top_MD_Loss)
+SG5Top_ERM_Loss<-Practice_Cat_Loss("science", "C. Evidence, Reasoning, and Modeling", SG5_TopStudent_item_perf)
+view(SG5Top_ERM_Loss)
+SG5Top_IQ_Loss<-Practice_Cat_Loss("science", "A. Investigations and Questioning", SG5_TopStudent_item_perf)
+view(SG5Top_IQ_Loss)
 
 SG5_ES_Loss<-Reporting_Cat_Loss("science", "Earth and Space Science", SG5_student_item_perf)
-#view(SG5_ES_Loss)
+view(SG5_ES_Loss)
 SG5_LS_Loss<-Reporting_Cat_Loss("science", "Life Science", SG5_student_item_perf)
-#view(SG5_LS_Loss)
+view(SG5_LS_Loss)
 SG5_PS_Loss<-Reporting_Cat_Loss("science", "Physical Science", SG5_student_item_perf)
-#view(SG5_PS_Loss)
-SG5Top_PS_Loss<-Reporting_Cat_Loss("science", "Physical Science", SG5_TopStudent_item_perf)
-#view(SG5Top_PS_Loss)
+view(SG5_PS_Loss)
+
 SG5_TE_Loss<-Reporting_Cat_Loss("science", "Technology/Engineering", SG5_student_item_perf)
-#view(SG5_TE_Loss)
+view(SG5_TE_Loss)
+
+SG5Top_ES_Loss<-Reporting_Cat_Loss("science", "Earth and Space Science", SG5_TopStudent_item_perf)
+view(SG5Top_ES_Loss)
+SG5Top_LS_Loss<-Reporting_Cat_Loss("science", "Life Science", SG5_TopStudent_item_perf)
+view(SG5Top_LS_Loss)
+SG5Top_PS_Loss<-Reporting_Cat_Loss("science", "Physical Science", SG5_TopStudent_item_perf)
+view(SG5Top_PS_Loss)
+SG5Top_TE_Loss<-Reporting_Cat_Loss("science", "Technology/Engineering", SG5_TopStudent_item_perf)
+view(SG5Top_TE_Loss)
 
 
 ##Create Math Item Data Frames--------------------------------------------------

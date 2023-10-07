@@ -18,8 +18,10 @@ ui <- dashboardPage(
                menuSubItem("G9 Physics Content", tabName = "g9PhysicsContent"),
                menuSubItem("G9 Physics RT-State Diff", tabName = "g9PhysicsPerf"),
                menuSubItem("G9 Physics Top Performers", tabName = "g9PhysicsTop"),
+               menuSubItem("G8 STE Analysis", tabName = "g8SteAnalysis"),
                menuSubItem("G8 STE Content", tabName = "g8SteContent"),
                menuSubItem("G8 STE Performance", tabName = "g8StePerf"),
+               menuSubItem("G5 STE Analysis", tabName = "g5SteAnalysis"),
                menuSubItem("G5 STE Content", tabName = "g5SteContent"),
                menuSubItem("G5 STE Perfromance", tabName = "g5StePerf")
                
@@ -559,6 +561,120 @@ ui <- dashboardPage(
               )
       ),
       
+      #G8 STE Analysis
+      
+      tabItem("g8SteAnalysis",
+              span(h1("How do we improve?")), #style = "color:black")),
+              
+              h3("% Points Lost by Reporting Category"),
+              
+              fluidRow(
+                # A static valueBox
+                
+                valueBox(paste(SG8_ES_Loss[1,5], "%"), HTML("<p> Earth & <br> Space Science</p>"), icon = icon("earth"), color = "light-blue"),
+                
+                valueBox(paste(SG8_LS_Loss[1,5], "%"), "Life Science",icon = icon("dna"), color = "light-blue"),
+                
+                box(  width = 4, solidHeader = FALSE,
+                      HTML("<p> Earth Science and Life Sciences Account for 27% and 30% of available points but <b> 30% and 35% of points lost by Rising Tide Students </b>
+                      </p>")
+                )
+                
+                
+              ),
+              
+              fluidRow(
+                
+                valueBox(paste(SG8_PS_Loss[1,5], "%"), "Physical Science", icon = icon("atom"), color = "light-blue"),
+                
+                
+                valueBox(paste(SG8_TE_Loss[1,5], "%"), HTML("<p> Technology & <br> Engineering</p>"), icon = icon("bridge"), color = "light-blue")
+                
+                
+                #valueBox(paste(8, "%"),  HTML("<p> unreleased or <br> no category reported </p>"), color = "light-blue")
+                
+              ),
+              
+              h3("% Points Lost Top Performing Students"),
+              
+              fluidRow(
+                # A static valueBox
+                valueBox(paste(SG8Top_ES_Loss[1,5], "%"), HTML("<p> Earth & <br> Space Science</p>"), icon = icon("earth"), color = "red"),
+                
+                
+                
+                valueBox(paste(SG8Top_LS_Loss[1,5], "%"), "Life Science",icon = icon("dna"), color = "red"),
+                
+                box(  width = 4, solidHeader = FALSE,
+                      HTML("<p> This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>. </p>")
+                )
+                
+                
+              ),
+              
+              fluidRow(
+                
+                valueBox(paste(SG8Top_PS_Loss[1,5], "%"), "Physical Science", icon = icon("atom"), color = "light-blue"),
+                
+                
+                valueBox(paste(SG8Top_TE_Loss[1,5], "%"), HTML("<p> Technology & <br> Engineering</p>"), icon = icon("bridge"), color = "light-blue")
+                
+                
+                #valueBox(paste(8, "%"),  HTML("<p> unreleased or <br> no category reported </p>"), color = "light-blue")
+                
+              ),
+              
+              
+              h3("% Points Lost by Practice Category"),
+              
+              fluidRow(
+                # A static valueBox
+                valueBox(paste(SG8_ERM_Loss[1,5], "%"), HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "red"),
+                
+                valueBox(paste(SG8_MD_Loss[1,5], "%"), HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "light-blue")
+                
+              ),
+              
+              
+              fluidRow(  
+                
+                valueBox(paste(SG8_IQ_Loss[1,5], "%"), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue"),
+                
+                box(  width = 4, solidHeader = FALSE,
+                      HTML("<p> Evidence, Reasoning and Modeling, Account for 48% of available points but <b> 56% of points lost by Rising Tide Students </b>
+                      This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>. </p>")
+                )
+                
+                
+              ),
+              
+              h3("Top Performing Students"),
+              
+              fluidRow(
+                # A static valueBox
+                valueBox(paste(SG8Top_ERM_Loss[1,5], "%"), HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "red"),
+                
+                valueBox(paste(SG8Top_MD_Loss[1,5], "%"), HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "light-blue")
+                
+              ),
+              
+              
+              fluidRow(  
+                
+                valueBox(paste(SG8Top_IQ_Loss[1,5], "%"), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue"),
+                
+                box(  width = 4, solidHeader = FALSE,
+                      HTML("<p> This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>.
+                       </p>")
+                )
+                
+                
+              )
+              
+              
+              
+          ),
+      
       #G5 Sci Content
       tabItem("g5SteContent",
               span(h1("How were students assessed?")), #style = "color:black")),
@@ -639,6 +755,88 @@ ui <- dashboardPage(
               )
       ),
       
+      tabItem("g5SteAnalysis",
+              
+              span(h1("How do we improve?")), #style = "color:black")),
+              
+              h3("% Points Lost by Reporting Category"),
+              
+              fluidRow(
+                # A static valueBox
+                valueBox(paste(SG5_PS_Loss[1,5], "%"), "Physical Science", icon = icon("atom"), color = "red"),
+                
+                
+                valueBox(paste(SG5_LS_Loss[1,5], "%"), "Life Science",icon = icon("dna"), color = "light-blue"),
+                
+                box(  width = 4, solidHeader = FALSE,
+                      HTML("<p> Physical Sciences Account for 26% of available points but <b> 33% of points lost by Rising Tide Students </b>
+                      This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>. </p>")
+                    )
+                  
+                
+              ),
+              
+              fluidRow(
+                valueBox(paste(SG5_ES_Loss[1,5], "%"), HTML("<p> Earth & <br> Space Science</p>"), icon = icon("earth"), color = "light-blue"),
+                
+                valueBox(paste(SG5_TE_Loss[1,5], "%"), HTML("<p> Technology & <br> Engineering</p>"), icon = icon("bridge"), color = "light-blue")
+                      
+                
+                #valueBox(paste(8, "%"),  HTML("<p> unreleased or <br> no category reported </p>"), color = "light-blue")
+                
+              ),
+              
+              
+              h3("% Points Lost by Practice Category"),
+              
+              fluidRow(
+                # A static valueBox
+                valueBox(paste(SG5_ERM_Loss[1,5], "%"), HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "red"),
+                
+                valueBox(paste(SG5_MD_Loss[1,5], "%"), HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "light-blue")
+                
+              ),
+                
+                
+              fluidRow(  
+                
+                valueBox(paste(SG5_IQ_Loss[1,5], "%"), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue"),
+                
+                box(  width = 4, solidHeader = FALSE,
+                      HTML("<p> Evidence, Reasoning and Modeling, Account for 48% of available points but <b> 56% of points lost by Rising Tide Students </b>
+                      This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>. </p>")
+                  )
+              
+                
+              ),
+              
+              h3("Top Performing Students"),
+              
+              fluidRow(
+                # A static valueBox
+                valueBox(paste(SG5Top_ERM_Loss[1,5], "%"), HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "red"),
+                
+                valueBox(paste(SG5Top_MD_Loss[1,5], "%"), HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "light-blue")
+                
+              ),
+              
+              
+              fluidRow(  
+                
+                valueBox(paste(SG5Top_IQ_Loss[1,5], "%"), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue"),
+                
+                box(  width = 4, solidHeader = FALSE,
+                      HTML("<p> This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>.
+                       </p>")
+                )
+                
+                
+              )
+             
+              
+              
+              
+        ),
       #G5 STE Student Performance
       
       tabItem("g5StePerf",
