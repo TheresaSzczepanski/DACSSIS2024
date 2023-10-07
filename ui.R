@@ -967,7 +967,7 @@ ui <- dashboardPage(
               
               
               fluidRow(
-                valueBox(MG10_AF_Diff[1,6], HTML("<p> Algebra and <br> Functions </p>"), icon = icon("square-root-variable"), color = "blue"),
+                valueBox(MG10_AF_Diff[1,6], HTML("<p> Algebra and <br> Functions </p>"), icon = icon("square-root-variable"), color = "red"),
                 valueBox( MG10_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue"),
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p>
@@ -975,14 +975,20 @@ ui <- dashboardPage(
                               <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
                              Weakest Items </a> 
 
-                            </p>")
+                            </p>"),
+                     HTML("<p> Algebra and Functions Items account for <b> 35% of available </b> points but <b> 48% </b> of points <b>lost by Rising Tide </b> Students 
+                      </p>")
                      
                 )
               ),
               
               fluidRow(
                 valueBox(MG10_NQ_Diff[1,6], HTML(" <p> Numbers and <br> Quantity </p>"), icon = icon("plus-minus"), color = "blue"),
-                valueBox(MG10_SP_Diff[1,6], HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "blue")
+                valueBox(MG10_SP_Diff[1,6], HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "red"),
+                box(  width = 4, solidHeader = FALSE,
+                      HTML("<p> Statistics and Probability Items account for <b> 17% of available </b> points but <b> 24% </b> of points <b>lost by Rising Tide's Top Performing StudentsStudents </b>
+                      </p>")
+                )
               ),
               
               h3("RT-State Diff by: Question Type"),
@@ -1059,12 +1065,17 @@ ui <- dashboardPage(
               span(h1("How do our students compare to their peers in the state?")), #style = "color:black")),
               
               h3("RT-State Diff by: Content Category"),
-              
+              h3("Different Trends between Algebra and G8 Students"),
               
               fluidRow(
-                valueBox(MG8_FN_Diff[1,6], "Functions", icon = icon("square-root-variable"), color = "blue"),
+                valueBox(MG8_FN_Diff[1,6], "Functions", icon = icon("square-root-variable"), color = "red"),
                 valueBox( MG8_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue"),
                 box( width = 4, solidHeader = FALSE,
+                     HTML("<p> Geometry Items account for <b> 30% of available </b> points but <b> 46% </b> of points <b>lost by Rising Tide's Top Performing StudentsStudents </b>
+                      </p>"),
+                     
+                     HTML("<p> Expressions and Equations account for <b> 37%  </b> of points lost by Rising Tide's Mid-Performing students but only <b> 22% </b> of points <b>lost by Rising Tide's Top Performing StudentsStudents </b>
+                      </p>"),
                      HTML("<p>
                              Rising Tide 2023
                               <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
