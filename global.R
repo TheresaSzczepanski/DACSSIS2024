@@ -407,7 +407,16 @@ MG7_LowStudent_item_perf<-MG7_student_item_perf%>%
 MG6_student_perf<-Student_Perf("math", 6, student_itemDF)
 MG6_student_item_perf<-Student_Item_Perf("math", MG6_item, MG6_student_perf)
 MG6_TopStudent_item_perf<-MG6_student_item_perf%>%
-  filter(`mscaleds`>=505)
+  filter(`mscaleds`>=515)
+
+MG6_MidStudent_item_perf<-MG6_student_item_perf%>%
+  filter(`mscaleds`>=500)%>%
+  filter( `mscaleds` <515)
+
+MG6_LowStudent_item_perf<-MG6_student_item_perf%>%
+  filter(`mscaleds`< 500)
+
+
 MG5_student_perf<-Student_Perf("math", 5, student_itemDF)
 MG5_student_item_perf<-Student_Item_Perf("math", MG5_item, MG5_student_perf)
 MG5_TopStudent_item_perf<-MG5_student_item_perf%>%
@@ -544,45 +553,45 @@ MG7_RP_Diff<-Reporting_Cat_Diff("math", "Ratios and Proportional Relationships",
 MG7_SP_Diff<-Reporting_Cat_Diff("math", "Statistics and Probability", MG7_student_item_perf)
 
 MG7_EE_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG7_student_item_perf)
-view(MG7_EE_Loss)
+#view(MG7_EE_Loss)
 MG7Top_EE_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG7_TopStudent_item_perf)
-view(MG7Top_EE_Loss)
+#view(MG7Top_EE_Loss)
 
 MG7Low_EE_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG7_LowStudent_item_perf)
-view(MG7Low_EE_Loss)
+#view(MG7Low_EE_Loss)
 
-MG7_NS_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG7_student_item_perf)
+MG7_NS_Loss<-Reporting_Cat_Loss("math", "The Number System", MG7_student_item_perf)
 view(MG7_NS_Loss)
-MG7Top_NS_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG7_TopStudent_item_perf)
+MG7Top_NS_Loss<-Reporting_Cat_Loss("math", "The Number System", MG7_TopStudent_item_perf)
 view(MG7Top_NS_Loss)
 
-MG7Low_NS_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG7_LowStudent_item_perf)
+MG7Low_NS_Loss<-Reporting_Cat_Loss("math", "The Number System", MG7_LowStudent_item_perf)
 view(MG7Low_NS_Loss)
 
 
 MG7_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG7_student_item_perf)
-view(MG7_GE_Loss)
+#view(MG7_GE_Loss)
 
 MG7Top_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG7_TopStudent_item_perf)
-view(MG7Top_GE_Loss)
+#view(MG7Top_GE_Loss)
 
 MG7Low_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG7_LowStudent_item_perf)
-view(MG7Low_GE_Loss)
+#view(MG7Low_GE_Loss)
 
 
 MG7_RP_Loss<-Reporting_Cat_Loss("math", "Ratios and Proportional Relationships", MG7_student_item_perf)
-view(MG7_RP_Loss)
+#view(MG7_RP_Loss)
 
 MG7Top_RP_Loss<-Reporting_Cat_Loss("math", "Ratios and Proportional Relationships", MG7_TopStudent_item_perf)
-view(MG7Top_RP_Loss)
+#view(MG7Top_RP_Loss)
 MG7Low_RP_Loss<-Reporting_Cat_Loss("math", "Ratios and Proportional Relationships", MG7_LowStudent_item_perf)
-view(MG7Low_RP_Loss)
+#view(MG7Low_RP_Loss)
 MG7_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG7_student_item_perf)
-view(MG7_SP_Loss)
+#view(MG7_SP_Loss)
 MG7Top_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG7_TopStudent_item_perf)
-view(MG7Top_SP_Loss)
+#view(MG7Top_SP_Loss)
 MG7Low_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG7_LowStudent_item_perf)
-view(MG7Low_SP_Loss)
+#view(MG7Low_SP_Loss)
 
 MG7Top_RP_Diff<-Reporting_Cat_Diff("math", "Ratios and Proportional Relationships", MG7_TopStudent_item_perf)
 #view(MG7Top_RP_Diff)
@@ -629,6 +638,48 @@ MG6_SP_Diff<-Reporting_Cat_Diff("math", "Statistics and Probability", MG6_studen
 #view(MG6_GE_Loss)
 #MG6Top_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG6_TopStudent_item_perf)
 #view(MG6Top_GE_Loss)
+
+MG6_EE_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG6_student_item_perf)
+view(MG6_EE_Loss)
+MG6Top_EE_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG6_TopStudent_item_perf)
+view(MG6Top_EE_Loss)
+
+MG6Low_EE_Loss<-Reporting_Cat_Loss("math", "Expressions and Equations", MG6_LowStudent_item_perf)
+view(MG6Low_EE_Loss)
+
+MG6_NS_Loss<-Reporting_Cat_Loss("math", "The Number System", MG6_student_item_perf)
+view(MG6_NS_Loss)
+MG6Top_NS_Loss<-Reporting_Cat_Loss("math", "The Number System", MG6_TopStudent_item_perf)
+view(MG6Top_NS_Loss)
+
+MG6Low_NS_Loss<-Reporting_Cat_Loss("math", "The Number System", MG6_LowStudent_item_perf)
+view(MG6Low_NS_Loss)
+
+
+MG6_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG6_student_item_perf)
+view(MG6_GE_Loss)
+
+MG6Top_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG6_TopStudent_item_perf)
+view(MG6Top_GE_Loss)
+
+MG6Low_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG6_LowStudent_item_perf)
+view(MG6Low_GE_Loss)
+
+
+MG6_RP_Loss<-Reporting_Cat_Loss("math", "Ratios and Proportional Relationships", MG6_student_item_perf)
+view(MG6_RP_Loss)
+
+MG6Top_RP_Loss<-Reporting_Cat_Loss("math", "Ratios and Proportional Relationships", MG6_TopStudent_item_perf)
+view(MG6Top_RP_Loss)
+MG6Low_RP_Loss<-Reporting_Cat_Loss("math", "Ratios and Proportional Relationships", MG6_LowStudent_item_perf)
+view(MG6Low_RP_Loss)
+MG6_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG6_student_item_perf)
+view(MG6_SP_Loss)
+MG6Top_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG6_TopStudent_item_perf)
+view(MG6Top_SP_Loss)
+MG6Low_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG6_LowStudent_item_perf)
+view(MG6Low_SP_Loss)
+
 MG6Top_RP_Diff<-Reporting_Cat_Diff("math", "Ratios and Proportional Relationships", MG6_TopStudent_item_perf)
 #view(MG6Top_RP_Diff)
 MG6Top_SP_Diff<-Reporting_Cat_Diff("math", "Statistics and Probability", MG6_TopStudent_item_perf)

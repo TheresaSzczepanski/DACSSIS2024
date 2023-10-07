@@ -1192,10 +1192,6 @@ ui <- dashboardPage(
                 ),
                      
                
-                
-                
-                
-               
                      
                 
                 
@@ -1203,9 +1199,8 @@ ui <- dashboardPage(
                      
                      HTML("<p> <b> Top Performing Students </b> lost a higher percentage </b> of points on
                               <b> Ratio and Proportional Reasoning items </b>, while,
-                              <b> Low Performing Students </b> lost   <b> 21% </b> of their points on 
-                                  <b> Number System Items </b> compared to only  <b> 7%  </b> of points lost 
-                            lost by Rising Tide's <b> Top Performing Students </b> 
+                              <b> Low Performing Students </b> lost   <b> 25% </b> of their points on 
+                                  <b> Number System Items </b> 
                       </p>")
                      
                 ),
@@ -1302,7 +1297,9 @@ ui <- dashboardPage(
               
               
               fluidRow(
-                valueBox(MG6_EE_Diff[1,6], HTML("<p>Expressions <br> and Equations</p>"), icon = icon("equals"), color = "red"),
+                
+                valueBox(MG6_RP_Diff[1,6], HTML("<p> Ratios and <br> Proportions </p>"), icon = icon("chart-pie"), color = "blue"),
+                
                 valueBox( MG6_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue"),
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p>
@@ -1316,8 +1313,46 @@ ui <- dashboardPage(
               ),
               
               fluidRow(
-                valueBox(MG6_NS_Diff[1,6], "Number System", icon = icon("less-than-equal"), color = "blue"),
-                valueBox(MG6_RP_Diff[1,6], HTML("<p> Ratios and <br> Proportions </p>"), icon = icon("chart-pie"), color = "blue"),
+                
+                box( width = 4, solidHeader = FALSE,
+                     
+                     HTML("<p> Expressions and Equations items account for <b> 30%  </b> of points available 
+                            but  <b> 37% </b> of points  <b>  lost by RisingTide Students </b> 
+                      </p>")
+                     
+                ),
+                
+                
+                
+                
+                
+                box( width = 4, solidHeader = FALSE,
+                     
+                     HTML("<p>
+                               <b> Number System Items</b> account for <b> 20% </b> of points available
+                               yet, <b> Low performing Rising Tide students </b> lost only  <b> 10% </b> of their points on 
+                                  these  and all students lost <b>only 10%  </b> of their points on these items.
+                      </p>")
+                     
+                ),
+                
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p> Statistics and Probability Items account for <b> 20% of available </b> 
+                          points but <b> 30% </b> of points <b>lost by Rising Tide's Top Performing Students </b>
+                          </p>")
+                     
+                     
+                )
+                
+                
+                
+              ),
+              
+              fluidRow(
+                
+                valueBox(MG6_NS_Diff[1,6], "Number System", icon = icon("less-than-equal"), color = "red"),
+                valueBox(MG6_EE_Diff[1,6], HTML("<p>Expressions <br> and Equations</p>"), icon = icon("equals"), color = "red"),
+                
                 valueBox(MG6_SP_Diff[1,6], HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "red")
               ),
               
