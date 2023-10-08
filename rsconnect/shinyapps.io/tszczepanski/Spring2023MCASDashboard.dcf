@@ -1,0 +1,12 @@
+name: Spring2023MCASDashboard
+title: Spring2023MCASDashboard
+username: tszczepanski
+account: tszczepanski
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10121538
+bundleId: 7775265
+url: https://tszczepanski.shinyapps.io/Spring2023MCASDashboard/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
