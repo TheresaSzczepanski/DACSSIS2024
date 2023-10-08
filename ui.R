@@ -43,11 +43,11 @@ ui <- dashboardPage(
                 menuSubItem("G10 ELA Writing Analysis", tabName = "g10ELAWritingAnalysis"),
                 menuSubItem("G10 ELA Reading Analysis", tabName = "g10ELAReadingAnalysis"),
                 menuSubItem("G10 ELA Content", tabName = "g10ELAContent"),
-                menuSubItem("G10 ELA RT-State Diff", tabName = "g10ELADiff"),
+                menuSubItem("G10 ELA RT-State Diff", tabName = "g10ELAAnalysis"),
                 menuSubItem("G8 ELA Content", tabName = "g8ELAContent"),
-                menuSubItem("G8 ELA RT-State Diff", tabName = "g8ELADiff"),
+                menuSubItem("G8 ELA RT-State Diff", tabName = "g8ELAAnalysis"),
                 menuSubItem("G7 ELA Content", tabName = "g7ELAContent"),
-                menuSubItem("G7 ELA RT-State Diff", tabName = "g7ELADiff"),
+                menuSubItem("G7 ELA Analysis", tabName = "g7ELAAnalysis"),
                 menuSubItem("G6 ELA Content", tabName = "g6ELAContent"),
                 menuSubItem("G6 ELA Analysis", tabName = "g6ELAAnalysis"),
                 menuSubItem("G5 ELA Content", tabName = "g5ELAContent"),
@@ -1637,7 +1637,7 @@ ui <- dashboardPage(
       
       #G10 ELA Performance
       
-      tabItem("g10ELADiff",
+      tabItem("g10ELAAnalysis",
               span(h1("How do our students compare to their peers in the state?")), #style = "color:black")),
 
               h2("RT-State Diff by Content Category"),
@@ -2196,7 +2196,7 @@ ui <- dashboardPage(
    
    #G8 ELA Performance
    
-   tabItem("g8ELADiff",
+   tabItem("g8ELAAnalysis",
            span(h1("How do our students compare to their peers in the state?")), #style = "color:black")),
            
            h2("RT-State Diff by Content Category"),
@@ -2498,7 +2498,7 @@ ui <- dashboardPage(
    
    #G7 ELA Performance
    
-   tabItem("g7ELADiff",
+   tabItem("g7ELAAnalysis",
            span(h1("How do our students compare to their peers in the state?")), #style = "color:black")),
            
            h2("RT-State Diff by Content Category"),

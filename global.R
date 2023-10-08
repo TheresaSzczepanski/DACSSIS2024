@@ -857,6 +857,46 @@ EG10Low_student_writing_item_perf<-EG10_student_item_perf%>%
   filter(str_detect(`Type`, "ES"))%>%
   filter(`escaleds` < 500)
 
+## EG10 Points Lost by Category and Student Performance Level
+
+EG10_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG10_student_item_perf)
+#view(EG10_LA_Loss)
+EG10_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG10_student_item_perf)
+#view(EG10_RE_Loss)
+EG10Top_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG10Top_student_reading_item_perf)
+# view(EG10Top_LA_Loss)
+EG10Top_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG10Top_student_reading_item_perf)
+# view(EG10Top_RE_Loss)
+
+EG10_CS_Loss<-Practice_Cat_Loss("ela", "Craft and Structure", EG10_student_item_perf)
+view(EG10_CS_Loss)
+EG10Top_CS_Loss<-Practice_Cat_Loss("ela", "Craft and Structure", EG10Top_student_reading_item_perf)
+view(EG10Top_CS_Loss)
+EG10Mid_CS_Loss<-Practice_Cat_Loss("ela", "Craft and Structure", EG10Mid_student_reading_item_perf)
+view(EG10Mid_CS_Loss)
+EG10_CV_Loss<-Practice_Cat_Loss("ela", "Conventions", EG10_student_item_perf)
+#view(EG10_CV_Loss)
+EG10_KD_Loss<-Practice_Cat_Loss("ela", "Key Ideas and Details", EG10_student_item_perf)
+#view(EG10_KD_Loss)
+EG10_KL_Loss<-Practice_Cat_Loss("ela", "Knowledge of Language", EG10_student_item_perf)
+#view(EG10_KL_Loss)
+EG10_ID_Loss<-Practice_Cat_Loss("ela", "Idea Development", EG10_student_item_perf)
+#view(EG10_ID_Loss)
+EG10_IK_Loss<-Practice_Cat_Loss("ela", "Integration of Knowledge and Ideas", EG10_student_item_perf)
+#view(EG10_IK_Loss)
+EG10_VA_Loss<-Practice_Cat_Loss("ela", "Vocabulary Acquisition and Use", EG10_student_item_perf)
+#view(EG10_VA_Loss)
+EG10_WC_Loss<-Practice_Cat_Loss("ela", "Writing Combined (Conv/Idea Dev)", EG10_student_item_perf)
+#view(EG10_WC_Loss)
+EG10_ESconv_Loss<-ELA_Subitem_Loss("conv", EG10_student_essay_perf)
+#view(EG10_ESconv_Loss)
+EG10_ESidea_Loss<-ELA_Subitem_Loss("idea", EG10_student_essay_perf)
+#view(EG10_ESidea_Loss)
+EG10Top_ESconv_Loss<-ELA_Subitem_Loss("conv", EG10Top_student_essay_perf)
+#view(EG10Top_ESconv_Loss)
+EG10Top_ESidea_Loss<-ELA_Subitem_Loss("idea", EG10Top_student_essay_perf)
+#view(EG10Top_ESidea_Loss)
+
 #EG8 Item DF's
 EG8_item<-read_item("data/2023ELAItemResults.xlsx", "EG8", "ela")
 EG8_xWalk<-read_item_xwalk("data/2023MCASItemXWalk.xlsx", "EG8_xwalk",
@@ -918,6 +958,46 @@ EG8Mid_student_writing_item_perf<-EG8_student_item_perf%>%
 EG8Low_student_writing_item_perf<-EG8_student_item_perf%>%
   filter(str_detect(`Type`, "ES"))%>%
   filter(`escaleds` < 500)
+
+## EG8 Points Lost by Category and Student Performance Level
+
+EG8_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG8_student_item_perf)
+#view(EG8_LA_Loss)
+EG8_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG8_student_item_perf)
+#view(EG8_RE_Loss)
+EG8Top_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG8Top_student_reading_item_perf)
+# view(EG8Top_LA_Loss)
+EG8Top_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG8Top_student_reading_item_perf)
+# view(EG8Top_RE_Loss)
+
+EG8_CS_Loss<-Practice_Cat_Loss("ela", "Craft and Structure", EG8_student_item_perf)
+view(EG8_CS_Loss)
+EG8Top_CS_Loss<-Practice_Cat_Loss("ela", "Craft and Structure", EG8Top_student_reading_item_perf)
+view(EG8Top_CS_Loss)
+EG8Mid_CS_Loss<-Practice_Cat_Loss("ela", "Craft and Structure", EG8Mid_student_reading_item_perf)
+view(EG8Mid_CS_Loss)
+EG8_CV_Loss<-Practice_Cat_Loss("ela", "Conventions", EG8_student_item_perf)
+#view(EG8_CV_Loss)
+EG8_KD_Loss<-Practice_Cat_Loss("ela", "Key Ideas and Details", EG8_student_item_perf)
+#view(EG8_KD_Loss)
+EG8_KL_Loss<-Practice_Cat_Loss("ela", "Knowledge of Language", EG8_student_item_perf)
+#view(EG8_KL_Loss)
+EG8_ID_Loss<-Practice_Cat_Loss("ela", "Idea Development", EG8_student_item_perf)
+#view(EG8_ID_Loss)
+EG8_IK_Loss<-Practice_Cat_Loss("ela", "Integration of Knowledge and Ideas", EG8_student_item_perf)
+#view(EG8_IK_Loss)
+EG8_VA_Loss<-Practice_Cat_Loss("ela", "Vocabulary Acquisition and Use", EG8_student_item_perf)
+#view(EG8_VA_Loss)
+EG8_WC_Loss<-Practice_Cat_Loss("ela", "Writing Combined (Conv/Idea Dev)", EG8_student_item_perf)
+#view(EG8_WC_Loss)
+EG8_ESconv_Loss<-ELA_Subitem_Loss("conv", EG8_student_essay_perf)
+#view(EG8_ESconv_Loss)
+EG8_ESidea_Loss<-ELA_Subitem_Loss("idea", EG8_student_essay_perf)
+#view(EG8_ESidea_Loss)
+EG8Top_ESconv_Loss<-ELA_Subitem_Loss("conv", EG8Top_student_essay_perf)
+#view(EG8Top_ESconv_Loss)
+EG8Top_ESidea_Loss<-ELA_Subitem_Loss("idea", EG8Top_student_essay_perf)
+#view(EG8Top_ESidea_Loss)
 #view(EG8_item)
 # EG8_item_summary<-EG8_item%>%
 #   mutate(`RT Points Earned` = `item Possible Points`*`RT Percent Points`)%>%
