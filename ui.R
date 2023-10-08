@@ -51,7 +51,7 @@ ui <- dashboardPage(
                 menuSubItem("G6 ELA Content", tabName = "g6ELAContent"),
                 menuSubItem("G6 ELA RT-State Diff", tabName = "g6ELADiff"),
                 menuSubItem("G5 ELA Content", tabName = "g5ELAContent"),
-                menuSubItem("G5 ELA RT-State Diff", tabName = "g5ELADiff")
+                menuSubItem("G5 ELA Analysis", tabName = "g5ELAAnalysis")
        )
 
     )
@@ -3104,14 +3104,14 @@ ui <- dashboardPage(
    
    #G5 ELA Performance
    
-   tabItem("g5ELADiff",
-           span(h1("How do our students compare to their peers in the state?")), #style = "color:black")),
+   tabItem("g5ELAAnalysis",
+           span(h1("How do we support reading?")), #style = "color:black")),
            
-           h2("RT-State Diff by Content Category"),
-           h3("Reading"),
+           h2("% Reading Points Lost by Reporting Category"),
+           
            fluidRow(
-             valueBox( EG5_RE_Diff[1,6],HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "blue"),
-             valueBox(EG5_RELA_PTS[1,2], HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
+             valueBox( paste(EG5_RE_Loss[1,5], "%") ,HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "red"),
+             valueBox( paste(EG5_LA_Loss[1,5], "%"),  HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
              box( title = "Released Materials", width = 4, solidHeader = FALSE,
                   HTML("<p>
                             <ul>
@@ -3131,61 +3131,104 @@ ui <- dashboardPage(
                               </li>
                             </ul>
                         </p>"))
+              ),
+           
+           h2("Selected Response RT-State Diff by Domain Cluster"),
+           
+           
+           fluidRow(
+             # A static valueBox
+             
+             valueBox(paste(round(EG5_KD_Loss[1,5]), "%"), HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
+             valueBox(paste(EG5_CS_Loss[1,5], "%"), HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "red"),
+             
+             
+             
+             valueBox(paste(EG5_IK_Loss[1,5], "%"), HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
+             
+             
+             
+             # valueBox(EG5_KL_Diff[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
+             
+             valueBox(paste(round(EG5_VA_Loss[1,5]), "%"), HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
+             box( width = 4, solidHeader = FALSE,
+                  HTML("<p> <b>15% </b> of points lost by RT students came from
+                       <b> Craft and Structure </b> items, even though they
+                       account for <b>only 11% </b> of points available</p>"),
+                  HTML("<p> <b>18% </b> of points lost by students meeting <b> but not exceeding </b>
+                        expectations came from
+                       <b> Craft and Structure </b> items. </p>")
+             ),
+             
+             valueBox(paste(EG5_CV_Loss[1,5], "%"), HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue")
+            
              
              
            ),
-           h3("Writing"),
+           
+           h2("RT-State Reading Comprehension Diff by Text Type"),
+           
            fluidRow(
-             valueBox( EG5_ESidea_Diff[1,5],HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "light-blue"),
-             valueBox( EG5_ESconv_Diff[1,5],HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+             
+             valueBox(EG5_NFRead_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
+             valueBox(EG5_FRead_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "blue"),
+             box(  width = 4, solidHeader = FALSE,
+                  
+                  HTML("<p> Students demonstrated <b> similar </b> levels of comprehension of 
+                          literature and informational texts relative to their peers in the state. </p>"),
+                  
+                  HTML("<p> Find text title and types in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+                       G5 ELA xWalk.</a> </p>")
+                  
+                  )
+             
+             
+             
+           ),
+           
+         
+           h1("How do we support our writers?"),
+           h3("% of Writing Points Lost"),
+           fluidRow(
+             valueBox( paste(EG5_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+             valueBox( paste(EG5_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
              box(width = 4, solidHeader = FALSE,
-                 HTML("<p> <ul>
-                              <li> Student sample writing and
-                                <a href ='https://www.doe.mass.edu/mcas/student/2022/grade5/ela.html'>
-                                Scoring guidelines </a>
-                              </li>
-
-
-
-                            </ul>
+                 HTML("<p> <b> 61% </b> of essay points lost by Rising Tide students were due to <b>Idea Development </b>. <ul>
+                             
                             </p>"
                  )
              )
              
            ),
            
-           
-           
-           
-           h2("RT-State Diff by Text Type"),
-           h3("Reading"),
+           h3("% Points Lost by Top Performing Students"),
            fluidRow(
-             
-             valueBox(EG5_NFRead_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
-             valueBox(EG5_FRead_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  
-                  HTML("<p> Text title and types in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G5 ELA xWalk.</a> </p>"))
-             
-             
+             valueBox( paste(EG5Top_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+             valueBox( paste(EG5Top_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+             box(width = 4, solidHeader = FALSE,
+                 HTML("<p> This trend is <b> more pronounced </b> in the <b> Top Performing Students </b>
+                            </p>"
+                 )
+             )
              
            ),
-           h3("Writing"),
-           fluidRow(
-             # A static valueBox
-             valueBox(EG5_NFWrite_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
-             valueBox(EG5_FWrite_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  
-                  HTML("<p> Text title and types in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G5 ELA xWalk.</a> </p>"))
-             
-             
-             
-           ),
+           
+      
+           # h3("Writing"),
+           # fluidRow(
+           #   # A static valueBox
+           #   valueBox(EG5_NFWrite_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
+           #   valueBox(EG5_FWrite_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
+           #   box( title = "Notes", width = 4, solidHeader = FALSE,
+           #        
+           #        HTML("<p> Text title and types in the <a href =
+           #            'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+           #             G5 ELA xWalk.</a> </p>"))
+           #   
+           #   
+           #   
+           # ),
            h2("RT-State Diff by Text Quantity"),
            h3("Reading"),
            fluidRow(
@@ -3200,48 +3243,22 @@ ui <- dashboardPage(
              
              
              
-           ),
-           
-           h3("Writing"),
-           fluidRow(
-             
-             valueBox(EG5_2TextWrite_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "light-blue" ),
-             valueBox(EG5_1TextWrite_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "light-blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  HTML("<p> Links to questions in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G5 ELA xWalk.</a> </p>"))
-             
-             
-             
-           ),
-           h2("Selected Response RT-State Diff by Domain Cluster"),
-           
-           
-           fluidRow(
-             # A static valueBox
-             
-             valueBox(round(EG5_KD_Diff[1,6]), HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
-             valueBox(EG5_CS_Diff[1,6], HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "blue"),
-             
-             
-             
-             valueBox(EG5_IK_Diff[1,6], HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
-             
-             
-             
-             # valueBox(EG5_KL_Diff[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
-             
-             valueBox(round(EG5_VA_Diff[1,6]), HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
-             valueBox(EG5_CV_Diff[1,6], HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  HTML("<p> Read more about the <a href =
-                      'https://www.doe.mass.edu/frameworks/ela/2017-06.pdf'>
-                       anchor standards </a> in the frameworks</p>"))
-             
-             
-             
            )
+           
+           # h3("Writing"),
+           # fluidRow(
+           #   
+           #   valueBox(EG5_2TextWrite_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "light-blue" ),
+           #   valueBox(EG5_1TextWrite_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "light-blue"),
+           #   box( title = "Notes", width = 4, solidHeader = FALSE,
+           #        HTML("<p> Links to questions in the <a href =
+           #            'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+           #             G5 ELA xWalk.</a> </p>"))
+           #   
+           #   
+           #   
+           # ),
+        
            
    )
       
