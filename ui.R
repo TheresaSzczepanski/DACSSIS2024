@@ -40,12 +40,13 @@ ui <- dashboardPage(
                menuSubItem("G5 Math Performance", tabName = "g5MathPerf")
       ),
        menuItem("ELA", tabName = "ela", icon = icon("book-bookmark"),
+                menuSubItem("G10 ELA Content", tabName = "g10ELAContent"),
                 menuSubItem("G10 ELA Writing Analysis", tabName = "g10ELAWritingAnalysis"),
                 menuSubItem("G10 ELA Reading Analysis", tabName = "g10ELAReadingAnalysis"),
-                menuSubItem("G10 ELA Content", tabName = "g10ELAContent"),
-                menuSubItem("G10 ELA RT-State Diff", tabName = "g10ELAAnalysis"),
+               
+                #menuSubItem("G10 ELA Analysis", tabName = "g10ELAAnalysis"),
                 menuSubItem("G8 ELA Content", tabName = "g8ELAContent"),
-                menuSubItem("G8 ELA RT-State Diff", tabName = "g8ELAAnalysis"),
+                menuSubItem("G8 ELA Analysis", tabName = "g8ELAAnalysis"),
                 menuSubItem("G7 ELA Content", tabName = "g7ELAContent"),
                 menuSubItem("G7 ELA Analysis", tabName = "g7ELAAnalysis"),
                 menuSubItem("G6 ELA Content", tabName = "g6ELAContent"),
@@ -1522,11 +1523,6 @@ ui <- dashboardPage(
                                Student sample writing and
                                 <a href ='https://www.doe.mass.edu/mcas/student/2022/grade10/ela.html'>
                                 Scoring guidelines </a>
-
-
-
-
-
                             </p>"
                     )
                 )
@@ -1637,179 +1633,116 @@ ui <- dashboardPage(
       
       #G10 ELA Performance
       
-      tabItem("g10ELAAnalysis",
-              span(h1("How do our students compare to their peers in the state?")), #style = "color:black")),
-
-              h2("RT-State Diff by Content Category"),
-              h3("Reading"),
+      tabItem("g10ELAReadingAnalysis",
+              
+              span(h1("How do we support reading?")), #style = "color:black")),
+              
+              h2("% Reading Points Lost by Reporting Category"),
+              
               fluidRow(
-                valueBox( EG10_RE_Diff[1,6],HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "blue"),
-                valueBox(EG10_RELA_PTS[1,2], HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
-                box( title = "Released Materials", width = 4, solidHeader = FALSE,
-                     HTML("<p>
-                            <ul>
-                              <li>
-                                <a href='https://mcas.digitalitemlibrary.com/home?subject=ELA&grades=Grade%2010&view=ALL'>Digital item library </a>
-                              </li>
-                               <li>
-                                  <a href = 'https://www.doe.mass.edu/mcas/2022/release/gr10-ela.pdf'>
-                                  2022 released paper based items </a>
-                              </li>
-                              <li> Sample
-                                <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-ela/MCAS_2022_Gr10_ELA_PT_ADA.pdf'>
-                                  Paper Based Practice Test PDF </a>
-                              </li>
-                              <li> Sample
-                                  <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-ela/'> computer based practice test</a>
-                              </li>
-                            </ul>
-                        </p>"))
-
-
-              ),
-              h3("Writing"),
-              fluidRow(
-                valueBox( EG10_ESidea_Diff[1,5],HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "light-blue"),
-                valueBox( EG10_ESconv_Diff[1,5],HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+                valueBox( paste(EG10_RE_Loss[1,5], "%") ,HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "red"),
+                valueBox( paste(EG10_LA_Loss[1,5], "%"),  HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
                 box(width = 4, solidHeader = FALSE,
-                    HTML("<p> <ul>
-                              <li> Student sample writing and
-                                <a href ='https://www.doe.mass.edu/mcas/student/2023/grade10/ela.html'>
-                                Scoring guidelines </a>
-                              </li>
-
-
-
-                            </ul>
-                            </p>"
+                    HTML("<p>
+                           <b>  Reading Comprehension </b> accounts for the almost all selected response points lost by Rising Tide Students.
+                        </p>"
                     )
                 )
-
               ),
-
-
-
-
-              h2("RT-State Diff by Text Type"),
-              h3("Reading"),
-              fluidRow(
-
-                valueBox(EG10_NFRead_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
-                valueBox(EG10_FRead_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "red"),
-                box( title = "Notes", width = 4, solidHeader = FALSE,
-
-                     HTML("<p> Text title and types in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G10 ELA xWalk.</a> </p>"))
-
-
-
-              ),
-              h3("Writing"),
+              
+              h2("% Selected Response Lost by Domain Cluster"),
+              
+              
               fluidRow(
                 # A static valueBox
-                valueBox(EG10_NFWrite_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
-                valueBox(EG10_FWrite_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
-                box( title = "Notes", width = 4, solidHeader = FALSE,
-
-                     HTML("<p> Text title and types in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G10 ELA xWalk.</a> </p>"))
-
-
-
-              ),
-              h2("RT-State Diff by Text Quantity"),
-              h3("Reading"),
-              fluidRow(
-                # A static valueBox
-                valueBox(EG10_2TextRead_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "blue" ),
-                valueBox(EG10_1TextRead_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "blue"),
-                box( title = "Notes", width = 4, solidHeader = FALSE,
-
-                     HTML("<p> Links to questions in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G10 ELA xWalk.</a> </p>"))
-
-
-
-              ),
-
-              h3("Writing"),
-              fluidRow(
-
-                valueBox(EG10_2TextWrite_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "light-blue" ),
-                valueBox(EG10_1TextWrite_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "light-blue"),
-                box( title = "Notes", width = 4, solidHeader = FALSE,
-                     HTML("<p> Links to questions in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G10 ELA xWalk.</a> </p>"))
-
-
-
-              ),
-              h2("Selected Response RT-State Diff by Domain Cluster"),
-
-
-              fluidRow(
-                # A static valueBox
-
-                valueBox(EG10_KD_Diff[1,6], HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
-                valueBox(EG10_CS_Diff[1,6], HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "blue"),
-
-
-
-                valueBox(EG10_IK_Diff[1,6], HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
-
-
-
+                
+                valueBox(paste(round(EG10_KD_Loss[1,5]), "%"), HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
+                valueBox(paste(EG10_CS_Loss[1,5], "%"), HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "red"),
+                
+                
+                
+                valueBox(paste(EG10_IK_Loss[1,5], "%"), HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
+                
+                
+                
                 # valueBox(EG10_KL_Diff[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
+                
+                valueBox(paste(round(EG10_VA_Loss[1,5]), "%"), HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p> <b> 28% </b> of points lost by RT students came from
+                       <b> Craft and Structure </b> items although they account for 
+                          only 23% of available points. </p>")
+                ),
+                
+                valueBox(paste(EG10_CV_Loss[1,5], "%"), HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue")
+                
+                
+                
+              ),
+              
+              h2("RT-State Reading Comprehension Diff by Text Type"),
+              
+              fluidRow(
+                
+                valueBox(EG10_NFRead_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
+                valueBox(EG10_FRead_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "blue"),
+                box(  width = 4, solidHeader = FALSE,
+                      
+                      HTML("<p> Students demonstrated a <b> stronger </b> level of comprehension of 
+                           informational texts relative to their peers in the state. </p>"),
+                      
+                      HTML("<p> Find text title and types in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+                       G10 ELA xWalk.</a> </p>")
+                      
+                  )
+                      
+                ),
+                
+          
+              h2("% Reading Points Lost by Text Type"),
+              fluidRow(
 
-                valueBox(EG10_VA_Diff[1,6], HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
-                valueBox(EG10_CV_Diff[1,6], HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue"),
-                box( title = "Notes", width = 4, solidHeader = FALSE,
-                     HTML("<p> Read more about the <a href =
-                      'https://www.doe.mass.edu/frameworks/ela/2017-06.pdf'>
-                       anchor standards </a> in the frameworks</p>"))
+                valueBox(paste(EG10_NFRead_Loss[1,5], "%"), HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
+                valueBox(paste(EG10_FRead_Loss[1,5], "%"), HTML("<p> Literature </p>"), icon=icon("book"), color = "red"),
+                box(  width = 4, solidHeader = FALSE,
+
+                     HTML("<p> Comprehension of Literature accounts for <b> 3/4 </b> of reading points lost by Rising Tide students, but
+                              <b> 78% </b>.</a> </p>")
+                     )
 
 
 
               )
+             
 
       ),
       
       #G10 ELA Analysis
       
       tabItem("g10ELAWritingAnalysis",
-              span(h1("How do we improve?")), #style = "color:black")),
-              span( h2("Writing with Text Synthesis")),
-              h3("RT-State Diff"),
-              fluidRow(
-                valueBox( EG10_ESidea_Diff[1,5],HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "light-blue"),
-                valueBox( EG10_ESconv_Diff[1,5],HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
-                box( width = 4, solidHeader = FALSE,
-                     HTML("<p> Rising Tide students earned <b> fewer points </b> than their peers in the state
-             across <b> all writing categories </b>. </p>"))
-              ),
-              #To-Do: Produce visual here?
-              fluidRow(
-                dataTableOutput("EG10_student_item_perf_by_type")
-              ),
-              # fluidRow(
-              #   box(
-              #     status = "primary", solidHeader = TRUE,
-              #     collapsible = TRUE, width = 500,
-              #     plotOutput("EG10_Bar_Plot")
-              #   )
-              # ),
-              h3("RT-State Diff"),
-
-
-
-
-
-
-
+              span(h1("How do we support writing?")), #style = "color:black")),
+              span( h2("Idea Development")),
+             #  h3("RT-State Diff"),
+             #  fluidRow(
+             #    valueBox( paste(EG10_ESidea_Diff[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+             #    valueBox( paste(EG10_ESconv_Diff[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+             #    box( width = 4, solidHeader = FALSE,
+             #         HTML("<p> Rising Tide students earned <b> fewer points </b> than their peers in the state
+             # across <b> all writing categories </b>. </p>"))
+             #  ),
+             #  #To-Do: Produce visual here?
+             #  fluidRow(
+             #    dataTableOutput("EG10_student_item_perf_by_type")
+             #  ),
+             #  # fluidRow(
+             #  #   box(
+             #  #     status = "primary", solidHeader = TRUE,
+             #  #     collapsible = TRUE, width = 500,
+             #  #     plotOutput("EG10_Bar_Plot")
+             #  #   )
+             #  # ),
+             #  h3("RT-State Diff"),
 
               h2("% Points Lost by Writing Subscore"),
               h3("All Students"),
@@ -1821,14 +1754,14 @@ ui <- dashboardPage(
                   on the MCAS and <b> 89% of points lost by Rising Tide </b> students. </p>"))
               ),
 
-              # h3("Top-Performing Students"),
-              # fluidRow(
-              #   valueBox( paste(EG10Top_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
-              #   valueBox( paste(EG10Top_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
-              #   box( width = 4, solidHeader = FALSE,
-              #        HTML("<p> The trend is <b> more pronounced </b> in students with scores <b> greater
-              #     than 515 </b>. </p>"))
-              # ),
+              h3("Top-Performing Students"),
+              fluidRow(
+                valueBox( paste(EG10Top_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+                valueBox( paste(EG10Top_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p> The trend is <b> more pronounced </b> in students with scores <b> greater
+                  than 515 </b>. </p>"))
+              ),
 
 
 
@@ -1840,7 +1773,7 @@ ui <- dashboardPage(
                 valueBox(paste(EG10_NFWrite_Loss[1,5], "%"), HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
                 valueBox(paste(EG10_FWrite_Loss[1,5], "%"), HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
                 box( width = 4, solidHeader = FALSE,
-                     HTML("<p> In <b> contrast</b> to their reading scores by text,
+                     HTML("<p> In <b> contrast</b> to their reading scores by text type,
                     Rising Tide students lost points regardless of the text type and student performance level.
                     This suggests the need to review the practice of writing in <b> both ELA and Social Studies </b>. </p>"))
               ),
@@ -1859,178 +1792,167 @@ ui <- dashboardPage(
       ),
       
       
-      tabItem("g10ELAReadingAnalysis",
-              span(h1("How do we improve our reading?")), #style = "color:black")),
-
-              h2("Literary Analysis Synthesizing Multiple Texts"),
-
-
-
-
-
-
-
-              h2("% Reading Points Lost by Text Type"),
-
-              h3("All Students"),
-
+      tabItem("g10ELAAnalysis",
+              span(h1("How do we support reading?")), #style = "color:black")),
+              
+              h2("% Reading Points Lost by Reporting Category"),
+              
               fluidRow(
-
-                valueBox(paste(EG10_NFRead_Loss[1,5], "%"), HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
-                valueBox(paste(EG10_FRead_Loss[1,5], "%"), HTML("<p> Literature </p>"), icon=icon("book"), color = "red"),
-                box(  width = 4, solidHeader = FALSE,
-                      HTML("<p>  <b> Rising Tide</b> students lost
-                  <b> significantly more points </b> in the comprehension and analysis of <b>literature </b>. </p>"))
-
-
-
+                valueBox( paste(EG10_RE_Loss[1,5], "%") ,HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "red"),
+                valueBox( paste(EG10_LA_Loss[1,5], "%"),  HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
+                box( title = "Released Materials", width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                           <b>  Reading Comprehension </b> accounts for the almost all selected response points lost by Rising Tide Students.
+                        </p>"
+                     )
+                     )
               ),
-
-
-             #  h3("Top Scoring Students"),
-             # 
-             #  fluidRow(
-             # 
-             #    valueBox(paste(EG10Top_NFRead_Loss[1,5], "%"), HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
-             #    valueBox(paste(EG10Top_FRead_Loss[1,5], "%"), HTML("<p> Literature </p>"), icon=icon("book"), color = "red"),
-             #    box(  width = 4, solidHeader = FALSE,
-             #          HTML("<p> This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>.
-             # This suggests that students need an adjustment at the <b>curricular level </b> in reading comprehension
-             # and <b> textual analysis </b> of <b>literature </b>. </p>"))
-             # 
-             # 
-             #  ),
-
-              h2("% Reading Points Lost by Text Quantity"),
-
-              h3("All Students"),
-
-
+              
+              h2("% Selected Response Lost by Domain Cluster"),
+              
+              
               fluidRow(
                 # A static valueBox
-                valueBox(paste(EG10_2TextRead_Loss[1,5], "%"), HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "blue" ),
-                valueBox(paste(EG10_1TextRead_Loss[1,5], "%"), HTML("<p> Single Text </p>"), icon=icon("1"), color = "blue"),
-                box(  width = 4, solidHeader = FALSE,
-                      HTML("<p><b> 58% </b> of reading points are from items asking
-                  students to <b> snythesize two texts </b>, yet these items account for
-                  <b> 65%</b> of reading points lost by <b>Rising Tide students </b>. </p>"))
-              ),
-
-
-             #  h3("Top Performing Students"),
-             # 
-             #  fluidRow(
-             #    # A static valueBox
-             #    valueBox(paste(EG10Top_2TextRead_Loss[1,5], "%"), HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "red" ),
-             #    valueBox(paste(EG10Top_1TextRead_Loss[1,5], "%"), HTML("<p> Single Text </p>"), icon=icon("1"), color = "blue"),
-             #    box(  width = 4, solidHeader = FALSE,
-             #          HTML("<p> This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>.
-             # This suggests that students need more targeted instruction in synthesizing <b> multiple literary and informational texts</b> in
-             #      <b> ELA </b>  and <b> Social Studies </b> at the <b>curricular level </b>. </p>"))
-             # 
-             # 
-             # 
-             #  ),
-
-              h2("% of Reading Points Lost by Reporting Category"),
-              h3("All Students"),
-
-              fluidRow(
-                valueBox( paste(EG10_RE_Loss[1,5], "%"),HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "blue"),
-                valueBox(paste(EG10_LA_Loss[1,5], "%"), HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
-                box(  width = 4, solidHeader = FALSE,
-                      HTML("<p><b> 86% </b> of slected response points are from items assessing
-                  students' reading comprehension. These items account for
-                  <b> 91%</b> of selected response points lost by <b>Rising Tide students </b>. </p>")),
-              ),
-             #  h3("Top Performing Students"),
-             #  fluidRow(
-             #    valueBox( paste(EG10Top_RE_Loss[1,5], "%"),HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "red"),
-             #    valueBox(paste(EG10Top_LA_Loss[1,5], "%"), HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
-             #    box(  width = 4, solidHeader = FALSE,
-             #          HTML("<p> Rising Tide's <b> top performing students</b> also lost a
-             #  disproportionate amount of points in reading comprehension.
-             # This suggests that all students would benefit from more curricular attention
-             # to <b> targeted reading comprehension </b>. </p>"))
-             # 
-             # 
-             #  ),
-
-              h1("What reading domain cluster should we review?"),
-              h2("Craft and Structure"),
-
-              HTML("<p> The <b> Craft and Structure </b> cluster is comprised of three <b> abstract </b>  standards.
-                <ul>
-                <li>
-                    <b>Interpreting </b> words and phrases as they are used in a text,
-                </li>
-                <li>
-                  <b> Analyzing</b> the <b>structure </b> of texts
-
-                </li>
-
-                <li>
-                  Assessing how <b> point of view </b> or purpose <b> shapes </b> the content and style of a text.
-                </li>
-                </ul>
-                Read about all of the literacy standards
-                <a href='https://www.doe.mass.edu/frameworks/ela/2017-06.pdf'>here. </a>
-                </p>"),
-              h3("% Points Lost by Domain Cluster: All Students"),
-
-
-              fluidRow(
-                # A static valueBox
-
-                valueBox(paste(EG10_KD_Loss[1,5], "%"), HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
-                valueBox(paste(EG10_CS_Loss[1,5], "%"), HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "blue"),
-
-
-
+                
+                valueBox(paste(round(EG10_KD_Loss[1,5]), "%"), HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
+                valueBox(paste(EG10_CS_Loss[1,5], "%"), HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "red"),
+                
+                
+                
                 valueBox(paste(EG10_IK_Loss[1,5], "%"), HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
-
-
-
-                # valueBox(EG10_KL_Loss[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
-
-                valueBox(paste(EG10_VA_Loss[1,5], "%"), HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
-                box(  width = 4, solidHeader = FALSE,
-                      HTML("<p> Craft and Structure items account for <b> 29%</b> of available selected response points
-                    and <b> 39% </b> of points lost by <b> Rising Tide students </b> </p>")),
-
+                
+                
+                
+                # valueBox(EG10_KL_Diff[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
+                
+                valueBox(paste(round(EG10_VA_Loss[1,5]), "%"), HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p> <b> 28% </b> of points lost by RT students came from
+                       <b> Craft and Structure </b> items although they account for 
+                          only <b> 21% </b> of available points. </p>")
+                    
+                ),
+                
                 valueBox(paste(EG10_CV_Loss[1,5], "%"), HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue")
-
+                
+                
+                
+              ),
+              
+              h2("RT-State Diff by Text Type"),
+              
+              fluidRow(
+                
+                valueBox(EG10_NFRead_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
+                valueBox(EG10_FRead_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "blue"),
+                box(  width = 4, solidHeader = FALSE,
+                      
+                     HTML("<p> Students demonstrated <b> stronger </b> levels of comprehension of 
+                          information relative to their peers in the state. </p>"),
+                      
+                      HTML("<p> Find text title and types in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+                       G10 ELA xWalk.</a> </p>")
+                      
+                )
+                
+                
+                
+              ),
+              
+              fluidRow(
+                
+                valueBox(EG10_NFRead_Loss[1,5], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
+                valueBox(EG10_FRead_Loss[1,5], HTML("<p> Literature </p>"), icon=icon("book"), color = "blue"),
+                box(  width = 4, solidHeader = FALSE,
+                      
+                      HTML("<p> Students demonstrated <b> stronger </b> levels of comprehension of 
+                          information relative to their peers in the state. </p>"),
+                      
+                      HTML("<p> Find text title and types in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+                       G10 ELA xWalk.</a> </p>")
+                      
+                )
+                
+                
+                
+              ),
+              
+              
+              h1("How do we support our writers?"),
+              h2("% of Writing Points Lost"),
+              h3("All Students"),
+              fluidRow(
+                valueBox( paste(EG10_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+                valueBox( paste(EG10_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+                box(width = 4, solidHeader = FALSE,
+                    HTML("<p> <b> 75% </b> of essay points lost by Rising Tide students were due to <b>Idea Development </b>. <ul>
+                             
+                            </p>"
+                    )
+                )
+                
+              ),
+              
+              h3("Top Performing Students"),
+              fluidRow(
+                valueBox( paste(EG10Top_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+                valueBox( paste(EG10Top_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+                box(width = 4, solidHeader = FALSE,
+                    HTML("<p> This trend is <b> more pronounced </b> in the <b> Top Performing Students </b>
+                            </p>"
+                    )
+                )
+                
               )
-
-
-
-              # h3("% Points Lost by Domain Cluster: Top Performing Students"),
-              # 
-              # 
+              
+              
+              # h3("Writing"),
               # fluidRow(
               #   # A static valueBox
-              # 
-              #   valueBox(paste(EG10Top_KD_Loss[1,5], "%"), HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
-              #   valueBox(paste(EG10Top_CS_Loss[1,5], "%"), HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "red"),
-              # 
-              # 
-              # 
-              #   valueBox(paste(EG10Top_IK_Loss[1,5], "%"), HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
-              # 
-              # 
-              # 
-              #   # valueBox(EG10_KL_Loss[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
-              # 
-              #   valueBox(paste(EG10Top_VA_Loss[1,5], "%"), HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
-              #   box(  width = 4, solidHeader = FALSE,
-              #         HTML("<p> Top Performing students lost <b>disproportionately more </b> craft and structure points. </p>")),
-              #   valueBox(paste(EG10Top_CV_Loss[1,5], "%"), HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue")
-              # 
-              # 
-              # 
+              #   valueBox(EG10_NFWrite_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
+              #   valueBox(EG10_FWrite_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
+              #   box( title = "Notes", width = 4, solidHeader = FALSE,
+              #        
+              #        HTML("<p> Text title and types in the <a href =
+              #            'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+              #             G10 ELA xWalk.</a> </p>"))
+              #   
+              #   
+              #   
+              # ),
+              # h2("RT-State Diff by Text Quantity"),
+              # h3("Reading"),
+              # fluidRow(
+              #   # A static valueBox
+              #   valueBox(EG10_2TextRead_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "blue" ),
+              #   valueBox(EG10_1TextRead_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "blue"),
+              #   box( title = "Notes", width = 4, solidHeader = FALSE,
+              #        
+              #        HTML("<p> Links to questions in the <a href =
+              #            'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+              #             G10 ELA xWalk.</a> </p>"))
+              #   
+              #   
+              #   
               # )
-
-
+              
+              # h3("Writing"),
+              # fluidRow(
+              #   
+              #   valueBox(EG10_2TextWrite_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "light-blue" ),
+              #   valueBox(EG10_1TextWrite_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "light-blue"),
+              #   box( title = "Notes", width = 4, solidHeader = FALSE,
+              #        HTML("<p> Links to questions in the <a href =
+              #            'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+              #             G10 ELA xWalk.</a> </p>"))
+              #   
+              #   
+              #   
+              # ),
+              
+              
       ),
    
  
@@ -2195,147 +2117,153 @@ ui <- dashboardPage(
    ),
    
    #G8 ELA Performance
+   # G8 ELA Paste
    
    tabItem("g8ELAAnalysis",
-           span(h1("How do our students compare to their peers in the state?")), #style = "color:black")),
+           span(h1("How do we support reading?")), #style = "color:black")),
            
-           h2("RT-State Diff by Content Category"),
-           h3("Reading"),
+           h2("% Reading Points Lost by Reporting Category"),
+           
            fluidRow(
-             valueBox( EG8_RE_Diff[1,6],HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "blue"),
-             valueBox(EG8_RELA_PTS[1,2], HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
-             box( title = "Released Materials", width = 4, solidHeader = FALSE,
+             valueBox( paste(EG8_RE_Loss[1,5], "%") ,HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "red"),
+             valueBox( paste(EG8_LA_Loss[1,5], "%"),  HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
+             box(width = 4, solidHeader = FALSE,
                   HTML("<p>
-                            <ul>
-                              <li>
-                                <a href='https://mcas.digitalitemlibrary.com/home?subject=ELA&grades=Grade%208&view=ALL'>Digital item library </a>
-                              </li>
-                               <li>
-                                  <a href = 'https://www.doe.mass.edu/mcas/2022/release/gr8-ela.pdf'>
-                                  2022 released paper based items </a>
-                              </li>
-                              <li> Sample
-                                <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-ela/MCAS_2022_Gr8_ELA_PT_ADA.pdf'>
-                                  Paper Based Practice Test PDF </a>
-                              </li>
-                              <li> Sample
-                                  <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-ela/'> computer based practice test</a>
-                              </li>
-                            </ul>
-                        </p>"))
+                           <b>  Reading Comprehension </b> accounts for the almost all selected response points lost by Rising Tide Students.
+                        </p>"
+                  )
+             )
+           ),
+           
+           h2("% Selected Response Lost by Domain Cluster"),
+           
+           
+           fluidRow(
+             # A static valueBox
+             
+             valueBox(paste(round(EG8_KD_Loss[1,5]), "%"), HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
+             valueBox(paste(EG8_CS_Loss[1,5], "%"), HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "red"),
+             
+             
+             
+             valueBox(paste(EG8_IK_Loss[1,5], "%"), HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
+             
+             
+             
+             # valueBox(EG8_KL_Diff[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
+             
+             valueBox(paste(round(EG8_VA_Loss[1,5]), "%"), HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
+             box( width = 4, solidHeader = FALSE,
+                  HTML("<p> <b> 41% </b> of points lost by RT students came from
+                       <b> Craft and Structure </b> items. </p>"),
+                  HTML("<p> Although Craft and Structure items account for <b> 38% </b> of available points,
+                          <b> Top Performing Students </b>  </b> 
+                        lost <b> 48% </b> of their reading comprehension points to 
+                       Craft and Structure items. </p>")
+             ),
+             
+             valueBox(paste(EG8_CV_Loss[1,5], "%"), HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue")
+             
              
              
            ),
-           h3("Writing"),
+           
+           h2("RT-State Reading Comprehension Diff by Text Type"),
+           
            fluidRow(
-             valueBox( EG8_ESidea_Diff[1,5],HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "light-blue"),
-             valueBox( EG8_ESconv_Diff[1,5],HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+             
+             valueBox(EG8_NFRead_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
+             valueBox(EG8_FRead_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "blue"),
+             box(  width = 4, solidHeader = FALSE,
+                   
+                   HTML("<p> Students demonstrated <b> similar </b> levels of comprehension of 
+                          literature and informational texts relative to their peers in the state. </p>"),
+                   
+                   HTML("<p> Find text title and types in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+                       G8 ELA xWalk.</a> </p>")
+                   
+             )
+             
+             
+             
+           ),
+           
+           
+           h1("How do we support our writers?"),
+           h2("% of Writing Points Lost"),
+           h3("All Students"),
+           fluidRow(
+             valueBox( paste(EG8_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+             valueBox( paste(EG8_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
              box(width = 4, solidHeader = FALSE,
-                 HTML("<p> <ul>
-                              <li> Student sample writing and
-                                <a href ='https://www.doe.mass.edu/mcas/student/2023/grade8/ela.html'>
-                                Scoring guidelines </a>
-                              </li>
-
-
-
-                            </ul>
+                 HTML("<p> <b> 75% </b> of essay points lost by Rising Tide students were due to <b>Idea Development </b>. <ul>
+                             
                             </p>"
                  )
              )
              
            ),
            
-           
-           
-           
-           h2("RT-State Diff by Text Type"),
-           h3("Reading"),
+           h3("Top Performing Students"),
            fluidRow(
-             
-             valueBox(EG8_NFRead_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
-             valueBox(EG8_FRead_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  
-                  HTML("<p> Text title and types in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G8 ELA xWalk.</a> </p>"))
-             
-             
-             
-           ),
-           h3("Writing"),
-           fluidRow(
-             # A static valueBox
-             valueBox(EG8_NFWrite_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
-             valueBox(EG8_FWrite_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  
-                  HTML("<p> Text title and types in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G8 ELA xWalk.</a> </p>"))
-             
-             
-             
-           ),
-           h2("RT-State Diff by Text Quantity"),
-           h3("Reading"),
-           fluidRow(
-             # A static valueBox
-             valueBox(EG8_2TextRead_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "blue" ),
-             valueBox(EG8_1TextRead_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  
-                  HTML("<p> Links to questions in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G8 ELA xWalk.</a> </p>"))
-             
-             
-             
-           ),
-           
-           h3("Writing"),
-           fluidRow(
-             
-             valueBox(EG8_2TextWrite_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "light-blue" ),
-             valueBox(EG8_1TextWrite_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "light-blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  HTML("<p> Links to questions in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G8 ELA xWalk.</a> </p>"))
-             
-             
-             
-           ),
-           h2("Selected Response RT-State Diff by Domain Cluster"),
-           
-           
-           fluidRow(
-             # A static valueBox
-             
-             valueBox(EG8_KD_Diff[1,6], HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
-             valueBox(EG8_CS_Diff[1,6], HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "blue"),
-             
-             
-             
-             valueBox(EG8_IK_Diff[1,6], HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
-             
-             
-             
-             # valueBox(EG8_KL_Diff[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
-             
-             valueBox(EG8_VA_Diff[1,6], HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
-             valueBox(EG8_CV_Diff[1,6], HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  HTML("<p> Read more about the <a href =
-                      'https://www.doe.mass.edu/frameworks/ela/2017-06.pdf'>
-                       anchor standards </a> in the frameworks</p>"))
-             
-             
+             valueBox( paste(EG8Top_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+             valueBox( paste(EG8Top_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+             box(width = 4, solidHeader = FALSE,
+                 HTML("<p> This trend is <b> more pronounced </b> in the <b> Top Performing Students </b>
+                            </p>"
+                 )
+             )
              
            )
            
-     ),
+           
+           # h3("Writing"),
+           # fluidRow(
+           #   # A static valueBox
+           #   valueBox(EG8_NFWrite_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
+           #   valueBox(EG8_FWrite_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
+           #   box( title = "Notes", width = 4, solidHeader = FALSE,
+           #        
+           #        HTML("<p> Text title and types in the <a href =
+           #            'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+           #             G8 ELA xWalk.</a> </p>"))
+           #   
+           #   
+           #   
+           # ),
+           # h2("RT-State Diff by Text Quantity"),
+           # h3("Reading"),
+           # fluidRow(
+           #   # A static valueBox
+           #   valueBox(EG8_2TextRead_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "blue" ),
+           #   valueBox(EG8_1TextRead_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "blue"),
+           #   box( title = "Notes", width = 4, solidHeader = FALSE,
+           #        
+           #        HTML("<p> Links to questions in the <a href =
+           #            'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+           #             G8 ELA xWalk.</a> </p>"))
+           #   
+           #   
+           #   
+           # )
+           
+           # h3("Writing"),
+           # fluidRow(
+           #   
+           #   valueBox(EG8_2TextWrite_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "light-blue" ),
+           #   valueBox(EG8_1TextWrite_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "light-blue"),
+           #   box( title = "Notes", width = 4, solidHeader = FALSE,
+           #        HTML("<p> Links to questions in the <a href =
+           #            'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+           #             G8 ELA xWalk.</a> </p>"))
+           #   
+           #   
+           #   
+           # ),
+           
+           
+   ),
    
    #G7 ELA Content
    
@@ -2496,148 +2424,152 @@ ui <- dashboardPage(
            #)
    ),
    
+   #G7 ELA Paste
    #G7 ELA Performance
    
    tabItem("g7ELAAnalysis",
-           span(h1("How do our students compare to their peers in the state?")), #style = "color:black")),
+           span(h1("How do we support reading?")), #style = "color:black")),
            
-           h2("RT-State Diff by Content Category"),
-           h3("Reading"),
+           h2("% Reading Points Lost by Reporting Category"),
+           
            fluidRow(
-             valueBox( EG7_RE_Diff[1,6],HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "blue"),
-             valueBox(EG7_RELA_PTS[1,2], HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
-             box( title = "Released Materials", width = 4, solidHeader = FALSE,
-                  HTML("<p>
-                            <ul>
-                              <li>
-                                <a href='https://mcas.digitalitemlibrary.com/home?subject=ELA&grades=Grade%207&view=ALL'>Digital item library </a>
-                              </li>
-                               <li>
-                                  <a href = 'https://www.doe.mass.edu/mcas/2022/release/gr7-ela.pdf'>
-                                  2022 released paper based items </a>
-                              </li>
-                              <li> Sample
-                                <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-ela/MCAS_2022_Gr7_ELA_PT_ADA.pdf'>
-                                  Paper Based Practice Test PDF </a>
-                              </li>
-                              <li> Sample
-                                  <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-ela/'> computer based practice test</a>
-                              </li>
-                            </ul>
-                        </p>"))
+             valueBox( paste(EG7_RE_Loss[1,5], "%") ,HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "red"),
+             valueBox( paste(EG7_LA_Loss[1,5], "%"),  HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
+             box(  width = 4, solidHeader = FALSE,
+                   HTML("<p>
+                           <b>  Reading Comprehension </b> accounts for the almost all selected response points lost by Rising Tide Students.
+                        </p>"
+                        )
+             )
+           ),
+           
+           
+           h2("% Selected Response Lost by Domain Cluster"),
+           
+           
+           fluidRow(
+             # A static valueBox
+             
+             valueBox(paste(round(EG7_KD_Loss[1,5]), "%"), HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
+             valueBox(paste(EG7Top_CS_Loss[1,5], "%"), HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "red"),
+             
+             
+             
+             valueBox(paste(EG7_IK_Loss[1,5], "%"), HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
+             
+             
+             
+             # valueBox(EG7_KL_Diff[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
+             
+             valueBox(paste(round(EG7_VA_Loss[1,5]), "%"), HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
+             box( width = 4, solidHeader = FALSE,
+                  HTML("<p> <b> 32% </b> of points lost by <b> Top Performing RT students </b> came from
+                       <b> Craft and Structure </b> items. </p>"),
+                  
+             ),
+             
+             valueBox(paste(EG7_CV_Loss[1,5], "%"), HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue")
+             
              
              
            ),
-           h3("Writing"),
+           
+           h2("RT-State Reading Comprehension Diff by Text Type"),
+           
            fluidRow(
-             valueBox( EG7_ESidea_Diff[1,5],HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "light-blue"),
-             valueBox( EG7_ESconv_Diff[1,5],HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+             
+             valueBox(EG7_NFRead_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
+             valueBox(EG7_FRead_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "blue"),
+             box(  width = 4, solidHeader = FALSE,
+                   
+                   HTML("<p> Students demonstrated <b> similar </b> levels of comprehension of 
+                          literature and informational texts relative to their peers in the state. </p>"),
+                   
+                   HTML("<p> Find text title and types in the <a href =
+                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+                       G7 ELA xWalk.</a> </p>")
+                   
+             )
+             
+             
+             
+           ),
+           
+           
+           h1("How do we support our writers?"),
+           h2("% of Writing Points Lost"),
+           h3("All Students"),
+           fluidRow(
+             valueBox( paste(EG7_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+             valueBox( paste(EG7_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
              box(width = 4, solidHeader = FALSE,
-                 HTML("<p> <ul>
-                              <li> Student sample writing and
-                                <a href ='https://www.doe.mass.edu/mcas/student/2022/grade7/ela.html'>
-                                Scoring guidelines </a>
-                              </li>
-
-
-
-                            </ul>
+                 HTML("<p> <b> 75% </b> of essay points lost by Rising Tide students were due to <b>Idea Development </b>. <ul>
+                             
                             </p>"
                  )
              )
              
            ),
            
-           
-           
-           
-           h2("RT-State Diff by Text Type"),
-           h3("Reading"),
+           h3("Top Performing Students"),
            fluidRow(
-             
-             valueBox(EG7_NFRead_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "blue" ),
-             valueBox(EG7_FRead_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  
-                  HTML("<p> Text title and types in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G7 ELA xWalk.</a> </p>"))
-             
-             
-             
-           ),
-           h3("Writing"),
-           fluidRow(
-             # A static valueBox
-             valueBox(EG7_NFWrite_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
-             valueBox(EG7_FWrite_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  
-                  HTML("<p> Text title and types in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G7 ELA xWalk.</a> </p>"))
-             
-             
-             
-           ),
-           h2("RT-State Diff by Text Quantity"),
-           h3("Reading"),
-           fluidRow(
-             # A static valueBox
-             valueBox(EG7_2TextRead_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "blue" ),
-             valueBox(EG7_1TextRead_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  
-                  HTML("<p> Links to questions in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G7 ELA xWalk.</a> </p>"))
-             
-             
-             
-           ),
-           
-           h3("Writing"),
-           fluidRow(
-             
-             valueBox(EG7_2TextWrite_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "light-blue" ),
-             valueBox(EG7_1TextWrite_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "light-blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  HTML("<p> Links to questions in the <a href =
-                      'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
-                       G7 ELA xWalk.</a> </p>"))
-             
-             
-             
-           ),
-           h2("Selected Response RT-State Diff by Domain Cluster"),
-           
-           
-           fluidRow(
-             # A static valueBox
-             
-             valueBox(round(EG7_KD_Diff[1,6]), HTML("<p> Key Ideas <br> and Details</p>"), icon = icon("circle-info"), color = "blue"),
-             valueBox(EG7_CS_Diff[1,6], HTML("<p> Craft and Structure </p>"), icon = icon("paragraph"), color = "blue"),
-             
-             
-             
-             valueBox(EG7_IK_Diff[1,6], HTML("<p> Integration of <br> Knowledge and Ideas</p>"), icon = icon("magnifying-glass-chart"), color = "blue"),
-             
-             
-             
-             # valueBox(EG7_KL_Diff[1,2], HTML("<p> Knowledge of <br>Language </p>"), icon = icon("message"), color = "blue"),
-             
-             valueBox(round(EG7_VA_Diff[1,6]), HTML("<p> Vocabulary <br> Acquisition & Use</p>"), icon = icon("spell-check"), color = "blue"),
-             valueBox(EG7_CV_Diff[1,6], HTML("<p> Conventions </p>"), icon = icon("quote-right"), color = "blue"),
-             box( title = "Notes", width = 4, solidHeader = FALSE,
-                  HTML("<p> Read more about the <a href =
-                      'https://www.doe.mass.edu/frameworks/ela/2017-06.pdf'>
-                       anchor standards </a> in the frameworks</p>"))
-             
-             
+             valueBox( paste(EG7Top_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+             valueBox( paste(EG7Top_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+             box(width = 4, solidHeader = FALSE,
+                 HTML("<p> This trend is <b> more pronounced </b> in the <b> Top Performing Students </b>
+                            </p>"
+                 )
+             )
              
            )
            
-   ), 
+           
+           # h3("Writing"),
+           # fluidRow(
+           #   # A static valueBox
+           #   valueBox(EG7_NFWrite_Diff[1,6], HTML("<p> Informational Texts </p>"),icon=icon("newspaper"), color = "light-blue" ),
+           #   valueBox(EG7_FWrite_Diff[1,6], HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
+           #   box( title = "Notes", width = 4, solidHeader = FALSE,
+           #        
+           #        HTML("<p> Text title and types in the <a href =
+           #            'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+           #             G7 ELA xWalk.</a> </p>"))
+           #   
+           #   
+           #   
+           # ),
+           # h2("RT-State Diff by Text Quantity"),
+           # h3("Reading"),
+           # fluidRow(
+           #   # A static valueBox
+           #   valueBox(EG7_2TextRead_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "blue" ),
+           #   valueBox(EG7_1TextRead_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "blue"),
+           #   box( title = "Notes", width = 4, solidHeader = FALSE,
+           #        
+           #        HTML("<p> Links to questions in the <a href =
+           #            'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+           #             G7 ELA xWalk.</a> </p>"))
+           #   
+           #   
+           #   
+           # )
+           
+           # h3("Writing"),
+           # fluidRow(
+           #   
+           #   valueBox(EG7_2TextWrite_Diff[1,6], HTML("<p> Multiple Texts </p>"),icon=icon("right-left"), color = "light-blue" ),
+           #   valueBox(EG7_1TextWrite_Diff[1,6], HTML("<p> Single Text </p>"), icon=icon("1"), color = "light-blue"),
+           #   box( title = "Notes", width = 4, solidHeader = FALSE,
+           #        HTML("<p> Links to questions in the <a href =
+           #            'https://docs.google.com/spreadsheets/d/1zxvLjYuxXifo5vYfNpGCfJ4esp0e1Z-TgC71ZlxN9Tc/edit?usp=sharing'>
+           #             G7 ELA xWalk.</a> </p>"))
+           #   
+           #   
+           #   
+           # ),
+           
+           
+   ),
    
    
    #G6 ELA Content
@@ -2809,28 +2741,14 @@ ui <- dashboardPage(
            fluidRow(
              valueBox( paste(EG6_RE_Loss[1,5], "%") ,HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "red"),
              valueBox( paste(EG6_LA_Loss[1,5], "%"),  HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
-             box( title = "Released Materials", width = 4, solidHeader = FALSE,
+             box(  width = 4, solidHeader = FALSE,
                   HTML("<p>
-                            <ul>
-                              <li>
-                                <a href='https://mcas.digitalitemlibrary.com/home?subject=ELA&grades=Grade%206&view=ALL'>Digital item library </a>
-                              </li>
-                               <li>
-                                  <a href = 'https://www.doe.mass.edu/mcas/2022/release/gr6-ela.pdf'>
-                                  2022 released paper based items </a>
-                              </li>
-                              <li> Sample
-                                <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-ela/MCAS_2022_Gr6_ELA_PT_ADA.pdf'>
-                                  Paper Based Practice Test PDF </a>
-                              </li>
-                              <li> Sample
-                                  <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-ela/'> computer based practice test</a>
-                              </li>
-                            </ul>
-                        </p>"))
+                           <b>  Reading Comprehension </b> accounts for the almost all selected response points lost by Rising Tide Students.
+                        </p>")
+                  )
            ),
            
-           h2("Selected Response RT-State Diff by Domain Cluster"),
+           h2("% Selected Response Lost by Domain Cluster"),
            
            
            fluidRow(
@@ -3127,32 +3045,36 @@ ui <- dashboardPage(
            
            
            h2("% Reading Points Lost by Reporting Category"),
+           h3("All Students"),
            
            fluidRow(
              valueBox( paste(EG5_RE_Loss[1,5], "%") ,HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "red"),
              valueBox( paste(EG5_LA_Loss[1,5], "%"),  HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
              box( title = "Released Materials", width = 4, solidHeader = FALSE,
                   HTML("<p>
-                            <ul>
-                              <li>
-                                <a href='https://mcas.digitalitemlibrary.com/home?subject=ELA&grades=Grade%205&view=ALL'>Digital item library </a>
-                              </li>
-                               <li>
-                                  <a href = 'https://www.doe.mass.edu/mcas/2022/release/gr5-ela.pdf'>
-                                  2022 released paper based items </a>
-                              </li>
-                              <li> Sample
-                                <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-ela/MCAS_2022_Gr5_ELA_PT_ADA.pdf'>
-                                  Paper Based Practice Test PDF </a>
-                              </li>
-                              <li> Sample
-                                  <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-ela/'> computer based practice test</a>
-                              </li>
-                            </ul>
-                        </p>"))
+                            <b> 77% of Points Lost by Rising Tide Students </b> came from reading comprehension items. Students 
+                                with lower performance levels lost signficantly more points on reading comprehension items.
+                        </p>")
+                  )
               ),
            
-           h2("Selected Response RT-State Diff by Domain Cluster"),
+           h3("Top Performing Students"),
+           fluidRow(
+             valueBox( paste(EG5Top_RE_Loss[1,5], "%") ,HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "red"),
+             valueBox( paste(EG5Top_LA_Loss[1,5], "%"),  HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
+             
+
+             # h3("Lowest Performing Students"),
+             # 
+             # fluidRow(
+             #   valueBox( paste(EG5Low_RE_Loss[1,5], "%") ,HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "red"),
+             #   valueBox( paste(EG5Low_LA_Loss[1,5], "%"),  HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue")
+             #   
+             # ),
+           ),
+           h2("% Selected Response Lost by Domain Cluster"),
+           
+           
            
            
            fluidRow(
