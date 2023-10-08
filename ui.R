@@ -20,22 +20,22 @@ ui <- dashboardPage(
                menuSubItem("G9 Physics Top Performers", tabName = "g9PhysicsTop"),
                menuSubItem("G8 STE Analysis", tabName = "g8SteAnalysis"),
                menuSubItem("G8 STE Content", tabName = "g8SteContent"),
-               menuSubItem("G8 STE Performance", tabName = "g8StePerf"),
+               menuSubItem("G8 STE RT-State Diff", tabName = "g8StePerf"),
                menuSubItem("G5 STE Analysis", tabName = "g5SteAnalysis"),
                menuSubItem("G5 STE Content", tabName = "g5SteContent"),
-               menuSubItem("G5 STE Perfromance", tabName = "g5StePerf")
+               menuSubItem("G5 STE RT-State Diff", tabName = "g5StePerf")
                
       ),
       menuItem("Mathematics", tabName = "math", icon = icon("infinity"),
                menuSubItem("G10 Math Content", tabName = "g10MathContent"),
                menuSubItem("G10 Math Performance", tabName = "g10MathPerf"),
                menuSubItem("G8 Math Content", tabName = "g8MathContent"),
-               menuSubItem("G8 Math Performance", tabName = "g8MathPerf"),
+               menuSubItem("G8 Math Analysis", tabName = "g8MathPerf"),
 
                menuSubItem("G7 Math Content", tabName = "g7MathContent"),
-               menuSubItem("G7 Math Performance", tabName = "g7MathPerf"),
+               menuSubItem("G7 Math Analysis", tabName = "g7MathPerf"),
                menuSubItem("G6 Math Content", tabName = "g6MathContent"),
-               menuSubItem("G6 Math Performance", tabName = "g6MathPerf"),
+               menuSubItem("G6 Math Analysis", tabName = "g6MathAnalysis"),
                menuSubItem("G5 Math Content", tabName = "g5MathContent"),
                menuSubItem("G5 Math Performance", tabName = "g5MathPerf")
       ),
@@ -1290,7 +1290,7 @@ ui <- dashboardPage(
       ),
       
       #G6 Math Performance
-      tabItem("g6MathPerf",
+      tabItem("g6MathAnalysis",
               span(h1("How do our students compare to their peers in the state?")), #style = "color:black")),
               
               h3("RT-State Diff by: Content Category"),
@@ -1434,16 +1434,21 @@ ui <- dashboardPage(
               
               fluidRow(
                 valueBox(MG5_GE_Diff[1,6], "Geometry", icon = icon("shapes"), color = "blue"),
-                valueBox( MG5_MD_Diff[1,6],HTML("<p> Measurement <br> and Data </p>"),icon = icon("ruler"), color = "red"),
+                
                 box( width = 4, solidHeader = FALSE,
-                     HTML("<p>
-                             Rising Tide 2023
+                     HTML("<p> The <b> Top Performing </b> students were weakest compared to their peers in the state on <b> Measurement and data Items </b>, while the 
+                                <b> Lowest Performing </b> students lost the highest percentage of points in <b> Numbers and Operations Base 10 </b>, notably most 
+                                of these items asked students to <b> round, reason with place value, and compare decimals </b> and <b> not </b> to perform calculations with 
+                                decimal operations. Explore the Rising Tide 2023
                               <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
                              Weakest Items </a> 
+                            
 
                             </p>")
                      
-                )
+                ),
+                
+                valueBox( MG5_MD_Diff[1,6],HTML("<p> Measurement <br> and Data </p>"),icon = icon("ruler"), color = "red")
                
                 
               ),
