@@ -1009,6 +1009,46 @@ EG7Low_student_writing_item_perf<-EG7_student_item_perf%>%
   filter(str_detect(`Type`, "ES"))%>%
   filter(`escaleds` < 500)
 
+## EG7 Points Lost by Category and Student Performance Level
+
+EG7_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG7_student_item_perf)
+#view(EG7_LA_Loss)
+EG7_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG7_student_item_perf)
+#view(EG7_RE_Loss)
+EG7Top_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG7Top_student_reading_item_perf)
+# view(EG7Top_LA_Loss)
+EG7Top_RE_Loss<-Reporting_Cat_Loss("ela", "RE", EG7Top_student_reading_item_perf)
+# view(EG7Top_RE_Loss)
+
+EG7_CS_Loss<-Practice_Cat_Loss("ela", "Craft and Structure", EG7_student_item_perf)
+view(EG7_CS_Loss)
+EG7Top_CS_Loss<-Practice_Cat_Loss("ela", "Craft and Structure", EG7Top_student_reading_item_perf)
+view(EG7Top_CS_Loss)
+EG7Mid_CS_Loss<-Practice_Cat_Loss("ela", "Craft and Structure", EG7Mid_student_reading_item_perf)
+view(EG7Mid_CS_Loss)
+EG7_CV_Loss<-Practice_Cat_Loss("ela", "Conventions", EG7_student_item_perf)
+#view(EG7_CV_Loss)
+EG7_KD_Loss<-Practice_Cat_Loss("ela", "Key Ideas and Details", EG7_student_item_perf)
+#view(EG7_KD_Loss)
+EG7_KL_Loss<-Practice_Cat_Loss("ela", "Knowledge of Language", EG7_student_item_perf)
+#view(EG7_KL_Loss)
+EG7_ID_Loss<-Practice_Cat_Loss("ela", "Idea Development", EG7_student_item_perf)
+#view(EG7_ID_Loss)
+EG7_IK_Loss<-Practice_Cat_Loss("ela", "Integration of Knowledge and Ideas", EG7_student_item_perf)
+#view(EG7_IK_Loss)
+EG7_VA_Loss<-Practice_Cat_Loss("ela", "Vocabulary Acquisition and Use", EG7_student_item_perf)
+#view(EG7_VA_Loss)
+EG7_WC_Loss<-Practice_Cat_Loss("ela", "Writing Combined (Conv/Idea Dev)", EG7_student_item_perf)
+#view(EG7_WC_Loss)
+EG7_ESconv_Loss<-ELA_Subitem_Loss("conv", EG7_student_essay_perf)
+#view(EG7_ESconv_Loss)
+EG7_ESidea_Loss<-ELA_Subitem_Loss("idea", EG7_student_essay_perf)
+#view(EG7_ESidea_Loss)
+EG7Top_ESconv_Loss<-ELA_Subitem_Loss("conv", EG7Top_student_essay_perf)
+#view(EG7Top_ESconv_Loss)
+EG7Top_ESidea_Loss<-ELA_Subitem_Loss("idea", EG7Top_student_essay_perf)
+#view(EG7Top_ESidea_Loss)
+
 
 #G6 ELA Item DF
 EG6_item<-read_item("data/2023ELAItemResults.xlsx", "EG6", "ela")
@@ -1080,6 +1120,8 @@ EG6Mid_student_writing_item_perf<-EG6_student_item_perf%>%
 EG6Low_student_writing_item_perf<-EG6_student_item_perf%>%
   filter(str_detect(`Type`, "ES"))%>%
   filter(`escaleds` < 500)
+
+## EG6 Points Lost by Category and Student Performance Level
 
 EG6_LA_Loss<-Reporting_Cat_Loss("ela", "LA", EG6_student_item_perf)
 #view(EG6_LA_Loss)
@@ -1348,9 +1390,6 @@ EG5Top_ESidea_Loss<-ELA_Subitem_Loss("idea", EG5Top_student_essay_perf)
 ## G6 ELA Exam Content
 EG6_ES_PTS<-Item_Type_Points("ES", EG6_item)
 EG6_SR_PTS<-Item_Type_Points("SR", EG6_item)
-
-
-
 
 EG6_RE_PTS<-Reporting_Cat_Points("ela", "RE", EG6_item)
 EG6_WR_PTS<-Reporting_Cat_Points("ela", "WR", EG6_item)
