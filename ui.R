@@ -1437,7 +1437,7 @@ ui <- dashboardPage(
                 
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p> The <b> Top Performing </b> students were weakest compared to their peers in the state on <b> Measurement and data Items </b>, while the 
-                                <b> Lowest Performing </b> students lost the highest percentage of points in <b> Numbers and Operations Base 10 </b>, notably most 
+                                <b> Lowest Performing </b> students lost the highest percentage of points in <b> Numbers and Operations Base 10 </b>. Notably most 
                                 of these items asked students to <b> round, reason with place value, and compare decimals </b> and <b> not </b> to perform calculations with 
                                 decimal operations. Explore the Rising Tide 2023
                               <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>

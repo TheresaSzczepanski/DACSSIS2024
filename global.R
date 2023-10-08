@@ -734,57 +734,57 @@ MG5_OA_Diff<-Reporting_Cat_Diff("math", "Operations and Algebraic Thinking", MG5
 
 
 MG5_MD_Loss<-Reporting_Cat_Loss("math", "Measurement and Data", MG5_student_item_perf)
-view(MG5_MD_Loss)
+#view(MG5_MD_Loss)
 MG5Top_MD_Loss<-Reporting_Cat_Loss("math", "Measurement and Data", MG5_TopStudent_item_perf)
-view(MG5Top_MD_Loss)
+#view(MG5Top_MD_Loss)
 
 MG5Top_MD_Diff<-Reporting_Cat_Diff("math", "Measurement and Data", MG5_TopStudent_item_perf)
-view(MG5Top_MD_Diff)
+#view(MG5Top_MD_Diff)
 
 MG5Low_MD_Loss<-Reporting_Cat_Loss("math", "Measurement and Data", MG5_LowStudent_item_perf)
-view(MG5Low_MD_Loss)
+#view(MG5Low_MD_Loss)
 
 MG5_NF_Loss<-Reporting_Cat_Loss("math", "Number and Operations-Fractions", MG5_student_item_perf)
-view(MG5_NF_Loss)
+#view(MG5_NF_Loss)
 MG5Top_NF_Loss<-Reporting_Cat_Loss("math", "Number and Operations-Fractions", MG5_TopStudent_item_perf)
-view(MG5Top_NF_Loss)
+#view(MG5Top_NF_Loss)
 MG5Top_NF_Diff<-Reporting_Cat_Diff("math", "Number and Operations-Fractions", MG5_TopStudent_item_perf)
-view(MG5Top_NF_Diff)
+#view(MG5Top_NF_Diff)
 
 MG5Low_NF_Loss<-Reporting_Cat_Loss("math", "Number and Operations-Fractions", MG5_LowStudent_item_perf)
-view(MG5Low_NF_Loss)
+#view(MG5Low_NF_Loss)
 
 MG5_NT_Loss<-Reporting_Cat_Loss("math", "Number and Operations in Base Ten", MG5_student_item_perf)
-view(MG5_NT_Loss)
+#view(MG5_NT_Loss)
 MG5Top_NT_Loss<-Reporting_Cat_Loss("math", "Number and Operations in Base Ten", MG5_TopStudent_item_perf)
-view(MG5Top_NT_Loss)
+#view(MG5Top_NT_Loss)
 MG5Top_NT_Diff<-Reporting_Cat_Diff("math", "Number and Operations in Base Ten", MG5_TopStudent_item_perf)
-view(MG5Top_NT_Diff)
+#view(MG5Top_NT_Diff)
 
 MG5Low_NT_Loss<-Reporting_Cat_Loss("math", "Number and Operations in Base Ten", MG5_LowStudent_item_perf)
-view(MG5Low_NT_Loss)
+#view(MG5Low_NT_Loss)
 
 
 MG5_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG5_student_item_perf)
-view(MG5_GE_Loss)
+#view(MG5_GE_Loss)
 
 MG5Top_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG5_TopStudent_item_perf)
-view(MG5Top_GE_Loss)
+#view(MG5Top_GE_Loss)
 
 MG5Low_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG5_LowStudent_item_perf)
-view(MG5Low_GE_Loss)
+#view(MG5Low_GE_Loss)
 
 
 MG5_OA_Loss<-Reporting_Cat_Loss("math", "Operations and Algebraic Thinking", MG5_student_item_perf)
-view(MG5_OA_Loss)
+#view(MG5_OA_Loss)
 
 MG5Top_OA_Loss<-Reporting_Cat_Loss("math", "Operations and Algebraic Thinking", MG5_TopStudent_item_perf)
-view(MG5Top_OA_Loss)
+#view(MG5Top_OA_Loss)
 MG5Top_OA_Diff<-Reporting_Cat_Diff("math", "Operations and Algebraic Thinking", MG5_TopStudent_item_perf)
-view(MG5Top_OA_Diff)
+#view(MG5Top_OA_Diff)
 
 MG5Low_OA_Loss<-Reporting_Cat_Loss("math", "Operations and Algebraic Thinking", MG5_LowStudent_item_perf)
-view(MG5Low_OA_Loss)
+#view(MG5Low_OA_Loss)
 
 
 ##Create ELA  Data Frames--------------------------------------------------
@@ -811,11 +811,51 @@ EG10_writing_item <- EG10_item%>%
 EG10_student_perf<-Student_Perf("ela", 10, student_itemDF)
 EG10_student_item_perf<-Student_Item_Perf("ela", EG10_item, EG10_student_perf)
 #view(EG10_student_item_perf)
+EG10_student_essay_perf<-Student_Essay_Perf(10, student_itemDF, EG10_item)
+
+EG10Top_student_essay_perf<-Student_Essay_Perf(10, student_itemDF, EG10_item)%>%
+  filter(`escaleds`>=515)
+
+EG10Mid_student_essay_perf<-Student_Essay_Perf(10, student_itemDF, EG10_item)%>%
+  filter(`escaleds` <515)%>%
+  filter(`escaleds` >= 500)
+
+EG10Low_student_essay_perf<-Student_Essay_Perf(10, student_itemDF, EG10_item)%>%
+  filter(`escaleds` < 500)
+
+#view(EG10_student_item_perf)
 EG10_student_reading_item_perf<-EG10_student_item_perf%>%
   filter(!str_detect(`Type`,"ES"))
+
+EG10Top_student_reading_item_perf<-EG10_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` >= 515)
+
+EG10Mid_student_reading_item_perf<-EG10_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` < 515)%>%
+  filter(`escaleds` >= 500)
+
+EG10Low_student_reading_item_perf<-EG10_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` < 500)
+
 EG10_student_writing_item_perf<-EG10_student_item_perf%>%
   filter(str_detect(`Type`, "ES"))
-EG10_student_essay_perf<-Student_Essay_Perf(10, student_itemDF, EG10_item)
+
+EG10Top_student_writing_item_perf<-EG10_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` >= 515)%>%
+  filter(`escaleds` >= 500)
+
+EG10Mid_student_writing_item_perf<-EG10_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` < 515)
+
+
+EG10Low_student_writing_item_perf<-EG10_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` < 500)
 
 #EG8 Item DF's
 EG8_item<-read_item("data/2023ELAItemResults.xlsx", "EG8", "ela")
@@ -833,17 +873,51 @@ EG8_writing_item <- EG8_item%>%
 
 ## EG8 Student Performance DF's
 
-EG8_student_perf<-Student_Perf("ela", 8, student_itemDF)
-EG8_student_item_perf<-Student_Item_Perf("ela", EG8_item, EG8_student_perf)
-#view(EG8_student_item_perf)
-
 EG8_student_essay_perf<-Student_Essay_Perf(8, student_itemDF, EG8_item)
-#view(EG8_student_essay_perf)
+
+EG8Top_student_essay_perf<-Student_Essay_Perf(8, student_itemDF, EG8_item)%>%
+  filter(`escaleds`>=515)
+
+EG8Mid_student_essay_perf<-Student_Essay_Perf(8, student_itemDF, EG8_item)%>%
+  filter(`escaleds` <515)%>%
+  filter(`escaleds` >= 500)
+
+EG8Low_student_essay_perf<-Student_Essay_Perf(8, student_itemDF, EG8_item)%>%
+  filter(`escaleds` < 500)
+
+#view(EG8_student_item_perf)
 EG8_student_reading_item_perf<-EG8_student_item_perf%>%
   filter(!str_detect(`Type`,"ES"))
+
+EG8Top_student_reading_item_perf<-EG8_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` >= 515)
+
+EG8Mid_student_reading_item_perf<-EG8_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` < 515)%>%
+  filter(`escaleds` >= 500)
+
+EG8Low_student_reading_item_perf<-EG8_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` < 500)
+
 EG8_student_writing_item_perf<-EG8_student_item_perf%>%
   filter(str_detect(`Type`, "ES"))
-EG8_student_essay_perf<-Student_Essay_Perf(8, student_itemDF, EG8_item)
+
+EG8Top_student_writing_item_perf<-EG8_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` >= 515)%>%
+  filter(`escaleds` >= 500)
+
+EG8Mid_student_writing_item_perf<-EG8_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` < 515)
+
+
+EG8Low_student_writing_item_perf<-EG8_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` < 500)
 #view(EG8_item)
 # EG8_item_summary<-EG8_item%>%
 #   mutate(`RT Points Earned` = `item Possible Points`*`RT Percent Points`)%>%
@@ -890,12 +964,51 @@ EG7_student_item_perf<-Student_Item_Perf("ela", EG7_item, EG7_student_perf)
 #view(EG7_student_item_perf)
 
 EG7_student_essay_perf<-Student_Essay_Perf(7, student_itemDF, EG7_item)
+
+EG7Top_student_essay_perf<-Student_Essay_Perf(7, student_itemDF, EG7_item)%>%
+  filter(`escaleds`>=515)
+
+EG7Mid_student_essay_perf<-Student_Essay_Perf(7, student_itemDF, EG7_item)%>%
+  filter(`escaleds` <515)%>%
+  filter(`escaleds` >= 500)
+
+EG7Low_student_essay_perf<-Student_Essay_Perf(7, student_itemDF, EG7_item)%>%
+  filter(`escaleds` < 500)
+
 #view(EG7_student_item_perf)
 EG7_student_reading_item_perf<-EG7_student_item_perf%>%
   filter(!str_detect(`Type`,"ES"))
+
+EG7Top_student_reading_item_perf<-EG7_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` >= 515)
+
+EG7Mid_student_reading_item_perf<-EG7_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` < 515)%>%
+  filter(`escaleds` >= 500)
+
+EG7Low_student_reading_item_perf<-EG7_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` < 500)
+  
 EG7_student_writing_item_perf<-EG7_student_item_perf%>%
   filter(str_detect(`Type`, "ES"))
-EG7_student_essay_perf<-Student_Essay_Perf(7, student_itemDF, EG7_item)
+
+EG7Top_student_writing_item_perf<-EG7_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` >= 515)%>%
+  filter(`escaleds` >= 500)
+
+EG7Mid_student_writing_item_perf<-EG7_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` < 515)
+
+
+EG7Low_student_writing_item_perf<-EG7_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` < 500)
+
 
 #G6 ELA Item DF
 EG6_item<-read_item("data/2023ELAItemResults.xlsx", "EG6", "ela")
@@ -922,17 +1035,51 @@ EG6_writing_item <- EG6_item%>%
 
 ## EG6 Student Performance DF's
 
-EG6_student_perf<-Student_Perf("ela", 6, student_itemDF)
-EG6_student_item_perf<-Student_Item_Perf("ela", EG6_item, EG6_student_perf)
-#view(EG6_student_item_perf)
-
 EG6_student_essay_perf<-Student_Essay_Perf(6, student_itemDF, EG6_item)
-#view(EG6_student_essay_perf)
+
+EG6Top_student_essay_perf<-Student_Essay_Perf(6, student_itemDF, EG6_item)%>%
+  filter(`escaleds`>=515)
+
+EG6Mid_student_essay_perf<-Student_Essay_Perf(6, student_itemDF, EG6_item)%>%
+  filter(`escaleds` <515)%>%
+  filter(`escaleds` >= 500)
+
+EG6Low_student_essay_perf<-Student_Essay_Perf(6, student_itemDF, EG6_item)%>%
+  filter(`escaleds` < 500)
+
+#view(EG6_student_item_perf)
 EG6_student_reading_item_perf<-EG6_student_item_perf%>%
   filter(!str_detect(`Type`,"ES"))
+
+EG6Top_student_reading_item_perf<-EG6_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` >= 515)
+
+EG6Mid_student_reading_item_perf<-EG6_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` < 515)%>%
+  filter(`escaleds` >= 500)
+
+EG6Low_student_reading_item_perf<-EG6_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` < 500)
+
 EG6_student_writing_item_perf<-EG6_student_item_perf%>%
   filter(str_detect(`Type`, "ES"))
-EG6_student_essay_perf<-Student_Essay_Perf(6, student_itemDF, EG6_item)
+
+EG6Top_student_writing_item_perf<-EG6_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` >= 515)%>%
+  filter(`escaleds` >= 500)
+
+EG6Mid_student_writing_item_perf<-EG6_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` < 515)
+
+
+EG6Low_student_writing_item_perf<-EG6_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` < 500)
 
 
 
@@ -963,17 +1110,51 @@ EG5_writing_item <- EG5_item%>%
 
 ## EG5 Student Performance DF's
 
-EG5_student_perf<-Student_Perf("ela", 5, student_itemDF)
-EG5_student_item_perf<-Student_Item_Perf("ela", EG5_item, EG5_student_perf)
-#view(EG5_student_item_perf)
-
 EG5_student_essay_perf<-Student_Essay_Perf(5, student_itemDF, EG5_item)
-#view(EG5_student_essay_perf)
+
+EG5Top_student_essay_perf<-Student_Essay_Perf(5, student_itemDF, EG5_item)%>%
+  filter(`escaleds`>=515)
+
+EG5Mid_student_essay_perf<-Student_Essay_Perf(5, student_itemDF, EG5_item)%>%
+  filter(`escaleds` <515)%>%
+  filter(`escaleds` >= 500)
+
+EG5Low_student_essay_perf<-Student_Essay_Perf(5, student_itemDF, EG5_item)%>%
+  filter(`escaleds` < 500)
+
+#view(EG5_student_item_perf)
 EG5_student_reading_item_perf<-EG5_student_item_perf%>%
   filter(!str_detect(`Type`,"ES"))
+
+EG5Top_student_reading_item_perf<-EG5_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` >= 515)
+
+EG5Mid_student_reading_item_perf<-EG5_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` < 515)%>%
+  filter(`escaleds` >= 500)
+
+EG5Low_student_reading_item_perf<-EG5_student_item_perf%>%
+  filter(!str_detect(`Type`,"ES"))%>%
+  filter(`escaleds` < 500)
+
 EG5_student_writing_item_perf<-EG5_student_item_perf%>%
   filter(str_detect(`Type`, "ES"))
-EG5_student_essay_perf<-Student_Essay_Perf(5, student_itemDF, EG5_item)
+
+EG5Top_student_writing_item_perf<-EG5_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` >= 515)%>%
+  filter(`escaleds` >= 500)
+
+EG5Mid_student_writing_item_perf<-EG5_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` < 515)
+
+
+EG5Low_student_writing_item_perf<-EG5_student_item_perf%>%
+  filter(str_detect(`Type`, "ES"))%>%
+  filter(`escaleds` < 500)
 
 ## Exam Content/Performance: G5
 # Exam Content: G5 ELA
