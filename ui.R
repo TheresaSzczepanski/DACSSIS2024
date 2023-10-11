@@ -642,7 +642,7 @@ ui <- dashboardPage(
                 valueBox(paste(SG8_IQ_Loss[1,5], "%"), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue"),
                 
                 box(  width = 4, solidHeader = FALSE,
-                      HTML("<p> Evidence, Reasoning and Modeling, Account for 48% of available points but <b> 56% of points lost by Rising Tide Students </b>
+                      HTML("<p> Evidence, Reasoning and Modeling, Account for 48% of available points but <b> 56% of points lost by Rising Tide Students. </b>
                       This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>. </p>")
                 )
                 
@@ -770,7 +770,7 @@ ui <- dashboardPage(
                 valueBox(paste(SG5_LS_Loss[1,5], "%"), "Life Science",icon = icon("dna"), color = "light-blue"),
                 
                 box(  width = 4, solidHeader = FALSE,
-                      HTML("<p> Physical Sciences Account for 26% of available points but <b> 33% of points lost by Rising Tide Students </b>
+                      HTML("<p> Physical Sciences Account for 26% of available points but <b> 33% of points lost by Rising Tide Students. </b>
                       This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>. </p>")
                     )
                   
@@ -804,7 +804,7 @@ ui <- dashboardPage(
                 valueBox(paste(SG5_IQ_Loss[1,5], "%"), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue"),
                 
                 box(  width = 4, solidHeader = FALSE,
-                      HTML("<p> Evidence, Reasoning and Modeling, Account for 48% of available points but <b> 56% of points lost by Rising Tide Students </b>
+                      HTML("<p> Evidence, Reasoning and Modeling, Account for 48% of available points but <b> 56% of points lost by Rising Tide Students. </b>
                       This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>. </p>")
                   )
               
@@ -978,7 +978,7 @@ ui <- dashboardPage(
 
                             </p>"),
                      HTML("<p> Algebra and Functions Items account for <b> 35% of available 
-                            </b> points but <b> 48% </b> of points <b>lost by Rising Tide </b> Students 
+                            </b> points but <b> 48% </b> of points <b>lost by Rising Tide </b> Students. 
                       </p>")
                      
                 )
@@ -989,7 +989,7 @@ ui <- dashboardPage(
                 valueBox(MG10_SP_Diff[1,6], HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "red"),
                 box(  width = 4, solidHeader = FALSE,
                       HTML("<p> Statistics and Probability Items account for <b> 17% of available </b> points but 
-                            <b> 24% </b> of points <b>lost by Rising Tide's Top Performing Students </b>
+                            <b> 24% </b> of points <b>lost by Rising Tide's Top Performing Students. </b>
                       </p>")
                 )
               ),
@@ -1074,10 +1074,10 @@ ui <- dashboardPage(
                 valueBox(MG8_FN_Diff[1,6], "Functions", icon = icon("square-root-variable"), color = "red"),
                 valueBox( MG8_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue"),
                 box( width = 4, solidHeader = FALSE,
-                     HTML("<p> Geometry Items account for <b> 30% of available </b> points but <b> 46% </b> of points <b>lost by Rising Tide's Top Performing StudentsStudents </b>
+                     HTML("<p> Geometry Items account for <b> 30% of available </b> points but <b> 46% </b> of points <b>lost by Rising Tide's Top Performing Students. </b>
                       </p>"),
                      
-                     HTML("<p> Expressions and Equations account for <b> 37%  </b> of points lost by Rising Tide's Mid-Performing students but only <b> 22% </b> of points <b>lost by Rising Tide's Top Performing StudentsStudents </b>
+                     HTML("<p> <b>Expressions and Equations</b> account for <b> 37%  </b> of points lost by Rising Tide's Mid-Performing students but only <b> 22% </b> of points <b>lost by Rising Tide's Top Performing StudentsStudents </b>
                       </p>"),
                      HTML("<p>
                              Rising Tide 2023
@@ -1186,8 +1186,8 @@ ui <- dashboardPage(
                   
                 box( width = 4, solidHeader = FALSE,
                      
-                     HTML("<p> Expressions and Equations items account for <b> 24%  </b> of points available 
-                            but only <b> 7% </b> of points lost by Rising Tide's <b> Top Performing Students </b> 
+                     HTML("<p> <b> Expressions and Equations </b> items account for <b> 24%  </b> of points available 
+                            but only <b> 7% </b> of points lost by Rising Tide's <b> Top Performing Students. </b> 
                       </p>")
                      
                 ),
@@ -1200,15 +1200,15 @@ ui <- dashboardPage(
                      
                      HTML("<p> <b> Top Performing Students </b> lost a higher percentage </b> of points on
                               <b> Ratio and Proportional Reasoning items </b>, while,
-                              <b> Low Performing Students </b> lost   <b> 25% </b> of their points on 
-                                  <b> Number System Items </b> 
+                              <b> Low Performing Students </b> lost  <b> 25% </b> of their points on 
+                                  <b> Number System Items. </b> 
                       </p>")
                      
                 ),
                 
                 box( width = 4, solidHeader = FALSE,
-                     HTML("<p> Statistics and Probability Items account for <b> 20% of available </b> 
-                          points but <b> 30% </b> of points <b>lost by Rising Tide's Top Performing Students </b>
+                     HTML("<p> <b> Statistics and Probability </b> Items account for <b> 20% of available </b> 
+                          points but <b> 30% </b> of points <b>lost by Rising Tide's Top Performing Students. </b>
                           </p>")
                      
                      
@@ -1317,8 +1317,8 @@ ui <- dashboardPage(
                 
                 box( width = 4, solidHeader = FALSE,
                      
-                     HTML("<p> Expressions and Equations items account for <b> 30%  </b> of points available 
-                            but  <b> 37% </b> of points  <b>  lost by RisingTide Students </b> 
+                     HTML("<p> <b>Expressions and Equations</b> items account for <b> 30%  </b> of points available 
+                            but  <b> 37% </b> of points  <b>  lost by Rising Tide Students. </b> 
                       </p>")
                      
                 ),
@@ -1338,8 +1338,8 @@ ui <- dashboardPage(
                 ),
                 
                 box( width = 4, solidHeader = FALSE,
-                     HTML("<p> Statistics and Probability Items account for <b> 20% of available </b> 
-                          points but <b> 30% </b> of points <b>lost by Rising Tide's Top Performing Students </b>
+                     HTML("<p> <b> Statistics and Probability </b> Items account for <b> 20% of available </b> 
+                          points but <b> 30% </b> of points <b>lost by Rising Tide's Top Performing Students. </b>
                           </p>")
                      
                      
@@ -1438,14 +1438,13 @@ ui <- dashboardPage(
                 
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p> The <b> Top Performing </b> students were weakest compared to their peers in the state on <b> Measurement and data Items </b>, while the 
-                                <b> Lowest Performing </b> students lost the highest percentage of points in <b> Numbers and Operations Base 10 </b>. Notably most 
+                                <b> Lowest Performing </b> students lost the highest percentage of points in <b> Numbers and Operations Base 10. </b> Notably most 
                                 of these items asked students to <b> round, reason with place value, and compare decimals </b> and <b> not </b> to perform calculations with 
-                                decimal operations. Explore the Rising Tide 2023
-                              <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
-                             Weakest Items </a> 
-                            
-
-                            </p>")
+                                decimal operations. 
+                            </p>"),
+                    HTML("<p> Explore the Rising Tide 2023
+                     <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
+                       Weakest Items. </a> </p>")
                      
                 ),
                 
@@ -1610,7 +1609,7 @@ ui <- dashboardPage(
                 box( title = "Notes", width = 4, solidHeader = FALSE,
                      HTML("<p> Read more about the <a href =
                       'https://www.doe.mass.edu/frameworks/ela/2017-06.pdf'>
-                       anchor standards </a> in the frameworks</p>"))
+                       anchor standards </a> in the frameworks.</p>"))
               )
 
 
@@ -1644,7 +1643,7 @@ ui <- dashboardPage(
                 valueBox( paste(EG10_LA_Loss[1,5], "%"),  HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
                 box(width = 4, solidHeader = FALSE,
                     HTML("<p>
-                           <b>  Reading Comprehension </b> accounts for the almost all selected response points lost by Rising Tide Students.
+                           <b>  Reading Comprehension </b> accounts for almost all selected response points lost by Rising Tide Students.
                         </p>"
                     )
                 )
@@ -1707,8 +1706,8 @@ ui <- dashboardPage(
                 valueBox(paste(EG10_FRead_Loss[1,5], "%"), HTML("<p> Literature </p>"), icon=icon("book"), color = "red"),
                 box(  width = 4, solidHeader = FALSE,
 
-                     HTML("<p> Comprehension of Literature accounts for <b> 3/4 </b> of reading points lost by Rising Tide students, but
-                              <b> 78% </b>.</a> </p>")
+                     HTML("<p> Comprehension of Literature accounts for <b> 3/4 </b> of reading points lost by Rising Tide students, but only
+                              <b> 71% </b> of available reading points.</a> </p>")
                      )
 
 
@@ -1774,7 +1773,7 @@ ui <- dashboardPage(
                 valueBox(paste(EG10_FWrite_Loss[1,5], "%"), HTML("<p> Literature </p>"), icon=icon("book"), color = "light-blue"),
                 box( width = 4, solidHeader = FALSE,
                      HTML("<p> In <b> contrast</b> to their reading scores by text type,
-                    Rising Tide students lost points regardless of the text type and student performance level.
+                    Rising Tide students lost writing points at rates independent of the text type and student performance level.
                     This suggests the need to review the practice of writing in <b> both ELA and Social Studies </b>. </p>"))
               ),
               h2("% Points Lost by Text Quantity"),
@@ -2133,7 +2132,19 @@ ui <- dashboardPage(
                         </p>"
                   )
              )
-           ),
+            ),
+             
+             h3("Top Performing Students"),
+             fluidRow(
+               valueBox( paste(EG8Top_RE_Loss[1,5], "%") ,HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "red"),
+               valueBox( paste(EG8Top_LA_Loss[1,5], "%"),  HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
+               box(width = 4, solidHeader = FALSE,
+                   HTML("<p>
+                            This is more pronounced in<b> Top Performing Students. </b>
+                        </p>"
+                   )
+               )
+              ),
            
            h2("% Selected Response Lost by Domain Cluster"),
            
@@ -2443,6 +2454,18 @@ ui <- dashboardPage(
              )
            ),
            
+           h3("Top Performing Students"),
+           fluidRow(
+             valueBox( paste(EG7Top_RE_Loss[1,5], "%") ,HTML("<p> Reading: <br>Comprehension</p>"),icon = icon("book-open-reader"), color = "red"),
+             valueBox( paste(EG7Top_LA_Loss[1,5], "%"),  HTML("<p>Reading: <br>Language Conv. <br> & Vocabulary </p>"), icon = icon("quote-left"), color = "blue"),
+             box(width = 4, solidHeader = FALSE,
+                 HTML("<p>
+                            This is more pronounced in<b> Top Performing Students. </b>
+                        </p>"
+                 )
+             )
+           ),
+           
            
            h2("% Selected Response Lost by Domain Cluster"),
            
@@ -2516,7 +2539,7 @@ ui <- dashboardPage(
              valueBox( paste(EG7Top_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
              valueBox( paste(EG7Top_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
              box(width = 4, solidHeader = FALSE,
-                 HTML("<p> This trend is <b> more pronounced </b> in the <b> Top Performing Students </b>
+                 HTML("<p> This trend is <b> more pronounced </b> in the <b> Top Performing Students. </b>
                             </p>"
                  )
              )
@@ -3133,8 +3156,8 @@ ui <- dashboardPage(
            h2("RT-State Diff"),
            
            fluidRow(
-             valueBox( paste(EG5_ESidea_Diff[1,5], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
-             valueBox( paste(EG5_ESconv_Diff[1,5], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+             valueBox( paste(EG5_ESidea_Diff[1,5]),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+             valueBox( paste(EG5_ESconv_Diff[1,5]),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
              box(width = 4, solidHeader = FALSE,
                  HTML("<p> 
                  
@@ -3147,7 +3170,7 @@ ui <- dashboardPage(
            h2("% of Writing Points Lost"),
            h3("All Students"),
            fluidRow(
-             valueBox( paste(EG5_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+             valueBox( paste(EG5_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "light-blue"),
              valueBox( paste(EG5_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
              box(width = 4, solidHeader = FALSE,
                  HTML("<p> 
@@ -3165,7 +3188,18 @@ ui <- dashboardPage(
              valueBox( paste(EG5Top_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
              valueBox( paste(EG5Top_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
              box(width = 4, solidHeader = FALSE,
-                 HTML("<p> This trend is <b> more pronounced </b> in the <b> Top Performing Students </b>
+                 HTML("<p> <b> Top Performing Students </b> lost disproportionately more points in Idea Development.
+                            </p>"
+                 )
+             )
+             
+           ),
+           h3("Low Performing Students"),
+           fluidRow(
+             valueBox( paste(EG5Low_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+             valueBox( paste(EG5Low_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
+             box(width = 4, solidHeader = FALSE,
+                 HTML("<p>  <b> Low Performing Students </b> lost essay points reflective of their relative weights in the exam.
                             </p>"
                  )
              )
