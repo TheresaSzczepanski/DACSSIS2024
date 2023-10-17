@@ -67,64 +67,110 @@ ui <- dashboardPage(
       
       tabItem(tabName = "g8CivicsContent",
               span(h1("How were students assessed?")), #style = "color:black")),
-              HTML("<p>The 2023 <b> HS Biology </b> exam consisted of 42 questions
-               worth in <b> total 55 points </b>.
-               Explore the released materials:
-                <ul>
-                <li> Complete and Score released questions in the  
-              <a href='https://mcas.digitalitemlibrary.com/home?subject=Science&grades=Biology&view=ALL'>digital item library. </a> 
-                </li>
-                <li> Download
-              <a href = 'https://www.doe.mass.edu/mcas/2023/release/hs-bio.pdf'>
-                2023 released paper based items PDF </a> 
-                </li>
-                <li> Download 
-                  <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-science/MCAS_2023_HS_Biology_PT_ADA.pdf'>
-                  HS Biology Paper sample test </a>
-                or 
-                <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-science/'>
-                complete Computer Based tests online </a> and grade with the
-                scoring key/rubrics </a>
-                </li>
-                <li>Review student
-              <a href = 'https://www.doe.mass.edu/mcas/student/2023/hs/biology.html'>
-                released Constructed Response </a> and Scoring Guidelines
-              </li>
-                
-                </ul>
+              HTML("<p>The 2023 <b> G8 Civics Pilot </b> exam consisted of 17 questions
+               worth in <b> total 20 points </b>.
                 </p>"),
-              h3("Available Points by Content Category"),
-              
-              
-              fluidRow(
-                # A static valueBox
-                #valueBox( scales::percent(22/42), "Motions, Forces, \n and Interactions", icon = icon("rocket"), color = "blue"),
-                
-                valueBox(SG11_EC_PTS[1,2], HTML("<p> Ecology </p>"), icon = icon("leaf"), color = "blue"),
-                valueBox( SG11_EV_PTS[1,2],"Evolution",icon = icon("dna"), color = "blue")
-              ),
+              h2("Available Points by Topic"),
+              h3("Foundations and develoment of the U.S. Political System & Government"),
               
               fluidRow(
-                valueBox(SG11_HE_PTS[1,2], "Hereditary", icon = icon("people-group"), color = "blue"),
-                valueBox(SG11_MO_PTS[1,2], HTML("<p> Molecules to <br> Organisms </p>"), icon = icon("bacteria"), color = "blue")
+               
+                valueBox(civics_TopicPts[1,2], HTML("<p> T1:  The philosophical <br> 
+                      foundations <br> of the United States
+<br>                   political system</p>"), icon = icon("book"), color = "blue"),
+                valueBox( civics_TopicPts[2,2],HTML("<p>T2: The development of the <br> United States government.</p>"),icon = icon("flag-usa"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                             There were no released items connected to Topic 5
+                            </p>"),
+                     HTML("<p> <ul>
+                <li> Review the Topics and Reporting Categories in the   
+              <a href='https://www.doe.mass.edu/frameworks/hss/2018-12.pdf'> Curriculum Framework. </a> 
+                </li>
+                <li> Explore
+              <a href = 'http://mcas.pearsonsupport.com/released-items/civics/'>
+                2023 released items  </a> 
+                </li>
+
                 
+                </ul></p>")
+                )
               ),
               
-              
-              h3("Available Points by Practice Category"),
-              HTML("<p>Explore all released questions by   
-                   <a href='https://mcas.digitalitemlibrary.com/home?subject=Science&grades=Biology&view=PracticeCategory'>
-                   science practice category</a>. \n Note that there are some
-                   items which do not have a listed science practice category. </p>"),
+              h3("Institutions and structure of U.S. government & Mass. state and Local governments"),
               fluidRow(
-                # A static valueBox
-                valueBox(SG11_ERM_PTS[1,2], HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "light-blue"),
-                valueBox(SG11_MD_PTS[1,2], HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "light-blue"),
-                valueBox(SG11_IQ_PTS[1,2], HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue")
-                
-                # valueBox(4,  "no category reported ", color = "aqua")
-                
+                valueBox( civics_TopicPts[3,2],HTML("<p>T3: The institutions of the <br> United States government.</p>"),icon = icon("landmark-dome"), color = "light-blue"),
+                valueBox( civics_TopicPts[5,2],HTML("<p>T6: The structure of Massachusetts state <br> and local
+government </p>"),icon = icon("location-dot"), color = "light-blue")
               ),
+              
+              h3("Rights and responsibilites, the U.S. Constitution, and news & media literacy"),
+              fluidRow(
+                valueBox(civics_TopicPts[7,2], HTML("<p> T5: The Constitution, Amendments,<br> and Supreme Court
+decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
+                valueBox( civics_TopicPts[4,2],HTML("<p>T4: Rights and responsibilities of citizens.</p>"),icon = icon("person-booth"), color = "blue"),
+                valueBox( civics_TopicPts[6,2],HTML("<p>T7: Freedom of the Press and <br>  News/Media Literacy </p>"),icon = icon("newspaper"), color = "blue"),
+            
+              ),
+             
+            
+              
+              
+              h2("How Did our Students Perform Compared to Their Peers in the State?"),
+              h3("RT-State Aggregate Diff"),
+              fluidRow(
+                
+                valueBox(RT_SumPerf[1,6], HTML("<p> 2023 Civics Pilot</p>"), icon = icon("check-to-slot"), color = "red"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                            <b> Rising Tide </b> students earned <b>60%</b> of the available points on the
+                            2023 Civics Pilot MCAS, while students across <b> MA earned 61% </b> of 
+                            available points.
+                            </p>")
+                )
+              ),
+              h3("RT State Diff by Topic"),
+              h3("Foundations and develoment of the U.S. Political System & Government"),
+              
+              fluidRow(
+                
+                valueBox(civics_TopicPts[1,7], HTML("<p> T1:  The philosophical <br> 
+                      foundations <br> of the United States
+<br>                   political system</p>"), icon = icon("book"), color = "red"),
+                valueBox( civics_TopicPts[2,7],HTML("<p>T2: The development of the <br> United States government.</p>"),icon = icon("flag-usa"), color = "red"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                             There were no released items connected to Topic 5
+                            </p>"),
+                     HTML("<p> <ul>
+                <li> Review the Topics and Reporting Categories in the   
+              <a href='https://www.doe.mass.edu/frameworks/hss/2018-12.pdf'> Curriculum Framework. </a> 
+                </li>
+                <li> Explore
+              <a href = 'http://mcas.pearsonsupport.com/released-items/civics/'>
+                2023 released items  </a> 
+                </li>
+
+                
+                </ul></p>")
+                )
+              ),
+              
+              h3("Institutions and structure of U.S. government & Mass. state and Local governments"),
+              fluidRow(
+                valueBox( civics_TopicPts[3,7],HTML("<p>T3: The institutions of the <br> United States government.</p>"),icon = icon("landmark-dome"), color = "light-blue"),
+                valueBox( civics_TopicPts[5,7],HTML("<p>T6: The structure of Massachusetts state <br> and local
+government </p>"),icon = icon("location-dot"), color = "red")
+              ),
+              
+              h3("Rights and responsibilites, the U.S. Constitution, and news & media literacy"),
+              fluidRow(
+                valueBox(civics_TopicPts[7,7], HTML("<p> T5: The Constitution, Amendments,<br> and Supreme Court
+decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
+                valueBox( civics_TopicPts[4,7],HTML("<p>T4: Rights and responsibilities of citizens.</p>"),icon = icon("person-booth"), color = "blue"),
+                valueBox( civics_TopicPts[6,7],HTML("<p>T7: Freedom of the Press and <br>  News/Media Literacy </p>"),icon = icon("newspaper"), color = "blue"),
+                
+              )
               
           ),
       #Science tab content

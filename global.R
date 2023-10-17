@@ -1,5 +1,47 @@
 source('dependencies.R')
 
+## Civics Pilot additions
+
+civics_ItemDF<- read_csv("data/MCAS2023_Civics_Item_Analysis_04830305.csv")
+#view(civics_ItemDF)
+civics_ItemDF<-civics_ItemDF%>%
+  mutate(`RT Points` = `Points`*`Percent_Possible_Points_School`/100)%>%
+  mutate(`State Points` = `Points` * `Percent_Possible_Points_State`/100)%>%
+  mutate(`Total Points` = sum(`Points`))
+RT_SumPerf<-civics_ItemDF%>%
+  summarise(`Pts Available` = sum(`Points`),
+            `State Pts` = sum(`State Points`),
+            `RT Pts` = sum(`RT Points`))%>%
+  mutate(`State%` = round(100*`State Pts`/`Pts Available`))%>%
+  mutate(`RT%` = round(100*`RT Pts`/`Pts Available`))%>%
+  mutate(`RT-State Diff` = `RT%`-`State%`)
+
+RT_SumPerf
+
+civics_ItemDF
+civics_TopicPts<-civics_ItemDF%>%
+  group_by(`Civics_topic`)%>%
+  summarize(`Pts Available` = sum(`Points`),
+            `State Pts` = sum(`State Points`),
+            `RT Pts` = sum(`RT Points`))%>%
+  mutate(`State%` = round(100*`State Pts`/`Pts Available`))%>%
+  mutate(`RT%` = round(100*`RT Pts`/`Pts Available`))%>%
+  mutate(`RT-State Diff` = `RT%`-`State%`)
+
+civics_TopicPts
+
+civics_ReportCatPts<-civics_ItemDF%>%
+  group_by(`Reporting_Category`)%>%
+  summarize(`Pts Available` = sum(`Points`),
+            `State Pts` = sum(`State Points`),
+            `RT Pts` = sum(`RT Points`))%>%
+  mutate(`State%` = round(100*`State Pts`/`Pts Available`))%>%
+  mutate(`RT%` = round(100*`RT Pts`/`Pts Available`))%>%
+  mutate(`RT-State Diff` = `RT%`-`State%`)
+
+civics_ReportCatPts
+
+
 ## Create Student Item Data Frames----------------------------------------------
 student_itemDF<-read_MCAS_Prelim_Private("csv","data/PrivProtectMCAS2023_spring_prelim_04830000.csv")
 #view(student_itemDF)
