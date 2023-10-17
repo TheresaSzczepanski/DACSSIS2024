@@ -1,0 +1,31 @@
+---
+title: "Civics Pilot"
+author: "Theresa Szczepanski"
+desription: "MCAS G8 2023"
+date: "10/18/2023"
+format:
+  html:
+    df-print: paged
+    toc: true
+    code-fold: true
+    code-copy: true
+    code-tools: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+```{r}
+#| label: setup
+#| warning: false
+#| message: false
+source('dependencies.R')
+```
+
+```{r}
+civics_ItemDF<- read_csv("data/MCAS2023_Civics_Item_Analysis_04830305.csv")
+view(civics_ItemDF)
+#civics_ItemDF%>%
+ # mutate
+
+```

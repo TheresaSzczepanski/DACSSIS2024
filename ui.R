@@ -53,8 +53,11 @@ ui <- dashboardPage(
                 menuSubItem("G6 ELA Analysis", tabName = "g6ELAAnalysis"),
                 menuSubItem("G5 ELA Content", tabName = "g5ELAContent"),
                 menuSubItem("G5 ELA Analysis", tabName = "g5ELAAnalysis")
-       )
+       ),
+      menuItem("Social Studies", tabName = "social", icon = icon("globe"),
+               menuSubItem("G8 Civics Content", tabName = "g8CivicsContent")
 
+              )
     )
   ),
   ##Body content
@@ -62,6 +65,9 @@ ui <- dashboardPage(
     tabItems(
       #First tab content
       
+      tabItem(tabName = "g8CivicsContent"
+              
+              ),
       #Science tab content
       tabItem(tabName = "science",
               h2("Science Trends Overview content")
@@ -3196,7 +3202,7 @@ ui <- dashboardPage(
            ),
            h3("Low Performing Students"),
            fluidRow(
-             valueBox( paste(EG5Low_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "red"),
+             valueBox( paste(EG5Low_ESidea_Loss[1,4], "%"),HTML("<p>Essay: <br> Idea Development <p>"),icon = icon("lightbulb"), color = "light-blue"),
              valueBox( paste(EG5Low_ESconv_Loss[1,4], "%"),HTML("<p> Essay:<br> Language Conv. <p>"),icon = icon("indent"), color = "light-blue"),
              box(width = 4, solidHeader = FALSE,
                  HTML("<p>  <b> Low Performing Students </b> lost essay points reflective of their relative weights in the exam.
