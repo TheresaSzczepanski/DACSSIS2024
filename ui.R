@@ -1179,7 +1179,6 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
               span(h1("How do our students compare to their peers in the state?")), #style = "color:black")),
               
               h3("RT-State Diff by: Content Category"),
-              h3("Different Trends between Algebra and G8 Students"),
               
               fluidRow(
                 valueBox(MG8_FN_Diff[1,6], "Functions", icon = icon("square-root-variable"), color = "red"),
@@ -1211,12 +1210,95 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
               fluidRow(
                 # A static valueBox
                 valueBox(MG8_SR_Diff[1,6], HTML("<p> Selected <br> Response </p>"), icon=icon("square-check")),
-
+                
                 valueBox(MG8_SA_Diff[1,6], "Short Answer", icon=icon("pen-to-square")),
-
+                
                 valueBox(MG8_CR_Diff[1,6], HTML("<p> Constructed <br> Response </p>"),icon=icon("pencil") )
+                
+              ),
+              
+              
+              h3("Different Trends between Algebra and G8 Students"),
+              h3("% Points Lost Top Performing Students"),
+              fluidRow(
+                valueBox(paste(MG8Top_FN_Loss[1,5], "%"), "Functions", icon = icon("square-root-variable"), color = "blue"),
+                valueBox( paste(MG8Top_GE_Loss[1,5], "%"),"Geometry",icon = icon("shapes"), color = "red"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p> Geometry Items account for <b> 30% of available </b> points but <b> 46% </b> of points <b>lost by Rising Tide's Top Performing Students. </b>
+                      </p>"),
+                     
 
-              )
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
+                     
+                )
+                
+              ),
+              
+              fluidRow(
+                
+                valueBox(paste(MG8Top_NSEE_Loss[1,5], "%"), HTML("<p> Number System: <br> Expressions <br> and Equations </p>"), icon = icon("equals"), color = "blue"),
+                valueBox(paste(MG8_SP_Loss[1,5], "%"), HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                  
+                     
+                     HTML("<p> <b>Expressions and Equations</b> account for <b> 37%  </b> of points lost by Rising Tide's Mid-Performing students but only <b> 22% </b> of points <b>lost by Rising Tide's Top Performing StudentsStudents </b>
+                      </p>"),
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
+                     
+                )
+              ),
+              
+              h3("% Points Lost Lowest Performing Students"),
+              fluidRow(
+                valueBox(paste(MG8Low_FN_Loss[1,5], "%"), "Functions", icon = icon("square-root-variable"), color = "blue"),
+                valueBox( paste(MG8Low_GE_Loss[1,5], "%"),"Geometry",icon = icon("shapes"), color = "red"),
+                box( width = 4, solidHeader = FALSE,
+                     HTML("<p> Geometry Items account for <b> 30% of available </b> points but <b> 36% </b> of points <b>lost by Rising Tide's Low Performing Students. </b>
+                      </p>"),
+                     
+                     
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
+                     
+                )
+                
+              ),
+              
+              fluidRow(
+                
+                valueBox(paste(MG8Low_NSEE_Loss[1,5], "%"), HTML("<p> Number System: <br> Expressions <br> and Equations </p>"), icon = icon("equals"), color = "red"),
+                valueBox(paste(MG8_SP_Loss[1,5], "%"), HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "blue"),
+                box( width = 4, solidHeader = FALSE,
+                     
+                     
+                     HTML("<p> <b>Expressions and Equations</b> account for <b> 35%  </b> of points lost by Rising Tide's Lowest-Performing students but only <b> 22% </b> of points <b>lost by Rising Tide's Low Performing StudentsStudents </b>
+                      </p>"),
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
+                     
+                )
+              ),
+              
+              
+              
       ),
       
       #G7 Math
