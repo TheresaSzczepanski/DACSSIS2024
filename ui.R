@@ -1424,15 +1424,78 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                 )
               ),
               
+              # fluidRow(
+              #   
+              #   box( width = 4, solidHeader = FALSE,
+              #        
+              #        HTML("<p> <b>Expressions and Equations</b> items account for <b> 30%  </b> of points available 
+              #               but  <b> 37% </b> of points  <b>  lost by Rising Tide Students. </b> 
+              #         </p>")
+              #        
+              #   ),
+              #   
+              #   
+              #   
+              #   
+              #   
+              #   box( width = 4, solidHeader = FALSE,
+              #        
+              #        HTML("<p>
+              #                  <b> Number System Items</b> account for <b> 20% </b> of points available
+              #                  yet, <b> Low performing Rising Tide students </b> lost only  <b> 10% </b> of their points on 
+              #                     these  and all students lost <b>only 10%  </b> of their points on these items.
+              #         </p>")
+              #        
+              #   ),
+              #   
+              #   box( width = 4, solidHeader = FALSE,
+              #        HTML("<p> <b> Statistics and Probability </b> Items account for <b> 20% of available </b> 
+              #             points but <b> 30% </b> of points <b>lost by Rising Tide's Top Performing Students. </b>
+              #             </p>")
+              #        
+              #        
+              #   )
+              #   
+              #   
+              #   
+              # ),
+              
               fluidRow(
                 
+                valueBox(MG6_NS_Diff[1,6], "Number System", icon = icon("less-than-equal"), color = "blue"),
+                valueBox(MG6_EE_Diff[1,6], HTML("<p>Expressions <br> and Equations</p>"), icon = icon("equals"), color = "red"),
+                
+                valueBox(MG6_SP_Diff[1,6], HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "red")
+              ),
+              
+              h3("% Points Lost Top Performing Students"),
+              fluidRow(
+                
+                valueBox(paste(MG6_RP_Loss[1,5], "%"), HTML("<p> Ratios and <br> Proportions </p>"), icon = icon("chart-pie"), color = "blue"),
+                
+                valueBox( paste(MG6_GE_Loss[1,5], "%"),"Geometry",icon = icon("shapes"), color = "blue"),
                 box( width = 4, solidHeader = FALSE,
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
                      
-                     HTML("<p> <b>Expressions and Equations</b> items account for <b> 30%  </b> of points available 
-                            but  <b> 37% </b> of points  <b>  lost by Rising Tide Students. </b> 
-                      </p>")
-                     
-                ),
+                )
+              ),
+              
+             
+              
+              fluidRow(
+                
+                valueBox(paste(MG6_NS_Loss[1,5], "%"), "Number System", icon = icon("less-than-equal"), color = "blue"),
+                valueBox(paste(MG6_EE_Loss[1,5], "%"), HTML("<p>Expressions <br> and Equations</p>"), icon = icon("equals"), color = "red"),
+                
+                valueBox(paste(MG6_SP_Loss[1,5], "%"), HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "red")
+              ),
+              fluidRow(
+                
                 
                 
                 
@@ -1442,8 +1505,16 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                      
                      HTML("<p>
                                <b> Number System Items</b> account for <b> 20% </b> of points available
-                               yet, <b> Low performing Rising Tide students </b> lost only  <b> 10% </b> of their points on 
+                               yet, <b>Rising Tide students </b> lost only  <b> 10% </b> of their points on 
                                   these  and all students lost <b>only 10%  </b> of their points on these items.
+                      </p>")
+                     
+                ),
+                
+                box( width = 4, solidHeader = FALSE,
+                     
+                     HTML("<p> <b>Expressions and Equations</b> items account for <b> 30%  </b> of points available 
+                            but  <b> 37% </b> of points  <b>  lost by Rising Tide Students. </b> 
                       </p>")
                      
                 ),
@@ -1456,28 +1527,19 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                      
                 )
                 
-                
-                
-              ),
-              
-              fluidRow(
-                
-                valueBox(MG6_NS_Diff[1,6], "Number System", icon = icon("less-than-equal"), color = "red"),
-                valueBox(MG6_EE_Diff[1,6], HTML("<p>Expressions <br> and Equations</p>"), icon = icon("equals"), color = "red"),
-                
-                valueBox(MG6_SP_Diff[1,6], HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "red")
               ),
               
               h3("RT-State Diff by: Question Type"),
               fluidRow(
                 # A static valueBox
-                valueBox(MG6_SR_Diff[1,6], HTML("<p> Selected <br> Response </p>"), icon=icon("square-check")),
+                valueBox(paste(MG6_SR_Diff[1,6], "%"), HTML("<p> Selected <br> Response </p>"), icon=icon("square-check")),
 
-                valueBox(MG6_SA_Diff[1,6], "Short Answer", icon=icon("pen-to-square")),
+                valueBox(paste(MG6_SA_Diff[1,6], "%"), "Short Answer", icon=icon("pen-to-square")),
 
-                valueBox(MG6_CR_Diff[1,6], HTML("<p> Constructed <br> Response </p>"),icon=icon("pencil") )
+                valueBox(paste(MG6_CR_Diff[1,6], "%"), HTML("<p> Constructed <br> Response </p>"),icon=icon("pencil") )
 
               )
+              
       ),
       
       #G5 Math
