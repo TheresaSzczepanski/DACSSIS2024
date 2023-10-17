@@ -425,6 +425,9 @@ MG10_student_item_perf<-Student_Item_Perf("math", MG10_item, MG10_student_perf)
 #view(MG10_student_item_perf)
 MG10_TopStudent_item_perf<-MG10_student_item_perf%>%
   filter(`mscaleds`>=515)
+
+MG10_LowStudent_item_perf<-MG10_student_item_perf%>%
+  filter(`mscaleds`<500)
 MG8_student_perf<-Student_Perf("math", 8, student_itemDF)
 MG8_student_item_perf<-Student_Item_Perf("math", MG8_item, MG8_student_perf)
 MG8_TopStudent_item_perf<-MG8_student_item_perf%>%
@@ -499,11 +502,17 @@ MG10_NQ_Diff<-Reporting_Cat_Diff("math", "Number and Quantity", MG10_student_ite
 MG10_AF_Loss<-Reporting_Cat_Loss("math", "Algebra and Functions", MG10_student_item_perf)
 MG10_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG10_student_item_perf)
 MG10_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG10_student_item_perf)
-
+MG10_NQ_Loss<-Reporting_Cat_Loss("math", "Number and Quantity", MG10_student_item_perf)
 
 MG10Top_AF_Loss<-Reporting_Cat_Loss("math", "Algebra and Functions", MG10_TopStudent_item_perf)
 MG10Top_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG10_TopStudent_item_perf)
 MG10Top_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG10_TopStudent_item_perf)
+MG10Top_NQ_Loss<-Reporting_Cat_Loss("math", "Number and Quantity", MG10_TopStudent_item_perf)
+
+MG10Low_AF_Loss<-Reporting_Cat_Loss("math", "Algebra and Functions", MG10_LowStudent_item_perf)
+MG10Low_GE_Loss<-Reporting_Cat_Loss("math", "Geometry", MG10_LowStudent_item_perf)
+MG10Low_SP_Loss<-Reporting_Cat_Loss("math", "Statistics and Probability", MG10_LowStudent_item_perf)
+MG10Low_NQ_Loss<-Reporting_Cat_Loss("math", "Number and Quantity", MG10_LowStudent_item_perf)
 
 #view(MG10_AF_Loss)
 #view(MG10Top_AF_Loss)
