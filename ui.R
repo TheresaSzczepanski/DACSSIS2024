@@ -65,9 +65,68 @@ ui <- dashboardPage(
     tabItems(
       #First tab content
       
-      tabItem(tabName = "g8CivicsContent"
+      tabItem(tabName = "g8CivicsContent",
+              span(h1("How were students assessed?")), #style = "color:black")),
+              HTML("<p>The 2023 <b> HS Biology </b> exam consisted of 42 questions
+               worth in <b> total 55 points </b>.
+               Explore the released materials:
+                <ul>
+                <li> Complete and Score released questions in the  
+              <a href='https://mcas.digitalitemlibrary.com/home?subject=Science&grades=Biology&view=ALL'>digital item library. </a> 
+                </li>
+                <li> Download
+              <a href = 'https://www.doe.mass.edu/mcas/2023/release/hs-bio.pdf'>
+                2023 released paper based items PDF </a> 
+                </li>
+                <li> Download 
+                  <a href = 'http://mcas.pearsonsupport.com/resources/student/practice-tests-science/MCAS_2023_HS_Biology_PT_ADA.pdf'>
+                  HS Biology Paper sample test </a>
+                or 
+                <a href = 'http://mcas.pearsonsupport.com/student/practice-tests-science/'>
+                complete Computer Based tests online </a> and grade with the
+                scoring key/rubrics </a>
+                </li>
+                <li>Review student
+              <a href = 'https://www.doe.mass.edu/mcas/student/2023/hs/biology.html'>
+                released Constructed Response </a> and Scoring Guidelines
+              </li>
+                
+                </ul>
+                </p>"),
+              h3("Available Points by Content Category"),
               
+              
+              fluidRow(
+                # A static valueBox
+                #valueBox( scales::percent(22/42), "Motions, Forces, \n and Interactions", icon = icon("rocket"), color = "blue"),
+                
+                valueBox(SG11_EC_PTS[1,2], HTML("<p> Ecology </p>"), icon = icon("leaf"), color = "blue"),
+                valueBox( SG11_EV_PTS[1,2],"Evolution",icon = icon("dna"), color = "blue")
               ),
+              
+              fluidRow(
+                valueBox(SG11_HE_PTS[1,2], "Hereditary", icon = icon("people-group"), color = "blue"),
+                valueBox(SG11_MO_PTS[1,2], HTML("<p> Molecules to <br> Organisms </p>"), icon = icon("bacteria"), color = "blue")
+                
+              ),
+              
+              
+              h3("Available Points by Practice Category"),
+              HTML("<p>Explore all released questions by   
+                   <a href='https://mcas.digitalitemlibrary.com/home?subject=Science&grades=Biology&view=PracticeCategory'>
+                   science practice category</a>. \n Note that there are some
+                   items which do not have a listed science practice category. </p>"),
+              fluidRow(
+                # A static valueBox
+                valueBox(SG11_ERM_PTS[1,2], HTML("<p> Evidence, Reasoning, <br> and Modeling</p>"), icon = icon("magnifying-glass-chart"), color = "light-blue"),
+                valueBox(SG11_MD_PTS[1,2], HTML("<p> Mathematics <br> and Data</p>"), icon = icon("calculator"), color = "light-blue"),
+                valueBox(SG11_IQ_PTS[1,2], HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue")
+                
+                # valueBox(4,  "no category reported ", color = "aqua")
+                
+              ),
+              
+          ),
       #Science tab content
       tabItem(tabName = "science",
               h2("Science Trends Overview content")
