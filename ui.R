@@ -422,9 +422,15 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                               <a href = 'https://docs.google.com/document/d/15noiswDgNC3FZmVgxhExutBqcNu5YcmjYf7vjSQ_-Dk/edit?usp=drive_link'>
                              Weakest Items </a> 
 
+                            </p>"),
+                     HTML("<p>
+                              <a href = 'https://docs.google.com/document/d/1wwXyvgF4sewAq3zbP-4I8iHEiBe-azF-jEyYzSu3-0A/edit?usp=drive_link'>
+                              Released MCAS by Standard </a> (2019-2023 Next Generation)
+
                             </p>")
+                     )
                 
-                  )
+                  
                 
               ),
               
@@ -562,6 +568,12 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                      HTML("<p>
                               <a href = 'https://docs.google.com/document/d/16w1tDbd0-xSRzP-00Yvf3A3T0kiE3f8Hk5sqOhlhRNc/edit?usp=drive_link'>
                               Released MCAS Items by Standard </a> (Next Generation MCAS 2019-2023)
+                            </p>"),
+                     HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/15noiswDgNC3FZmVgxhExutBqcNu5YcmjYf7vjSQ_-Dk/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
                             </p>")
                      
                 )
@@ -718,7 +730,17 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                 valueBox(paste(SG8Top_LS_Loss[1,5], "%"), "Life Science",icon = icon("dna"), color = "red"),
                 
                 box(  width = 4, solidHeader = FALSE,
-                      HTML("<p> This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>. </p>")
+                      HTML("<p> This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>. </p>"),
+                      HTML("<p>
+                              <a href = 'https://docs.google.com/document/d/16w1tDbd0-xSRzP-00Yvf3A3T0kiE3f8Hk5sqOhlhRNc/edit?usp=drive_link'>
+                              Released MCAS Items by Standard </a> (Next Generation MCAS 2019-2023)
+                            </p>"),
+                      HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/15noiswDgNC3FZmVgxhExutBqcNu5YcmjYf7vjSQ_-Dk/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
                 )
                 
                 
@@ -753,8 +775,8 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                 valueBox(paste(SG8_IQ_Loss[1,5], "%"), HTML("<p> Investigating <br> and Questioning</p>"), icon = icon("question"), color = "light-blue"),
                 
                 box(  width = 4, solidHeader = FALSE,
-                      HTML("<p> Evidence, Reasoning and Modeling, Account for 48% of available points but <b> 56% of points lost by Rising Tide Students. </b>
-                      This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>. </p>")
+                      HTML("<p> Evidence, Reasoning and Modeling, Account for 45% of available points but <b> 51% of points lost by Rising Tide Students. </b>
+                       </p>")
                 )
                 
                 
@@ -777,7 +799,17 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                 
                 box(  width = 4, solidHeader = FALSE,
                       HTML("<p> This trend is <b> more pronounced</b> in Rising Tide's <b> top performing students</b>.
-                       </p>")
+                       </p>"),
+                      HTML("<p>
+                              <a href = 'https://docs.google.com/document/d/16w1tDbd0-xSRzP-00Yvf3A3T0kiE3f8Hk5sqOhlhRNc/edit?usp=drive_link'>
+                              Released MCAS Items by Standard </a> (Next Generation MCAS 2019-2023)
+                            </p>"),
+                      HTML("<p>
+                             Rising Tide 2023
+                              <a href = 'https://docs.google.com/document/d/15noiswDgNC3FZmVgxhExutBqcNu5YcmjYf7vjSQ_-Dk/edit?usp=drive_link'>
+                             Weakest Items </a> 
+
+                            </p>")
                 )
                 
                 
