@@ -1119,10 +1119,8 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                               <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
                              Weakest Items </a> 
 
-                            </p>"),
-                     HTML("<p> Algebra and Functions Items account for <b> 35% of available 
-                            </b> points but <b> 48% </b> of points <b>lost by Rising Tide </b> Students. 
-                      </p>")
+                            </p>")
+                    
                      
                 )
               ),
@@ -1131,9 +1129,10 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                 valueBox(MG10_NQ_Diff[1,6], HTML(" <p> Numbers and <br> Quantity </p>"), icon = icon("plus-minus"), color = "blue"),
                 valueBox(MG10_SP_Diff[1,6], HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "red"),
                 box(  width = 4, solidHeader = FALSE,
-                      HTML("<p> Statistics and Probability Items account for <b> 17% of available </b> points but 
-                            <b> 24% </b> of points <b>lost by Rising Tide's Top Performing Students. </b>
-                      </p>")
+                      HTML("<p>
+                              <a href = 'https://docs.google.com/document/d/1fgVckOxME_Kgi8SimVxrumECnr648MzCIbIBEMH0qZ4/edit?usp=drive_link'>
+                              Released MCAS Items by Standard </a> (Next Generation MCAS 2019-2023)
+                            </p>")
                 )
               ),
               
@@ -1172,7 +1171,7 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                 valueBox(paste(MG10_SP_Loss[1,5], "%"), HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "red"),
                 box(  width = 4, solidHeader = FALSE,
                       HTML("<p> Statistics and Probability Items account for <b> 17% of available </b> points but 
-                            <b> 24% </b> of points <b>lost by Rising Tide's Top Performing Students. </b>
+                            <b> 20% </b> of points <b>lost by Rising Tide's Top Performing Students. </b>
                       </p>")
                 )
               ),
@@ -1186,10 +1185,10 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                               <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
                              Weakest Items </a> 
 
-                            </p>"),
-                     HTML("<p> Algebra and Functions Items account for <b> 35% of available 
-                            </b> points but <b> 38% </b> of points <b>lost by Rising Tide </b> Students. 
-                      </p>")
+                            </p>")
+                     # HTML("<p> Algebra and Functions Items account for <b> 35% of available 
+                     #        </b> points but <b> 38% </b> of points <b>lost by Rising Tide </b> Students. 
+                     #  </p>")
                      
                 )
               ),
@@ -1199,7 +1198,7 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                 valueBox(paste(MG10Top_SP_Loss[1,5], "%"), HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "red"),
                 box(  width = 4, solidHeader = FALSE,
                       HTML("<p> Statistics and Probability Items account for <b> 17% of available </b> points but 
-                            <b> 20% </b> of points <b>lost by Rising Tide's Students. </b>
+                            <b> 24% </b> of points <b>lost by Rising Tide's Students. </b>
                       </p>")
                 )
               ),
@@ -1214,9 +1213,9 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                               <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
                              Weakest Items </a> 
 
-                            </p>"),
-                     HTML("<p> Algebra and Functions Items account for <b> 35% of available 
-                            </b> points but <b> 38% </b> of points <b>lost by Rising Tide's Lowest Performing </b> Students. 
+                             </p>"),
+                      HTML("<p> Algebra and Functions Items account for <b> 35% of available 
+                             </b> points but <b> 38% </b> of points <b>lost by Rising Tide's Lowest Performing </b> Students. 
                       </p>")
                      
                 )
@@ -1300,11 +1299,11 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
                 valueBox(MG8_FN_Diff[1,6], "Functions", icon = icon("square-root-variable"), color = "red"),
                 valueBox( MG8_GE_Diff[1,6],"Geometry",icon = icon("shapes"), color = "blue"),
                 box( width = 4, solidHeader = FALSE,
-                     HTML("<p> Geometry Items account for <b> 30% of available </b> points but <b> 46% </b> of points <b>lost by Rising Tide's Top Performing Students. </b>
-                      </p>"),
                      
-                     HTML("<p> <b>Expressions and Equations</b> account for <b> 37%  </b> of points lost by Rising Tide's Mid-Performing students but only <b> 22% </b> of points <b>lost by Rising Tide's Top Performing StudentsStudents </b>
-                      </p>"),
+                     HTML("<p>
+                              <a href = 'https://docs.google.com/document/d/1TC52o3YIa-5PkHXSMqRgGYci6pwU-dk-PPvoHj5J_SU/edit?usp=drive_link'>
+                              Released MCAS Items by Standard </a> (Next Generation MCAS 2019-2023)
+                            </p>"),
                      HTML("<p>
                              Rising Tide 2023
                               <a href = 'https://docs.google.com/document/d/1tbKex6noJywV97sosAQD_LJF67MQAwQA1D3Vdqz6B8Q/edit?usp=drive_link'>
