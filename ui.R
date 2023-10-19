@@ -1357,7 +1357,7 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
               fluidRow(
                 
                 valueBox(paste(MG8Top_NSEE_Loss[1,5], "%"), HTML("<p> Number System: <br> Expressions <br> and Equations </p>"), icon = icon("equals"), color = "blue"),
-                valueBox(paste(MG8_SP_Loss[1,5], "%"), HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "blue"),
+                valueBox(paste(MG8Top_SP_Loss[1,5], "%"), HTML("<p> Statistics and <br> Probability </p>"), icon = icon("chart-line"), color = "blue"),
                 box( width = 4, solidHeader = FALSE,
                   
                      
