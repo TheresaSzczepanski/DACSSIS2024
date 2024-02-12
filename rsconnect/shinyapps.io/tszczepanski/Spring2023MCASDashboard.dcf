@@ -5,7 +5,7 @@ account: tszczepanski
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 10121538
-bundleId: 7818622
+bundleId: 7825974
 url: https://tszczepanski.shinyapps.io/Spring2023MCASDashboard/
 version: 1
 asMultiple: FALSE

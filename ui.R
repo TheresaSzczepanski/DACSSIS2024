@@ -1607,7 +1607,7 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
               box( width = 4, solidHeader = FALSE,
                    
                    HTML("<p> <b> Expressions and Equations </b> items account for <b> 24%  </b> of points available 
-                            but only <b> 7% </b> of points lost by Rising Tide's <b> Low Performing Students. </b> 
+                            and <b> 21% </b> of points lost by Rising Tide's <b> Low Performing Students. </b> 
                       </p>")
                    
               ),
@@ -1645,8 +1645,8 @@ decisions <br> </p>"), icon = icon("scale-balanced"), color = "blue"),
               
               box( width = 4, solidHeader = FALSE,
                    
-                   HTML("<p> <b> Expressions and Equations </b> items account for <b> 24%  </b> of points available 
-                            but only <b> 21% </b> of points lost by Rising Tide's <b> Low Performing Students. </b> 
+                   HTML("<p> <b> Number System </b> items account for <b> 20%  </b> of points available 
+                            but <b> 25% </b> of points lost by Rising Tide's <b> Low Performing Students. </b> 
                       </p>")
                    
               ),
