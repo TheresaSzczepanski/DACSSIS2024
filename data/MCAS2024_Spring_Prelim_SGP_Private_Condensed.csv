@@ -1,0 +1,504 @@
+"","adminyear","grade","gradesims","grade2021","grade2022","grade2023","escaleds","eperflev","eperf2","escaleds2021","escaleds2022","escaleds2023","esgp","esgp2021","esgp2022","esgp2023","emcpts","eorpts","eperpospts","mscaleds","mperflev","mperf2","mscaleds2021","mscaleds2022","mscaleds2023","msgp","msgp2021","msgp2022","msgp2023","mmcpts","morpts","mperpospts","ssubject","sscaleds","sperflev","sperf2","smcpts","sorpts","sperpospts","gender","highneeds","lowincome","IEP","plan504","days_in_person"
+"1",2024,"5",5,NA,3,4,531,"E","Exceeding",NA,533,526,NA,NA,NA,66,33,11,92,514,"M","Meeting",NA,529,531,NA,NA,NA,65,24,17,76,NA,549,"E","Exceeding",31,6,90,"M",0,0,"NonDisabled",0,170
+"2",2024,"5",5,NA,3,4,510,"M","Meeting",NA,516,501,NA,NA,NA,18,32,6,79,478,"PM","Partially Meeting",NA,483,476,NA,NA,NA,15,8,8,30,NA,489,"PM","Partially Meeting",17,3,49,"F",1,1,"NonDisabled",0,174
+"3",2024,"5",5,NA,3,4,516,"M","Meeting",NA,528,518,NA,NA,NA,50,32,8,83,526,"M","Meeting",NA,523,511,NA,NA,NA,18,26,21,87,NA,520,"M","Meeting",27,4,76,"F",0,0,"NonDisabled",1,165
+"4",2024,"5",5,NA,3,4,508,"M","Meeting",NA,520,511,NA,NA,NA,43,29,8,77,505,"M","Meeting",NA,501,504,NA,NA,NA,54,20,15,65,NA,497,"PM","Partially Meeting",21,2,56,"F",0,0,"NonDisabled",0,174
+"5",2024,"5",5,NA,3,4,519,"M","Meeting",NA,507,515,NA,NA,NA,80,30,11,85,505,"M","Meeting",NA,481,494,NA,NA,NA,76,21,14,65,NA,505,"M","Meeting",23,3,63,"F",1,0,"NonDisabled",0,180
+"6",2024,"5",5,NA,3,4,487,"PM","Partially Meeting",NA,510,488,NA,NA,NA,7,21,5,54,485,"PM","Partially Meeting",NA,483,488,NA,NA,NA,52,13,8,39,NA,497,"PM","Partially Meeting",22,1,56,"F",1,0,"Disabled",0,174
+"7",2024,"5",5,NA,3,4,491,"PM","Partially Meeting",NA,492,515,NA,NA,NA,97,25,3,58,NA,"ABS",NA,NA,483,497,NA,NA,NA,80,5,7,22,NA,NA,"ABS",NA,NA,NA,NA,"F",1,1,"Disabled",0,142
+"8",2024,"5",5,NA,3,4,516,"M","Meeting",NA,538,522,NA,NA,NA,50,32,8,83,505,"M","Meeting",NA,513,513,NA,NA,NA,49,23,12,65,NA,492,"PM","Partially Meeting",18,3,51,"F",0,0,"NonDisabled",0,171
+"9",2024,"5",5,NA,3,4,492,"PM","Partially Meeting",NA,497,503,NA,NA,NA,76,25,4,60,472,"PM","Partially Meeting",NA,475,507,NA,NA,NA,98,8,5,24,NA,483,"PM","Partially Meeting",16,2,44,"F",1,0,"Disabled",0,174
+"10",2024,"5",5,NA,3,4,482,"PM","Partially Meeting",NA,499,492,NA,NA,NA,34,13,10,48,509,"M","Meeting",NA,505,502,NA,NA,NA,37,21,17,70,NA,486,"PM","Partially Meeting",18,1,46,"M",1,0,"NonDisabled",1,177
+"11",2024,"5",5,NA,3,4,502,"M","Meeting",NA,510,511,NA,NA,NA,65,28,6,71,508,"M","Meeting",NA,526,515,NA,NA,NA,26,21,16,69,NA,508,"M","Meeting",23,4,66,"M",0,0,"NonDisabled",0,174
+"12",2024,"5",5,NA,3,4,519,"M","Meeting",NA,510,531,NA,NA,NA,96,31,10,85,516,"M","Meeting",NA,526,535,NA,NA,NA,79,25,17,78,NA,503,"M","Meeting",20,5,61,"M",0,0,"NonDisabled",0,175
+"13",2024,"5",5,NA,NA,4,502,"M","Meeting",NA,NA,515,NA,NA,NA,NA,28,6,71,513,"M","Meeting",NA,NA,511,NA,NA,NA,NA,22,18,74,NA,531,"E","Exceeding",30,4,83,"M",0,0,"NonDisabled",0,168
+"14",2024,"5",5,NA,3,4,494,"PM","Partially Meeting",NA,510,499,NA,NA,NA,24,24,6,63,516,"M","Meeting",NA,526,502,NA,NA,NA,4,23,19,78,NA,508,"M","Meeting",22,5,66,"M",1,1,"NonDisabled",0,174
+"15",2024,"5",5,NA,3,4,489,"PM","Partially Meeting",NA,488,482,NA,NA,NA,30,25,2,56,491,"PM","Partially Meeting",NA,499,519,NA,NA,NA,94,11,14,46,NA,489,"PM","Partially Meeting",18,2,49,"M",1,0,"Disabled",0,173
+"16",2024,"5",5,NA,3,4,499,"PM","Partially Meeting",NA,502,501,NA,NA,NA,54,29,4,69,497,"PM","Partially Meeting",NA,492,491,NA,NA,NA,34,18,11,54,NA,503,"M","Meeting",20,5,61,"F",0,0,"NonDisabled",1,169
+"17",2024,"5",5,NA,3,4,506,"M","Meeting",NA,516,499,NA,NA,NA,14,28,8,75,504,"M","Meeting",NA,513,504,NA,NA,NA,21,17,17,63,NA,503,"M","Meeting",22,3,61,"F",1,1,"NonDisabled",0,179
+"18",2024,"5",5,NA,3,4,487,"PM","Partially Meeting",NA,476,464,NA,NA,NA,18,22,4,54,494,"PM","Partially Meeting",NA,440,454,NA,NA,NA,51,16,11,50,NA,497,"PM","Partially Meeting",18,5,56,"M",1,1,"Disabled",0,171
+"19",2024,"5",5,NA,3,4,491,"PM","Partially Meeting",NA,497,497,NA,NA,NA,53,23,5,58,484,"PM","Partially Meeting",NA,490,494,NA,NA,NA,50,11,9,37,NA,472,"PM","Partially Meeting",12,2,34,"F",1,0,"Disabled",0,164
+"20",2024,"5",5,NA,3,4,494,"PM","Partially Meeting",NA,507,501,NA,NA,NA,38,26,4,63,504,"M","Meeting",NA,505,507,NA,NA,NA,51,18,16,63,NA,497,"PM","Partially Meeting",22,1,56,"F",0,0,"NonDisabled",1,171
+"21",2024,"5",5,NA,3,4,481,"PM","Partially Meeting",NA,494,490,NA,NA,NA,39,16,6,46,501,"M","Meeting",NA,509,499,NA,NA,NA,18,18,14,59,NA,478,"PM","Partially Meeting",13,3,39,"M",0,0,"NonDisabled",0,168
+"22",2024,"5",5,NA,3,4,504,"M","Meeting",NA,513,518,NA,NA,NA,76,30,5,73,516,"M","Meeting",NA,523,525,NA,NA,NA,60,23,19,78,NA,531,"E","Exceeding",28,6,83,"M",1,1,"NonDisabled",0,178
+"23",2024,"5",5,NA,3,4,465,"NM","Not Meeting",NA,474,469,NA,NA,NA,36,10,3,27,488,"PM","Partially Meeting",NA,492,493,NA,NA,NA,39,11,12,43,NA,465,"NM","Not Meeting",10,2,29,"F",1,0,"Disabled",0,173
+"24",2024,"5",5,NA,3,4,482,"PM","Partially Meeting",NA,504,494,NA,NA,NA,27,21,2,48,NA,"ABS",NA,NA,NA,500,NA,NA,NA,NA,NA,NA,NA,NA,481,"PM","Partially Meeting",14,3,41,"M",0,0,"NonDisabled",0,163
+"25",2024,"5",5,NA,3,4,486,"PM","Partially Meeting",NA,497,499,NA,NA,NA,64,24,1,52,472,"PM","Partially Meeting",NA,459,460,NA,NA,NA,30,10,3,24,NA,486,"PM","Partially Meeting",17,2,46,"F",1,0,"Disabled",0,169
+"26",2024,"5",5,NA,3,4,478,"PM","Partially Meeting",NA,504,494,NA,NA,NA,27,19,1,42,481,"PM","Partially Meeting",NA,492,479,NA,NA,NA,8,10,8,33,NA,465,"NM","Not Meeting",11,1,29,"M",1,1,"NonDisabled",1,169
+"27",2024,"5",5,NA,3,4,486,"PM","Partially Meeting",NA,502,501,NA,NA,NA,54,21,4,52,519,"M","Meeting",NA,515,515,NA,NA,NA,49,22,22,81,NA,505,"M","Meeting",23,3,63,"F",0,0,"NonDisabled",0,175
+"28",2024,"5",5,NA,3,4,510,"M","Meeting",NA,538,515,NA,NA,NA,28,29,9,79,531,"E","Exceeding",NA,520,517,NA,NA,NA,43,25,24,91,NA,517,"M","Meeting",24,6,73,"M",1,1,"NonDisabled",0,175
+"29",2024,"5",5,NA,NA,NA,496,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,28,3,65,508,"M","Meeting",NA,NA,NA,NA,NA,NA,NA,22,15,69,NA,508,"M","Meeting",24,3,66,"M",0,0,"NonDisabled",0,172
+"30",2024,"5",5,NA,3,4,476,"PM","Partially Meeting",NA,482,490,NA,NA,NA,77,16,3,40,484,"PM","Partially Meeting",NA,477,476,NA,NA,NA,28,12,8,37,NA,492,"PM","Partially Meeting",18,3,51,"F",0,0,"NonDisabled",0,174
+"31",2024,"5",5,NA,3,4,487,"PM","Partially Meeting",NA,507,486,NA,NA,NA,7,19,7,54,484,"PM","Partially Meeting",NA,481,479,NA,NA,NA,29,12,8,37,NA,478,"PM","Partially Meeting",15,1,39,"F",1,1,"NonDisabled",0,164
+"32",2024,"5",5,NA,3,4,498,"PM","Partially Meeting",NA,504,501,NA,NA,NA,47,26,6,67,491,"PM","Partially Meeting",NA,490,482,NA,NA,NA,15,13,12,46,NA,486,"PM","Partially Meeting",18,1,46,"F",0,0,"NonDisabled",1,174
+"33",2024,"5",5,NA,3,4,516,"M","Meeting",NA,524,526,NA,NA,NA,76,33,7,83,514,"M","Meeting",NA,513,511,NA,NA,NA,40,21,20,76,NA,536,"E","Exceeding",30,5,85,"F",0,0,"NonDisabled",0,163
+"34",2024,"5",5,NA,3,4,506,"M","Meeting",NA,513,499,NA,NA,NA,18,31,5,75,511,"M","Meeting",NA,509,505,NA,NA,NA,36,20,19,72,NA,527,"M","Meeting",28,5,80,"F",0,0,"NonDisabled",0,176
+"35",2024,"5",5,NA,3,4,481,"PM","Partially Meeting",NA,502,490,NA,NA,NA,23,20,2,46,488,"PM","Partially Meeting",NA,511,504,NA,NA,NA,27,15,8,43,NA,486,"PM","Partially Meeting",18,1,46,"M",1,1,"NonDisabled",1,169
+"36",2024,"5",5,NA,3,4,544,"E","Exceeding",NA,533,531,NA,NA,NA,77,34,12,96,535,"E","Exceeding",NA,560,539,NA,NA,NA,38,27,23,93,NA,511,"M","Meeting",23,5,68,"F",0,0,"NonDisabled",0,180
+"37",2024,"5",5,NA,3,4,486,"PM","Partially Meeting",NA,490,526,NA,NA,NA,99,21,4,52,495,"PM","Partially Meeting",NA,470,531,NA,NA,NA,99,15,13,52,NA,483,"PM","Partially Meeting",15,3,44,"F",1,1,"NonDisabled",0,168
+"38",2024,"5",5,NA,3,4,498,"PM","Partially Meeting",NA,538,511,NA,NA,NA,20,29,3,67,521,"M","Meeting",NA,523,539,NA,NA,NA,90,24,21,83,NA,542,"E","Exceeding",30,6,88,"F",0,0,"NonDisabled",0,171
+"39",2024,"5",5,NA,3,4,513,"M","Meeting",NA,510,511,NA,NA,NA,65,30,9,81,523,"M","Meeting",NA,534,513,NA,NA,NA,10,26,20,85,NA,524,"M","Meeting",26,6,78,"M",1,1,"NonDisabled",0,171
+"40",2024,"5",5,NA,3,4,498,"PM","Partially Meeting",NA,484,506,NA,NA,NA,97,30,2,67,499,"PM","Partially Meeting",NA,497,500,NA,NA,NA,51,20,11,57,NA,531,"E","Exceeding",28,6,83,"M",1,0,"Disabled",0,176
+"41",2024,"5",5,NA,3,4,519,"M","Meeting",NA,513,537,NA,NA,NA,97,33,8,85,508,"M","Meeting",NA,473,500,NA,NA,NA,95,22,15,69,NA,527,"M","Meeting",27,6,80,"M",1,0,"Disabled",0,171
+"42",2024,"5",5,NA,3,4,472,"PM","Partially Meeting",NA,486,488,NA,NA,NA,58,15,2,35,481,"PM","Partially Meeting",NA,470,477,NA,NA,NA,50,7,11,33,NA,489,"PM","Partially Meeting",19,1,49,"F",1,0,"Disabled",0,175
+"43",2024,"5",5,NA,3,4,481,"PM","Partially Meeting",NA,499,492,NA,NA,NA,34,17,5,46,479,"PM","Partially Meeting",NA,492,493,NA,NA,NA,39,11,6,31,NA,486,"PM","Partially Meeting",17,2,46,"M",1,0,"Disabled",0,170
+"44",2024,"5",5,NA,3,4,491,"PM","Partially Meeting",NA,507,494,NA,NA,NA,20,22,6,58,508,"M","Meeting",NA,509,511,NA,NA,NA,54,18,19,69,NA,505,"M","Meeting",19,7,63,"M",1,1,"NonDisabled",0,169
+"45",2024,"5",5,NA,3,4,486,"PM","Partially Meeting",NA,494,486,NA,NA,NA,26,21,4,52,499,"PM","Partially Meeting",NA,523,505,NA,NA,NA,9,16,15,57,NA,492,"PM","Partially Meeting",18,3,51,"M",0,0,"NonDisabled",1,179
+"46",2024,"5",5,NA,NA,NA,513,"M","Meeting",NA,NA,NA,NA,NA,NA,NA,31,8,81,506,"M","Meeting",NA,NA,NA,NA,NA,NA,NA,16,20,67,NA,508,"M","Meeting",22,5,66,"F",0,0,"NonDisabled",0,171
+"47",2024,"5",5,NA,NA,NA,NA,"ABS",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"ABS",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"ABS",NA,NA,NA,NA,"M",0,0,"NonDisabled",0,170
+"48",2024,"5",5,NA,3,4,486,"PM","Partially Meeting",NA,499,488,NA,NA,NA,21,19,6,52,481,"PM","Partially Meeting",NA,473,476,NA,NA,NA,39,10,8,33,NA,475,"PM","Partially Meeting",15,0,37,"F",1,1,"NonDisabled",0,169
+"49",2024,"5",5,NA,NA,NA,487,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,22,4,54,474,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,9,5,26,NA,483,"PM","Partially Meeting",15,3,44,"F",1,1,"Disabled",0,161
+"50",2024,"5",5,NA,3,4,487,"PM","Partially Meeting",NA,482,484,NA,NA,NA,56,22,4,54,484,"PM","Partially Meeting",NA,483,482,NA,NA,NA,32,11,9,37,NA,469,"NM","Not Meeting",13,0,32,"M",1,1,"Disabled",0,172
+"51",2024,"5",5,NA,NA,NA,489,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,19,8,56,487,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,14,8,41,NA,489,"PM","Partially Meeting",14,6,49,"F",0,0,"NonDisabled",0,175
+"52",2024,"5",5,NA,3,4,479,"PM","Partially Meeting",NA,480,469,NA,NA,NA,20,16,5,44,490,"PM","Partially Meeting",NA,497,499,NA,NA,NA,48,13,11,44,NA,462,"NM","Not Meeting",10,1,27,"F",0,0,"NonDisabled",0,176
+"53",2024,"5",5,NA,NA,NA,513,"M","Meeting",NA,NA,NA,NA,NA,NA,NA,31,8,81,491,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,17,8,46,NA,511,"M","Meeting",26,2,68,"F",0,0,"NonDisabled",1,163
+"54",2024,"5",5,NA,NA,NA,492,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,26,3,60,498,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,18,12,56,NA,536,"E","Exceeding",30,5,85,"M",0,0,"NonDisabled",0,163
+"55",2024,"5",5,NA,3,4,513,"M","Meeting",NA,533,518,NA,NA,NA,45,29,10,81,513,"M","Meeting",NA,515,515,NA,NA,NA,49,24,16,74,NA,517,"M","Meeting",25,5,73,"F",0,0,"NonDisabled",0,164
+"56",2024,"5",5,NA,NA,NA,489,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,23,4,56,526,"M","Meeting",NA,NA,NA,NA,NA,NA,NA,25,22,87,NA,514,"M","Meeting",25,4,71,"M",1,1,"Disabled",0,172
+"57",2024,"5",5,NA,NA,NA,479,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,16,5,44,481,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,12,6,33,NA,469,"NM","Not Meeting",12,1,32,"M",1,0,"Disabled",0,174
+"58",2024,"5",5,NA,3,4,498,"PM","Partially Meeting",NA,499,499,NA,NA,NA,57,28,4,67,504,"M","Meeting",NA,505,511,NA,NA,NA,66,19,15,63,NA,517,"M","Meeting",25,5,73,"M",1,1,"NonDisabled",0,171
+"59",2024,"5",5,NA,NA,4,491,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,20,8,58,478,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,8,8,30,NA,458,"NM","Not Meeting",10,0,24,"F",1,0,"Disabled",0,156
+"60",2024,"5",5,NA,3,4,467,"NM","Not Meeting",NA,499,518,NA,NA,NA,95,13,1,29,462,"NM","Not Meeting",NA,462,517,NA,NA,NA,99,5,4,17,NA,469,"NM","Not Meeting",12,1,32,"F",1,1,"NonDisabled",0,169
+"61",2024,"5",5,NA,3,4,487,"PM","Partially Meeting",NA,486,486,NA,NA,NA,51,20,6,54,472,"PM","Partially Meeting",NA,473,474,NA,NA,NA,33,6,7,24,NA,475,"PM","Partially Meeting",15,0,37,"F",1,1,"Disabled",0,169
+"62",2024,"5",5,NA,3,4,484,"PM","Partially Meeting",NA,494,472,NA,NA,NA,3,20,4,50,482,"PM","Partially Meeting",NA,492,490,NA,NA,NA,31,9,10,35,NA,475,"PM","Partially Meeting",13,2,37,"F",1,1,"Disabled",0,163
+"63",2024,"5",5,NA,3,4,510,"M","Meeting",NA,510,509,NA,NA,NA,57,32,6,79,514,"M","Meeting",NA,520,513,NA,NA,NA,30,23,18,76,NA,505,"M","Meeting",22,4,63,"M",0,0,"NonDisabled",1,171
+"64",2024,"5",5,NA,3,4,506,"M","Meeting",NA,516,515,NA,NA,NA,60,28,8,75,485,"PM","Partially Meeting",NA,506,485,NA,NA,NA,4,13,8,39,NA,486,"PM","Partially Meeting",14,5,46,"F",0,0,"NonDisabled",0,175
+"65",2024,"5",5,NA,3,4,492,"PM","Partially Meeting",NA,484,494,NA,NA,NA,83,25,4,60,485,"PM","Partially Meeting",NA,481,487,NA,NA,NA,52,13,8,39,NA,497,"PM","Partially Meeting",22,1,56,"F",0,0,"NonDisabled",0,163
+"66",2024,"5",5,NA,3,4,478,"PM","Partially Meeting",NA,482,484,NA,NA,NA,56,13,7,42,501,"M","Meeting",NA,485,494,NA,NA,NA,66,21,11,59,NA,458,"NM","Not Meeting",9,1,24,"F",1,1,"NonDisabled",0,164
+"67",2024,"5",5,NA,NA,NA,492,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,25,4,60,513,"M","Meeting",NA,NA,NA,NA,NA,NA,NA,22,18,74,NA,520,"M","Meeting",28,3,76,"M",0,0,"NonDisabled",0,172
+"68",2024,"5",5,NA,3,4,491,"PM","Partially Meeting",NA,504,503,NA,NA,NA,53,24,4,58,484,"PM","Partially Meeting",NA,479,488,NA,NA,NA,63,12,8,37,NA,505,"M","Meeting",23,3,63,"F",0,0,"NonDisabled",1,172
+"69",2024,"5",5,NA,3,4,479,"PM","Partially Meeting",NA,488,467,NA,NA,NA,6,15,6,44,485,"PM","Partially Meeting",NA,459,481,NA,NA,NA,80,11,10,39,NA,481,"PM","Partially Meeting",14,3,41,"F",1,1,"NonDisabled",0,104
+"70",2024,"5",5,NA,3,4,442,"NM","Not Meeting",NA,463,464,NA,NA,NA,44,6,0,13,462,"NM","Not Meeting",NA,462,479,NA,NA,NA,72,5,4,17,NA,462,"NM","Not Meeting",10,1,27,"F",1,1,"Disabled",0,178
+"71",2024,"5",5,NA,3,4,522,"M","Meeting",NA,528,537,NA,NA,NA,89,29,13,88,523,"M","Meeting",NA,554,544,NA,NA,NA,58,27,19,85,NA,520,"M","Meeting",27,4,76,"F",0,0,"NonDisabled",0,177
+"72",2024,"5",5,NA,3,4,476,"PM","Partially Meeting",NA,NA,482,NA,NA,NA,NA,16,3,40,495,"PM","Partially Meeting",NA,NA,487,NA,NA,NA,NA,13,15,52,NA,492,"PM","Partially Meeting",17,4,51,"F",1,0,"NonDisabled",0,110
+"73",2024,"5",5,NA,3,4,474,"PM","Partially Meeting",NA,482,475,NA,NA,NA,27,17,1,38,474,"PM","Partially Meeting",NA,486,472,NA,NA,NA,7,9,5,26,NA,492,"PM","Partially Meeting",18,3,51,"M",1,0,"Disabled",0,175
+"74",2024,"5",5,NA,3,4,491,"PM","Partially Meeting",NA,499,511,NA,NA,NA,88,18,10,58,488,"PM","Partially Meeting",NA,499,499,NA,NA,NA,42,13,10,43,NA,465,"NM","Not Meeting",11,1,29,"F",1,1,"NonDisabled",0,167
+"75",2024,"5",5,NA,3,4,536,"E","Exceeding",NA,560,537,NA,NA,NA,55,33,12,94,526,"M","Meeting",NA,534,528,NA,NA,NA,47,25,22,87,NA,514,"M","Meeting",24,5,71,"F",0,0,"NonDisabled",0,178
+"76",2024,"5",5,NA,3,4,513,"M","Meeting",NA,551,560,NA,NA,NA,96,29,10,81,540,"E","Exceeding",NA,560,560,NA,NA,NA,78,28,23,94,NA,542,"E","Exceeding",31,5,88,"M",0,0,"NonDisabled",0,178
+"77",2024,"5",5,NA,3,4,NA,"ABS",NA,NA,492,518,NA,NA,NA,98,6,4,21,NA,"ABS",NA,NA,501,496,NA,NA,NA,25,NA,NA,NA,NA,NA,"ABS",NA,NA,NA,NA,"F",1,1,"NonDisabled",1,147
+"78",2024,"5",5,NA,3,4,484,"PM","Partially Meeting",NA,482,480,NA,NA,NA,41,21,3,50,484,"PM","Partially Meeting",NA,477,482,NA,NA,NA,48,12,8,37,NA,489,"PM","Partially Meeting",18,2,49,"M",1,0,"Disabled",0,170
+"79",2024,"5",5,NA,3,4,478,"PM","Partially Meeting",NA,507,497,NA,NA,NA,24,18,2,42,484,"PM","Partially Meeting",NA,473,474,NA,NA,NA,33,12,8,37,NA,497,"PM","Partially Meeting",19,4,56,"F",1,1,"NonDisabled",0,173
+"80",2024,"5",5,NA,3,4,482,"PM","Partially Meeting",NA,497,486,NA,NA,NA,21,19,4,48,505,"M","Meeting",NA,490,491,NA,NA,NA,40,19,16,65,NA,481,"PM","Partially Meeting",14,3,41,"M",1,1,"NonDisabled",1,170
+"81",2024,"5",5,NA,3,4,482,"PM","Partially Meeting",NA,486,472,NA,NA,NA,13,21,2,48,478,"PM","Partially Meeting",NA,465,482,NA,NA,NA,75,11,5,30,NA,497,"PM","Partially Meeting",19,4,56,"M",1,0,"Disabled",0,169
+"82",2024,"5",5,NA,3,4,491,"PM","Partially Meeting",NA,469,477,NA,NA,NA,70,17,11,58,490,"PM","Partially Meeting",NA,475,481,NA,NA,NA,48,14,10,44,NA,475,"PM","Partially Meeting",11,4,37,"F",0,0,"NonDisabled",0,176
+"83",2024,"5",5,NA,3,4,486,"PM","Partially Meeting",NA,499,497,NA,NA,NA,46,24,1,52,476,"PM","Partially Meeting",NA,486,490,NA,NA,NA,45,10,5,28,NA,492,"PM","Partially Meeting",21,0,51,"F",1,0,"Disabled",0,177
+"84",2024,"5",5,NA,3,4,478,"PM","Partially Meeting",NA,471,492,NA,NA,NA,95,18,2,42,482,"PM","Partially Meeting",NA,470,493,NA,NA,NA,89,7,12,35,NA,472,"PM","Partially Meeting",13,1,34,"F",1,1,"Disabled",0,174
+"85",2024,"5",5,NA,3,4,516,"M","Meeting",NA,520,503,NA,NA,NA,21,29,11,83,528,"M","Meeting",NA,520,522,NA,NA,NA,59,26,22,89,NA,508,"M","Meeting",22,5,66,"F",0,0,"NonDisabled",0,160
+"86",2024,"5",5,NA,3,4,513,"M","Meeting",NA,538,522,NA,NA,NA,50,30,9,81,521,"M","Meeting",NA,534,535,NA,NA,NA,67,26,19,83,NA,524,"M","Meeting",28,4,78,"M",0,0,"NonDisabled",0,177
+"87",2024,"5",5,NA,3,4,494,"PM","Partially Meeting",NA,507,506,NA,NA,NA,55,24,6,63,487,"PM","Partially Meeting",NA,494,488,NA,NA,NA,22,12,10,41,NA,497,"PM","Partially Meeting",19,4,56,"F",1,1,"NonDisabled",0,145
+"88",2024,"5",5,NA,NA,NA,506,"M","Meeting",NA,NA,NA,NA,NA,NA,NA,28,8,75,479,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,10,7,31,NA,489,"PM","Partially Meeting",17,3,49,"F",0,0,"NonDisabled",0,165
+"89",2024,"5",5,NA,3,4,472,"PM","Partially Meeting",NA,504,486,NA,NA,NA,9,13,4,35,479,"PM","Partially Meeting",NA,494,482,NA,NA,NA,10,11,6,31,NA,465,"NM","Not Meeting",11,1,29,"F",1,1,"NonDisabled",0,174
+"90",2024,"5",5,NA,NA,NA,502,"M","Meeting",NA,NA,NA,NA,NA,NA,NA,28,6,71,501,"M","Meeting",NA,NA,NA,NA,NA,NA,NA,18,14,59,NA,497,"PM","Partially Meeting",20,3,56,"M",0,0,"NonDisabled",0,168
+"91",2024,"6",6,NA,4,5,452,"NM","Not Meeting",NA,469,464,NA,NA,NA,22,12,0,24,476,"PM","Partially Meeting",NA,476,445,NA,NA,NA,1,9,5,26,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,168
+"92",2024,"6",6,"3",4,5,474,"PM","Partially Meeting",471,482,477,NA,NA,79,38,14,6,40,467,"NM","Not Meeting",452,481,480,NA,NA,77,47,3,7,19,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"Disabled",0,173
+"93",2024,"6",6,"3",4,5,497,"PM","Partially Meeting",482,488,503,NA,NA,78,90,21,9,60,487,"PM","Partially Meeting",460,483,482,NA,NA,73,46,10,10,37,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,166
+"94",2024,"6",6,"3",4,5,486,"PM","Partially Meeting",524,508,517,NA,NA,38,68,19,6,50,482,"PM","Partially Meeting",497,508,494,NA,NA,67,12,11,6,31,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"Disabled",0,121
+"95",2024,"6",6,"3",4,5,458,"NM","Not Meeting",464,464,472,NA,NA,36,66,14,0,28,464,"NM","Not Meeting",443,461,456,NA,NA,46,12,8,1,17,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"Disabled",0,178
+"96",2024,"6",6,"3",4,5,507,"M","Meeting",512,505,503,NA,NA,54,33,27,7,68,517,"M","Meeting",506,522,518,NA,NA,83,58,22,19,76,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",1,173
+"97",2024,"6",6,"3",4,5,533,"E","Exceeding",507,516,517,NA,NA,90,64,30,12,84,499,"PM","Partially Meeting",515,508,504,NA,NA,27,29,16,13,54,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,135
+"98",2024,"6",6,NA,4,5,505,"M","Meeting",NA,488,496,NA,NA,NA,65,26,7,66,494,"PM","Partially Meeting",NA,495,491,NA,NA,NA,35,11,14,46,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",1,179
+"99",2024,"6",6,"3",4,5,522,"M","Meeting",518,503,520,NA,NA,34,85,26,13,78,516,"M","Meeting",528,524,518,NA,NA,50,34,15,25,74,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,179
+"100",2024,"6",6,"3",4,5,533,"E","Exceeding",540,508,520,NA,NA,18,67,29,13,84,504,"M","Meeting",519,522,513,NA,NA,57,27,15,17,59,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,176
+"101",2024,"6",6,"3",4,5,444,"NM","Not Meeting",456,480,468,NA,NA,86,22,10,0,20,NA,"ABS",NA,466,468,473,NA,NA,27,38,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"Disabled",0,155
+"102",2024,"6",6,"3",4,5,493,"PM","Partially Meeting",518,503,500,NA,NA,35,26,28,0,56,490,"PM","Partially Meeting",536,517,501,NA,NA,21,3,12,10,41,NA,NA,NA,NA,NA,NA,NA,"N",1,0,"Disabled",0,173
+"103",2024,"6",6,"3",4,5,444,"NM","Not Meeting",451,474,469,NA,NA,74,43,9,0,18,472,"PM","Partially Meeting",482,476,485,NA,NA,16,62,9,3,22,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,180
+"104",2024,"6",6,"3",4,5,493,"PM","Partially Meeting",499,510,503,NA,NA,91,37,18,10,56,511,"M","Meeting",519,513,522,NA,NA,32,78,16,21,69,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"Disabled",0,170
+"105",2024,"6",6,"3",4,5,529,"M","Meeting",512,543,517,NA,NA,99,28,27,14,82,514,"M","Meeting",532,524,513,NA,NA,45,16,19,20,72,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,174
+"106",2024,"6",6,"3",4,5,502,"M","Meeting",492,474,492,NA,NA,14,85,19,13,64,510,"M","Meeting",492,513,510,NA,NA,88,59,17,19,67,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,177
+"107",2024,"6",6,"3",4,5,507,"M","Meeting",502,492,496,NA,NA,40,50,30,4,68,503,"M","Meeting",510,502,498,NA,NA,20,25,14,17,57,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"Disabled",0,176
+"108",2024,"6",6,"3",4,5,497,"PM","Partially Meeting",512,494,496,NA,NA,20,34,27,3,60,480,"PM","Partially Meeting",478,493,494,NA,NA,69,58,9,7,30,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,176
+"109",2024,"6",6,"3",4,5,490,"PM","Partially Meeting",492,490,496,NA,NA,59,64,22,5,54,467,"NM","Not Meeting",478,480,484,NA,NA,30,51,7,3,19,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,161
+"110",2024,"6",6,"3",4,5,495,"PM","Partially Meeting",506,498,488,NA,NA,49,10,21,8,58,494,"PM","Partially Meeting",504,501,491,NA,NA,29,12,14,11,46,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,177
+"111",2024,"6",6,NA,4,5,469,"NM","Not Meeting",NA,474,488,NA,NA,NA,81,15,3,36,460,"NM","Not Meeting",NA,478,471,NA,NA,NA,14,5,3,15,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,167
+"112",2024,"6",6,"3",4,5,481,"PM","Partially Meeting",481,478,486,NA,NA,52,70,14,9,46,487,"PM","Partially Meeting",487,496,482,NA,NA,56,9,11,9,37,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,157
+"113",2024,"6",6,"3",4,5,507,"M","Meeting",482,467,503,NA,NA,21,99,22,12,68,487,"PM","Partially Meeting",478,476,502,NA,NA,23,98,11,9,37,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,109
+"114",2024,"6",6,"3",4,5,474,"PM","Partially Meeting",485,484,474,NA,NA,60,15,16,4,40,499,"PM","Partially Meeting",479,495,482,NA,NA,69,13,11,18,54,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,175
+"115",2024,"6",6,"3",4,5,537,"E","Exceeding",524,516,511,NA,NA,63,31,29,14,86,511,"M","Meeting",536,517,518,NA,NA,21,42,18,19,69,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",0,175
+"116",2024,"6",6,"3",4,5,469,"NM","Not Meeting",476,461,477,NA,NA,20,81,15,3,36,478,"PM","Partially Meeting",483,468,473,NA,NA,6,28,8,7,28,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"Disabled",0,179
+"117",2024,"6",6,NA,4,5,NA,"ABS",NA,NA,490,NA,NA,NA,NA,NA,NA,NA,NA,NA,"ABS",NA,NA,461,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"Disabled",0,164
+"118",2024,"6",6,"3",4,5,529,"M","Meeting",512,505,500,NA,NA,54,26,31,10,82,542,"E","Exceeding",532,533,541,NA,NA,71,83,23,28,94,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",0,171
+"119",2024,"6",6,NA,NA,5,497,"PM","Partially Meeting",NA,NA,483,NA,NA,NA,NA,22,8,60,490,"PM","Partially Meeting",NA,NA,488,NA,NA,NA,NA,8,14,41,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,180
+"120",2024,"6",6,"3",4,5,458,"NM","Not Meeting",489,480,469,NA,NA,38,12,9,5,28,480,"PM","Partially Meeting",466,474,485,NA,NA,42,76,13,3,30,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"Disabled",0,173
+"121",2024,"6",6,"3",4,5,516,"M","Meeting",506,505,500,NA,NA,71,32,27,10,74,504,"M","Meeting",506,512,508,NA,NA,56,43,19,13,59,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,178
+"122",2024,"6",6,"3",4,5,499,"PM","Partially Meeting",518,513,508,NA,NA,65,31,21,10,62,507,"M","Meeting",501,524,518,NA,NA,93,57,17,17,63,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,165
+"123",2024,"6",6,"3",4,5,497,"PM","Partially Meeting",507,480,483,NA,NA,6,28,19,11,60,484,"PM","Partially Meeting",452,481,487,NA,NA,77,72,12,6,33,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,88
+"124",2024,"6",6,"3",4,5,533,"E","Exceeding",555,510,523,NA,NA,14,66,31,11,84,504,"M","Meeting",525,517,514,NA,NA,34,38,16,16,59,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,177
+"125",2024,"6",6,"3",4,5,507,"M","Meeting",497,505,500,NA,NA,87,40,29,5,68,506,"M","Meeting",483,507,505,NA,NA,88,66,15,18,61,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,174
+"126",2024,"6",6,"3",4,5,555,"E","Exceeding",546,527,523,NA,NA,67,46,33,13,92,516,"M","Meeting",519,533,507,NA,NA,86,3,17,23,74,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,178
+"127",2024,"6",6,"3",4,5,455,"NM","Not Meeting",476,478,449,NA,NA,61,1,10,3,26,456,"NM","Not Meeting",443,461,456,NA,NA,46,12,5,2,13,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"Disabled",0,163
+"128",2024,"6",6,"3",4,5,522,"M","Meeting",524,508,503,NA,NA,37,21,27,12,78,499,"PM","Partially Meeting",497,507,504,NA,NA,63,47,13,15,52,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,170
+"129",2024,"6",6,"3",NA,NA,529,"M","Meeting",502,NA,NA,NA,NA,NA,NA,26,15,82,456,"NM","Not Meeting",471,NA,NA,NA,NA,NA,NA,5,2,13,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,165
+"130",2024,"6",6,"3",4,5,537,"E","Exceeding",540,523,513,NA,NA,62,24,31,12,86,504,"M","Meeting",504,513,501,NA,NA,67,16,14,18,59,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,169
+"131",2024,"6",6,"3",4,5,529,"M","Meeting",502,510,517,NA,NA,90,76,28,13,82,503,"M","Meeting",455,508,502,NA,NA,99,66,12,19,57,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,171
+"132",2024,"6",6,"3",4,5,533,"E","Exceeding",492,494,494,NA,NA,70,48,28,14,84,493,"PM","Partially Meeting",482,510,494,NA,NA,94,17,9,15,44,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,171
+"133",2024,"6",6,"3",4,5,525,"M","Meeting",518,520,511,NA,NA,80,31,28,12,80,524,"M","Meeting",541,537,536,NA,NA,70,61,21,24,83,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"NonDisabled",0,176
+"134",2024,"6",6,"3",4,5,516,"M","Meeting",524,505,508,NA,NA,31,42,28,9,74,508,"M","Meeting",497,513,520,NA,NA,80,88,17,18,65,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",0,169
+"135",2024,"6",6,"3",4,5,548,"E","Exceeding",530,523,528,NA,NA,75,70,32,13,90,519,"M","Meeting",517,542,532,NA,NA,96,57,19,23,78,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,167
+"136",2024,"6",6,"3",4,5,NA,"MED",NA,499,503,500,NA,NA,80,44,NA,NA,NA,NA,"ABS",NA,471,502,491,NA,NA,93,29,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"Disabled",0,114
+"137",2024,"6",6,"3",4,5,499,"PM","Partially Meeting",502,505,496,NA,NA,78,20,23,8,62,491,"PM","Partially Meeting",503,499,477,NA,NA,29,1,14,9,43,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",1,168
+"138",2024,"6",6,"3",4,5,522,"M","Meeting",514,501,528,NA,NA,37,96,25,14,78,487,"PM","Partially Meeting",504,499,504,NA,NA,25,60,11,9,37,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,169
+"139",2024,"6",6,"3",4,5,499,"PM","Partially Meeting",507,503,485,NA,NA,61,3,23,8,62,493,"PM","Partially Meeting",504,499,492,NA,NA,25,18,9,15,44,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,179
+"140",2024,"6",6,"3",4,5,537,"E","Exceeding",524,537,520,NA,NA,96,35,29,14,86,531,"E","Exceeding",519,522,520,NA,NA,57,55,20,28,89,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,172
+"141",2024,"6",6,"3",4,5,533,"E","Exceeding",514,505,508,NA,NA,51,50,29,13,84,499,"PM","Partially Meeting",475,493,498,NA,NA,74,75,12,16,52,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,177
+"142",2024,"6",6,NA,4,5,507,"M","Meeting",NA,498,505,NA,NA,NA,63,26,8,68,514,"M","Meeting",NA,519,520,NA,NA,NA,67,18,21,72,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,158
+"143",2024,"6",6,"3",4,5,499,"PM","Partially Meeting",524,503,483,NA,NA,26,1,22,9,62,499,"PM","Partially Meeting",508,507,490,NA,NA,38,4,15,14,54,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,169
+"144",2024,"6",6,"3",4,5,519,"M","Meeting",518,505,543,NA,NA,40,99,25,13,76,494,"PM","Partially Meeting",517,505,495,NA,NA,17,10,13,12,46,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,176
+"145",2024,"6",6,"3",4,5,533,"E","Exceeding",514,510,523,NA,NA,69,85,31,11,84,499,"PM","Partially Meeting",528,522,529,NA,NA,42,78,14,14,52,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,180
+"146",2024,"6",6,"3",4,5,493,"PM","Partially Meeting",512,488,477,NA,NA,9,5,19,9,56,485,"PM","Partially Meeting",492,504,495,NA,NA,66,27,11,8,35,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,176
+"147",2024,"6",6,NA,NA,5,525,"M","Meeting",NA,NA,520,NA,NA,NA,NA,30,10,80,513,"M","Meeting",NA,NA,513,NA,NA,NA,NA,17,21,70,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,173
+"148",2024,"6",6,"3",4,5,522,"M","Meeting",518,516,528,NA,NA,74,84,26,13,78,519,"M","Meeting",525,529,522,NA,NA,71,38,14,28,78,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,171
+"149",2024,"6",6,"3",4,5,555,"E","Exceeding",524,523,517,NA,NA,79,43,32,14,92,522,"M","Meeting",522,505,514,NA,NA,13,71,19,25,81,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,172
+"150",2024,"6",6,NA,4,5,502,"M","Meeting",NA,494,496,NA,NA,NA,45,25,7,64,496,"PM","Partially Meeting",NA,501,498,NA,NA,NA,42,15,11,48,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",0,142
+"151",2024,"6",6,"3",4,5,516,"M","Meeting",512,505,505,NA,NA,54,42,26,11,74,506,"M","Meeting",489,504,490,NA,NA,73,13,15,18,61,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",1,172
+"152",2024,"6",6,"3",4,5,529,"M","Meeting",518,492,486,NA,NA,10,10,31,10,82,494,"PM","Partially Meeting",468,492,492,NA,NA,81,62,10,15,46,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",1,166
+"153",2024,"6",6,"3",4,5,537,"E","Exceeding",502,513,523,NA,NA,92,87,29,14,86,506,"M","Meeting",501,529,516,NA,NA,97,37,13,20,61,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,173
+"154",2024,"6",6,"3",4,5,467,"NM","Not Meeting",506,501,500,NA,NA,57,41,17,0,34,485,"PM","Partially Meeting",499,491,482,NA,NA,16,10,12,7,35,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",1,147
+"155",2024,"6",6,"3",4,5,533,"E","Exceeding",531,516,513,NA,NA,53,38,31,11,84,519,"M","Meeting",525,508,513,NA,NA,13,55,20,22,78,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,174
+"156",2024,"6",6,"3",4,5,481,"PM","Partially Meeting",502,484,500,NA,NA,18,80,17,6,46,480,"PM","Partially Meeting",475,483,482,NA,NA,45,38,8,8,30,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,163
+"157",2024,"6",6,"3",4,5,519,"M","Meeting",538,513,511,NA,NA,34,28,30,8,76,501,"M","Meeting",489,507,490,NA,NA,80,9,14,16,56,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,178
+"158",2024,"6",6,"3",4,5,476,"PM","Partially Meeting",502,494,481,NA,NA,45,6,14,7,42,480,"PM","Partially Meeting",471,491,475,NA,NA,75,8,8,8,30,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,169
+"159",2024,"6",6,"3",4,5,505,"M","Meeting",502,508,486,NA,NA,83,3,20,13,66,493,"PM","Partially Meeting",483,510,499,NA,NA,93,35,12,12,44,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",1,166
+"160",2024,"6",6,"3",4,5,502,"M","Meeting",524,501,490,NA,NA,20,5,20,12,64,494,"PM","Partially Meeting",528,504,491,NA,NA,7,4,13,12,46,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,178
+"161",2024,"6",6,"3",4,5,519,"M","Meeting",510,505,505,NA,NA,63,44,28,10,76,496,"PM","Partially Meeting",503,499,502,NA,NA,29,55,14,12,48,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,168
+"162",2024,"6",6,NA,NA,5,537,"E","Exceeding",NA,NA,520,NA,NA,NA,NA,30,13,86,519,"M","Meeting",NA,NA,499,NA,NA,NA,NA,16,26,78,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,176
+"163",2024,"6",6,"3",4,5,486,"PM","Partially Meeting",507,510,492,NA,NA,80,5,18,7,50,491,"PM","Partially Meeting",441,480,491,NA,NA,85,90,13,10,43,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,173
+"164",2024,"6",6,NA,4,5,497,"PM","Partially Meeting",NA,490,481,NA,NA,NA,14,24,6,60,497,"PM","Partially Meeting",NA,519,490,NA,NA,NA,1,13,14,50,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",0,169
+"165",2024,"6",6,"3",4,5,490,"PM","Partially Meeting",492,486,490,NA,NA,47,53,22,5,54,474,"PM","Partially Meeting",473,504,482,NA,NA,93,6,7,6,24,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,170
+"166",2024,"6",6,NA,4,5,472,"PM","Partially Meeting",NA,482,483,NA,NA,NA,40,17,2,38,474,"PM","Partially Meeting",NA,493,480,NA,NA,NA,10,7,6,24,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"Disabled",0,179
+"167",2024,"6",6,"3",4,5,525,"M","Meeting",512,503,500,NA,NA,48,30,27,13,80,491,"PM","Partially Meeting",479,493,498,NA,NA,66,73,9,14,43,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"Disabled",0,157
+"168",2024,"6",6,"3",4,5,516,"M","Meeting",495,494,503,NA,NA,63,74,27,10,74,488,"PM","Partially Meeting",525,507,494,NA,NA,11,4,13,8,39,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,167
+"169",2024,"6",6,"3",4,5,516,"M","Meeting",499,503,503,NA,NA,80,52,26,11,74,504,"M","Meeting",504,496,499,NA,NA,19,50,16,16,59,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,168
+"170",2024,"6",6,"3",4,5,516,"M","Meeting",514,520,513,NA,NA,86,44,27,10,74,506,"M","Meeting",508,517,516,NA,NA,69,60,18,15,61,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,179
+"171",2024,"6",6,"3",4,5,537,"E","Exceeding",538,520,532,NA,NA,55,80,30,13,86,511,"M","Meeting",536,513,518,NA,NA,15,52,13,24,69,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,170
+"172",2024,"6",6,"3",4,5,522,"M","Meeting",514,508,532,NA,NA,60,96,29,10,78,522,"M","Meeting",519,527,529,NA,NA,72,76,18,26,81,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,174
+"173",2024,"6",6,"3",NA,5,513,"M","Meeting",514,NA,500,NA,NA,NA,NA,31,5,72,493,"PM","Partially Meeting",503,NA,502,NA,NA,NA,NA,13,11,44,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,175
+"174",2024,"6",6,"3",4,5,493,"PM","Partially Meeting",481,488,503,NA,NA,80,91,20,8,56,494,"PM","Partially Meeting",503,504,482,NA,NA,39,1,11,14,46,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",0,175
+"175",2024,"6",6,"3",4,5,507,"M","Meeting",506,484,490,NA,NA,12,43,25,9,68,510,"M","Meeting",504,515,508,NA,NA,71,36,18,18,67,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,168
+"176",2024,"6",6,"3",4,5,497,"PM","Partially Meeting",540,501,488,NA,NA,8,3,22,8,60,503,"M","Meeting",528,512,504,NA,NA,18,14,17,14,57,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,174
+"177",2024,"6",6,"3",4,5,481,"PM","Partially Meeting",510,482,476,NA,NA,6,8,19,4,46,497,"PM","Partially Meeting",489,513,507,NA,NA,91,50,16,11,50,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,170
+"178",2024,"6",6,NA,4,5,497,"PM","Partially Meeting",NA,484,485,NA,NA,NA,40,24,6,60,484,"PM","Partially Meeting",NA,496,499,NA,NA,NA,62,10,8,33,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,161
+"179",2024,"6",6,"3",4,5,502,"M","Meeting",518,498,508,NA,NA,21,61,19,13,64,484,"PM","Partially Meeting",492,493,505,NA,NA,35,86,10,8,33,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,160
+"180",2024,"6",6,"3",4,5,533,"E","Exceeding",507,505,500,NA,NA,67,30,28,14,84,514,"M","Meeting",515,522,516,NA,NA,68,43,16,23,72,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,172
+"181",2024,"6",6,NA,4,5,548,"E","Exceeding",NA,527,513,NA,NA,NA,27,32,13,90,504,"M","Meeting",NA,517,504,NA,NA,NA,16,14,18,59,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,174
+"182",2024,"6",6,"3",4,5,479,"PM","Partially Meeting",510,482,485,NA,NA,6,27,15,7,44,484,"PM","Partially Meeting",519,495,480,NA,NA,4,2,9,9,33,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,173
+"183",2024,"6",6,"3",4,5,502,"M","Meeting",497,482,490,NA,NA,22,57,23,9,64,488,"PM","Partially Meeting",510,504,494,NA,NA,23,12,10,11,39,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,135
+"184",2024,"6",6,"3",4,5,472,"PM","Partially Meeting",487,490,488,NA,NA,73,41,16,3,38,469,"NM","Not Meeting",487,480,471,NA,NA,15,7,5,6,20,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"Disabled",0,172
+"185",2024,"6",6,"3",4,5,525,"M","Meeting",530,516,498,NA,NA,56,4,28,12,80,499,"PM","Partially Meeting",528,517,501,NA,NA,30,4,16,13,54,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",1,157
+"186",2024,"7",6,NA,NA,6,471,"PM","Partially Meeting",NA,NA,510,NA,NA,NA,NA,16,3,38,476,"PM","Partially Meeting",NA,NA,482,NA,NA,NA,NA,10,3,24,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"Disabled",0,555
+"187",2024,"7",7,"4",5,6,502,"M","Meeting",508,523,510,NA,NA,92,26,24,10,68,515,"M","Meeting",501,505,521,NA,NA,57,93,18,20,70,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,170
+"188",2024,"7",7,"4",5,6,504,"M","Meeting",512,499,507,NA,NA,26,57,24,11,70,513,"M","Meeting",501,489,509,NA,NA,10,92,19,18,69,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"NonDisabled",0,172
+"189",2024,"7",7,"4",5,6,502,"M","Meeting",522,504,510,NA,NA,26,45,21,13,68,495,"PM","Partially Meeting",527,506,508,NA,NA,11,26,10,14,44,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,171
+"190",2024,"7",7,NA,5,6,475,"PM","Partially Meeting",NA,495,499,NA,NA,NA,58,20,1,42,489,"PM","Partially Meeting",NA,489,489,NA,NA,NA,43,11,9,37,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"Disabled",0,166
+"191",2024,"7",7,"4",5,6,509,"M","Meeting",528,497,529,NA,NA,6,91,25,12,74,532,"E","Exceeding",529,520,528,NA,NA,41,66,23,24,87,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,178
+"192",2024,"7",7,"4",5,6,515,"M","Meeting",522,501,499,NA,NA,17,21,25,14,78,512,"M","Meeting",513,489,498,NA,NA,3,46,18,18,67,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,168
+"193",2024,"7",7,"4",5,6,515,"M","Meeting",522,497,496,NA,NA,10,24,29,10,78,489,"PM","Partially Meeting",489,485,491,NA,NA,21,55,11,9,37,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",1,173
+"194",2024,"7",7,"4",5,6,449,"NM","Not Meeting",451,467,471,NA,NA,59,89,8,3,22,461,"NM","Not Meeting",442,475,510,NA,NA,83,99,6,2,15,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"Disabled",0,169
+"195",2024,"7",7,"4",5,6,515,"M","Meeting",501,506,507,NA,NA,73,53,27,12,78,492,"PM","Partially Meeting",462,477,492,NA,NA,57,94,16,6,41,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,172
+"196",2024,"7",7,NA,5,6,504,"M","Meeting",NA,497,499,NA,NA,NA,50,24,11,70,510,"M","Meeting",NA,508,508,NA,NA,NA,41,15,20,65,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,177
+"197",2024,"7",7,"4",5,6,477,"PM","Partially Meeting",489,469,471,NA,NA,6,66,12,10,44,473,"PM","Partially Meeting",480,482,469,NA,NA,35,8,7,5,22,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"Disabled",0,178
+"198",2024,"7",7,"4",5,6,469,"NM","Not Meeting",501,495,481,NA,NA,37,14,18,0,36,482,"PM","Partially Meeting",477,482,480,NA,NA,42,35,11,5,30,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,176
+"199",2024,"7",7,"4",5,6,477,"PM","Partially Meeting",477,504,496,NA,NA,97,55,16,6,44,478,"PM","Partially Meeting",506,494,494,NA,NA,13,23,9,5,26,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"NonDisabled",0,177
+"200",2024,"7",7,"4",5,6,466,"NM","Not Meeting",479,467,468,NA,NA,17,73,9,8,34,476,"PM","Partially Meeting",467,464,460,NA,NA,15,21,9,4,24,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"Disabled",0,175
+"201",2024,"7",7,NA,5,6,544,"E","Exceeding",NA,520,534,NA,NA,NA,78,32,14,92,529,"M","Meeting",NA,518,530,NA,NA,NA,85,23,23,85,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,135
+"202",2024,"7",7,"4",5,6,515,"M","Meeting",516,516,526,NA,NA,72,68,31,8,78,490,"PM","Partially Meeting",505,502,501,NA,NA,38,32,10,11,39,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,179
+"203",2024,"7",7,NA,5,6,518,"M","Meeting",NA,501,534,NA,NA,NA,96,28,12,80,523,"M","Meeting",NA,498,528,NA,NA,NA,99,22,21,80,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,164
+"204",2024,"7",7,"4",5,6,496,"PM","Partially Meeting",508,501,513,NA,NA,41,70,23,8,62,498,"PM","Partially Meeting",484,490,496,NA,NA,56,67,12,14,48,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,174
+"205",2024,"7",7,"4",5,6,515,"M","Meeting",522,508,529,NA,NA,38,82,29,10,78,532,"E","Exceeding",527,520,528,NA,NA,43,67,23,24,87,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,165
+"206",2024,"7",7,"4",5,6,509,"M","Meeting",505,506,501,NA,NA,64,34,25,12,74,503,"M","Meeting",506,508,513,NA,NA,55,63,15,15,56,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",0,172
+"207",2024,"7",7,"4",5,6,499,"PM","Partially Meeting",491,508,496,NA,NA,93,32,21,12,66,498,"PM","Partially Meeting",470,484,487,NA,NA,63,64,13,13,48,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,155
+"208",2024,"7",7,NA,5,6,518,"M","Meeting",NA,504,534,NA,NA,NA,95,28,12,80,529,"M","Meeting",NA,522,528,NA,NA,NA,69,22,24,85,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,169
+"209",2024,"7",7,"4",5,6,498,"PM","Partially Meeting",522,508,519,NA,NA,38,59,23,9,64,492,"PM","Partially Meeting",509,492,487,NA,NA,6,9,8,14,41,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,164
+"210",2024,"7",7,"4",5,6,486,"PM","Partially Meeting",495,486,481,NA,NA,24,41,18,8,52,496,"PM","Partially Meeting",489,492,494,NA,NA,44,47,14,11,46,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,175
+"211",2024,"7",7,NA,5,6,509,"M","Meeting",NA,497,501,NA,NA,NA,56,29,8,74,487,"PM","Partially Meeting",NA,484,495,NA,NA,NA,83,12,7,35,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",1,168
+"212",2024,"7",7,"4",5,6,458,"NM","Not Meeting",479,477,460,NA,NA,42,29,11,3,28,465,"NM","Not Meeting",466,474,478,NA,NA,38,61,6,3,17,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"Disabled",0,176
+"213",2024,"7",7,"4",5,6,469,"NM","Not Meeting",489,472,473,NA,NA,10,64,11,7,36,496,"PM","Partially Meeting",474,481,485,NA,NA,44,62,15,10,46,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,176
+"214",2024,"7",7,"4",5,6,492,"PM","Partially Meeting",528,508,513,NA,NA,32,38,28,1,58,478,"PM","Partially Meeting",467,484,485,NA,NA,70,62,9,5,26,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",1,169
+"215",2024,"7",7,"4",5,6,512,"M","Meeting",504,501,504,NA,NA,50,52,26,12,76,487,"PM","Partially Meeting",483,477,492,NA,NA,14,83,11,8,35,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,170
+"216",2024,"7",7,"4",5,6,521,"M","Meeting",510,511,516,NA,NA,70,58,27,14,82,502,"M","Meeting",505,497,503,NA,NA,21,52,12,17,54,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,159
+"217",2024,"7",7,"4",5,6,502,"M","Meeting",536,493,519,NA,NA,2,79,26,8,68,493,"PM","Partially Meeting",492,464,482,NA,NA,1,64,13,10,43,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,170
+"218",2024,"7",7,"4",5,6,473,"PM","Partially Meeting",492,489,476,NA,NA,43,24,16,4,40,489,"PM","Partially Meeting",498,474,491,NA,NA,1,74,9,11,37,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"Disabled",0,170
+"219",2024,"7",7,"4",5,6,477,"PM","Partially Meeting",504,482,453,NA,NA,6,3,16,6,44,468,"NM","Not Meeting",477,469,464,NA,NA,10,16,8,2,19,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"Disabled",0,169
+"220",2024,"7",7,"4",5,6,482,"PM","Partially Meeting",482,501,479,NA,NA,93,15,16,8,48,521,"M","Meeting",513,505,515,NA,NA,26,69,21,21,78,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,171
+"221",2024,"7",7,"4",5,6,496,"PM","Partially Meeting",505,497,507,NA,NA,34,69,23,8,62,507,"M","Meeting",501,496,510,NA,NA,24,85,17,16,61,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",1,176
+"222",2024,"7",7,"4",5,6,502,"M","Meeting",512,495,516,NA,NA,16,85,22,12,68,529,"M","Meeting",500,499,515,NA,NA,40,89,23,23,85,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,173
+"223",2024,"7",7,"4",5,6,499,"PM","Partially Meeting",516,508,522,NA,NA,50,72,25,8,66,503,"M","Meeting",509,508,512,NA,NA,45,54,15,15,56,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",1,150
+"224",2024,"7",7,"4",5,6,512,"M","Meeting",539,499,499,NA,NA,5,15,23,15,76,518,"M","Meeting",522,499,519,NA,NA,6,87,18,22,74,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,156
+"225",2024,"7",7,"4",5,6,490,"PM","Partially Meeting",560,497,491,NA,NA,1,6,20,8,56,507,"M","Meeting",500,493,510,NA,NA,20,89,15,18,61,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,174
+"226",2024,"7",7,"4",5,6,446,"NM","Not Meeting",451,467,450,NA,NA,60,40,10,0,20,465,"NM","Not Meeting",452,461,456,NA,NA,28,25,5,4,17,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"Disabled",0,168
+"227",2024,"7",7,"4",5,6,494,"PM","Partially Meeting",522,493,504,NA,NA,5,55,20,10,60,493,"PM","Partially Meeting",492,493,492,NA,NA,41,35,13,10,43,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,176
+"228",2024,"7",7,"4",5,6,490,"PM","Partially Meeting",539,501,501,NA,NA,7,17,17,11,56,499,"PM","Partially Meeting",552,506,505,NA,NA,2,10,12,15,50,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,174
+"229",2024,"7",7,"4",5,6,475,"PM","Partially Meeting",492,484,456,NA,NA,28,9,16,5,42,487,"PM","Partially Meeting",474,461,460,NA,NA,5,19,13,6,35,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,175
+"230",2024,"7",7,"4",5,6,528,"M","Meeting",515,501,504,NA,NA,28,40,28,15,86,542,"E","Exceeding",509,498,516,NA,NA,16,89,25,25,93,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,153
+"231",2024,"7",7,"4",5,6,504,"M","Meeting",512,504,504,NA,NA,40,39,24,11,70,489,"PM","Partially Meeting",495,490,464,NA,NA,23,1,12,8,37,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",1,175
+"232",2024,"7",7,"4",5,6,441,"NM","Not Meeting",443,459,453,NA,NA,39,71,8,0,16,461,"NM","Not Meeting",462,461,464,NA,NA,15,36,8,0,15,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"Disabled",0,81
+"233",2024,"7",7,"4",5,6,498,"PM","Partially Meeting",495,481,476,NA,NA,12,41,20,12,64,487,"PM","Partially Meeting",474,471,489,NA,NA,18,90,10,9,35,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"Disabled",0,171
+"234",2024,"7",7,"4",5,6,533,"E","Exceeding",508,506,519,NA,NA,60,76,29,15,88,538,"E","Exceeding",522,505,530,NA,NA,12,96,27,22,91,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,175
+"235",2024,"7",7,NA,5,6,496,"PM","Partially Meeting",NA,497,501,NA,NA,NA,56,25,6,62,504,"M","Meeting",NA,486,505,NA,NA,NA,95,13,18,57,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,172
+"236",2024,"7",7,"4",5,6,482,"PM","Partially Meeting",482,499,493,NA,NA,91,54,11,13,48,482,"PM","Partially Meeting",455,490,476,NA,NA,96,27,9,7,30,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,177
+"237",2024,"7",7,NA,5,6,488,"PM","Partially Meeting",NA,NA,496,NA,NA,NA,NA,21,6,54,490,"PM","Partially Meeting",NA,440,499,NA,NA,NA,99,7,14,39,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,176
+"238",2024,"7",7,"4",5,6,446,"NM","Not Meeting",492,489,488,NA,NA,43,55,10,0,20,471,"PM","Partially Meeting",467,464,496,NA,NA,15,99,8,3,20,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,174
+"239",2024,"7",7,"4",5,6,466,"NM","Not Meeting",512,486,499,NA,NA,4,67,11,6,34,490,"PM","Partially Meeting",492,490,496,NA,NA,32,58,14,7,39,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",0,169
+"240",2024,"7",7,"4",5,6,484,"PM","Partially Meeting",512,511,501,NA,NA,67,20,17,8,50,484,"PM","Partially Meeting",508,502,488,NA,NA,28,3,12,5,31,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,175
+"241",2024,"7",7,"4",5,6,461,"NM","Not Meeting",482,481,468,NA,NA,43,37,9,6,30,482,"PM","Partially Meeting",462,475,478,NA,NA,52,61,9,7,30,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",1,145
+"242",2024,"7",7,"4",5,6,504,"M","Meeting",510,497,499,NA,NA,24,42,27,8,70,519,"M","Meeting",500,508,508,NA,NA,71,46,21,20,76,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,172
+"243",2024,"7",7,"4",5,6,518,"M","Meeting",498,501,510,NA,NA,67,73,29,11,80,560,"E","Exceeding",527,529,530,NA,NA,71,55,27,27,100,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,173
+"244",2024,"7",7,"4",5,6,518,"M","Meeting",515,527,522,NA,NA,90,47,27,13,80,506,"M","Meeting",535,508,504,NA,NA,8,11,14,18,59,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,173
+"245",2024,"7",7,"4",5,6,490,"PM","Partially Meeting",539,531,493,NA,NA,75,1,22,6,56,492,"PM","Partially Meeting",505,504,506,NA,NA,43,49,11,11,41,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",1,175
+"246",2024,"7",7,"4",5,6,507,"M","Meeting",512,511,504,NA,NA,67,26,26,10,72,515,"M","Meeting",522,496,510,NA,NA,2,70,20,18,70,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,173
+"247",2024,"7",7,NA,5,6,544,"E","Exceeding",NA,531,529,NA,NA,NA,52,33,13,92,542,"E","Exceeding",NA,514,538,NA,NA,NA,96,25,25,93,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,165
+"248",2024,"7",7,"4",5,6,502,"M","Meeting",508,501,519,NA,NA,41,83,25,9,68,503,"M","Meeting",503,508,495,NA,NA,63,7,16,14,56,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,156
+"249",2024,"7",7,"4",5,6,458,"NM","Not Meeting",474,450,446,NA,NA,3,53,8,6,28,473,"PM","Partially Meeting",470,494,500,NA,NA,90,82,9,3,22,NA,NA,NA,NA,NA,NA,NA,"F",1,0,"Disabled",0,170
+"250",2024,"7",7,"4",5,6,488,"PM","Partially Meeting",482,495,493,NA,NA,84,64,18,9,54,498,"PM","Partially Meeting",498,489,491,NA,NA,14,34,13,13,48,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,163
+"251",2024,"7",7,NA,NA,NA,499,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,25,8,66,461,"NM","Not Meeting",NA,NA,NA,NA,NA,NA,NA,5,3,15,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"Disabled",0,161
+"252",2024,"7",7,"4",5,6,528,"M","Meeting",522,536,544,NA,NA,95,79,27,16,86,535,"E","Exceeding",512,493,508,NA,NA,5,75,24,24,89,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"Disabled",0,172
+"253",2024,"7",7,"4",5,6,518,"M","Meeting",498,520,510,NA,NA,96,40,27,13,80,500,"M","Meeting",509,511,505,NA,NA,55,20,15,13,52,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,171
+"254",2024,"7",7,NA,5,6,496,"PM","Partially Meeting",NA,466,481,NA,NA,NA,95,19,12,62,495,"PM","Partially Meeting",NA,489,495,NA,NA,NA,66,12,12,44,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,175
+"255",2024,"7",7,"4",5,6,473,"PM","Partially Meeting",504,504,496,NA,NA,57,27,20,0,40,489,"PM","Partially Meeting",513,498,494,NA,NA,11,12,12,8,37,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",1,173
+"256",2024,"7",7,"4",5,6,496,"PM","Partially Meeting",500,506,493,NA,NA,76,21,22,9,62,500,"M","Meeting",508,508,503,NA,NA,49,20,15,13,52,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,177
+"257",2024,"7",7,NA,NA,NA,492,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,21,8,58,487,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,12,7,35,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,114
+"258",2024,"7",7,NA,5,6,544,"E","Exceeding",NA,520,529,NA,NA,NA,69,31,15,92,529,"M","Meeting",NA,518,521,NA,NA,NA,60,25,21,85,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,174
+"259",2024,"7",7,"4",5,6,494,"PM","Partially Meeting",477,493,468,NA,NA,87,14,24,6,60,485,"PM","Partially Meeting",452,481,464,NA,NA,84,17,10,8,33,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"Disabled",0,176
+"260",2024,"7",7,NA,5,6,521,"M","Meeting",NA,508,516,NA,NA,NA,61,28,13,82,515,"M","Meeting",NA,522,521,NA,NA,NA,45,19,19,70,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,172
+"261",2024,"7",7,"4",5,6,502,"M","Meeting",501,491,481,NA,NA,25,21,21,13,68,473,"PM","Partially Meeting",470,475,478,NA,NA,35,52,6,6,22,NA,NA,NA,NA,NA,NA,NA,"M",1,0,"Disabled",0,158
+"262",2024,"7",7,"4",5,6,477,"PM","Partially Meeting",479,459,465,NA,NA,6,82,9,13,44,476,"PM","Partially Meeting",455,461,476,NA,NA,23,83,8,5,24,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",1,177
+"263",2024,"7",7,"4",5,6,461,"NM","Not Meeting",448,466,441,NA,NA,56,12,13,2,30,441,"NM","Not Meeting",440,448,442,NA,NA,16,18,2,0,4,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"Disabled",0,168
+"264",2024,"7",7,"4",5,6,482,"PM","Partially Meeting",495,476,479,NA,NA,6,60,16,8,48,499,"PM","Partially Meeting",495,486,503,NA,NA,15,86,16,11,50,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,174
+"265",2024,"7",7,"4",5,6,509,"M","Meeting",495,523,513,NA,NA,98,47,26,11,74,496,"PM","Partially Meeting",492,501,516,NA,NA,70,93,13,12,46,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,162
+"266",2024,"7",7,"4",5,6,515,"M","Meeting",505,516,539,NA,NA,88,93,28,11,78,527,"M","Meeting",512,513,508,NA,NA,54,22,24,21,83,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,171
+"267",2024,"7",7,"4",5,6,533,"E","Exceeding",512,508,529,NA,NA,58,88,29,15,88,510,"M","Meeting",529,506,513,NA,NA,10,49,18,17,65,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,173
+"268",2024,"7",7,"4",5,6,479,"PM","Partially Meeting",500,489,507,NA,NA,22,86,15,8,46,485,"PM","Partially Meeting",498,482,494,NA,NA,5,65,10,8,33,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,173
+"269",2024,"7",7,"4",5,6,502,"M","Meeting",510,508,510,NA,NA,61,46,26,8,68,487,"PM","Partially Meeting",477,481,515,NA,NA,36,99,11,8,35,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,177
+"270",2024,"7",7,"4",5,6,482,"PM","Partially Meeting",482,487,481,NA,NA,66,50,16,8,48,496,"PM","Partially Meeting",466,NA,498,NA,NA,NA,NA,13,12,46,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"NonDisabled",0,177
+"271",2024,"7",7,"4",5,6,461,"NM","Not Meeting",467,466,441,NA,NA,31,12,8,7,30,489,"PM","Partially Meeting",477,467,472,NA,NA,7,39,12,8,37,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"Disabled",0,164
+"272",2024,"7",7,"4",5,6,504,"M","Meeting",515,497,504,NA,NA,16,51,22,13,70,503,"M","Meeting",513,497,500,NA,NA,9,34,17,13,56,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,175
+"273",2024,"7",7,"4",5,6,490,"PM","Partially Meeting",501,495,507,NA,NA,37,77,18,10,56,516,"M","Meeting",503,504,506,NA,NA,48,51,18,21,72,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,169
+"274",2024,"7",7,"4",5,6,512,"M","Meeting",554,508,529,NA,NA,11,65,27,11,76,510,"M","Meeting",512,508,509,NA,NA,36,39,16,19,65,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,176
+"275",2024,"7",7,NA,5,6,499,"PM","Partially Meeting",NA,491,501,NA,NA,NA,77,25,8,66,493,"PM","Partially Meeting",NA,489,491,NA,NA,NA,49,12,11,43,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",0,175
+"276",2024,"7",7,"4",5,6,504,"M","Meeting",515,506,522,NA,NA,45,77,27,8,70,521,"M","Meeting",535,509,512,NA,NA,10,30,22,20,78,NA,NA,NA,NA,NA,NA,NA,"M",0,0,"NonDisabled",0,169
+"277",2024,"7",7,"4",5,6,492,"PM","Partially Meeting",500,504,499,NA,NA,69,37,21,8,58,490,"PM","Partially Meeting",489,492,498,NA,NA,44,62,10,11,39,NA,NA,NA,NA,NA,NA,NA,"M",1,1,"NonDisabled",0,168
+"278",2024,"7",7,"4",5,6,477,"PM","Partially Meeting",482,484,476,NA,NA,56,46,15,7,44,476,"PM","Partially Meeting",489,484,464,NA,NA,18,2,10,3,24,NA,NA,NA,NA,NA,NA,NA,"F",1,1,"Disabled",0,176
+"279",2024,"7",7,"4",5,6,515,"M","Meeting",508,506,519,NA,NA,60,76,26,13,78,518,"M","Meeting",517,505,512,NA,NA,19,55,18,22,74,NA,NA,NA,NA,NA,NA,NA,"F",0,0,"NonDisabled",0,175
+"280",2024,"8",8,"5",6,7,492,"PM","Partially Meeting",514,494,500,NA,50,12,55,21,8,58,489,"PM","Partially Meeting",479,480,487,NA,8,24,84,12,11,43,NA,486,"PM","Partially Meeting",18,1,46,"M",1,1,"Disabled",0,177
+"281",2024,"8",8,"5",6,7,494,"PM","Partially Meeting",498,497,485,NA,69,78,17,20,10,60,492,"PM","Partially Meeting",495,488,487,NA,57,28,46,14,11,46,NA,499,"PM","Partially Meeting",20,4,59,"M",1,1,"Disabled",0,170
+"282",2024,"8",8,"6",7,8,485,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,18,8,52,480,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,10,8,33,NA,476,"PM","Partially Meeting",14,1,37,"F",1,1,"Disabled",0,176
+"283",2024,"8",8,"5",6,7,508,"M","Meeting",531,520,496,NA,NA,43,3,25,11,72,521,"M","Meeting",512,515,520,NA,NA,53,62,25,20,83,NA,508,"M","Meeting",22,5,66,"F",0,0,"NonDisabled",0,171
+"284",2024,"8",8,"5",6,7,483,"PM","Partially Meeting",494,509,487,NA,NA,85,8,20,5,50,486,"PM","Partially Meeting",479,487,486,NA,NA,58,62,13,8,39,NA,489,"PM","Partially Meeting",19,1,49,"M",1,0,"Disabled",0,167
+"285",2024,"8",8,"5",6,7,489,"PM","Partially Meeting",505,479,493,NA,NA,7,69,15,13,56,489,"PM","Partially Meeting",495,490,503,NA,NA,22,92,16,7,43,NA,456,"NM","Not Meeting",8,1,22,"F",0,0,"NonDisabled",0,178
+"286",2024,"8",8,"5",6,7,496,"PM","Partially Meeting",491,494,483,NA,47,83,20,22,9,62,480,"PM","Partially Meeting",500,493,492,NA,85,39,44,10,8,33,NA,484,"PM","Partially Meeting",18,0,44,"F",1,0,"Disabled",0,174
+"287",2024,"8",8,"5",6,7,469,"NM","Not Meeting",467,443,452,NA,29,13,46,15,4,38,467,"NM","Not Meeting",473,459,466,NA,13,5,63,7,5,22,NA,456,"NM","Not Meeting",9,0,22,"M",1,1,"Disabled",0,171
+"288",2024,"8",8,"5",6,7,492,"PM","Partially Meeting",524,506,507,NA,82,32,41,21,8,58,513,"M","Meeting",493,504,503,NA,3,48,60,23,17,74,NA,511,"M","Meeting",23,5,68,"F",0,0,"NonDisabled",0,173
+"289",2024,"8",8,"5",6,7,487,"PM","Partially Meeting",498,476,485,NA,37,14,56,18,9,54,492,"PM","Partially Meeting",492,493,489,NA,68,63,42,14,11,46,NA,484,"PM","Partially Meeting",13,5,44,"M",0,0,"NonDisabled",0,177
+"290",2024,"8",8,"5",6,7,517,"M","Meeting",501,497,495,NA,22,39,43,26,13,78,494,"PM","Partially Meeting",490,497,490,NA,5,41,35,13,14,50,NA,489,"PM","Partially Meeting",18,2,49,"F",0,0,"NonDisabled",0,175
+"291",2024,"8",8,"5",6,7,492,"PM","Partially Meeting",510,512,498,NA,64,76,20,19,10,58,499,"PM","Partially Meeting",487,494,490,NA,56,79,47,14,16,56,NA,502,"M","Meeting",21,4,61,"F",1,0,"Disabled",0,173
+"292",2024,"8",8,"5",6,7,503,"M","Meeting",472,494,495,NA,2,93,73,26,8,68,490,"PM","Partially Meeting",473,494,484,NA,4,81,37,12,12,44,NA,492,"PM","Partially Meeting",17,4,51,"F",0,0,"NonDisabled",0,176
+"293",2024,"8",8,NA,6,7,483,"PM","Partially Meeting",NA,499,479,NA,NA,NA,5,17,8,50,472,"PM","Partially Meeting",NA,488,480,NA,NA,NA,30,5,9,26,NA,484,"PM","Partially Meeting",16,2,44,"F",0,0,"NonDisabled",0,165
+"294",2024,"8",8,"5",6,7,532,"E","Exceeding",505,517,516,NA,35,85,62,28,15,86,514,"M","Meeting",506,518,512,NA,69,90,29,23,18,76,NA,499,"PM","Partially Meeting",19,5,59,"F",0,0,"NonDisabled",0,177
+"295",2024,"8",8,"5",6,7,496,"PM","Partially Meeting",501,514,498,NA,20,81,21,18,13,62,489,"PM","Partially Meeting",477,499,484,NA,41,97,22,14,9,43,NA,494,"PM","Partially Meeting",17,5,54,"F",1,1,"NonDisabled",0,168
+"296",2024,"8",8,"5",6,7,492,"PM","Partially Meeting",517,504,504,NA,77,40,45,19,10,58,496,"PM","Partially Meeting",507,500,516,NA,24,13,93,13,15,52,NA,494,"PM","Partially Meeting",19,3,54,"M",0,0,"NonDisabled",0,174
+"297",2024,"8",8,"5",6,7,501,"M","Meeting",491,527,495,NA,6,98,6,25,8,66,501,"M","Meeting",483,493,492,NA,17,63,63,19,13,59,NA,528,"M","Meeting",29,4,80,"M",0,0,"NonDisabled",0,168
+"298",2024,"8",8,"5",6,7,485,"PM","Partially Meeting",491,494,493,NA,29,74,50,22,4,52,505,"M","Meeting",495,494,504,NA,26,32,88,23,12,65,NA,517,"M","Meeting",25,5,73,"F",0,0,"NonDisabled",1,171
+"299",2024,"8",8,"5",6,7,508,"M","Meeting",519,520,502,NA,62,69,10,28,8,72,499,"PM","Partially Meeting",486,494,486,NA,5,43,30,18,12,56,NA,502,"M","Meeting",19,6,61,"M",0,0,"NonDisabled",0,179
+"300",2024,"8",8,"5",6,7,496,"PM","Partially Meeting",514,509,509,NA,85,73,51,21,10,62,503,"M","Meeting",506,506,512,NA,59,47,73,21,12,61,NA,502,"M","Meeting",20,5,61,"F",0,0,"NonDisabled",0,179
+"301",2024,"8",8,"5",6,7,494,"PM","Partially Meeting",491,520,491,NA,41,99,6,20,10,60,482,"PM","Partially Meeting",486,487,480,NA,49,52,32,8,11,35,NA,478,"PM","Partially Meeting",15,1,39,"F",0,0,"NonDisabled",0,167
+"302",2024,"8",8,"5",6,7,520,"M","Meeting",510,512,528,NA,23,46,91,28,12,80,487,"PM","Partially Meeting",487,488,466,NA,10,26,6,12,10,41,NA,497,"PM","Partially Meeting",19,4,56,"F",0,0,"NonDisabled",0,174
+"303",2024,"8",8,"5",6,7,511,"M","Meeting",511,520,524,NA,14,54,74,29,8,74,499,"PM","Partially Meeting",513,506,511,NA,24,11,61,17,13,56,NA,521,"M","Meeting",27,4,76,"M",0,0,"NonDisabled",0,168
+"304",2024,"8",8,"5",6,7,492,"PM","Partially Meeting",506,501,481,NA,23,32,4,21,8,58,492,"PM","Partially Meeting",493,508,502,NA,29,86,39,14,11,46,NA,489,"PM","Partially Meeting",17,3,49,"F",1,1,"NonDisabled",0,174
+"305",2024,"8",8,"5",6,7,517,"M","Meeting",517,512,509,NA,49,38,42,26,13,78,496,"PM","Partially Meeting",485,499,489,NA,5,66,32,14,14,52,NA,544,"E","Exceeding",29,7,88,"M",0,0,"NonDisabled",0,174
+"306",2024,"8",8,"5",6,7,555,"E","Exceeding",531,531,560,NA,89,82,98,33,14,94,535,"E","Exceeding",498,515,531,NA,9,82,96,26,24,93,NA,521,"M","Meeting",26,5,76,"F",0,0,"NonDisabled",0,180
+"307",2024,"8",8,"5",6,7,465,"NM","Not Meeting",482,442,456,NA,9,1,45,9,8,34,460,"NM","Not Meeting",477,471,458,NA,17,17,18,8,2,19,NA,473,"PM","Partially Meeting",14,0,34,"F",1,1,"Disabled",0,174
+"308",2024,"8",8,"5",6,7,498,"PM","Partially Meeting",514,512,511,NA,59,61,52,24,8,64,517,"M","Meeting",504,518,518,NA,20,80,55,23,20,80,NA,502,"M","Meeting",21,4,61,"M",0,0,"NonDisabled",0,172
+"309",2024,"8",8,"5",6,7,508,"M","Meeting",519,504,541,NA,NA,24,99,26,10,72,517,"M","Meeting",506,506,531,NA,NA,37,99,24,19,80,NA,517,"M","Meeting",26,4,73,"F",0,0,"NonDisabled",0,179
+"310",2024,"8",8,"5",6,7,520,"M","Meeting",519,512,516,NA,83,65,62,26,14,80,517,"M","Meeting",506,508,520,NA,41,50,87,23,20,80,NA,508,"M","Meeting",22,5,66,"F",0,0,"NonDisabled",0,171
+"311",2024,"8",8,"5",6,7,524,"M","Meeting",524,524,521,NA,57,57,50,33,8,82,496,"PM","Partially Meeting",503,507,518,NA,9,33,88,15,13,52,NA,521,"M","Meeting",26,5,76,"M",0,0,"NonDisabled",0,179
+"312",2024,"8",8,"5",6,7,503,"M","Meeting",519,494,498,NA,NA,9,42,26,8,68,499,"PM","Partially Meeting",493,500,507,NA,NA,59,83,17,13,56,NA,511,"M","Meeting",23,5,68,"M",0,0,"NonDisabled",1,178
+"313",2024,"8",8,"5",6,7,511,"M","Meeting",491,517,496,NA,1,83,18,25,12,74,482,"PM","Partially Meeting",480,480,484,NA,4,15,73,10,9,35,NA,489,"PM","Partially Meeting",19,1,49,"M",1,0,"Disabled",0,167
+"314",2024,"8",8,"5",6,7,524,"M","Meeting",498,517,498,NA,32,95,18,28,13,82,460,"NM","Not Meeting",446,471,451,NA,1,72,18,8,2,19,NA,481,"PM","Partially Meeting",14,3,41,"M",1,0,"Disabled",0,169
+"315",2024,"8",8,"5",6,7,508,"M","Meeting",505,535,518,NA,35,98,39,22,14,72,521,"M","Meeting",510,515,515,NA,75,75,45,21,24,83,NA,514,"M","Meeting",25,4,71,"F",0,0,"NonDisabled",0,177
+"316",2024,"8",8,"5",6,7,527,"M","Meeting",530,527,524,NA,48,45,48,28,14,84,507,"M","Meeting",498,517,NA,NA,10,85,NA,21,15,67,NA,528,"M","Meeting",30,3,80,"M",0,0,"NonDisabled",0,170
+"317",2024,"8",8,"5",6,7,511,"M","Meeting",524,514,513,NA,NA,42,45,25,12,74,499,"PM","Partially Meeting",501,506,504,NA,NA,52,49,18,13,57,NA,497,"PM","Partially Meeting",20,3,56,"F",0,0,"NonDisabled",0,172
+"318",2024,"8",8,"5",6,7,548,"E","Exceeding",524,531,521,NA,55,75,38,31,15,92,528,"M","Meeting",498,524,523,NA,8,94,64,25,23,89,NA,511,"M","Meeting",22,6,68,"F",0,0,"NonDisabled",0,180
+"319",2024,"8",8,"5",6,NA,517,"M","Meeting",540,540,NA,NA,87,77,NA,31,8,78,508,"M","Meeting",533,511,NA,NA,88,6,NA,21,16,69,NA,524,"M","Meeting",26,6,78,"M",0,0,"NonDisabled",0,173
+"320",2024,"8",8,"5",6,7,496,"PM","Partially Meeting",494,501,493,NA,10,64,33,23,8,62,511,"M","Meeting",482,493,508,NA,24,75,97,23,16,72,NA,494,"PM","Partially Meeting",18,4,54,"F",0,0,"NonDisabled",0,175
+"321",2024,"8",8,"5",6,7,517,"M","Meeting",524,517,518,NA,82,62,54,31,8,78,492,"PM","Partially Meeting",501,504,502,NA,47,55,43,13,12,46,NA,521,"M","Meeting",24,7,76,"F",0,0,"NonDisabled",1,176
+"322",2024,"8",8,"5",6,7,487,"PM","Partially Meeting",491,494,481,NA,6,51,16,19,8,54,504,"M","Meeting",503,497,506,NA,48,23,78,19,15,63,NA,492,"PM","Partially Meeting",16,5,51,"M",0,0,"NonDisabled",1,166
+"323",2024,"8",8,"5",6,7,441,"NM","Not Meeting",510,488,485,NA,58,14,23,9,0,18,484,"PM","Partially Meeting",472,476,480,NA,9,35,76,13,7,37,NA,446,"NM","Not Meeting",7,0,17,"F",1,1,"NonDisabled",0,174
+"324",2024,"8",8,"5",6,7,520,"M","Meeting",531,531,516,NA,80,73,19,29,11,80,513,"M","Meeting",516,508,507,NA,84,32,31,22,18,74,NA,521,"M","Meeting",27,4,76,"F",0,0,"NonDisabled",1,164
+"325",2024,"8",8,NA,6,7,487,"PM","Partially Meeting",NA,514,507,NA,NA,NA,34,19,8,54,474,"PM","Partially Meeting",NA,487,469,NA,NA,NA,12,7,8,28,NA,497,"PM","Partially Meeting",20,3,56,"F",1,0,"Disabled",0,170
+"326",2024,"8",8,NA,6,7,472,"PM","Partially Meeting",NA,447,470,NA,NA,NA,85,16,4,40,477,"PM","Partially Meeting",NA,485,480,NA,NA,NA,42,10,6,30,NA,467,"NM","Not Meeting",11,1,29,"F",1,1,"Disabled",0,169
+"327",2024,"8",8,"5",6,7,527,"M","Meeting",530,540,509,NA,75,86,4,27,15,84,510,"M","Meeting",510,518,534,NA,12,54,92,18,20,70,NA,533,"E","Exceeding",27,7,83,"M",1,1,"NonDisabled",0,174
+"328",2024,"8",8,"5",6,7,462,"NM","Not Meeting",455,490,462,NA,1,98,3,10,6,32,456,"NM","Not Meeting",444,466,469,NA,1,27,77,4,5,17,NA,463,"NM","Not Meeting",11,0,27,"M",1,1,"Disabled",0,178
+"329",2024,"8",8,"5",6,7,524,"M","Meeting",531,520,521,NA,43,24,52,27,14,82,545,"E","Exceeding",523,532,551,NA,64,79,92,26,26,96,NA,528,"M","Meeting",27,6,80,"M",0,0,"NonDisabled",0,178
+"330",2024,"8",8,"5",6,7,452,"NM","Not Meeting",481,476,473,NA,2,30,32,8,4,24,494,"PM","Partially Meeting",498,490,496,NA,23,11,73,17,10,50,NA,486,"PM","Partially Meeting",16,3,46,"M",0,0,"NonDisabled",0,176
+"331",2024,"8",8,"5",6,7,508,"M","Meeting",501,499,516,NA,NA,48,92,28,8,72,501,"M","Meeting",501,510,515,NA,NA,66,75,20,12,59,NA,524,"M","Meeting",28,4,78,"M",0,0,"NonDisabled",0,176
+"332",2024,"8",8,"5",6,7,460,"NM","Not Meeting",498,472,473,NA,62,16,27,13,2,30,477,"PM","Partially Meeting",496,493,496,NA,33,28,67,9,7,30,NA,467,"NM","Not Meeting",12,0,29,"M",1,1,"NonDisabled",0,172
+"333",2024,"8",8,"5",6,7,489,"PM","Partially Meeting",501,501,500,NA,26,56,53,20,8,56,492,"PM","Partially Meeting",493,483,484,NA,38,13,51,14,11,46,NA,505,"M","Meeting",20,6,63,"F",1,0,"Disabled",0,164
+"334",2024,"8",8,"5",6,7,441,"NM","Not Meeting",477,447,470,NA,12,8,80,5,3,16,484,"PM","Partially Meeting",479,476,462,NA,15,22,19,12,8,37,NA,473,"PM","Partially Meeting",13,1,34,"M",1,0,"Disabled",0,179
+"335",2024,"8",8,"5",6,7,511,"M","Meeting",502,517,498,NA,29,89,16,25,12,74,505,"M","Meeting",496,520,494,NA,29,97,2,22,13,65,NA,508,"M","Meeting",23,4,66,"F",1,1,"NonDisabled",0,163
+"336",2024,"8",8,"5",6,7,524,"M","Meeting",511,520,502,NA,76,92,15,28,13,82,507,"M","Meeting",493,497,520,NA,38,56,99,22,14,67,NA,521,"M","Meeting",26,5,76,"F",0,0,"NonDisabled",0,179
+"337",2024,"8",8,"5",6,7,527,"M","Meeting",502,527,513,NA,13,93,40,26,16,84,508,"M","Meeting",495,503,512,NA,10,51,88,21,16,69,NA,511,"M","Meeting",21,7,68,"F",0,0,"NonDisabled",0,177
+"338",2024,"8",8,"5",6,7,472,"PM","Partially Meeting",491,494,481,NA,19,67,16,16,4,40,493,"PM","Partially Meeting",519,499,504,NA,42,2,52,12,14,48,NA,492,"PM","Partially Meeting",16,5,51,"M",1,1,"NonDisabled",0,176
+"339",2024,"8",8,NA,6,7,483,"PM","Partially Meeting",NA,504,493,NA,NA,NA,23,19,6,50,511,"M","Meeting",NA,507,500,NA,NA,NA,31,22,17,72,NA,499,"PM","Partially Meeting",20,4,59,"F",0,0,"NonDisabled",0,178
+"340",2024,"8",8,"5",6,7,503,"M","Meeting",496,499,493,NA,NA,60,36,24,10,68,510,"M","Meeting",503,520,508,NA,NA,88,17,19,19,70,NA,497,"PM","Partially Meeting",19,4,56,"M",0,0,"NonDisabled",0,179
+"341",2024,"8",8,"5",6,7,511,"M","Meeting",517,535,521,NA,NA,92,36,27,10,74,501,"M","Meeting",496,499,512,NA,NA,46,94,18,14,59,NA,502,"M","Meeting",22,3,61,"M",1,1,"NonDisabled",0,176
+"342",2024,"8",8,"5",6,7,501,"M","Meeting",501,514,495,NA,42,91,12,21,12,66,505,"M","Meeting",493,503,496,NA,16,62,37,19,16,65,NA,473,"PM","Partially Meeting",11,3,34,"F",0,0,"NonDisabled",0,172
+"343",2024,"8",8,"5",6,7,492,"PM","Partially Meeting",519,531,504,NA,NA,83,6,25,4,58,505,"M","Meeting",512,515,521,NA,NA,53,68,20,15,65,NA,514,"M","Meeting",25,4,71,"M",0,0,"NonDisabled",0,179
+"344",2024,"8",8,"5",6,7,494,"PM","Partially Meeting",517,512,502,NA,NA,45,24,24,6,60,499,"PM","Partially Meeting",492,501,512,NA,NA,66,92,17,14,57,NA,511,"M","Meeting",24,4,68,"M",0,0,"NonDisabled",0,177
+"345",2024,"8",8,"5",6,7,489,"PM","Partially Meeting",514,512,502,NA,47,47,26,17,11,56,497,"PM","Partially Meeting",501,507,496,NA,7,38,18,19,10,54,NA,499,"PM","Partially Meeting",20,4,59,"F",1,1,"NonDisabled",0,171
+"346",2024,"8",8,"5",6,7,474,"PM","Partially Meeting",487,472,470,NA,59,46,28,14,7,42,451,"NM","Not Meeting",469,478,469,NA,15,61,39,6,2,15,NA,463,"NM","Not Meeting",10,1,27,"M",1,1,"Disabled",0,151
+"347",2024,"8",8,"5",6,7,517,"M","Meeting",496,535,518,NA,2,97,46,26,13,78,526,"M","Meeting",504,517,512,NA,5,62,36,24,23,87,NA,505,"M","Meeting",20,6,63,"M",0,0,"NonDisabled",0,177
+"348",2024,"8",8,"5",6,7,555,"E","Exceeding",511,524,531,NA,64,92,84,34,13,94,504,"M","Meeting",506,511,500,NA,83,78,15,19,15,63,NA,514,"M","Meeting",25,4,71,"F",0,0,"NonDisabled",0,173
+"349",2024,"8",8,"5",6,7,542,"E","Exceeding",519,514,524,NA,55,45,79,32,13,90,526,"M","Meeting",512,529,531,NA,58,94,62,25,22,87,NA,511,"M","Meeting",22,6,68,"F",0,0,"NonDisabled",0,174
+"350",2024,"8",8,"5",6,7,498,"PM","Partially Meeting",511,499,502,NA,64,36,54,25,7,64,499,"PM","Partially Meeting",473,497,486,NA,7,91,34,14,16,56,NA,505,"M","Meeting",23,3,63,"M",1,1,"Disabled",1,168
+"351",2024,"8",8,"5",6,7,527,"M","Meeting",531,514,518,NA,95,53,56,27,15,84,514,"M","Meeting",513,529,527,NA,6,73,44,20,21,76,NA,508,"M","Meeting",24,3,66,"M",0,0,"NonDisabled",0,172
+"352",2024,"8",8,"5",6,7,514,"M","Meeting",524,514,516,NA,61,34,53,30,8,76,531,"E","Exceeding",552,524,545,NA,99,20,90,25,24,91,NA,538,"E","Exceeding",29,6,85,"M",0,0,"NonDisabled",1,176
+"353",2024,"8",8,"5",6,7,498,"PM","Partially Meeting",501,476,491,NA,13,3,72,27,5,64,472,"PM","Partially Meeting",469,480,473,NA,15,67,43,10,4,26,NA,481,"PM","Partially Meeting",15,2,41,"F",1,0,"Disabled",0,176
+"354",2024,"8",8,"5",6,7,524,"M","Meeting",524,520,518,NA,27,31,47,29,12,82,523,"M","Meeting",520,508,525,NA,23,5,87,26,20,85,NA,508,"M","Meeting",23,4,66,"F",0,0,"NonDisabled",0,174
+"355",2024,"8",8,"5",6,7,536,"E","Exceeding",511,520,489,NA,34,72,1,32,12,88,501,"M","Meeting",483,491,480,NA,1,23,22,18,14,59,NA,499,"PM","Partially Meeting",20,4,59,"F",0,0,"NonDisabled",0,152
+"356",2024,"8",8,"5",6,7,508,"M","Meeting",501,514,496,NA,8,67,16,25,11,72,508,"M","Meeting",500,506,523,NA,2,25,97,17,20,69,NA,511,"M","Meeting",23,5,68,"M",0,0,"NonDisabled",0,171
+"357",2024,"8",8,"5",6,7,467,"NM","Not Meeting",NA,485,495,NA,NA,NA,73,12,6,36,474,"PM","Partially Meeting",468,466,478,NA,13,23,89,4,11,28,NA,484,"PM","Partially Meeting",17,1,44,"F",1,0,"Disabled",0,172
+"358",2024,"8",8,"5",6,7,469,"NM","Not Meeting",477,469,473,NA,16,52,48,17,2,38,451,"NM","Not Meeting",500,491,494,NA,90,42,54,6,2,15,NA,456,"NM","Not Meeting",9,0,22,"M",1,1,"Disabled",1,148
+"359",2024,"8",8,"5",6,7,469,"NM","Not Meeting",491,457,470,NA,60,8,53,14,5,38,472,"PM","Partially Meeting",463,459,473,NA,19,23,88,7,7,26,NA,476,"PM","Partially Meeting",15,0,37,"M",1,0,"Disabled",0,176
+"360",2024,"8",8,NA,6,7,496,"PM","Partially Meeting",NA,512,507,NA,NA,NA,41,25,6,62,513,"M","Meeting",NA,503,504,NA,NA,NA,63,20,20,74,NA,497,"PM","Partially Meeting",21,2,56,"M",0,0,"NonDisabled",0,178
+"361",2024,"8",8,"5",6,7,483,"PM","Partially Meeting",519,520,511,NA,55,62,29,20,5,50,517,"M","Meeting",520,544,527,NA,31,94,13,21,22,80,NA,511,"M","Meeting",25,3,68,"M",0,0,"NonDisabled",1,172
+"362",2024,"8",8,"5",6,7,536,"E","Exceeding",510,506,513,NA,28,35,73,33,11,88,517,"M","Meeting",501,520,518,NA,2,73,53,23,20,80,NA,544,"E","Exceeding",31,5,88,"M",0,0,"NonDisabled",0,177
+"363",2024,"8",8,"5",6,7,489,"PM","Partially Meeting",484,483,481,NA,7,51,41,21,7,56,496,"PM","Partially Meeting",468,522,503,NA,1,99,28,13,15,52,NA,486,"PM","Partially Meeting",16,3,46,"F",0,0,"NonDisabled",0,174
+"364",2024,"8",8,"5",6,7,501,"M","Meeting",494,492,498,NA,6,31,72,20,13,66,511,"M","Meeting",503,494,510,NA,48,16,92,21,18,72,NA,499,"PM","Partially Meeting",19,5,59,"F",0,0,"NonDisabled",0,179
+"365",2024,"8",8,"5",6,7,511,"M","Meeting",517,501,500,NA,55,18,37,25,12,74,497,"PM","Partially Meeting",498,494,490,NA,10,14,35,16,13,54,NA,494,"PM","Partially Meeting",18,4,54,"M",1,0,"Disabled",0,177
+"366",2024,"8",8,"5",6,7,514,"M","Meeting",481,497,502,NA,NA,88,82,30,8,76,511,"M","Meeting",463,491,494,NA,NA,94,86,24,15,72,NA,497,"PM","Partially Meeting",21,2,56,"F",1,0,"Disabled",0,176
+"367",2024,"8",8,"5",6,7,524,"M","Meeting",537,497,513,NA,NA,3,71,28,13,82,519,"M","Meeting",510,515,515,NA,NA,60,45,24,20,81,NA,517,"M","Meeting",26,4,73,"F",0,0,"NonDisabled",0,176
+"368",2024,"8",8,"5",6,7,517,"M","Meeting",514,485,511,NA,66,6,93,28,11,78,487,"PM","Partially Meeting",489,499,498,NA,3,42,61,13,9,41,NA,499,"PM","Partially Meeting",20,4,59,"F",1,1,"NonDisabled",1,159
+"369",2024,"8",8,"5",6,7,503,"M","Meeting",514,517,507,NA,18,41,27,24,10,68,514,"M","Meeting",513,525,529,NA,30,78,65,18,23,76,NA,508,"M","Meeting",23,4,66,"F",1,1,"NonDisabled",0,167
+"370",2024,"8",8,"5",6,7,517,"M","Meeting",494,517,513,NA,NA,93,64,28,11,78,554,"E","Exceeding",524,529,540,NA,NA,66,78,28,25,98,NA,524,"M","Meeting",27,5,78,"M",0,0,"NonDisabled",0,176
+"371",2024,"8",8,"5",6,7,503,"M","Meeting",496,499,493,NA,27,67,36,26,8,68,496,"PM","Partially Meeting",504,499,499,NA,89,51,48,15,13,52,NA,514,"M","Meeting",26,3,71,"M",1,1,"NonDisabled",1,170
+"372",2024,"8",8,"5",6,7,503,"M","Meeting",505,506,496,NA,67,78,27,28,6,68,499,"PM","Partially Meeting",516,504,511,NA,40,8,62,18,12,56,NA,484,"PM","Partially Meeting",16,2,44,"M",0,0,"NonDisabled",1,178
+"373",2024,"8",8,NA,6,7,472,"PM","Partially Meeting",NA,NA,483,NA,NA,NA,NA,14,6,40,472,"PM","Partially Meeting",NA,NA,473,NA,NA,NA,NA,11,3,26,NA,463,"NM","Not Meeting",10,1,27,"F",1,0,"Disabled",0,161
+"374",2024,"8",8,"5",6,7,542,"E","Exceeding",546,535,528,NA,90,57,36,30,15,90,511,"M","Meeting",519,520,520,NA,75,58,37,20,19,72,NA,528,"M","Meeting",30,3,80,"F",1,1,"NonDisabled",0,176
+"375",2024,"9",9,NA,NA,8,NA,NA,NA,NA,NA,494,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,485,NA,NA,NA,NA,NA,NA,NA,"6",495,"PM",NA,23,7,50,"M",1,0,"Disabled",0,174
+"376",2024,"9",9,"6",7,8,NA,NA,NA,513,484,472,NA,10,1,9,NA,NA,NA,NA,NA,NA,518,481,480,NA,64,1,17,NA,NA,NA,"6",484,"PM",NA,21,2,38,"M",1,1,"NonDisabled",0,170
+"377",2024,"9",9,"6",7,8,NA,NA,NA,456,443,440,NA,54,11,27,NA,NA,NA,NA,NA,NA,477,468,469,NA,63,30,38,NA,NA,NA,"6",466,"NM",NA,13,2,25,"M",1,1,"Disabled",0,167
+"378",2024,"9",9,"6",7,8,NA,NA,NA,507,514,499,NA,18,74,12,NA,NA,NA,NA,NA,NA,504,512,512,NA,12,57,57,NA,NA,NA,"6",511,"M",NA,30,9,65,"M",0,0,"NonDisabled",0,170
+"379",2024,"9",9,"6",7,8,NA,NA,NA,501,478,484,NA,56,11,48,NA,NA,NA,NA,NA,NA,484,477,482,NA,19,15,55,NA,NA,NA,"6",484,"PM",NA,18,5,38,"M",1,0,"Disabled",0,163
+"380",2024,"9",9,"6",7,8,NA,NA,NA,513,500,524,NA,15,21,91,NA,NA,NA,NA,NA,NA,510,518,521,NA,5,55,69,NA,NA,NA,"6",502,"M",NA,28,6,57,"F",1,1,"NonDisabled",0,178
+"381",2024,"9",9,"6",7,8,NA,NA,NA,507,484,484,NA,13,3,30,NA,NA,NA,NA,NA,NA,507,496,503,NA,28,15,65,NA,NA,NA,"6",497,"PM",NA,27,4,52,"F",1,1,"NonDisabled",1,163
+"382",2024,"9",9,"6",7,8,NA,NA,NA,477,482,502,NA,11,37,92,NA,NA,NA,NA,NA,NA,491,489,499,NA,17,41,79,NA,NA,NA,"6",499,"PM",NA,26,6,53,"F",1,1,"NonDisabled",0,173
+"383",2024,"9",9,"6",7,8,NA,NA,NA,472,494,491,NA,1,57,51,NA,NA,NA,NA,NA,NA,477,485,483,NA,1,22,46,NA,NA,NA,"6",500,"M",NA,28,5,55,"M",1,0,"Disabled",0,168
+"384",2024,"9",9,"6",7,8,NA,NA,NA,481,480,491,NA,NA,43,75,NA,NA,NA,NA,NA,NA,463,460,458,NA,NA,29,25,NA,NA,NA,"6",446,"NM",NA,6,3,15,"F",1,1,"Disabled",0,174
+"385",2024,"9",9,"6",7,8,NA,NA,NA,520,525,553,NA,93,98,95,NA,NA,NA,NA,NA,NA,510,506,524,NA,66,55,94,NA,NA,NA,"6",523,"M",NA,33,12,75,"F",0,0,"NonDisabled",0,176
+"386",2024,"9",9,"6",7,8,NA,NA,NA,488,496,472,NA,8,56,4,NA,NA,NA,NA,NA,NA,494,481,506,NA,37,9,97,NA,NA,NA,"6",495,"PM",NA,26,4,50,"F",0,0,"NonDisabled",0,176
+"387",2024,"9",9,"6",7,8,NA,NA,NA,495,492,507,NA,6,34,82,NA,NA,NA,NA,NA,NA,484,497,508,NA,2,78,88,NA,NA,NA,"6",507,"M",NA,29,8,62,"M",1,1,"NonDisabled",0,167
+"388",2024,"9",9,"6",7,8,NA,NA,NA,501,502,520,NA,7,31,88,NA,NA,NA,NA,NA,NA,510,518,532,NA,1,39,91,NA,NA,NA,"6",537,"E",NA,37,14,85,"M",1,1,"NonDisabled",0,179
+"389",2024,"9",9,"6",7,8,NA,NA,NA,501,488,484,NA,36,13,25,NA,NA,NA,NA,NA,NA,491,491,503,NA,18,32,86,NA,NA,NA,"6",499,"PM",NA,27,5,53,"M",0,0,"NonDisabled",0,179
+"390",2024,"9",9,"6",7,8,NA,NA,NA,507,496,489,NA,57,53,18,NA,NA,NA,NA,NA,NA,498,489,485,NA,41,28,22,NA,NA,NA,"6",485,"PM",NA,18,6,40,"M",0,0,"NonDisabled",0,170
+"391",2024,"9",9,"6",7,8,NA,NA,NA,514,502,491,NA,25,32,12,NA,NA,NA,NA,NA,NA,498,494,505,NA,1,8,80,NA,NA,NA,"6",502,"M",NA,28,6,57,"M",0,0,"NonDisabled",0,172
+"392",2024,"9",9,"6",7,8,NA,NA,NA,477,478,452,NA,75,85,8,NA,NA,NA,NA,NA,NA,473,474,478,NA,15,43,60,NA,NA,NA,"6",476,"PM",NA,16,3,32,"F",1,1,"Disabled",0,161
+"393",2024,"9",9,"6",7,8,NA,NA,NA,513,509,524,NA,84,82,80,NA,NA,NA,NA,NA,NA,519,516,509,NA,31,26,25,NA,NA,NA,"6",505,"M",NA,27,9,60,"M",0,0,"NonDisabled",0,175
+"394",2024,"9",9,"6",7,8,NA,NA,NA,472,482,458,NA,3,53,10,NA,NA,NA,NA,NA,NA,468,489,488,NA,1,75,63,NA,NA,NA,"6",489,"PM",NA,24,2,43,"M",1,1,"Disabled",0,170
+"395",2024,"9",9,"6",7,8,NA,NA,NA,534,507,520,NA,89,35,65,NA,NA,NA,NA,NA,NA,516,512,519,NA,16,16,76,NA,NA,NA,"6",520,"M",NA,32,12,73,"M",1,1,"NonDisabled",0,171
+"396",2024,"9",9,"6",7,8,NA,NA,NA,514,504,507,NA,NA,44,45,NA,NA,NA,NA,NA,NA,484,497,483,NA,NA,82,12,NA,NA,NA,"6",485,"PM",NA,21,3,40,"F",0,0,"NonDisabled",0,166
+"397",2024,"9",9,"6",7,8,NA,NA,NA,510,500,502,NA,96,74,41,NA,NA,NA,NA,NA,NA,487,496,496,NA,21,63,56,NA,NA,NA,"6",494,"PM",NA,23,6,48,"M",1,0,"Disabled",0,173
+"398",2024,"9",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"6",523,"M",NA,37,8,75,"M",0,0,"NonDisabled",0,177
+"399",2024,"9",9,"6",7,8,NA,NA,NA,510,516,529,NA,34,85,78,NA,NA,NA,NA,NA,NA,511,505,506,NA,24,21,50,NA,NA,NA,"6",532,"E",NA,36,13,82,"F",0,0,"NonDisabled",0,168
+"400",2024,"9",9,"6",7,8,NA,NA,NA,503,486,464,NA,16,6,4,NA,NA,NA,NA,NA,NA,487,497,505,NA,10,86,80,NA,NA,NA,"6",500,"M",NA,26,7,55,"M",0,0,"NonDisabled",1,173
+"401",2024,"9",9,"6",7,8,NA,NA,NA,488,488,489,NA,56,73,45,NA,NA,NA,NA,NA,NA,459,481,465,NA,4,91,15,NA,NA,NA,"6",476,"PM",NA,18,1,32,"F",1,0,"Disabled",0,178
+"402",2024,"9",9,"6",7,8,NA,NA,NA,510,488,504,NA,38,15,74,NA,NA,NA,NA,NA,NA,498,492,501,NA,19,30,70,NA,NA,NA,"6",497,"PM",NA,24,7,52,"M",0,0,"NonDisabled",0,170
+"403",2024,"9",9,"6",7,8,NA,NA,NA,492,486,491,NA,53,44,55,NA,NA,NA,NA,NA,NA,463,460,485,NA,4,15,97,NA,NA,NA,"6",494,"PM",NA,25,4,48,"M",0,0,"NonDisabled",0,164
+"404",2024,"9",9,"6",7,8,NA,NA,NA,534,519,539,NA,95,73,82,NA,NA,NA,NA,NA,NA,491,503,519,NA,31,83,96,NA,NA,NA,"6",518,"M",NA,35,8,72,"F",0,0,"NonDisabled",1,176
+"405",2024,"9",9,"6",7,8,NA,NA,NA,527,519,507,NA,80,70,13,NA,NA,NA,NA,NA,NA,504,509,499,NA,34,69,18,NA,NA,NA,"6",514,"M",NA,32,9,68,"M",0,0,"NonDisabled",1,166
+"406",2024,"9",9,"6",7,8,NA,NA,NA,495,500,452,NA,11,56,1,NA,NA,NA,NA,NA,NA,493,489,488,NA,44,42,35,NA,NA,NA,"6",482,"PM",NA,19,3,37,"M",1,0,"Disabled",0,180
+"407",2024,"9",9,"6",7,8,NA,NA,NA,520,514,529,NA,57,69,78,NA,NA,NA,NA,NA,NA,498,503,511,NA,7,43,76,NA,NA,NA,"6",543,"E",NA,37,16,88,"F",0,0,"NonDisabled",0,174
+"408",2024,"9",9,"6",7,8,NA,NA,NA,513,514,529,NA,44,82,81,NA,NA,NA,NA,NA,NA,498,502,509,NA,33,69,74,NA,NA,NA,"6",500,"M",NA,26,7,55,"M",0,0,"NonDisabled",1,171
+"409",2024,"9",9,"6",7,8,NA,NA,NA,483,504,502,NA,NA,93,49,NA,NA,NA,NA,NA,NA,514,513,524,NA,NA,40,84,NA,NA,NA,"6",525,"M",NA,35,11,77,"M",0,0,"NonDisabled",0,179
+"410",2024,"9",9,"6",7,8,NA,NA,NA,489,469,464,NA,77,21,27,NA,NA,NA,NA,NA,NA,494,499,499,NA,51,82,49,NA,NA,NA,"6",485,"PM",NA,22,2,40,"M",1,1,"NonDisabled",0,155
+"411",2024,"9",9,"6",7,8,NA,NA,NA,484,478,496,NA,26,32,86,NA,NA,NA,NA,NA,NA,501,497,498,NA,19,33,43,NA,NA,NA,"6",495,"PM",NA,22,8,50,"F",0,0,"NonDisabled",0,168
+"412",2024,"9",9,"6",7,8,NA,NA,NA,528,509,507,NA,64,40,28,NA,NA,NA,NA,NA,NA,518,520,524,NA,23,36,69,NA,NA,NA,"6",512,"M",NA,29,11,67,"M",0,0,"NonDisabled",1,172
+"413",2024,"9",9,"6",7,8,NA,NA,NA,483,482,504,NA,15,47,93,NA,NA,NA,NA,NA,NA,507,503,512,NA,9,29,76,NA,NA,NA,"6",520,"M",NA,33,11,73,"F",1,0,"Disabled",0,171
+"414",2024,"9",9,"6",7,8,NA,NA,NA,528,509,510,NA,49,33,35,NA,NA,NA,NA,NA,NA,504,509,NA,NA,21,68,NA,NA,NA,NA,"6",529,"M",NA,34,14,80,"M",0,0,"NonDisabled",0,163
+"415",2024,"9",9,"6",7,8,NA,NA,NA,543,507,507,NA,95,24,25,NA,NA,NA,NA,NA,NA,494,497,489,NA,39,63,20,NA,NA,NA,"6",512,"M",NA,30,10,67,"M",1,1,"NonDisabled",0,171
+"416",2024,"9",9,NA,7,8,NA,NA,NA,NA,484,491,NA,NA,NA,64,NA,NA,NA,NA,NA,NA,NA,494,498,NA,NA,NA,61,NA,NA,NA,"6",491,"PM",NA,23,4,45,"F",0,0,"NonDisabled",0,169
+"417",2024,"9",9,NA,7,8,NA,NA,NA,NA,476,484,NA,NA,NA,67,NA,NA,NA,NA,NA,NA,NA,465,482,NA,NA,NA,87,NA,NA,NA,"6",480,"PM",NA,19,2,35,"F",1,0,"Disabled",0,173
+"418",2024,"9",9,"6",7,8,NA,NA,NA,527,525,529,NA,73,91,56,NA,NA,NA,NA,NA,NA,511,508,512,NA,72,60,64,NA,NA,NA,"6",511,"M",NA,28,11,65,"F",0,0,"NonDisabled",0,171
+"419",2024,"9",9,"6",7,8,NA,NA,NA,489,492,499,NA,4,34,65,NA,NA,NA,NA,NA,NA,511,510,512,NA,11,38,57,NA,NA,NA,"6",514,"M",NA,34,7,68,"M",1,0,"Disabled",0,179
+"420",2024,"9",9,"6",7,8,NA,NA,NA,510,511,534,NA,7,42,91,NA,NA,NA,NA,NA,NA,501,487,503,NA,20,14,87,NA,NA,NA,"6",507,"M",NA,30,7,62,"F",1,1,"NonDisabled",0,170
+"421",2024,"9",9,"6",7,8,NA,NA,NA,499,496,494,NA,NA,51,35,NA,NA,NA,NA,NA,NA,494,481,492,NA,NA,10,73,NA,NA,NA,"6",487,"PM",NA,23,2,42,"M",0,0,"NonDisabled",0,173
+"422",2024,"9",9,NA,NA,8,NA,NA,NA,NA,NA,496,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,516,NA,NA,NA,NA,NA,NA,NA,"6",507,"M",NA,29,8,62,"F",1,1,"NonDisabled",0,171
+"423",2024,"9",9,"6",7,8,NA,NA,NA,534,504,496,NA,80,10,11,NA,NA,NA,NA,NA,NA,501,497,492,NA,16,22,24,NA,NA,NA,"6",491,"PM",NA,22,5,45,"F",0,0,"NonDisabled",0,164
+"424",2024,"9",9,"6",7,8,NA,NA,NA,519,514,507,NA,38,56,24,NA,NA,NA,NA,NA,NA,498,505,498,NA,1,37,25,NA,NA,NA,"6",507,"M",NA,31,6,62,"M",1,1,"NonDisabled",0,169
+"425",2024,"9",9,"6",7,8,NA,NA,NA,501,498,499,NA,80,78,44,NA,NA,NA,NA,NA,NA,484,499,488,NA,38,92,20,NA,NA,NA,"6",504,"M",NA,29,6,58,"M",1,0,"Disabled",0,177
+"426",2024,"9",9,"6",7,8,NA,NA,NA,547,507,472,NA,89,15,1,NA,NA,NA,NA,NA,NA,534,527,505,NA,55,37,2,NA,NA,NA,"6",494,"PM",NA,24,5,48,"M",1,0,"Disabled",0,163
+"427",2024,"9",9,"6",7,8,NA,NA,NA,496,486,502,NA,29,39,79,NA,NA,NA,NA,NA,NA,493,489,488,NA,32,37,35,NA,NA,NA,"6",489,"PM",NA,20,6,43,"F",0,0,"NonDisabled",0,167
+"428",2024,"9",9,NA,7,8,NA,NA,NA,NA,504,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,500,NA,NA,NA,NA,NA,NA,NA,NA,"6",499,"PM",NA,24,8,53,"F",1,1,"NonDisabled",0,165
+"429",2024,"9",9,"6",7,8,NA,NA,NA,520,514,529,NA,56,62,78,NA,NA,NA,NA,NA,NA,541,527,521,NA,26,9,23,NA,NA,NA,"6",520,"M",NA,33,11,73,"M",0,0,"NonDisabled",0,171
+"430",2024,"9",9,"6",7,8,NA,NA,NA,445,463,440,NA,1,72,7,NA,NA,NA,NA,NA,NA,459,479,469,NA,31,96,31,NA,NA,NA,"6",476,"PM",NA,17,2,32,"M",1,1,"Disabled",0,155
+"431",2024,"9",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"6",537,"E",NA,38,13,85,"F",0,0,"NonDisabled",0,172
+"432",2024,"9",9,"6",7,8,NA,NA,NA,540,525,524,NA,91,76,36,NA,NA,NA,NA,NA,NA,501,499,498,NA,32,44,39,NA,NA,NA,"6",497,"PM",NA,25,6,52,"F",0,0,"NonDisabled",0,165
+"433",2024,"9",9,"6",7,8,NA,NA,NA,462,469,472,NA,30,64,60,NA,NA,NA,NA,NA,NA,481,481,488,NA,28,42,71,NA,NA,NA,"6",485,"PM",NA,21,3,40,"F",1,0,"Disabled",0,176
+"434",2024,"9",9,"6",7,8,NA,NA,NA,523,492,517,NA,32,2,86,NA,NA,NA,NA,NA,NA,501,506,502,NA,16,64,35,NA,NA,NA,"6",494,"PM",NA,24,5,48,"F",0,0,"NonDisabled",0,172
+"435",2024,"9",9,"6",7,8,NA,NA,NA,534,507,486,NA,99,60,2,NA,NA,NA,NA,NA,NA,468,481,483,NA,8,74,67,NA,NA,NA,"6",474,"PM",NA,14,4,30,"F",0,0,"NonDisabled",0,161
+"436",2024,"9",9,"6",7,8,NA,NA,NA,495,490,494,NA,18,31,51,NA,NA,NA,NA,NA,NA,473,465,465,NA,11,20,30,NA,NA,NA,"6",460,"NM",NA,10,3,22,"F",1,0,"Disabled",0,161
+"437",2024,"9",9,"6",7,8,NA,NA,NA,469,443,440,NA,28,2,8,NA,NA,NA,NA,NA,NA,473,477,469,NA,15,57,24,NA,NA,NA,"6",480,"PM",NA,18,3,35,"M",1,1,"Disabled",0,165
+"438",2024,"9",9,"6",7,8,NA,NA,NA,507,516,502,NA,33,87,13,NA,NA,NA,NA,NA,NA,498,499,489,NA,32,69,15,NA,NA,NA,"6",525,"M",NA,35,11,77,"M",1,0,"Disabled",1,174
+"439",2024,"10",10,"7",8,9,497,"PM","Partially Meeting",517,504,NA,NA,58,16,NA,25,8,65,484,"PM","Partially Meeting",516,477,NA,NA,19,1,NA,16,5,35,"6",509,"PAS","Meeting",NA,NA,NA,"F",1,1,"NonDisabled",1,176
+"440",2024,"10",10,"7",8,9,525,"M","Meeting",488,516,NA,NA,10,95,NA,29,14,84,497,"PM","Partially Meeting",488,504,NA,NA,14,91,NA,21,9,50,"6",507,"PAS","Meeting",NA,NA,NA,"M",1,0,"Disabled",0,180
+"441",2024,"10",10,"7",8,9,508,"M","Meeting",497,520,NA,NA,57,98,NA,26,12,75,490,"PM","Partially Meeting",476,486,NA,NA,10,76,NA,18,7,42,"6",498,"PAS","Partially Meeting",NA,NA,NA,"M",1,1,"NonDisabled",0,176
+"442",2024,"10",10,"7",8,9,521,"M","Meeting",504,494,NA,NA,65,40,NA,30,12,82,514,"M","Meeting",514,505,NA,NA,53,39,NA,29,13,70,"6",513,"PAS","Meeting",NA,NA,NA,"M",0,0,"NonDisabled",0,178
+"443",2024,"10",10,"7",8,9,501,"M","Meeting",487,492,NA,NA,16,64,NA,25,10,69,499,"PM","Partially Meeting",505,492,NA,NA,62,18,NA,21,10,52,"6",493,"PAS","Partially Meeting",NA,NA,NA,"M",0,0,"NonDisabled",0,172
+"444",2024,"10",10,"7",8,9,499,"PM","Partially Meeting",487,487,NA,NA,68,54,NA,24,10,67,493,"PM","Partially Meeting",480,486,NA,NA,39,64,NA,18,9,45,"6",503,"PAS","Meeting",NA,NA,NA,"M",1,0,"NonDisabled",0,178
+"445",2024,"10",10,NA,NA,9,499,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,26,8,67,NA,"TRN",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"5",481,"PAS","Partially Meeting",NA,NA,NA,"F",1,1,"Disabled",0,555
+"446",2024,"10",10,"7",NA,9,489,"PM","Partially Meeting",497,NA,NA,NA,NA,NA,NA,22,7,57,464,"NM","Not Meeting",476,NA,NA,NA,NA,NA,NA,9,3,20,"6",489,"PAS","Partially Meeting",NA,NA,NA,"M",1,0,"Disabled",0,169
+"447",2024,"10",10,"7",8,9,529,"M","Meeting",507,516,NA,NA,75,91,NA,31,13,86,507,"M","Meeting",488,499,NA,NA,3,72,NA,22,15,62,"6",503,"PAS","Meeting",NA,NA,NA,"M",0,0,"NonDisabled",1,178
+"448",2024,"10",10,"7",8,9,541,"E","Exceeding",504,513,NA,NA,9,66,NA,32,14,90,520,"M","Meeting",503,506,NA,NA,25,62,NA,24,22,77,"6",545,"PAS","Exceeding",NA,NA,NA,"M",1,1,"NonDisabled",0,172
+"449",2024,"10",10,"7",8,9,499,"PM","Partially Meeting",502,520,NA,NA,67,96,NA,24,10,67,506,"M","Meeting",495,499,NA,NA,45,69,NA,23,13,60,"6",486,"PAS","Partially Meeting",NA,NA,NA,"F",0,0,"NonDisabled",0,168
+"450",2024,"10",10,"7",8,9,517,"M","Meeting",497,516,NA,NA,24,95,NA,29,12,80,490,"PM","Partially Meeting",479,496,NA,NA,23,91,NA,18,7,42,"6",491,"PAS","Partially Meeting",NA,NA,NA,"F",1,1,"NonDisabled",0,175
+"451",2024,"10",10,"7",8,9,529,"M","Meeting",523,524,NA,NA,48,75,NA,34,10,86,536,"E","Exceeding",534,528,NA,NA,25,24,NA,31,23,90,"6",539,"PAS","Exceeding",NA,NA,NA,"M",0,0,"NonDisabled",1,179
+"452",2024,"10",10,"7",8,9,535,"E","Exceeding",517,516,NA,NA,59,45,NA,31,14,88,510,"M","Meeting",499,505,NA,NA,9,58,NA,22,17,65,"6",498,"PAS","Partially Meeting",NA,NA,NA,"F",1,1,"NonDisabled",0,175
+"453",2024,"10",10,"7",8,9,497,"PM","Partially Meeting",468,492,NA,NA,11,96,NA,23,10,65,499,"PM","Partially Meeting",465,493,NA,NA,1,90,NA,18,13,52,"6",489,"PAS","Partially Meeting",NA,NA,NA,"F",1,1,"Disabled",0,176
+"454",2024,"10",10,"7",8,9,559,"E","Exceeding",522,528,NA,NA,24,60,NA,33,15,94,529,"M","Meeting",539,543,NA,NA,62,72,NA,32,19,85,"6",529,"PAS","Meeting",NA,NA,NA,"F",1,1,"NonDisabled",0,173
+"455",2024,"10",10,"7",8,9,514,"M","Meeting",497,502,NA,NA,53,59,NA,28,12,78,503,"M","Meeting",486,492,NA,NA,29,59,NA,20,14,57,"6",502,"PAS","Meeting",NA,NA,NA,"F",0,0,"NonDisabled",0,171
+"456",2024,"10",10,"7",8,9,514,"M","Meeting",512,524,NA,NA,57,84,NA,30,10,78,525,"M","Meeting",534,528,NA,NA,58,37,NA,31,18,82,"6",517,"PAS","Meeting",NA,NA,NA,"M",1,1,"NonDisabled",0,170
+"457",2024,"10",10,"7",8,9,508,"M","Meeting",474,504,NA,NA,2,97,NA,26,12,75,484,"PM","Partially Meeting",495,488,NA,NA,16,21,NA,17,4,35,"6",478,"PAS","Partially Meeting",NA,NA,NA,"F",0,0,"NonDisabled",0,173
+"458",2024,"10",10,"7",8,9,521,"M","Meeting",501,481,NA,NA,66,11,NA,28,14,82,499,"PM","Partially Meeting",484,496,NA,NA,43,89,NA,23,8,52,"6",488,"PAS","Partially Meeting",NA,NA,NA,"F",1,0,"Disabled",0,175
+"459",2024,"10",10,"7",8,9,511,"M","Meeting",512,504,NA,NA,68,54,NA,30,9,76,496,"PM","Partially Meeting",489,480,NA,NA,2,6,NA,17,12,48,"5",486,"PAS","Partially Meeting",NA,NA,NA,"F",0,0,"NonDisabled",0,174
+"460",2024,"10",10,NA,NA,NA,549,"E","Exceeding",NA,NA,NA,NA,NA,NA,NA,34,13,92,512,"M","Meeting",NA,NA,NA,NA,NA,NA,NA,24,17,68,"6",532,"E","Exceeding",37,12,82,"F",0,0,"NonDisabled",0,177
+"461",2024,"10",10,"7",8,9,499,"PM","Partially Meeting",462,479,NA,NA,8,86,NA,24,10,67,484,"PM","Partially Meeting",489,493,NA,NA,48,78,NA,12,9,35,"6",486,"PAS","Partially Meeting",NA,NA,NA,"M",0,0,"NonDisabled",0,178
+"462",2024,"10",10,"7",8,9,508,"M","Meeting",497,510,NA,NA,11,49,NA,28,10,75,508,"M","Meeting",499,501,NA,NA,32,56,NA,24,14,63,"5",508,"PAS","Meeting",NA,NA,NA,"F",0,0,"NonDisabled",0,173
+"463",2024,"10",10,"7",8,9,529,"M","Meeting",504,516,NA,NA,8,79,NA,31,13,86,547,"E","Exceeding",524,528,NA,NA,11,56,NA,34,23,95,"6",521,"PAS","Meeting",NA,NA,NA,"M",0,0,"NonDisabled",0,180
+"464",2024,"10",10,"7",8,9,493,"PM","Partially Meeting",479,467,NA,NA,2,6,NA,22,9,61,482,"PM","Partially Meeting",483,468,NA,NA,22,5,NA,15,5,33,"6",491,"PAS","Partially Meeting",NA,NA,NA,"M",1,0,"Disabled",0,173
+"465",2024,"10",10,"7",8,9,508,"M","Meeting",512,499,NA,NA,NA,22,NA,26,12,75,495,"PM","Partially Meeting",480,508,NA,NA,NA,99,NA,19,9,47,"6",493,"PAS","Partially Meeting",NA,NA,NA,"M",0,0,"NonDisabled",0,172
+"466",2024,"10",10,"7",8,9,506,"M","Meeting",501,533,NA,NA,35,99,NA,23,14,73,502,"M","Meeting",503,505,NA,NA,24,58,NA,24,9,55,"6",513,"PAS","Meeting",NA,NA,NA,"F",0,0,"NonDisabled",0,178
+"467",2024,"10",10,"7",8,9,521,"M","Meeting",517,516,NA,NA,34,58,NA,30,12,82,506,"M","Meeting",502,501,NA,NA,3,25,NA,23,13,60,"6",521,"PAS","Meeting",NA,NA,NA,"M",0,0,"NonDisabled",1,172
+"468",2024,"10",10,"7",8,9,541,"E","Exceeding",523,524,NA,NA,43,51,NA,30,16,90,514,"M","Meeting",524,514,NA,NA,28,21,NA,28,14,70,"6",519,"PAS","Meeting",NA,NA,NA,"F",0,0,"NonDisabled",0,173
+"469",2024,"10",10,"7",8,9,511,"M","Meeting",534,520,NA,NA,94,39,NA,27,12,76,523,"M","Meeting",505,525,NA,NA,10,93,NA,28,20,80,"6",519,"PAS","Meeting",NA,NA,NA,"F",1,1,"NonDisabled",1,169
+"470",2024,"10",10,"7",8,9,521,"M","Meeting",497,516,NA,NA,59,98,NA,30,12,82,525,"M","Meeting",513,521,NA,NA,85,88,NA,31,18,82,"6",560,"PAS","Exceeding",NA,NA,NA,"M",0,0,"NonDisabled",0,179
+"471",2024,"10",10,"7",8,9,525,"M","Meeting",504,539,NA,NA,2,96,NA,30,13,84,523,"M","Meeting",518,506,NA,NA,54,15,NA,30,18,80,"6",521,"PAS","Meeting",NA,NA,NA,"F",0,0,"NonDisabled",0,172
+"472",2024,"10",10,"7",8,9,541,"E","Exceeding",512,533,NA,NA,40,97,NA,33,13,90,512,"M","Meeting",505,508,NA,NA,21,63,NA,28,13,68,"6",534,"PAS","Exceeding",NA,NA,NA,"M",0,0,"NonDisabled",1,173
+"473",2024,"10",10,"7",8,9,521,"M","Meeting",507,489,NA,NA,64,18,NA,31,11,82,510,"M","Meeting",528,497,NA,NA,99,4,NA,24,15,65,"6",500,"PAS","Meeting",NA,NA,NA,"M",1,1,"NonDisabled",0,156
+"474",2024,"10",10,"7",8,9,491,"PM","Partially Meeting",NA,487,NA,NA,NA,NA,NA,22,8,59,496,"PM","Partially Meeting",471,493,NA,NA,9,87,NA,20,9,48,"6",515,"PAS","Meeting",NA,NA,NA,"M",1,0,"Disabled",0,170
+"475",2024,"10",10,"7",8,9,549,"E","Exceeding",504,510,NA,NA,10,63,NA,34,13,92,560,"E","Exceeding",528,525,NA,NA,58,48,NA,35,24,98,"6",545,"PAS","Exceeding",NA,NA,NA,"M",0,0,"NonDisabled",0,179
+"476",2024,"10",10,"7",8,9,535,"E","Exceeding",529,516,NA,NA,90,54,NA,32,13,88,517,"M","Meeting",492,509,NA,NA,6,84,NA,27,17,73,"6",517,"PAS","Meeting",NA,NA,NA,"F",1,1,"NonDisabled",0,164
+"477",2024,"10",10,"7",8,9,541,"E","Exceeding",504,545,NA,NA,13,99,NA,33,13,90,523,"M","Meeting",517,514,NA,NA,37,45,NA,31,17,80,"6",519,"PAS","Meeting",NA,NA,NA,"F",0,0,"NonDisabled",0,173
+"478",2024,"10",10,"7",8,9,549,"E","Exceeding",534,539,NA,NA,88,87,NA,32,15,92,531,"E","Exceeding",508,494,NA,NA,9,6,NA,29,23,87,"6",532,"PAS","Exceeding",NA,NA,NA,"F",0,0,"NonDisabled",0,170
+"479",2024,"10",10,"7",8,9,525,"M","Meeting",512,516,NA,NA,39,69,NA,29,14,84,508,"M","Meeting",510,498,NA,NA,53,19,NA,23,15,63,"6",507,"PAS","Meeting",NA,NA,NA,"F",0,0,"NonDisabled",0,171
+"480",2024,"10",10,"7",8,9,501,"M","Meeting",488,489,NA,NA,8,40,NA,24,11,69,497,"PM","Partially Meeting",476,473,NA,NA,19,22,NA,18,12,50,"5",469,"PRF","Not Meeting",NA,NA,NA,"F",1,1,"NonDisabled",0,168
+"481",2024,"10",10,"7",8,9,476,"PM","Partially Meeting",487,467,NA,NA,13,3,NA,18,4,43,457,"NM","Not Meeting",473,459,NA,NA,20,9,NA,8,2,17,"6",472,"PAS","Partially Meeting",NA,NA,NA,"M",1,0,"Disabled",0,170
+"482",2024,"10",10,NA,9,NA,560,"E","Exceeding",NA,NA,NA,NA,NA,NA,NA,34,15,96,517,"M","Meeting",NA,NA,NA,NA,NA,NA,NA,25,19,73,"5",558,"PAS","Exceeding",NA,NA,NA,"N",0,0,"NonDisabled",1,172
+"483",2024,"10",10,"7",8,9,535,"E","Exceeding",497,533,NA,NA,23,99,NA,31,14,88,506,"M","Meeting",511,499,NA,NA,80,31,NA,21,15,60,"6",505,"PAS","Meeting",NA,NA,NA,"F",0,0,"NonDisabled",1,172
+"484",2024,"10",10,NA,8,9,511,"M","Meeting",NA,533,NA,NA,NA,NA,NA,25,14,76,499,"PM","Partially Meeting",NA,498,NA,NA,NA,NA,NA,20,11,52,"6",493,"PAS","Partially Meeting",NA,NA,NA,"M",0,0,"NonDisabled",0,173
+"485",2024,"10",10,"7",8,9,469,"NM","Not Meeting",446,448,NA,NA,1,29,NA,15,4,37,474,"PM","Partially Meeting",456,454,NA,NA,11,13,NA,12,4,27,"6",469,"PRF","Not Meeting",NA,NA,NA,"M",1,0,"Disabled",0,178
+"486",2024,"10",10,"7",8,9,560,"E","Exceeding",517,520,NA,NA,NA,63,NA,34,15,96,536,"E","Exceeding",513,525,NA,NA,NA,87,NA,32,22,90,"6",521,"PAS","Meeting",NA,NA,NA,"M",0,0,"NonDisabled",0,180
+"487",2024,"10",10,"7",8,9,501,"M","Meeting",455,461,NA,NA,1,27,NA,26,9,69,503,"M","Meeting",499,447,NA,NA,14,1,NA,26,8,57,"6",469,"PRF","Not Meeting",NA,NA,NA,"M",1,0,"Disabled",0,156
+"488",2024,"10",10,"7",8,9,483,"PM","Partially Meeting",497,499,NA,NA,17,46,NA,15,11,51,469,"NM","Not Meeting",476,477,NA,NA,53,66,NA,9,5,23,"6",474,"PAS","Partially Meeting",NA,NA,NA,"F",1,1,"Disabled",0,163
+"489",2024,"10",10,"8",NA,9,485,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,22,5,53,490,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,15,10,42,"6",467,"PRF","Not Meeting",NA,NA,NA,"F",1,0,"Disabled",0,170
+"490",2024,"10",10,"7",8,9,559,"E","Exceeding",517,520,NA,NA,83,85,NA,34,14,94,523,"M","Meeting",524,538,NA,NA,83,94,NA,31,17,80,"6",519,"PAS","Meeting",NA,NA,NA,"F",0,0,"NonDisabled",0,171
+"491",2024,"10",10,"7",8,9,517,"M","Meeting",501,513,NA,NA,22,92,NA,28,13,80,520,"M","Meeting",513,519,NA,NA,5,58,NA,29,17,77,"6",523,"PAS","Meeting",NA,NA,NA,"F",1,1,"NonDisabled",0,162
+"492",2024,"10",10,"7",8,9,508,"M","Meeting",493,502,NA,NA,12,61,NA,26,12,75,531,"E","Exceeding",514,509,NA,NA,32,35,NA,32,20,87,"6",511,"PAS","Meeting",NA,NA,NA,"M",0,0,"NonDisabled",0,174
+"493",2024,"10",10,"7",8,9,525,"M","Meeting",523,524,NA,NA,70,71,NA,34,9,84,527,"M","Meeting",514,519,NA,NA,20,63,NA,32,18,83,"6",532,"PAS","Exceeding",NA,NA,NA,"F",0,0,"NonDisabled",1,158
+"494",2024,"10",10,"7",8,9,487,"PM","Partially Meeting",446,497,NA,NA,1,93,NA,26,2,55,453,"NM","Not Meeting",441,NA,NA,NA,1,NA,NA,8,1,15,"6",444,"PRF","Not Meeting",NA,NA,NA,"F",1,0,"Disabled",0,166
+"495",2024,"10",10,NA,NA,NA,497,"PM","Partially Meeting",NA,NA,NA,NA,NA,NA,NA,25,8,65,448,"NM","Not Meeting",NA,NA,NA,NA,NA,NA,NA,7,1,13,"5",NA,"ABS",NA,NA,NA,NA,"M",0,0,"NonDisabled",0,140
+"496",2024,"10",10,"7",8,9,493,"PM","Partially Meeting",493,492,NA,NA,34,39,NA,24,7,61,482,"PM","Partially Meeting",473,471,NA,NA,45,36,NA,14,6,33,"6",458,"PRF","Not Meeting",NA,NA,NA,"M",1,0,"Disabled",0,175
+"497",2024,"10",10,"7",8,NA,506,"M","Meeting",502,507,NA,NA,14,63,NA,26,11,73,NA,"TRN",NA,496,499,NA,NA,3,42,NA,NA,NA,NA,"5",NA,"TRN",NA,NA,NA,NA,"F",1,1,"Disabled",0,94
+"498",2024,"10",10,"7",8,9,535,"E","Exceeding",487,499,NA,NA,1,36,NA,32,13,88,500,"M","Meeting",488,485,NA,NA,31,29,NA,18,14,53,"5",502,"PAS","Meeting",NA,NA,NA,"F",0,0,"NonDisabled",1,166
+"499",2024,"10",10,"7",8,9,511,"M","Meeting",462,489,NA,NA,9,95,NA,26,13,76,495,"PM","Partially Meeting",496,492,NA,NA,28,35,NA,19,9,47,"6",491,"PAS","Partially Meeting",NA,NA,NA,"M",1,1,"NonDisabled",0,166
+"500",2024,"10",10,"7",8,9,541,"E","Exceeding",529,524,NA,NA,89,66,NA,31,15,90,490,"PM","Partially Meeting",496,496,NA,NA,62,55,NA,17,8,42,"6",488,"PAS","Partially Meeting",NA,NA,NA,"F",0,0,"NonDisabled",0,166
+"501",2024,"10",10,"7",8,9,529,"M","Meeting",501,533,NA,NA,29,98,NA,29,15,86,531,"E","Exceeding",541,538,NA,NA,89,65,NA,33,19,87,"6",553,"PAS","Exceeding",NA,NA,NA,"M",0,0,"NonDisabled",0,177
+"502",2024,"10",10,"7",8,9,499,"PM","Partially Meeting",507,487,NA,NA,17,2,NA,24,10,67,467,"NM","Not Meeting",492,493,NA,NA,2,20,NA,4,9,22,"6",472,"PAS","Partially Meeting",NA,NA,NA,"F",1,1,"Disabled",0,178
+"503",2024,"10",11,NA,9,10,NA,"DNT",NA,NA,NA,465,NA,NA,NA,NA,NA,NA,NA,NA,"DNT",NA,NA,NA,467,NA,NA,NA,NA,NA,NA,NA,"5",458,"NM",NA,11,2,22,"F",1,0,"Disabled",0,145
