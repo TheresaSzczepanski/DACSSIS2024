@@ -5,7 +5,7 @@ AI.N-Q.A.2,AI.N-Q.A.2 MI.N-Q.A.2,Define appropriate quantities for the purpose o
 AI.N-Q.A.3,AI.N-Q.A.3 MI.N-Q.A.3,Choose a level of accuracy appropriate to limitations on measurement when reporting quantities.,Number and Quantity,Quantities,,,,,,
 AI.N-RN.A.1,AI.N-RN.A.1 MII.N-RN.A.1,"Explain how the definition of the meaning of rational exponents follows from extending the properties of integer exponents to those values, allowing for a notation for radicals in terms of rational exponents. For example, we define 51/3 to be the cube root of 5 because we want (51/3) 3 = 5(1/3) 3 to hold, so (51/3) 3 must equal 5.",Number and Quantity,The Real Number System,,,,,,
 AI.N-RN.A.2,AI.N-RN.A.2 MII.N-RN.A.2,Rewrite expressions involving radicals and rational exponents using the properties of exponents.,Number and Quantity,The Real Number System,,,,,,
-AI.N-RN.B3,AI.N-RN.B3 MII.N-RN.B3,"Explain why the sum or product of two rational numbers is rational; that the sum of a rational number
+AI.N-RN.B.3,AI.N-RN.B.3 MII.N-RN.B.3,"Explain why the sum or product of two rational numbers is rational; that the sum of a rational number
 and an irrational number is irrational; and that the product of a nonzero rational number and an
 irrational number is irrational.",Number and Quantity,The Real Number System,,,,,,
 AI.A-SSE.A.1,AI.A-SSE.A.1.a MI.A-SSE.A.1.a MII.A-SSE.A.1.a,"Interpret parts of an expression, such as terms, factors, and coefficients.",Algebra,Seeing Structure in Expressions,,,,,,
